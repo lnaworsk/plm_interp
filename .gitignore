@@ -1,0 +1,12 @@
+*.joblib
+*.svg
+*.png
+data/jacobian/
+data/9606_database.json
+data/gene2refseq
+data/GRCh38_latest_protein_copy.faa
+data/all_comparison_data_WITH_STARTING.csv
+data/Supplementary_Table_3.xlsx
+pdb_seqres.txt.gz
+variant_summary.txt.gz
+data/figure_data/
