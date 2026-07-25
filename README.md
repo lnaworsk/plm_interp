@@ -1,6 +1,6 @@
-# [esm2_interp]
+# [plm_interp]
 
-> esm2_interp contains code related to analyzing ESM-2 interpretability for intrinisically disordered proteins.
+> plm_interp contains code related to analyzing ESM-2 interpretability for intrinisically disordered proteins.
 
  **Paper:** [Title of preprint](https://arxiv.org/abs/XXXX.XXXXX)  
  **Authors:** [Lauren Naworski] (https://github.com/lnaworsk), [Rob Scrutton], [Lydia Good]
@@ -9,8 +9,8 @@
 ## Installation
 ---
 ```bash
-git clone https://github.com/lnaworsk/esm2_interp.git
-cd [esm2_interp]
+git clone https://github.com/lnaworsk/plm_interp.git
+cd [plm_interp]
 conda env create -f environment.yml
 conda activate torch-gpu
 ```
@@ -35,9 +35,9 @@ NOTE: You will need to install Iupred2a https://iupred2a.elte.hu/ to run and upa
 
 ## Data
 
-Please see scripts/esm2_interp_data.py for information on external data and how to access/download external data utilized for this work. Run python esm2_interp_data.py for automatic download of external data
+Please see scripts/plm_interp_data.py for information on external data and how to access/download external data utilized for this work. Run python plm_interp_data.py for automatic download of external data
 
-NOTE: As many external databases are continuously updated, this repo provides ability to download directly from the external DBs (getting most up-to-date) or to utilize the exact sequences and data we utilized for this work for reproducability. The repo is automatically set up for reproducing the same analyses in this work (see scripts/esm2_interp_data.py)
+NOTE: As many external databases are continuously updated, this repo provides ability to download directly from the external DBs (getting most up-to-date) or to utilize the exact sequences and data we utilized for this work for reproducability. The repo is automatically set up for reproducing the same analyses in this work (see scripts/plm_interp_data.py)
 
 > **PDB/DisProt Attention Analyses**
 - DisProt Sequences: Sequences come frome DisProt release_2025_06 with_ambiguous_evidences. The filtered dervived set of sequences used in this analysis are stored in data/protein_input_sets.csv and pdb_disprot.fasta
@@ -101,4 +101,4 @@ If you use this code, please cite our work:
 
 ## Contact
 
-For questions, open a [GitHub issue](https://github.com/[lnaworsk]/[esm2_interp]/issues).
+For questions, open a [GitHub issue](https://github.com/[lnaworsk]/[plm_interp]/issues).
