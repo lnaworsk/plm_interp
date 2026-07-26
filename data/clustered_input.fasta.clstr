@@ -1,0 +1,7115 @@
+>Cluster 0
+0	1023aa, >pdb_protein2120... *
+>Cluster 1
+0	1016aa, >disprot_protein1957... *
+1	162aa, >disprot_protein1967... at 43.21%
+>Cluster 2
+0	996aa, >disprot_protein595... *
+>Cluster 3
+0	990aa, >pdb_protein2118... *
+>Cluster 4
+0	989aa, >disprot_protein2059... *
+>Cluster 5
+0	968aa, >pdb_protein2119... *
+>Cluster 6
+0	962aa, >pdb_protein2117... *
+>Cluster 7
+0	419aa, >disprot_protein1122... at 100.00%
+1	405aa, >disprot_protein1123... at 100.00%
+2	956aa, >disprot_protein1124... *
+>Cluster 8
+0	69aa, >disprot_protein1479... at 100.00%
+1	929aa, >disprot_protein1480... *
+>Cluster 9
+0	922aa, >pdb_protein2116... *
+>Cluster 10
+0	191aa, >disprot_protein1391... at 100.00%
+1	595aa, >disprot_protein1393... at 100.00%
+2	905aa, >disprot_protein1394... *
+>Cluster 11
+0	905aa, >pdb_protein2115... *
+>Cluster 12
+0	230aa, >pdb_protein1736... at 96.09%
+1	864aa, >pdb_protein2113... *
+>Cluster 13
+0	837aa, >disprot_protein1437... *
+>Cluster 14
+0	828aa, >disprot_protein663... *
+>Cluster 15
+0	827aa, >pdb_protein2114... *
+>Cluster 16
+0	61aa, >pdb_protein202... at 44.26%
+1	815aa, >pdb_protein2109... *
+>Cluster 17
+0	815aa, >pdb_protein2111... *
+>Cluster 18
+0	808aa, >pdb_protein2110... *
+>Cluster 19
+0	807aa, >pdb_protein2112... *
+>Cluster 20
+0	594aa, >disprot_protein1392... at 100.00%
+1	804aa, >disprot_protein1395... *
+>Cluster 21
+0	297aa, >disprot_protein1340... at 100.00%
+1	788aa, >disprot_protein1341... *
+2	695aa, >pdb_protein2102... at 49.93%
+>Cluster 22
+0	62aa, >disprot_protein53... at 48.39%
+1	52aa, >disprot_protein484... at 40.38%
+2	53aa, >disprot_protein960... at 49.06%
+3	77aa, >disprot_protein1169... at 42.86%
+4	778aa, >disprot_protein1225... *
+5	51aa, >disprot_protein1226... at 100.00%
+6	338aa, >disprot_protein1227... at 100.00%
+7	227aa, >disprot_protein1228... at 100.00%
+8	54aa, >disprot_protein1582... at 53.70%
+9	57aa, >disprot_protein1637... at 43.86%
+>Cluster 23
+0	777aa, >disprot_protein608... *
+>Cluster 24
+0	767aa, >disprot_protein1702... *
+>Cluster 25
+0	761aa, >pdb_protein2108... *
+>Cluster 26
+0	757aa, >pdb_protein2107... *
+>Cluster 27
+0	754aa, >pdb_protein2103... *
+>Cluster 28
+0	751aa, >disprot_protein1281... *
+1	86aa, >disprot_protein1282... at 100.00%
+2	169aa, >disprot_protein1283... at 100.00%
+>Cluster 29
+0	59aa, >disprot_protein261... at 69.49%
+1	60aa, >disprot_protein262... at 70.00%
+2	750aa, >disprot_protein398... *
+3	206aa, >disprot_protein1108... at 52.43%
+4	92aa, >pdb_protein749... at 95.65%
+>Cluster 30
+0	750aa, >pdb_protein2105... *
+>Cluster 31
+0	81aa, >disprot_protein777... at 41.98%
+1	747aa, >disprot_protein1027... *
+2	54aa, >disprot_protein2117... at 40.74%
+3	70aa, >pdb_protein431... at 41.43%
+>Cluster 32
+0	149aa, >disprot_protein1146... at 100.00%
+1	730aa, >disprot_protein1147... *
+2	499aa, >disprot_protein1149... at 100.00%
+>Cluster 33
+0	730aa, >pdb_protein2106... *
+>Cluster 34
+0	727aa, >disprot_protein374... *
+1	201aa, >disprot_protein375... at 44.28%
+2	220aa, >disprot_protein376... at 100.00%
+3	212aa, >disprot_protein377... at 100.00%
+>Cluster 35
+0	727aa, >pdb_protein2104... *
+>Cluster 36
+0	720aa, >disprot_protein176... *
+1	343aa, >disprot_protein177... at 100.00%
+2	159aa, >disprot_protein178... at 100.00%
+>Cluster 37
+0	718aa, >pdb_protein2098... *
+>Cluster 38
+0	200aa, >disprot_protein2040... at 100.00%
+1	713aa, >disprot_protein2041... *
+2	226aa, >disprot_protein2042... at 100.00%
+3	75aa, >disprot_protein2043... at 100.00%
+4	300aa, >disprot_protein2044... at 100.00%
+>Cluster 39
+0	705aa, >pdb_protein2099... *
+>Cluster 40
+0	701aa, >disprot_protein362... *
+1	673aa, >disprot_protein363... at 100.00%
+2	153aa, >disprot_protein364... at 100.00%
+3	75aa, >disprot_protein365... at 100.00%
+>Cluster 41
+0	699aa, >disprot_protein717... *
+1	60aa, >disprot_protein1028... at 46.67%
+>Cluster 42
+0	699aa, >disprot_protein1326... *
+>Cluster 43
+0	56aa, >pdb_protein599... at 41.07%
+1	683aa, >pdb_protein2100... *
+>Cluster 44
+0	682aa, >pdb_protein2101... *
+>Cluster 45
+0	52aa, >disprot_protein439... at 40.38%
+1	55aa, >disprot_protein725... at 43.64%
+2	119aa, >disprot_protein730... at 100.00%
+3	674aa, >disprot_protein731... *
+4	121aa, >disprot_protein732... at 100.00%
+5	230aa, >disprot_protein733... at 100.00%
+6	320aa, >disprot_protein734... at 100.00%
+>Cluster 46
+0	665aa, >pdb_protein2094... *
+>Cluster 47
+0	652aa, >pdb_protein2095... *
+>Cluster 48
+0	649aa, >pdb_protein2093... *
+>Cluster 49
+0	642aa, >pdb_protein2096... *
+>Cluster 50
+0	640aa, >disprot_protein609... *
+1	579aa, >disprot_protein610... at 100.00%
+>Cluster 51
+0	636aa, >pdb_protein2097... *
+>Cluster 52
+0	635aa, >disprot_protein1444... *
+>Cluster 53
+0	635aa, >disprot_protein1919... *
+>Cluster 54
+0	628aa, >disprot_protein1233... *
+1	52aa, >disprot_protein1849... at 40.38%
+>Cluster 55
+0	626aa, >pdb_protein2087... *
+>Cluster 56
+0	623aa, >pdb_protein2090... *
+>Cluster 57
+0	620aa, >pdb_protein2082... *
+>Cluster 58
+0	620aa, >pdb_protein2091... *
+>Cluster 59
+0	134aa, >disprot_protein58... at 58.21%
+1	613aa, >disprot_protein356... *
+>Cluster 60
+0	610aa, >disprot_protein669... *
+1	164aa, >disprot_protein670... at 100.00%
+2	325aa, >disprot_protein671... at 100.00%
+>Cluster 61
+0	155aa, >disprot_protein1247... at 100.00%
+1	608aa, >disprot_protein1249... *
+>Cluster 62
+0	98aa, >disprot_protein555... at 93.88%
+1	605aa, >disprot_protein654... *
+2	56aa, >disprot_protein655... at 100.00%
+3	208aa, >disprot_protein656... at 100.00%
+4	397aa, >disprot_protein657... at 100.00%
+5	81aa, >pdb_protein654... at 97.53%
+>Cluster 63
+0	604aa, >pdb_protein2084... *
+>Cluster 64
+0	604aa, >pdb_protein2086... *
+>Cluster 65
+0	603aa, >disprot_protein611... *
+1	342aa, >disprot_protein612... at 100.00%
+2	112aa, >disprot_protein613... at 96.43%
+>Cluster 66
+0	169aa, >disprot_protein925... at 100.00%
+1	139aa, >disprot_protein926... at 100.00%
+2	602aa, >disprot_protein927... *
+3	153aa, >disprot_protein928... at 100.00%
+>Cluster 67
+0	78aa, >disprot_protein1025... at 100.00%
+1	601aa, >disprot_protein1026... *
+>Cluster 68
+0	600aa, >disprot_protein278... *
+>Cluster 69
+0	599aa, >pdb_protein2089... *
+>Cluster 70
+0	596aa, >pdb_protein2083... *
+>Cluster 71
+0	589aa, >pdb_protein2092... *
+>Cluster 72
+0	587aa, >pdb_protein2088... *
+>Cluster 73
+0	582aa, >pdb_protein2085... *
+>Cluster 74
+0	581aa, >disprot_protein1179... *
+1	112aa, >disprot_protein1180... at 100.00%
+2	61aa, >disprot_protein1181... at 100.00%
+3	86aa, >disprot_protein1182... at 100.00%
+4	141aa, >disprot_protein1183... at 100.00%
+5	289aa, >disprot_protein1184... at 100.00%
+6	173aa, >disprot_protein1185... at 100.00%
+>Cluster 75
+0	82aa, >disprot_protein1789... at 100.00%
+1	578aa, >disprot_protein1790... *
+>Cluster 76
+0	84aa, >disprot_protein903... at 100.00%
+1	577aa, >disprot_protein904... *
+>Cluster 77
+0	570aa, >pdb_protein2070... *
+>Cluster 78
+0	152aa, >disprot_protein180... at 100.00%
+1	569aa, >disprot_protein181... *
+2	418aa, >disprot_protein182... at 100.00%
+3	58aa, >disprot_protein606... at 98.28%
+4	55aa, >pdb_protein376... at 40.00%
+5	59aa, >pdb_protein507... at 42.37%
+6	57aa, >pdb_protein966... at 45.61%
+>Cluster 79
+0	143aa, >pdb_protein1119... at 98.60%
+1	568aa, >pdb_protein2079... *
+>Cluster 80
+0	545aa, >disprot_protein906... at 100.00%
+1	566aa, >disprot_protein907... *
+2	381aa, >disprot_protein908... at 100.00%
+3	79aa, >disprot_protein909... at 100.00%
+4	371aa, >disprot_protein910... at 100.00%
+5	395aa, >disprot_protein911... at 100.00%
+>Cluster 81
+0	564aa, >disprot_protein164... *
+1	216aa, >disprot_protein165... at 100.00%
+2	248aa, >disprot_protein166... at 100.00%
+3	459aa, >disprot_protein167... at 100.00%
+4	223aa, >disprot_protein168... at 100.00%
+>Cluster 82
+0	562aa, >pdb_protein2076... *
+>Cluster 83
+0	558aa, >pdb_protein2077... *
+>Cluster 84
+0	412aa, >pdb_protein2031... at 86.89%
+1	557aa, >pdb_protein2081... *
+>Cluster 85
+0	555aa, >disprot_protein57... *
+>Cluster 86
+0	554aa, >disprot_protein1920... *
+>Cluster 87
+0	552aa, >pdb_protein2073... *
+>Cluster 88
+0	547aa, >pdb_protein2074... *
+>Cluster 89
+0	547aa, >pdb_protein2075... *
+>Cluster 90
+0	544aa, >pdb_protein2078... *
+>Cluster 91
+0	543aa, >disprot_protein238... *
+1	331aa, >pdb_protein1956... at 98.49%
+>Cluster 92
+0	540aa, >pdb_protein2080... *
+>Cluster 93
+0	538aa, >pdb_protein2071... *
+>Cluster 94
+0	344aa, >disprot_protein308... at 100.00%
+1	307aa, >disprot_protein309... at 100.00%
+2	119aa, >disprot_protein310... at 100.00%
+3	307aa, >disprot_protein311... at 100.00%
+4	537aa, >disprot_protein312... *
+5	79aa, >disprot_protein502... at 41.77%
+6	71aa, >disprot_protein917... at 40.85%
+7	56aa, >disprot_protein2030... at 44.64%
+>Cluster 95
+0	51aa, >disprot_protein1365... at 43.14%
+1	534aa, >pdb_protein2072... *
+>Cluster 96
+0	527aa, >pdb_protein2063... *
+>Cluster 97
+0	507aa, >disprot_protein629... at 100.00%
+1	163aa, >disprot_protein630... at 100.00%
+2	526aa, >disprot_protein631... *
+3	86aa, >disprot_protein632... at 100.00%
+4	214aa, >disprot_protein633... at 100.00%
+5	422aa, >disprot_protein634... at 100.00%
+6	117aa, >disprot_protein635... at 100.00%
+7	57aa, >disprot_protein636... at 100.00%
+8	211aa, >disprot_protein637... at 100.00%
+9	64aa, >disprot_protein638... at 100.00%
+10	306aa, >disprot_protein639... at 100.00%
+11	70aa, >disprot_protein916... at 52.86%
+12	64aa, >disprot_protein2031... at 57.81%
+>Cluster 98
+0	275aa, >disprot_protein1396... at 100.00%
+1	522aa, >disprot_protein1397... *
+2	163aa, >disprot_protein1398... at 100.00%
+>Cluster 99
+0	519aa, >pdb_protein2069... *
+>Cluster 100
+0	186aa, >disprot_protein33... at 100.00%
+1	64aa, >disprot_protein34... at 100.00%
+2	518aa, >disprot_protein35... *
+3	500aa, >disprot_protein36... at 100.00%
+4	91aa, >pdb_protein189... at 96.70%
+5	81aa, >pdb_protein222... at 93.83%
+6	91aa, >pdb_protein386... at 93.41%
+7	74aa, >pdb_protein850... at 100.00%
+8	94aa, >pdb_protein870... at 40.43%
+9	72aa, >pdb_protein977... at 100.00%
+>Cluster 101
+0	516aa, >pdb_protein2067... *
+>Cluster 102
+0	506aa, >pdb_protein2068... *
+>Cluster 103
+0	503aa, >pdb_protein2065... *
+>Cluster 104
+0	500aa, >pdb_protein2066... *
+>Cluster 105
+0	450aa, >pdb_protein2055... at 40.44%
+1	491aa, >pdb_protein2064... *
+>Cluster 106
+0	488aa, >disprot_protein1958... *
+>Cluster 107
+0	272aa, >disprot_protein1251... at 56.62%
+1	307aa, >disprot_protein1328... at 100.00%
+2	485aa, >disprot_protein1329... *
+3	78aa, >pdb_protein277... at 43.59%
+4	69aa, >pdb_protein284... at 100.00%
+>Cluster 108
+0	484aa, >pdb_protein2059... *
+>Cluster 109
+0	481aa, >pdb_protein2047... *
+>Cluster 110
+0	105aa, >disprot_protein707... at 100.00%
+1	480aa, >pdb_protein2049... *
+>Cluster 111
+0	478aa, >pdb_protein2048... *
+>Cluster 112
+0	477aa, >disprot_protein1911... *
+>Cluster 113
+0	477aa, >pdb_protein2045... *
+>Cluster 114
+0	470aa, >disprot_protein985... at 100.00%
+1	471aa, >disprot_protein986... *
+2	130aa, >disprot_protein987... at 100.00%
+3	62aa, >disprot_protein988... at 100.00%
+>Cluster 115
+0	468aa, >pdb_protein2046... *
+>Cluster 116
+0	468aa, >pdb_protein2053... *
+>Cluster 117
+0	135aa, >disprot_protein106... at 100.00%
+1	352aa, >disprot_protein1724... at 45.45%
+2	467aa, >disprot_protein2023... *
+3	159aa, >disprot_protein2024... at 100.00%
+4	72aa, >pdb_protein904... at 65.28%
+>Cluster 118
+0	465aa, >disprot_protein1248... *
+>Cluster 119
+0	465aa, >pdb_protein2044... *
+>Cluster 120
+0	462aa, >disprot_protein753... *
+>Cluster 121
+0	462aa, >disprot_protein1057... *
+1	155aa, >disprot_protein1058... at 100.00%
+>Cluster 122
+0	462aa, >pdb_protein2060... *
+>Cluster 123
+0	458aa, >pdb_protein2043... *
+>Cluster 124
+0	406aa, >disprot_protein426... at 57.39%
+1	100aa, >disprot_protein427... at 80.00%
+2	404aa, >disprot_protein428... at 100.00%
+3	111aa, >disprot_protein429... at 100.00%
+4	107aa, >disprot_protein430... at 99.07%
+5	456aa, >disprot_protein1514... at 60.09%
+6	457aa, >disprot_protein1515... *
+7	355aa, >disprot_protein1516... at 100.00%
+8	405aa, >disprot_protein1517... at 100.00%
+9	448aa, >disprot_protein1765... at 91.74%
+10	450aa, >disprot_protein1766... at 54.22%
+>Cluster 125
+0	455aa, >disprot_protein378... *
+1	54aa, >disprot_protein706... at 40.74%
+>Cluster 126
+0	455aa, >pdb_protein2061... *
+>Cluster 127
+0	454aa, >disprot_protein1606... *
+>Cluster 128
+0	452aa, >disprot_protein1475... *
+1	308aa, >disprot_protein1476... at 100.00%
+>Cluster 129
+0	451aa, >pdb_protein2050... *
+>Cluster 130
+0	451aa, >pdb_protein2051... *
+>Cluster 131
+0	451aa, >pdb_protein2054... *
+>Cluster 132
+0	449aa, >disprot_protein103... *
+>Cluster 133
+0	226aa, >disprot_protein1342... at 61.50%
+1	144aa, >pdb_protein1016... at 50.69%
+2	134aa, >pdb_protein1018... at 54.48%
+3	125aa, >pdb_protein1023... at 48.00%
+4	124aa, >pdb_protein1028... at 57.26%
+5	137aa, >pdb_protein1042... at 49.64%
+6	133aa, >pdb_protein1057... at 52.63%
+7	122aa, >pdb_protein1123... at 44.26%
+8	122aa, >pdb_protein1137... at 50.00%
+9	133aa, >pdb_protein1151... at 57.89%
+10	133aa, >pdb_protein1153... at 54.14%
+11	118aa, >pdb_protein1163... at 68.64%
+12	125aa, >pdb_protein1164... at 60.80%
+13	121aa, >pdb_protein1171... at 66.12%
+14	118aa, >pdb_protein1179... at 57.63%
+15	144aa, >pdb_protein1203... at 53.47%
+16	118aa, >pdb_protein1221... at 70.34%
+17	123aa, >pdb_protein1243... at 59.35%
+18	136aa, >pdb_protein1264... at 53.68%
+19	123aa, >pdb_protein1267... at 59.35%
+20	121aa, >pdb_protein1270... at 67.77%
+21	126aa, >pdb_protein1303... at 51.59%
+22	127aa, >pdb_protein1308... at 52.76%
+23	127aa, >pdb_protein1311... at 71.65%
+24	121aa, >pdb_protein1332... at 47.93%
+25	136aa, >pdb_protein1339... at 49.26%
+26	142aa, >pdb_protein1344... at 50.00%
+27	134aa, >pdb_protein1382... at 52.99%
+28	120aa, >pdb_protein1419... at 60.83%
+29	172aa, >pdb_protein1546... at 59.88%
+30	148aa, >pdb_protein1609... at 52.03%
+31	224aa, >pdb_protein1651... at 61.61%
+32	223aa, >pdb_protein1653... at 51.12%
+33	225aa, >pdb_protein1655... at 55.56%
+34	227aa, >pdb_protein1657... at 58.15%
+35	209aa, >pdb_protein1660... at 64.11%
+36	219aa, >pdb_protein1663... at 71.23%
+37	230aa, >pdb_protein1666... at 53.91%
+38	218aa, >pdb_protein1667... at 55.05%
+39	231aa, >pdb_protein1672... at 63.20%
+40	237aa, >pdb_protein1690... at 61.18%
+41	220aa, >pdb_protein1702... at 68.64%
+42	242aa, >pdb_protein1704... at 60.74%
+43	234aa, >pdb_protein1709... at 54.70%
+44	230aa, >pdb_protein1711... at 53.91%
+45	229aa, >pdb_protein1718... at 51.09%
+46	218aa, >pdb_protein1719... at 56.88%
+47	225aa, >pdb_protein1723... at 54.67%
+48	223aa, >pdb_protein1729... at 65.02%
+49	229aa, >pdb_protein1732... at 45.85%
+50	223aa, >pdb_protein1733... at 64.13%
+51	221aa, >pdb_protein1743... at 85.97%
+52	222aa, >pdb_protein1747... at 72.97%
+53	225aa, >pdb_protein1749... at 63.11%
+54	238aa, >pdb_protein1750... at 55.88%
+55	207aa, >pdb_protein1763... at 65.22%
+56	229aa, >pdb_protein1771... at 52.84%
+57	231aa, >pdb_protein1777... at 63.64%
+58	227aa, >pdb_protein1779... at 55.51%
+59	234aa, >pdb_protein1786... at 61.54%
+60	219aa, >pdb_protein1789... at 75.34%
+61	232aa, >pdb_protein1790... at 55.60%
+62	211aa, >pdb_protein1796... at 63.51%
+63	233aa, >pdb_protein1798... at 59.23%
+64	260aa, >pdb_protein1879... at 56.54%
+65	447aa, >pdb_protein2052... *
+>Cluster 134
+0	447aa, >pdb_protein2056... *
+>Cluster 135
+0	446aa, >pdb_protein2057... *
+>Cluster 136
+0	446aa, >pdb_protein2062... *
+>Cluster 137
+0	445aa, >disprot_protein2084... *
+>Cluster 138
+0	444aa, >pdb_protein2058... *
+>Cluster 139
+0	441aa, >disprot_protein614... *
+>Cluster 140
+0	441aa, >disprot_protein627... *
+>Cluster 141
+0	440aa, >disprot_protein1596... *
+1	279aa, >disprot_protein1597... at 100.00%
+>Cluster 142
+0	440aa, >pdb_protein2042... *
+>Cluster 143
+0	436aa, >pdb_protein2027... *
+>Cluster 144
+0	436aa, >pdb_protein2038... *
+>Cluster 145
+0	434aa, >disprot_protein1820... *
+>Cluster 146
+0	432aa, >disprot_protein204... *
+1	179aa, >disprot_protein1101... at 98.32%
+2	72aa, >disprot_protein1151... at 43.06%
+3	55aa, >disprot_protein1774... at 40.00%
+>Cluster 147
+0	432aa, >pdb_protein2041... *
+>Cluster 148
+0	431aa, >disprot_protein154... *
+1	198aa, >disprot_protein749... at 93.43%
+2	188aa, >disprot_protein750... at 98.40%
+3	83aa, >disprot_protein814... at 71.08%
+4	255aa, >disprot_protein1316... at 80.39%
+5	290aa, >disprot_protein1332... at 64.83%
+6	168aa, >disprot_protein1333... at 94.64%
+7	278aa, >disprot_protein1334... at 68.71%
+8	288aa, >disprot_protein1335... at 66.67%
+9	279aa, >disprot_protein1336... at 68.46%
+>Cluster 149
+0	431aa, >disprot_protein708... *
+>Cluster 150
+0	430aa, >pdb_protein2023... *
+>Cluster 151
+0	429aa, >pdb_protein2040... *
+>Cluster 152
+0	428aa, >pdb_protein2033... *
+>Cluster 153
+0	426aa, >disprot_protein1284... *
+>Cluster 154
+0	426aa, >disprot_protein1806... *
+>Cluster 155
+0	423aa, >disprot_protein1303... *
+>Cluster 156
+0	422aa, >disprot_protein605... *
+>Cluster 157
+0	422aa, >pdb_protein2024... *
+>Cluster 158
+0	422aa, >pdb_protein2025... *
+>Cluster 159
+0	422aa, >pdb_protein2026... *
+>Cluster 160
+0	225aa, >disprot_protein1361... at 100.00%
+1	421aa, >disprot_protein1362... *
+>Cluster 161
+0	417aa, >pdb_protein2037... *
+>Cluster 162
+0	416aa, >pdb_protein2021... *
+>Cluster 163
+0	415aa, >pdb_protein2035... *
+>Cluster 164
+0	414aa, >disprot_protein794... *
+1	101aa, >disprot_protein1808... at 47.52%
+>Cluster 165
+0	414aa, >disprot_protein982... *
+>Cluster 166
+0	411aa, >pdb_protein2029... *
+>Cluster 167
+0	410aa, >pdb_protein2028... *
+>Cluster 168
+0	408aa, >pdb_protein2039... *
+>Cluster 169
+0	407aa, >disprot_protein1106... *
+1	52aa, >disprot_protein1107... at 100.00%
+>Cluster 170
+0	407aa, >pdb_protein2032... *
+>Cluster 171
+0	402aa, >pdb_protein2022... *
+>Cluster 172
+0	401aa, >disprot_protein577... *
+>Cluster 173
+0	51aa, >disprot_protein245... at 100.00%
+1	400aa, >disprot_protein246... *
+2	290aa, >disprot_protein247... at 100.00%
+3	110aa, >disprot_protein248... at 100.00%
+4	59aa, >disprot_protein441... at 40.68%
+>Cluster 174
+0	400aa, >pdb_protein2030... *
+>Cluster 175
+0	398aa, >pdb_protein2017... *
+>Cluster 176
+0	82aa, >pdb_protein92... at 45.12%
+1	378aa, >pdb_protein2000... at 98.94%
+2	398aa, >pdb_protein2019... *
+>Cluster 177
+0	396aa, >pdb_protein2018... *
+>Cluster 178
+0	396aa, >pdb_protein2020... *
+>Cluster 179
+0	395aa, >disprot_protein110... *
+>Cluster 180
+0	193aa, >disprot_protein943... at 100.00%
+1	395aa, >disprot_protein944... *
+>Cluster 181
+0	392aa, >pdb_protein2034... *
+>Cluster 182
+0	392aa, >pdb_protein2036... *
+>Cluster 183
+0	388aa, >pdb_protein1991... *
+>Cluster 184
+0	388aa, >pdb_protein2006... *
+>Cluster 185
+0	384aa, >disprot_protein318... *
+1	74aa, >disprot_protein319... at 100.00%
+2	66aa, >disprot_protein320... at 100.00%
+3	350aa, >disprot_protein321... at 54.29%
+>Cluster 186
+0	383aa, >pdb_protein2004... *
+>Cluster 187
+0	382aa, >pdb_protein1996... *
+>Cluster 188
+0	65aa, >disprot_protein803... at 41.54%
+1	381aa, >disprot_protein1619... *
+2	294aa, >disprot_protein1620... at 100.00%
+>Cluster 189
+0	381aa, >pdb_protein1989... *
+>Cluster 190
+0	105aa, >disprot_protein1929... at 100.00%
+1	376aa, >disprot_protein1931... at 100.00%
+2	380aa, >disprot_protein1932... *
+>Cluster 191
+0	380aa, >pdb_protein2010... *
+>Cluster 192
+0	378aa, >disprot_protein379... *
+>Cluster 193
+0	69aa, >disprot_protein1614... at 42.03%
+1	378aa, >disprot_protein1615... *
+2	69aa, >disprot_protein1616... at 100.00%
+3	117aa, >disprot_protein1617... at 100.00%
+4	87aa, >disprot_protein1618... at 96.55%
+>Cluster 194
+0	377aa, >pdb_protein2001... *
+>Cluster 195
+0	377aa, >pdb_protein2009... *
+1	375aa, >pdb_protein2011... at 93.07%
+>Cluster 196
+0	373aa, >pdb_protein2016... *
+>Cluster 197
+0	372aa, >disprot_protein1352... *
+1	92aa, >pdb_protein52... at 86.96%
+>Cluster 198
+0	253aa, >disprot_protein1635... at 100.00%
+1	372aa, >disprot_protein1636... *
+>Cluster 199
+0	371aa, >disprot_protein526... *
+>Cluster 200
+0	370aa, >pdb_protein2015... *
+>Cluster 201
+0	367aa, >pdb_protein1997... *
+>Cluster 202
+0	367aa, >pdb_protein1999... *
+>Cluster 203
+0	365aa, >disprot_protein1536... *
+1	82aa, >disprot_protein1538... at 57.32%
+>Cluster 204
+0	363aa, >disprot_protein644... *
+1	161aa, >disprot_protein645... at 100.00%
+2	65aa, >disprot_protein646... at 100.00%
+3	52aa, >disprot_protein647... at 100.00%
+>Cluster 205
+0	363aa, >pdb_protein1987... *
+>Cluster 206
+0	362aa, >disprot_protein700... *
+1	209aa, >disprot_protein702... at 100.00%
+>Cluster 207
+0	362aa, >pdb_protein1992... *
+>Cluster 208
+0	360aa, >pdb_protein2005... *
+>Cluster 209
+0	359aa, >disprot_protein720... *
+>Cluster 210
+0	51aa, >disprot_protein62... at 45.10%
+1	358aa, >disprot_protein1054... *
+>Cluster 211
+0	358aa, >disprot_protein1240... *
+1	78aa, >pdb_protein165... at 84.62%
+2	69aa, >pdb_protein614... at 43.48%
+>Cluster 212
+0	358aa, >pdb_protein1998... *
+>Cluster 213
+0	357aa, >pdb_protein1995... *
+>Cluster 214
+0	357aa, >pdb_protein2013... *
+>Cluster 215
+0	51aa, >disprot_protein1275... at 100.00%
+1	353aa, >disprot_protein1276... *
+2	259aa, >disprot_protein1277... at 100.00%
+>Cluster 216
+0	353aa, >pdb_protein1985... *
+>Cluster 217
+0	352aa, >pdb_protein1986... *
+>Cluster 218
+0	351aa, >pdb_protein1990... *
+>Cluster 219
+0	350aa, >disprot_protein1152... *
+>Cluster 220
+0	350aa, >disprot_protein2072... *
+>Cluster 221
+0	350aa, >pdb_protein1994... *
+>Cluster 222
+0	61aa, >pdb_protein8... at 55.74%
+1	60aa, >pdb_protein25... at 50.00%
+2	61aa, >pdb_protein33... at 59.02%
+3	57aa, >pdb_protein198... at 56.14%
+4	57aa, >pdb_protein236... at 50.88%
+5	88aa, >pdb_protein301... at 56.82%
+6	99aa, >pdb_protein329... at 58.59%
+7	70aa, >pdb_protein345... at 48.57%
+8	79aa, >pdb_protein405... at 55.70%
+9	99aa, >pdb_protein406... at 47.47%
+10	91aa, >pdb_protein415... at 54.95%
+11	71aa, >pdb_protein493... at 50.70%
+12	92aa, >pdb_protein512... at 51.09%
+13	96aa, >pdb_protein514... at 46.88%
+14	70aa, >pdb_protein533... at 55.71%
+15	85aa, >pdb_protein543... at 49.41%
+16	99aa, >pdb_protein568... at 51.52%
+17	60aa, >pdb_protein613... at 51.67%
+18	70aa, >pdb_protein620... at 51.43%
+19	51aa, >pdb_protein644... at 62.75%
+20	77aa, >pdb_protein652... at 58.44%
+21	57aa, >pdb_protein678... at 50.88%
+22	74aa, >pdb_protein679... at 54.05%
+23	58aa, >pdb_protein735... at 51.72%
+24	59aa, >pdb_protein767... at 49.15%
+25	52aa, >pdb_protein779... at 57.69%
+26	61aa, >pdb_protein789... at 55.74%
+27	60aa, >pdb_protein791... at 61.67%
+28	60aa, >pdb_protein800... at 55.00%
+29	62aa, >pdb_protein862... at 53.23%
+30	85aa, >pdb_protein886... at 52.94%
+31	73aa, >pdb_protein925... at 52.05%
+32	67aa, >pdb_protein951... at 55.22%
+33	59aa, >pdb_protein959... at 57.63%
+34	114aa, >pdb_protein1069... at 97.37%
+35	147aa, >pdb_protein1286... at 45.58%
+36	138aa, >pdb_protein1370... at 53.62%
+37	147aa, >pdb_protein1415... at 51.70%
+38	133aa, >pdb_protein1421... at 55.64%
+39	149aa, >pdb_protein1448... at 48.99%
+40	169aa, >pdb_protein1450... at 50.89%
+41	173aa, >pdb_protein1542... at 46.82%
+42	169aa, >pdb_protein1552... at 50.30%
+43	157aa, >pdb_protein1593... at 55.41%
+44	205aa, >pdb_protein1809... at 49.76%
+45	347aa, >pdb_protein1988... *
+>Cluster 223
+0	347aa, >pdb_protein2003... *
+>Cluster 224
+0	347aa, >pdb_protein2007... *
+>Cluster 225
+0	345aa, >disprot_protein337... *
+>Cluster 226
+0	345aa, >pdb_protein2012... *
+>Cluster 227
+0	122aa, >disprot_protein191... at 100.00%
+1	307aa, >disprot_protein196... at 100.00%
+2	344aa, >disprot_protein197... *
+>Cluster 228
+0	344aa, >disprot_protein1507... *
+>Cluster 229
+0	343aa, >pdb_protein2002... *
+>Cluster 230
+0	342aa, >disprot_protein1216... *
+1	164aa, >disprot_protein1217... at 100.00%
+>Cluster 231
+0	342aa, >pdb_protein1993... *
+>Cluster 232
+0	341aa, >disprot_protein457... *
+>Cluster 233
+0	341aa, >disprot_protein1708... *
+1	52aa, >pdb_protein633... at 40.38%
+>Cluster 234
+0	341aa, >pdb_protein2008... *
+>Cluster 235
+0	341aa, >pdb_protein2014... *
+>Cluster 236
+0	56aa, >disprot_protein665... at 42.86%
+1	340aa, >disprot_protein1404... *
+>Cluster 237
+0	58aa, >pdb_protein572... at 53.45%
+1	340aa, >pdb_protein1931... *
+>Cluster 238
+0	340aa, >pdb_protein1945... *
+>Cluster 239
+0	339aa, >pdb_protein1955... *
+>Cluster 240
+0	339aa, >pdb_protein1984... *
+>Cluster 241
+0	338aa, >disprot_protein1317... *
+>Cluster 242
+0	338aa, >disprot_protein1558... *
+1	95aa, >disprot_protein1559... at 100.00%
+2	91aa, >disprot_protein1560... at 100.00%
+3	114aa, >disprot_protein1561... at 100.00%
+>Cluster 243
+0	338aa, >pdb_protein1962... *
+>Cluster 244
+0	338aa, >pdb_protein1966... *
+>Cluster 245
+0	337aa, >pdb_protein1968... *
+>Cluster 246
+0	337aa, >pdb_protein1977... *
+>Cluster 247
+0	336aa, >disprot_protein1256... *
+>Cluster 248
+0	336aa, >pdb_protein1928... *
+>Cluster 249
+0	336aa, >pdb_protein1936... *
+>Cluster 250
+0	336aa, >pdb_protein1952... *
+>Cluster 251
+0	334aa, >disprot_protein328... *
+>Cluster 252
+0	332aa, >disprot_protein538... *
+1	290aa, >disprot_protein539... at 100.00%
+>Cluster 253
+0	331aa, >disprot_protein1036... *
+>Cluster 254
+0	331aa, >pdb_protein1934... *
+>Cluster 255
+0	330aa, >disprot_protein913... *
+1	66aa, >disprot_protein1134... at 42.42%
+>Cluster 256
+0	330aa, >disprot_protein2005... *
+>Cluster 257
+0	330aa, >disprot_protein2049... *
+1	111aa, >disprot_protein2050... at 100.00%
+>Cluster 258
+0	330aa, >pdb_protein1927... *
+>Cluster 259
+0	330aa, >pdb_protein1960... *
+>Cluster 260
+0	330aa, >pdb_protein1963... *
+>Cluster 261
+0	71aa, >pdb_protein430... at 47.89%
+1	330aa, >pdb_protein1967... *
+>Cluster 262
+0	330aa, >pdb_protein1983... *
+>Cluster 263
+0	329aa, >pdb_protein1926... *
+>Cluster 264
+0	329aa, >pdb_protein1959... *
+>Cluster 265
+0	328aa, >disprot_protein1219... *
+>Cluster 266
+0	328aa, >pdb_protein1976... *
+>Cluster 267
+0	280aa, >disprot_protein588... at 47.50%
+1	327aa, >disprot_protein1968... *
+>Cluster 268
+0	327aa, >pdb_protein1929... *
+>Cluster 269
+0	327aa, >pdb_protein1932... *
+>Cluster 270
+0	326aa, >disprot_protein1855... *
+1	113aa, >pdb_protein1403... at 62.83%
+>Cluster 271
+0	326aa, >pdb_protein1933... *
+>Cluster 272
+0	60aa, >disprot_protein1611... at 41.67%
+1	326aa, >pdb_protein1948... *
+>Cluster 273
+0	325aa, >pdb_protein1938... *
+>Cluster 274
+0	325aa, >pdb_protein1965... *
+1	308aa, >pdb_protein1969... at 42.21%
+>Cluster 275
+0	324aa, >disprot_protein297... *
+1	110aa, >disprot_protein298... at 100.00%
+2	100aa, >disprot_protein299... at 100.00%
+3	197aa, >disprot_protein300... at 100.00%
+4	268aa, >disprot_protein301... at 100.00%
+>Cluster 276
+0	108aa, >pdb_protein1265... at 61.11%
+1	324aa, >pdb_protein1973... *
+>Cluster 277
+0	323aa, >pdb_protein1930... *
+>Cluster 278
+0	322aa, >disprot_protein854... *
+>Cluster 279
+0	322aa, >pdb_protein1950... *
+>Cluster 280
+0	306aa, >pdb_protein1943... at 97.06%
+1	321aa, >pdb_protein1958... *
+>Cluster 281
+0	320aa, >disprot_protein1224... *
+>Cluster 282
+0	320aa, >pdb_protein1935... *
+>Cluster 283
+0	320aa, >pdb_protein1964... *
+>Cluster 284
+0	320aa, >pdb_protein1980... *
+>Cluster 285
+0	104aa, >disprot_protein333... at 100.00%
+1	152aa, >disprot_protein334... at 100.00%
+2	70aa, >disprot_protein335... at 100.00%
+3	319aa, >disprot_protein336... *
+>Cluster 286
+0	106aa, >disprot_protein130... at 43.40%
+1	319aa, >disprot_protein466... *
+2	66aa, >disprot_protein1402... at 45.45%
+3	104aa, >disprot_protein2082... at 50.96%
+>Cluster 287
+0	318aa, >disprot_protein200... *
+>Cluster 288
+0	318aa, >disprot_protein827... *
+>Cluster 289
+0	317aa, >disprot_protein243... *
+1	60aa, >disprot_protein244... at 100.00%
+2	54aa, >disprot_protein547... at 44.44%
+>Cluster 290
+0	317aa, >disprot_protein984... *
+>Cluster 291
+0	317aa, >pdb_protein1939... *
+>Cluster 292
+0	316aa, >disprot_protein12... *
+1	71aa, >disprot_protein13... at 100.00%
+2	61aa, >disprot_protein14... at 100.00%
+3	76aa, >disprot_protein18... at 44.74%
+4	69aa, >disprot_protein19... at 47.83%
+5	84aa, >disprot_protein20... at 46.43%
+6	60aa, >disprot_protein22... at 41.67%
+7	52aa, >disprot_protein744... at 44.23%
+>Cluster 293
+0	72aa, >disprot_protein1985... at 48.61%
+1	63aa, >disprot_protein1986... at 41.27%
+2	86aa, >disprot_protein1987... at 56.98%
+3	52aa, >disprot_protein1988... at 50.00%
+4	66aa, >disprot_protein1989... at 43.94%
+5	84aa, >disprot_protein1990... at 55.95%
+6	316aa, >pdb_protein1972... *
+>Cluster 294
+0	315aa, >pdb_protein1975... *
+>Cluster 295
+0	314aa, >disprot_protein169... *
+1	298aa, >disprot_protein170... at 100.00%
+2	278aa, >disprot_protein826... at 64.75%
+>Cluster 296
+0	314aa, >pdb_protein1942... *
+>Cluster 297
+0	314aa, >pdb_protein1961... *
+>Cluster 298
+0	314aa, >pdb_protein1978... *
+>Cluster 299
+0	310aa, >disprot_protein862... *
+1	109aa, >disprot_protein863... at 100.00%
+>Cluster 300
+0	310aa, >disprot_protein1337... *
+1	226aa, >disprot_protein1338... at 100.00%
+>Cluster 301
+0	310aa, >disprot_protein1339... *
+>Cluster 302
+0	309aa, >disprot_protein205... *
+1	54aa, >disprot_protein347... at 40.74%
+>Cluster 303
+0	298aa, >disprot_protein1574... at 67.79%
+1	309aa, >disprot_protein1822... *
+>Cluster 304
+0	54aa, >disprot_protein85... at 40.74%
+1	308aa, >disprot_protein199... *
+2	56aa, >disprot_protein1594... at 41.07%
+>Cluster 305
+0	308aa, >disprot_protein1010... *
+>Cluster 306
+0	308aa, >pdb_protein1970... *
+>Cluster 307
+0	307aa, >pdb_protein1941... *
+>Cluster 308
+0	306aa, >pdb_protein1953... *
+>Cluster 309
+0	306aa, >pdb_protein1979... *
+>Cluster 310
+0	230aa, >disprot_protein111... at 100.00%
+1	300aa, >disprot_protein112... at 100.00%
+2	229aa, >disprot_protein113... at 100.00%
+3	304aa, >disprot_protein114... *
+>Cluster 311
+0	304aa, >disprot_protein948... *
+>Cluster 312
+0	303aa, >pdb_protein1949... *
+>Cluster 313
+0	301aa, >disprot_protein839... *
+1	66aa, >disprot_protein1038... at 40.91%
+>Cluster 314
+0	301aa, >disprot_protein840... *
+>Cluster 315
+0	301aa, >disprot_protein1322... *
+1	300aa, >disprot_protein1323... at 100.00%
+2	222aa, >disprot_protein1324... at 100.00%
+>Cluster 316
+0	301aa, >pdb_protein1944... *
+1	299aa, >pdb_protein1982... at 49.50%
+>Cluster 317
+0	301aa, >pdb_protein1954... *
+>Cluster 318
+0	72aa, >disprot_protein837... at 100.00%
+1	300aa, >disprot_protein838... *
+>Cluster 319
+0	300aa, >pdb_protein1974... *
+>Cluster 320
+0	299aa, >pdb_protein1971... *
+>Cluster 321
+0	62aa, >disprot_protein1889... at 41.94%
+1	298aa, >pdb_protein1940... *
+>Cluster 322
+0	298aa, >pdb_protein1946... *
+>Cluster 323
+0	298aa, >pdb_protein1951... *
+>Cluster 324
+0	297aa, >disprot_protein974... *
+>Cluster 325
+0	296aa, >disprot_protein1609... *
+>Cluster 326
+0	295aa, >disprot_protein1222... *
+>Cluster 327
+0	295aa, >disprot_protein1373... *
+>Cluster 328
+0	295aa, >disprot_protein1621... *
+1	225aa, >disprot_protein1622... at 100.00%
+>Cluster 329
+0	295aa, >pdb_protein1937... *
+>Cluster 330
+0	113aa, >pdb_protein1014... at 68.14%
+1	104aa, >pdb_protein1121... at 56.73%
+2	112aa, >pdb_protein1142... at 64.29%
+3	113aa, >pdb_protein1197... at 43.36%
+4	108aa, >pdb_protein1199... at 55.56%
+5	108aa, >pdb_protein1224... at 55.56%
+6	120aa, >pdb_protein1248... at 44.17%
+7	110aa, >pdb_protein1285... at 42.73%
+8	110aa, >pdb_protein1316... at 40.00%
+9	109aa, >pdb_protein1387... at 55.05%
+10	124aa, >pdb_protein1394... at 56.45%
+11	107aa, >pdb_protein1401... at 52.34%
+12	295aa, >pdb_protein1981... *
+>Cluster 331
+0	294aa, >disprot_protein104... *
+>Cluster 332
+0	294aa, >disprot_protein224... *
+>Cluster 333
+0	293aa, >pdb_protein1925... *
+>Cluster 334
+0	293aa, >pdb_protein1947... *
+>Cluster 335
+0	293aa, >pdb_protein1957... *
+>Cluster 336
+0	115aa, >disprot_protein778... at 43.48%
+1	112aa, >disprot_protein779... at 43.75%
+2	140aa, >disprot_protein1841... at 42.14%
+3	292aa, >disprot_protein1871... *
+4	72aa, >pdb_protein733... at 40.28%
+>Cluster 337
+0	292aa, >pdb_protein1907... *
+>Cluster 338
+0	291aa, >disprot_protein1634... *
+>Cluster 339
+0	260aa, >pdb_protein1839... at 42.69%
+1	291aa, >pdb_protein1855... *
+>Cluster 340
+0	291aa, >pdb_protein1874... *
+>Cluster 341
+0	290aa, >disprot_protein1186... *
+>Cluster 342
+0	54aa, >disprot_protein1445... at 100.00%
+1	290aa, >disprot_protein1446... *
+>Cluster 343
+0	289aa, >disprot_protein370... *
+1	147aa, >disprot_protein371... at 100.00%
+>Cluster 344
+0	91aa, >disprot_protein685... at 100.00%
+1	139aa, >disprot_protein686... at 100.00%
+2	65aa, >disprot_protein687... at 100.00%
+3	137aa, >disprot_protein1075... at 100.00%
+4	99aa, >disprot_protein1076... at 100.00%
+5	289aa, >disprot_protein1077... *
+>Cluster 345
+0	288aa, >disprot_protein737... *
+>Cluster 346
+0	288aa, >disprot_protein1288... *
+>Cluster 347
+0	288aa, >disprot_protein1719... *
+>Cluster 348
+0	288aa, >disprot_protein2101... *
+>Cluster 349
+0	288aa, >pdb_protein1843... *
+>Cluster 350
+0	288aa, >pdb_protein1875... *
+>Cluster 351
+0	288aa, >pdb_protein1904... *
+>Cluster 352
+0	283aa, >disprot_protein1827... at 100.00%
+1	285aa, >disprot_protein1828... at 100.00%
+2	286aa, >disprot_protein1829... *
+3	205aa, >disprot_protein1830... at 45.37%
+>Cluster 353
+0	286aa, >pdb_protein1854... *
+>Cluster 354
+0	286aa, >pdb_protein1868... *
+>Cluster 355
+0	286aa, >pdb_protein1888... *
+>Cluster 356
+0	286aa, >pdb_protein1892... *
+>Cluster 357
+0	286aa, >pdb_protein1919... *
+>Cluster 358
+0	285aa, >disprot_protein1795... *
+>Cluster 359
+0	285aa, >pdb_protein1842... *
+>Cluster 360
+0	285aa, >pdb_protein1905... *
+>Cluster 361
+0	285aa, >pdb_protein1918... *
+>Cluster 362
+0	90aa, >disprot_protein394... at 100.00%
+1	284aa, >disprot_protein395... *
+2	160aa, >disprot_protein396... at 100.00%
+>Cluster 363
+0	284aa, >pdb_protein1882... *
+>Cluster 364
+0	284aa, >pdb_protein1924... *
+>Cluster 365
+0	283aa, >disprot_protein1311... *
+>Cluster 366
+0	81aa, >disprot_protein471... at 41.98%
+1	282aa, >disprot_protein895... *
+>Cluster 367
+0	282aa, >disprot_protein1312... *
+>Cluster 368
+0	282aa, >pdb_protein1897... *
+>Cluster 369
+0	281aa, >disprot_protein1371... *
+>Cluster 370
+0	281aa, >pdb_protein1886... *
+1	258aa, >pdb_protein1900... at 65.12%
+2	267aa, >pdb_protein1906... at 62.55%
+>Cluster 371
+0	280aa, >disprot_protein192... *
+1	129aa, >disprot_protein193... at 65.89%
+2	79aa, >disprot_protein194... at 83.54%
+3	91aa, >disprot_protein195... at 100.00%
+>Cluster 372
+0	280aa, >disprot_protein822... *
+1	268aa, >disprot_protein824... at 100.00%
+>Cluster 373
+0	280aa, >pdb_protein1876... *
+>Cluster 374
+0	279aa, >pdb_protein1848... *
+>Cluster 375
+0	278aa, >pdb_protein1863... *
+1	260aa, >pdb_protein1866... at 57.69%
+2	277aa, >pdb_protein1908... at 84.84%
+3	278aa, >pdb_protein1920... at 72.30%
+>Cluster 376
+0	278aa, >pdb_protein1877... *
+>Cluster 377
+0	277aa, >disprot_protein1330... *
+>Cluster 378
+0	276aa, >disprot_protein866... *
+>Cluster 379
+0	276aa, >pdb_protein1901... *
+>Cluster 380
+0	276aa, >pdb_protein1910... *
+>Cluster 381
+0	54aa, >disprot_protein722... at 40.74%
+1	275aa, >disprot_protein1344... *
+>Cluster 382
+0	275aa, >disprot_protein2039... *
+>Cluster 383
+0	275aa, >pdb_protein1853... *
+>Cluster 384
+0	275aa, >pdb_protein1898... *
+>Cluster 385
+0	274aa, >pdb_protein1883... *
+>Cluster 386
+0	273aa, >pdb_protein1836... *
+>Cluster 387
+0	273aa, >pdb_protein1837... *
+>Cluster 388
+0	273aa, >pdb_protein1878... *
+>Cluster 389
+0	218aa, >disprot_protein601... at 46.33%
+1	272aa, >disprot_protein1198... *
+2	270aa, >disprot_protein1199... at 100.00%
+3	56aa, >pdb_protein273... at 41.07%
+>Cluster 390
+0	75aa, >disprot_protein1424... at 100.00%
+1	271aa, >disprot_protein1425... *
+>Cluster 391
+0	271aa, >disprot_protein1860... *
+>Cluster 392
+0	271aa, >pdb_protein1867... *
+>Cluster 393
+0	270aa, >disprot_protein1319... *
+>Cluster 394
+0	270aa, >disprot_protein1801... *
+>Cluster 395
+0	269aa, >disprot_protein1144... *
+1	260aa, >disprot_protein1145... at 100.00%
+>Cluster 396
+0	269aa, >pdb_protein1902... *
+>Cluster 397
+0	268aa, >disprot_protein872... *
+>Cluster 398
+0	267aa, >disprot_protein188... *
+>Cluster 399
+0	267aa, >disprot_protein263... *
+1	65aa, >disprot_protein455... at 40.00%
+>Cluster 400
+0	267aa, >disprot_protein905... *
+>Cluster 401
+0	171aa, >pdb_protein1544... at 59.06%
+1	267aa, >pdb_protein1873... *
+>Cluster 402
+0	267aa, >pdb_protein1899... *
+>Cluster 403
+0	62aa, >disprot_protein1661... at 40.32%
+1	267aa, >pdb_protein1912... *
+>Cluster 404
+0	51aa, >disprot_protein24... at 41.18%
+1	266aa, >disprot_protein688... *
+2	81aa, >disprot_protein689... at 100.00%
+>Cluster 405
+0	257aa, >disprot_protein1110... at 100.00%
+1	266aa, >disprot_protein1111... *
+2	101aa, >disprot_protein1112... at 100.00%
+>Cluster 406
+0	266aa, >disprot_protein1674... *
+1	231aa, >disprot_protein1675... at 85.71%
+>Cluster 407
+0	266aa, >pdb_protein1851... *
+>Cluster 408
+0	266aa, >pdb_protein1872... *
+>Cluster 409
+0	266aa, >pdb_protein1921... *
+>Cluster 410
+0	166aa, >disprot_protein142... at 100.00%
+1	265aa, >disprot_protein143... *
+>Cluster 411
+0	260aa, >disprot_protein372... at 67.31%
+1	265aa, >disprot_protein405... *
+2	185aa, >disprot_protein413... at 41.62%
+>Cluster 412
+0	184aa, >disprot_protein763... at 100.00%
+1	265aa, >disprot_protein764... *
+2	172aa, >disprot_protein765... at 100.00%
+3	73aa, >disprot_protein766... at 100.00%
+4	71aa, >disprot_protein1466... at 42.25%
+>Cluster 413
+0	265aa, >pdb_protein1917... *
+>Cluster 414
+0	264aa, >disprot_protein1032... *
+>Cluster 415
+0	264aa, >pdb_protein1914... *
+>Cluster 416
+0	262aa, >disprot_protein1309... *
+>Cluster 417
+0	262aa, >pdb_protein1869... *
+1	246aa, >pdb_protein1885... at 91.06%
+>Cluster 418
+0	262aa, >pdb_protein1911... *
+>Cluster 419
+0	261aa, >disprot_protein2070... *
+1	88aa, >disprot_protein2071... at 73.86%
+>Cluster 420
+0	261aa, >pdb_protein1860... *
+>Cluster 421
+0	261aa, >pdb_protein1861... *
+>Cluster 422
+0	261aa, >pdb_protein1862... *
+>Cluster 423
+0	261aa, >pdb_protein1870... *
+>Cluster 424
+0	261aa, >pdb_protein1923... *
+>Cluster 425
+0	260aa, >disprot_protein39... *
+>Cluster 426
+0	260aa, >disprot_protein820... *
+>Cluster 427
+0	260aa, >pdb_protein1838... *
+>Cluster 428
+0	260aa, >pdb_protein1909... *
+>Cluster 429
+0	258aa, >disprot_protein1948... *
+>Cluster 430
+0	223aa, >disprot_protein1429... at 94.62%
+1	72aa, >disprot_protein1430... at 100.00%
+2	189aa, >pdb_protein1592... at 98.94%
+3	217aa, >pdb_protein1776... at 96.31%
+4	258aa, >pdb_protein1850... *
+>Cluster 431
+0	258aa, >pdb_protein1890... *
+>Cluster 432
+0	257aa, >disprot_protein338... *
+>Cluster 433
+0	257aa, >disprot_protein1210... *
+1	138aa, >disprot_protein1211... at 100.00%
+2	157aa, >disprot_protein1212... at 100.00%
+>Cluster 434
+0	257aa, >disprot_protein1646... *
+>Cluster 435
+0	256aa, >disprot_protein4... *
+1	65aa, >disprot_protein5... at 100.00%
+>Cluster 436
+0	248aa, >disprot_protein1307... at 100.00%
+1	256aa, >disprot_protein1308... *
+>Cluster 437
+0	256aa, >pdb_protein1846... *
+>Cluster 438
+0	256aa, >pdb_protein1871... *
+>Cluster 439
+0	249aa, >pdb_protein1841... at 77.11%
+1	252aa, >pdb_protein1889... at 77.78%
+2	256aa, >pdb_protein1891... *
+>Cluster 440
+0	256aa, >pdb_protein1894... *
+>Cluster 441
+0	255aa, >disprot_protein1522... *
+>Cluster 442
+0	255aa, >pdb_protein1844... *
+>Cluster 443
+0	255aa, >pdb_protein1859... *
+>Cluster 444
+0	254aa, >disprot_protein1168... *
+>Cluster 445
+0	254aa, >disprot_protein1315... *
+>Cluster 446
+0	254aa, >pdb_protein1864... *
+>Cluster 447
+0	253aa, >disprot_protein566... *
+1	86aa, >disprot_protein1092... at 44.19%
+>Cluster 448
+0	253aa, >disprot_protein591... *
+1	59aa, >disprot_protein963... at 42.37%
+2	250aa, >disprot_protein1722... at 99.60%
+>Cluster 449
+0	253aa, >pdb_protein1852... *
+>Cluster 450
+0	253aa, >pdb_protein1913... *
+>Cluster 451
+0	252aa, >pdb_protein1840... *
+>Cluster 452
+0	252aa, >pdb_protein1849... *
+>Cluster 453
+0	252aa, >pdb_protein1857... *
+>Cluster 454
+0	222aa, >pdb_protein1818... at 47.30%
+1	252aa, >pdb_protein1916... *
+>Cluster 455
+0	251aa, >disprot_protein109... *
+>Cluster 456
+0	251aa, >pdb_protein1895... *
+>Cluster 457
+0	250aa, >disprot_protein1306... *
+>Cluster 458
+0	250aa, >disprot_protein2118... *
+>Cluster 459
+0	250aa, >pdb_protein1847... *
+>Cluster 460
+0	62aa, >disprot_protein1428... at 62.90%
+1	77aa, >disprot_protein1469... at 55.84%
+2	89aa, >disprot_protein1471... at 55.06%
+3	56aa, >pdb_protein448... at 91.07%
+4	250aa, >pdb_protein1880... *
+>Cluster 461
+0	249aa, >disprot_protein76... *
+1	53aa, >disprot_protein77... at 100.00%
+2	239aa, >disprot_protein78... at 100.00%
+3	243aa, >disprot_protein79... at 100.00%
+4	82aa, >disprot_protein80... at 100.00%
+>Cluster 462
+0	249aa, >disprot_protein846... *
+>Cluster 463
+0	249aa, >pdb_protein1835... *
+>Cluster 464
+0	249aa, >pdb_protein1858... *
+>Cluster 465
+0	248aa, >pdb_protein1865... *
+>Cluster 466
+0	248aa, >pdb_protein1887... *
+>Cluster 467
+0	248aa, >pdb_protein1896... *
+>Cluster 468
+0	246aa, >disprot_protein436... *
+1	174aa, >disprot_protein437... at 100.00%
+2	174aa, >disprot_protein440... at 65.52%
+>Cluster 469
+0	246aa, >pdb_protein1845... *
+>Cluster 470
+0	246aa, >pdb_protein1884... *
+>Cluster 471
+0	246aa, >pdb_protein1903... *
+>Cluster 472
+0	246aa, >pdb_protein1915... *
+>Cluster 473
+0	245aa, >pdb_protein1922... *
+>Cluster 474
+0	244aa, >disprot_protein1285... *
+1	244aa, >disprot_protein1286... at 90.98%
+>Cluster 475
+0	244aa, >disprot_protein1372... *
+>Cluster 476
+0	244aa, >pdb_protein1856... *
+>Cluster 477
+0	244aa, >pdb_protein1881... *
+>Cluster 478
+0	244aa, >pdb_protein1893... *
+>Cluster 479
+0	243aa, >disprot_protein357... *
+>Cluster 480
+0	88aa, >disprot_protein919... at 46.59%
+1	74aa, >disprot_protein920... at 100.00%
+2	243aa, >disprot_protein921... *
+>Cluster 481
+0	59aa, >disprot_protein1951... at 40.68%
+1	58aa, >disprot_protein2047... at 100.00%
+2	243aa, >disprot_protein2048... *
+>Cluster 482
+0	243aa, >pdb_protein1656... *
+>Cluster 483
+0	243aa, >pdb_protein1662... *
+>Cluster 484
+0	243aa, >pdb_protein1827... *
+>Cluster 485
+0	59aa, >disprot_protein305... at 40.68%
+1	67aa, >disprot_protein534... at 43.28%
+2	60aa, >disprot_protein535... at 46.67%
+3	238aa, >disprot_protein549... at 90.34%
+4	242aa, >disprot_protein551... *
+5	227aa, >disprot_protein1218... at 84.58%
+>Cluster 486
+0	242aa, >disprot_protein965... *
+>Cluster 487
+0	242aa, >disprot_protein995... *
+>Cluster 488
+0	192aa, >disprot_protein1047... at 100.00%
+1	242aa, >disprot_protein1051... *
+>Cluster 489
+0	195aa, >disprot_protein2096... at 100.00%
+1	242aa, >disprot_protein2097... *
+2	123aa, >disprot_protein2098... at 100.00%
+3	119aa, >disprot_protein2099... at 100.00%
+>Cluster 490
+0	242aa, >pdb_protein1671... *
+>Cluster 491
+0	242aa, >pdb_protein1793... *
+>Cluster 492
+0	241aa, >disprot_protein748... *
+>Cluster 493
+0	241aa, >disprot_protein946... *
+1	181aa, >disprot_protein1213... at 89.50%
+2	104aa, >disprot_protein1214... at 44.23%
+>Cluster 494
+0	241aa, >pdb_protein1679... *
+>Cluster 495
+0	241aa, >pdb_protein1759... *
+>Cluster 496
+0	241aa, >pdb_protein1817... *
+>Cluster 497
+0	240aa, >disprot_protein983... *
+>Cluster 498
+0	240aa, >disprot_protein1975... *
+>Cluster 499
+0	126aa, >pdb_protein1186... at 70.63%
+1	107aa, >pdb_protein1229... at 44.86%
+2	218aa, >pdb_protein1661... at 70.18%
+3	214aa, >pdb_protein1665... at 51.87%
+4	215aa, >pdb_protein1688... at 70.70%
+5	211aa, >pdb_protein1689... at 70.14%
+6	215aa, >pdb_protein1697... at 44.19%
+7	214aa, >pdb_protein1698... at 69.63%
+8	214aa, >pdb_protein1701... at 63.55%
+9	213aa, >pdb_protein1706... at 69.48%
+10	240aa, >pdb_protein1727... *
+11	214aa, >pdb_protein1728... at 71.96%
+12	213aa, >pdb_protein1730... at 70.89%
+13	214aa, >pdb_protein1740... at 51.40%
+14	219aa, >pdb_protein1741... at 49.32%
+15	218aa, >pdb_protein1742... at 66.51%
+16	214aa, >pdb_protein1754... at 50.47%
+17	219aa, >pdb_protein1755... at 66.21%
+18	235aa, >pdb_protein1758... at 74.04%
+19	217aa, >pdb_protein1775... at 46.08%
+20	214aa, >pdb_protein1780... at 71.96%
+21	216aa, >pdb_protein1781... at 68.52%
+22	212aa, >pdb_protein1794... at 70.75%
+23	214aa, >pdb_protein1795... at 45.79%
+24	216aa, >pdb_protein1800... at 45.83%
+25	215aa, >pdb_protein1802... at 52.56%
+26	214aa, >pdb_protein1803... at 71.03%
+27	210aa, >pdb_protein1808... at 70.00%
+28	211aa, >pdb_protein1811... at 45.50%
+29	239aa, >pdb_protein1830... at 43.93%
+30	238aa, >pdb_protein1832... at 49.58%
+>Cluster 500
+0	240aa, >pdb_protein1731... *
+1	239aa, >pdb_protein1752... at 78.66%
+>Cluster 501
+0	240aa, >pdb_protein1831... *
+>Cluster 502
+0	239aa, >disprot_protein1349... *
+>Cluster 503
+0	238aa, >disprot_protein798... *
+>Cluster 504
+0	115aa, >disprot_protein326... at 54.78%
+1	55aa, >disprot_protein327... at 65.45%
+2	143aa, >disprot_protein1018... at 54.55%
+3	138aa, >disprot_protein1019... at 55.80%
+4	136aa, >disprot_protein1020... at 55.15%
+5	238aa, >disprot_protein1175... *
+>Cluster 505
+0	238aa, >disprot_protein1305... *
+>Cluster 506
+0	238aa, >disprot_protein1821... *
+>Cluster 507
+0	238aa, >pdb_protein1674... *
+>Cluster 508
+0	238aa, >pdb_protein1683... *
+>Cluster 509
+0	238aa, >pdb_protein1715... *
+>Cluster 510
+0	238aa, >pdb_protein1720... *
+>Cluster 511
+0	238aa, >pdb_protein1735... *
+1	209aa, >pdb_protein1753... at 100.00%
+>Cluster 512
+0	238aa, >pdb_protein1756... *
+>Cluster 513
+0	237aa, >disprot_protein787... *
+1	224aa, >disprot_protein788... at 45.54%
+2	220aa, >disprot_protein789... at 46.36%
+3	224aa, >disprot_protein790... at 45.54%
+4	227aa, >disprot_protein791... at 61.67%
+5	225aa, >disprot_protein792... at 62.22%
+6	237aa, >disprot_protein793... at 47.68%
+7	94aa, >disprot_protein796... at 45.74%
+8	227aa, >disprot_protein797... at 61.67%
+9	227aa, >disprot_protein1807... at 61.23%
+10	94aa, >disprot_protein1809... at 44.68%
+>Cluster 514
+0	237aa, >disprot_protein1065... *
+>Cluster 515
+0	237aa, >pdb_protein1700... *
+>Cluster 516
+0	236aa, >disprot_protein599... *
+1	204aa, >disprot_protein600... at 74.02%
+>Cluster 517
+0	236aa, >disprot_protein1081... *
+>Cluster 518
+0	236aa, >disprot_protein1318... *
+>Cluster 519
+0	236aa, >disprot_protein1508... *
+>Cluster 520
+0	235aa, >disprot_protein1310... *
+>Cluster 521
+0	235aa, >disprot_protein1387... *
+1	192aa, >disprot_protein1388... at 100.00%
+>Cluster 522
+0	235aa, >pdb_protein1670... *
+>Cluster 523
+0	235aa, >pdb_protein1682... *
+>Cluster 524
+0	235aa, >pdb_protein1770... *
+>Cluster 525
+0	235aa, >pdb_protein1824... *
+>Cluster 526
+0	234aa, >disprot_protein1190... *
+1	139aa, >disprot_protein1191... at 100.00%
+>Cluster 527
+0	234aa, >disprot_protein1455... *
+>Cluster 528
+0	233aa, >disprot_protein1257... *
+>Cluster 529
+0	233aa, >disprot_protein1290... *
+>Cluster 530
+0	233aa, >pdb_protein1813... *
+>Cluster 531
+0	232aa, >disprot_protein1302... *
+>Cluster 532
+0	232aa, >disprot_protein1304... *
+>Cluster 533
+0	232aa, >disprot_protein1706... *
+>Cluster 534
+0	232aa, >disprot_protein2079... *
+>Cluster 535
+0	232aa, >pdb_protein1765... *
+>Cluster 536
+0	70aa, >pdb_protein111... at 98.57%
+1	87aa, >pdb_protein306... at 96.55%
+2	87aa, >pdb_protein983... at 97.70%
+3	232aa, >pdb_protein1826... *
+>Cluster 537
+0	231aa, >disprot_protein367... *
+>Cluster 538
+0	231aa, >disprot_protein1148... *
+>Cluster 539
+0	231aa, >disprot_protein1269... *
+1	61aa, >disprot_protein1270... at 100.00%
+2	99aa, >disprot_protein1271... at 98.99%
+>Cluster 540
+0	231aa, >disprot_protein1384... *
+>Cluster 541
+0	231aa, >disprot_protein1898... *
+>Cluster 542
+0	231aa, >pdb_protein1677... *
+>Cluster 543
+0	231aa, >pdb_protein1787... *
+>Cluster 544
+0	230aa, >disprot_protein1301... *
+>Cluster 545
+0	216aa, >pdb_protein1681... at 94.44%
+1	230aa, >pdb_protein1760... *
+>Cluster 546
+0	139aa, >disprot_protein477... at 100.00%
+1	199aa, >disprot_protein478... at 100.00%
+2	229aa, >disprot_protein479... *
+>Cluster 547
+0	229aa, >disprot_protein795... *
+1	227aa, >disprot_protein799... at 76.65%
+>Cluster 548
+0	82aa, >disprot_protein1272... at 100.00%
+1	229aa, >disprot_protein1273... *
+>Cluster 549
+0	229aa, >pdb_protein1804... *
+>Cluster 550
+0	229aa, >pdb_protein1820... *
+>Cluster 551
+0	228aa, >disprot_protein423... *
+>Cluster 552
+0	228aa, >pdb_protein1714... *
+>Cluster 553
+0	228aa, >pdb_protein1772... *
+>Cluster 554
+0	228aa, >pdb_protein1807... *
+>Cluster 555
+0	227aa, >disprot_protein533... *
+>Cluster 556
+0	227aa, >disprot_protein1235... *
+>Cluster 557
+0	227aa, >disprot_protein1300... *
+>Cluster 558
+0	227aa, >disprot_protein2022... *
+>Cluster 559
+0	227aa, >pdb_protein1673... *
+>Cluster 560
+0	227aa, >pdb_protein1696... *
+>Cluster 561
+0	227aa, >pdb_protein1703... *
+>Cluster 562
+0	227aa, >pdb_protein1806... *
+>Cluster 563
+0	82aa, >disprot_protein485... at 100.00%
+1	226aa, >disprot_protein486... *
+>Cluster 564
+0	226aa, >disprot_protein584... *
+1	58aa, >pdb_protein272... at 44.83%
+2	51aa, >pdb_protein792... at 41.18%
+>Cluster 565
+0	226aa, >disprot_protein701... *
+1	195aa, >disprot_protein703... at 100.00%
+2	60aa, >disprot_protein704... at 100.00%
+>Cluster 566
+0	226aa, >disprot_protein2063... *
+>Cluster 567
+0	225aa, >disprot_protein932... *
+>Cluster 568
+0	225aa, >disprot_protein1405... *
+>Cluster 569
+0	169aa, >disprot_protein1053... at 59.17%
+1	172aa, >disprot_protein1084... at 47.09%
+2	212aa, >disprot_protein1666... at 46.23%
+3	121aa, >disprot_protein1912... at 80.17%
+4	225aa, >disprot_protein1921... *
+>Cluster 570
+0	225aa, >disprot_protein2057... *
+>Cluster 571
+0	224aa, >disprot_protein242... *
+>Cluster 572
+0	224aa, >disprot_protein878... *
+>Cluster 573
+0	224aa, >disprot_protein1320... *
+1	201aa, >disprot_protein1321... at 100.00%
+>Cluster 574
+0	224aa, >disprot_protein1331... *
+1	56aa, >disprot_protein1671... at 46.43%
+2	81aa, >disprot_protein1672... at 40.74%
+>Cluster 575
+0	224aa, >disprot_protein1452... *
+1	58aa, >disprot_protein1453... at 100.00%
+>Cluster 576
+0	224aa, >pdb_protein1713... *
+>Cluster 577
+0	224aa, >pdb_protein1819... *
+>Cluster 578
+0	223aa, >disprot_protein1690... *
+>Cluster 579
+0	223aa, >pdb_protein1680... *
+>Cluster 580
+0	223aa, >pdb_protein1707... *
+>Cluster 581
+0	210aa, >disprot_protein1900... at 50.00%
+1	222aa, >disprot_protein1923... *
+>Cluster 582
+0	79aa, >pdb_protein782... at 40.51%
+1	222aa, >pdb_protein1669... *
+>Cluster 583
+0	222aa, >pdb_protein1769... *
+>Cluster 584
+0	221aa, >disprot_protein1477... *
+>Cluster 585
+0	221aa, >disprot_protein1664... *
+1	63aa, >disprot_protein1665... at 100.00%
+>Cluster 586
+0	221aa, >pdb_protein1738... *
+>Cluster 587
+0	220aa, >disprot_protein1299... *
+>Cluster 588
+0	220aa, >disprot_protein1576... *
+1	220aa, >disprot_protein1825... at 81.82%
+2	129aa, >pdb_protein1140... at 75.19%
+>Cluster 589
+0	220aa, >pdb_protein1676... *
+>Cluster 590
+0	220aa, >pdb_protein1693... *
+>Cluster 591
+0	220aa, >pdb_protein1699... *
+>Cluster 592
+0	220aa, >pdb_protein1737... *
+>Cluster 593
+0	220aa, >pdb_protein1739... *
+>Cluster 594
+0	220aa, >pdb_protein1788... *
+>Cluster 595
+0	70aa, >disprot_protein44... at 41.43%
+1	89aa, >disprot_protein45... at 43.82%
+2	90aa, >disprot_protein46... at 45.56%
+3	102aa, >disprot_protein99... at 45.10%
+4	219aa, >disprot_protein122... *
+5	97aa, >disprot_protein695... at 42.27%
+6	91aa, >disprot_protein696... at 46.15%
+7	94aa, >disprot_protein697... at 43.62%
+8	219aa, >pdb_protein1722... at 83.56%
+>Cluster 596
+0	219aa, >disprot_protein876... *
+>Cluster 597
+0	132aa, >disprot_protein2064... at 100.00%
+1	60aa, >disprot_protein2065... at 100.00%
+2	131aa, >disprot_protein2066... at 100.00%
+3	219aa, >disprot_protein2067... *
+>Cluster 598
+0	219aa, >pdb_protein1708... *
+>Cluster 599
+0	218aa, >disprot_protein472... *
+1	61aa, >disprot_protein1612... at 40.98%
+2	71aa, >pdb_protein777... at 43.66%
+>Cluster 600
+0	218aa, >disprot_protein1297... *
+>Cluster 601
+0	218aa, >pdb_protein1726... *
+>Cluster 602
+0	98aa, >pdb_protein606... at 100.00%
+1	218aa, >pdb_protein1746... *
+>Cluster 603
+0	218aa, >pdb_protein1761... *
+>Cluster 604
+0	218aa, >pdb_protein1783... *
+>Cluster 605
+0	217aa, >disprot_protein322... *
+>Cluster 606
+0	217aa, >disprot_protein1295... *
+>Cluster 607
+0	217aa, >disprot_protein1683... *
+>Cluster 608
+0	217aa, >pdb_protein1687... *
+>Cluster 609
+0	217aa, >pdb_protein1716... *
+>Cluster 610
+0	217aa, >pdb_protein1762... *
+>Cluster 611
+0	192aa, >pdb_protein1550... at 44.27%
+1	217aa, >pdb_protein1767... *
+>Cluster 612
+0	217aa, >pdb_protein1833... *
+>Cluster 613
+0	216aa, >disprot_protein747... *
+>Cluster 614
+0	216aa, >disprot_protein967... *
+>Cluster 615
+0	213aa, >disprot_protein1099... at 83.57%
+1	208aa, >disprot_protein1291... at 57.21%
+2	216aa, >disprot_protein1293... *
+3	216aa, >disprot_protein1294... at 97.69%
+4	216aa, >disprot_protein1296... at 89.81%
+>Cluster 616
+0	216aa, >disprot_protein1593... *
+>Cluster 617
+0	216aa, >pdb_protein1654... *
+>Cluster 618
+0	216aa, >pdb_protein1829... *
+>Cluster 619
+0	215aa, >disprot_protein1579... *
+>Cluster 620
+0	215aa, >disprot_protein1783... *
+1	75aa, >disprot_protein1784... at 100.00%
+2	87aa, >disprot_protein1785... at 100.00%
+3	75aa, >disprot_protein1786... at 100.00%
+>Cluster 621
+0	215aa, >pdb_protein1668... *
+>Cluster 622
+0	174aa, >disprot_protein68... at 100.00%
+1	214aa, >disprot_protein71... *
+>Cluster 623
+0	214aa, >disprot_protein1292... *
+>Cluster 624
+0	214aa, >disprot_protein1792... *
+>Cluster 625
+0	214aa, >pdb_protein1685... *
+>Cluster 626
+0	214aa, >pdb_protein1734... *
+>Cluster 627
+0	161aa, >pdb_protein1643... at 45.34%
+1	214aa, >pdb_protein1778... *
+>Cluster 628
+0	214aa, >pdb_protein1782... *
+>Cluster 629
+0	59aa, >disprot_protein225... at 100.00%
+1	160aa, >disprot_protein226... at 100.00%
+2	51aa, >disprot_protein227... at 100.00%
+3	213aa, >disprot_protein228... *
+4	155aa, >disprot_protein229... at 100.00%
+5	155aa, >disprot_protein230... at 100.00%
+6	104aa, >disprot_protein231... at 100.00%
+>Cluster 630
+0	213aa, >disprot_protein1663... *
+>Cluster 631
+0	213aa, >pdb_protein1675... *
+>Cluster 632
+0	213aa, >pdb_protein1745... *
+>Cluster 633
+0	212aa, >pdb_protein1717... *
+>Cluster 634
+0	212aa, >pdb_protein1757... *
+>Cluster 635
+0	62aa, >disprot_protein1677... at 40.32%
+1	212aa, >pdb_protein1766... *
+>Cluster 636
+0	211aa, >disprot_protein1009... *
+>Cluster 637
+0	103aa, >pdb_protein1071... at 84.47%
+1	211aa, >pdb_protein1695... *
+>Cluster 638
+0	211aa, >pdb_protein1705... *
+>Cluster 639
+0	211aa, >pdb_protein1721... *
+>Cluster 640
+0	211aa, >pdb_protein1785... *
+>Cluster 641
+0	211aa, >pdb_protein1799... *
+>Cluster 642
+0	210aa, >disprot_protein1390... *
+1	52aa, >disprot_protein1770... at 40.38%
+>Cluster 643
+0	210aa, >pdb_protein1816... *
+>Cluster 644
+0	59aa, >pdb_protein437... at 50.85%
+1	162aa, >pdb_protein1461... at 58.02%
+2	180aa, >pdb_protein1473... at 96.67%
+3	210aa, >pdb_protein1822... *
+>Cluster 645
+0	209aa, >pdb_protein1691... *
+>Cluster 646
+0	209aa, >pdb_protein1748... *
+>Cluster 647
+0	209aa, >pdb_protein1814... *
+>Cluster 648
+0	208aa, >disprot_protein1045... *
+1	208aa, >disprot_protein1049... at 75.96%
+>Cluster 649
+0	182aa, >disprot_protein690... at 56.59%
+1	182aa, >disprot_protein1041... at 72.53%
+2	208aa, >disprot_protein1046... *
+3	208aa, >disprot_protein1050... at 75.96%
+>Cluster 650
+0	174aa, >disprot_protein1714... at 47.70%
+1	208aa, >disprot_protein1715... *
+2	119aa, >disprot_protein1716... at 100.00%
+3	117aa, >disprot_protein1717... at 100.00%
+>Cluster 651
+0	208aa, >pdb_protein1664... *
+>Cluster 652
+0	208aa, >pdb_protein1694... *
+>Cluster 653
+0	208aa, >pdb_protein1712... *
+>Cluster 654
+0	208aa, >pdb_protein1744... *
+>Cluster 655
+0	208aa, >pdb_protein1784... *
+>Cluster 656
+0	208aa, >pdb_protein1821... *
+>Cluster 657
+0	207aa, >disprot_protein880... *
+>Cluster 658
+0	207aa, >disprot_protein1236... *
+>Cluster 659
+0	207aa, >disprot_protein1555... *
+>Cluster 660
+0	207aa, >disprot_protein1775... *
+>Cluster 661
+0	207aa, >pdb_protein1652... *
+>Cluster 662
+0	207aa, >pdb_protein1686... *
+>Cluster 663
+0	207aa, >pdb_protein1834... *
+>Cluster 664
+0	206aa, >disprot_protein488... *
+1	73aa, >disprot_protein489... at 100.00%
+2	156aa, >disprot_protein490... at 85.90%
+>Cluster 665
+0	206aa, >disprot_protein554... *
+>Cluster 666
+0	206aa, >disprot_protein901... *
+>Cluster 667
+0	206aa, >disprot_protein1070... *
+>Cluster 668
+0	206aa, >disprot_protein1289... *
+>Cluster 669
+0	206aa, >disprot_protein1642... *
+>Cluster 670
+0	206aa, >disprot_protein1879... *
+1	204aa, >disprot_protein1880... at 100.00%
+>Cluster 671
+0	206aa, >pdb_protein1659... *
+1	206aa, >pdb_protein1774... at 58.74%
+2	205aa, >pdb_protein1828... at 62.44%
+>Cluster 672
+0	206aa, >pdb_protein1825... *
+>Cluster 673
+0	205aa, >pdb_protein1710... *
+>Cluster 674
+0	204aa, >disprot_protein348... *
+>Cluster 675
+0	204aa, >disprot_protein1287... *
+>Cluster 676
+0	204aa, >disprot_protein1955... *
+>Cluster 677
+0	204aa, >disprot_protein2076... *
+>Cluster 678
+0	192aa, >pdb_protein1517... at 54.69%
+1	204aa, >pdb_protein1678... *
+>Cluster 679
+0	204aa, >pdb_protein1684... *
+>Cluster 680
+0	204aa, >pdb_protein1810... *
+>Cluster 681
+0	203aa, >disprot_protein508... *
+1	202aa, >disprot_protein509... at 100.00%
+>Cluster 682
+0	203aa, >disprot_protein615... *
+>Cluster 683
+0	160aa, >disprot_protein899... at 100.00%
+1	203aa, >disprot_protein900... *
+>Cluster 684
+0	203aa, >disprot_protein1157... *
+>Cluster 685
+0	203aa, >disprot_protein1279... *
+>Cluster 686
+0	203aa, >disprot_protein1575... *
+1	202aa, >disprot_protein1823... at 59.41%
+>Cluster 687
+0	203aa, >disprot_protein1651... *
+>Cluster 688
+0	187aa, >pdb_protein1576... at 75.94%
+1	203aa, >pdb_protein1658... *
+>Cluster 689
+0	203aa, >pdb_protein1725... *
+>Cluster 690
+0	203aa, >pdb_protein1797... *
+>Cluster 691
+0	203aa, >pdb_protein1812... *
+>Cluster 692
+0	203aa, >pdb_protein1815... *
+>Cluster 693
+0	202aa, >disprot_protein280... *
+>Cluster 694
+0	202aa, >disprot_protein323... *
+>Cluster 695
+0	202aa, >pdb_protein1823... *
+>Cluster 696
+0	169aa, >disprot_protein213... at 43.79%
+1	201aa, >disprot_protein214... *
+>Cluster 697
+0	201aa, >disprot_protein552... *
+>Cluster 698
+0	201aa, >disprot_protein1608... *
+>Cluster 699
+0	201aa, >pdb_protein1751... *
+>Cluster 700
+0	201aa, >pdb_protein1805... *
+>Cluster 701
+0	200aa, >disprot_protein187... *
+>Cluster 702
+0	200aa, >disprot_protein1042... *
+1	169aa, >disprot_protein1043... at 100.00%
+>Cluster 703
+0	200aa, >disprot_protein1090... *
+1	178aa, >disprot_protein1091... at 100.00%
+>Cluster 704
+0	200aa, >disprot_protein1267... *
+1	190aa, >disprot_protein1268... at 100.00%
+>Cluster 705
+0	200aa, >pdb_protein1764... *
+>Cluster 706
+0	200aa, >pdb_protein1792... *
+>Cluster 707
+0	199aa, >disprot_protein843... *
+1	96aa, >disprot_protein844... at 100.00%
+>Cluster 708
+0	55aa, >disprot_protein1013... at 100.00%
+1	199aa, >disprot_protein1014... *
+>Cluster 709
+0	199aa, >disprot_protein1044... *
+1	149aa, >disprot_protein1048... at 100.00%
+>Cluster 710
+0	199aa, >disprot_protein1278... *
+>Cluster 711
+0	69aa, >disprot_protein464... at 44.93%
+1	73aa, >pdb_protein348... at 43.84%
+2	73aa, >pdb_protein418... at 43.84%
+3	75aa, >pdb_protein724... at 49.33%
+4	146aa, >pdb_protein1306... at 45.89%
+5	153aa, >pdb_protein1590... at 75.82%
+6	199aa, >pdb_protein1773... *
+>Cluster 712
+0	76aa, >disprot_protein11... at 40.79%
+1	94aa, >disprot_protein15... at 100.00%
+2	198aa, >disprot_protein16... *
+3	101aa, >disprot_protein17... at 100.00%
+4	53aa, >disprot_protein21... at 100.00%
+5	158aa, >disprot_protein664... at 99.37%
+>Cluster 713
+0	198aa, >disprot_protein1230... *
+>Cluster 714
+0	198aa, >pdb_protein1724... *
+>Cluster 715
+0	178aa, >pdb_protein1454... at 93.26%
+1	198aa, >pdb_protein1768... *
+>Cluster 716
+0	198aa, >pdb_protein1791... *
+>Cluster 717
+0	197aa, >disprot_protein1813... *
+>Cluster 718
+0	196aa, >disprot_protein774... *
+>Cluster 719
+0	196aa, >disprot_protein1374... *
+>Cluster 720
+0	196aa, >pdb_protein1650... *
+>Cluster 721
+0	196aa, >pdb_protein1692... *
+>Cluster 722
+0	196aa, >pdb_protein1801... *
+>Cluster 723
+0	195aa, >disprot_protein41... *
+>Cluster 724
+0	195aa, >disprot_protein923... *
+>Cluster 725
+0	182aa, >disprot_protein1115... at 100.00%
+1	195aa, >disprot_protein1116... *
+>Cluster 726
+0	195aa, >disprot_protein1491... *
+>Cluster 727
+0	195aa, >disprot_protein1846... *
+>Cluster 728
+0	195aa, >pdb_protein1439... *
+1	192aa, >pdb_protein1453... at 58.33%
+2	194aa, >pdb_protein1604... at 52.06%
+>Cluster 729
+0	195aa, >pdb_protein1441... *
+>Cluster 730
+0	195aa, >pdb_protein1514... *
+>Cluster 731
+0	195aa, >pdb_protein1622... *
+>Cluster 732
+0	194aa, >disprot_protein203... *
+>Cluster 733
+0	52aa, >disprot_protein2010... at 100.00%
+1	194aa, >disprot_protein2011... *
+>Cluster 734
+0	194aa, >pdb_protein1488... *
+>Cluster 735
+0	194aa, >pdb_protein1508... *
+>Cluster 736
+0	194aa, >pdb_protein1538... *
+>Cluster 737
+0	188aa, >pdb_protein1451... at 72.87%
+1	190aa, >pdb_protein1585... at 60.53%
+2	194aa, >pdb_protein1608... *
+>Cluster 738
+0	193aa, >disprot_protein406... *
+>Cluster 739
+0	193aa, >disprot_protein727... *
+>Cluster 740
+0	180aa, >disprot_protein1357... at 41.67%
+1	193aa, >disprot_protein1358... *
+>Cluster 741
+0	193aa, >pdb_protein1528... *
+>Cluster 742
+0	193aa, >pdb_protein1556... *
+>Cluster 743
+0	185aa, >pdb_protein1491... at 41.08%
+1	193aa, >pdb_protein1578... *
+2	189aa, >pdb_protein1582... at 52.38%
+>Cluster 744
+0	192aa, >disprot_protein235... *
+>Cluster 745
+0	191aa, >pdb_protein1627... *
+>Cluster 746
+0	190aa, >disprot_protein159... *
+>Cluster 747
+0	190aa, >disprot_protein571... *
+>Cluster 748
+0	190aa, >pdb_protein1463... *
+>Cluster 749
+0	190aa, >pdb_protein1477... *
+>Cluster 750
+0	117aa, >disprot_protein117... at 100.00%
+1	189aa, >disprot_protein118... *
+2	188aa, >disprot_protein119... at 100.00%
+>Cluster 751
+0	189aa, >disprot_protein871... *
+>Cluster 752
+0	126aa, >disprot_protein1876... at 98.41%
+1	189aa, >disprot_protein1877... *
+>Cluster 753
+0	189aa, >pdb_protein1532... *
+>Cluster 754
+0	189aa, >pdb_protein1588... *
+>Cluster 755
+0	189aa, >pdb_protein1596... *
+>Cluster 756
+0	189aa, >pdb_protein1606... *
+>Cluster 757
+0	188aa, >disprot_protein351... *
+1	110aa, >disprot_protein352... at 100.00%
+2	168aa, >disprot_protein353... at 100.00%
+3	125aa, >disprot_protein354... at 100.00%
+4	100aa, >disprot_protein355... at 100.00%
+>Cluster 758
+0	188aa, >disprot_protein587... *
+>Cluster 759
+0	188aa, >pdb_protein1456... *
+>Cluster 760
+0	188aa, >pdb_protein1506... *
+>Cluster 761
+0	188aa, >pdb_protein1509... *
+>Cluster 762
+0	188aa, >pdb_protein1511... *
+>Cluster 763
+0	188aa, >pdb_protein1634... *
+>Cluster 764
+0	188aa, >pdb_protein1635... *
+>Cluster 765
+0	187aa, >disprot_protein522... *
+>Cluster 766
+0	187aa, >disprot_protein1074... *
+>Cluster 767
+0	187aa, >disprot_protein1457... *
+>Cluster 768
+0	187aa, >pdb_protein1472... *
+>Cluster 769
+0	187aa, >pdb_protein1591... *
+>Cluster 770
+0	187aa, >pdb_protein1648... *
+>Cluster 771
+0	155aa, >disprot_protein101... at 48.39%
+1	168aa, >disprot_protein325... at 40.48%
+2	186aa, >disprot_protein421... *
+>Cluster 772
+0	186aa, >disprot_protein922... *
+>Cluster 773
+0	186aa, >pdb_protein1457... *
+>Cluster 774
+0	186aa, >pdb_protein1469... *
+>Cluster 775
+0	186aa, >pdb_protein1560... *
+>Cluster 776
+0	186aa, >pdb_protein1644... *
+>Cluster 777
+0	124aa, >disprot_protein6... at 100.00%
+1	185aa, >disprot_protein7... *
+>Cluster 778
+0	185aa, >disprot_protein401... *
+>Cluster 779
+0	185aa, >disprot_protein1109... *
+>Cluster 780
+0	185aa, >disprot_protein1381... *
+>Cluster 781
+0	185aa, >pdb_protein1446... *
+1	183aa, >pdb_protein1526... at 55.74%
+>Cluster 782
+0	185aa, >pdb_protein1478... *
+>Cluster 783
+0	185aa, >pdb_protein1499... *
+>Cluster 784
+0	185aa, >pdb_protein1568... *
+>Cluster 785
+0	185aa, >pdb_protein1603... *
+>Cluster 786
+0	185aa, >pdb_protein1623... *
+>Cluster 787
+0	184aa, >disprot_protein66... *
+1	180aa, >disprot_protein67... at 100.00%
+>Cluster 788
+0	184aa, >disprot_protein1245... *
+>Cluster 789
+0	184aa, >disprot_protein1363... *
+>Cluster 790
+0	183aa, >disprot_protein2112... at 100.00%
+1	184aa, >disprot_protein2113... *
+2	79aa, >disprot_protein2114... at 100.00%
+>Cluster 791
+0	184aa, >pdb_protein1430... *
+>Cluster 792
+0	184aa, >pdb_protein1447... *
+>Cluster 793
+0	184aa, >pdb_protein1475... *
+>Cluster 794
+0	184aa, >pdb_protein1501... *
+>Cluster 795
+0	184aa, >pdb_protein1599... *
+>Cluster 796
+0	183aa, >disprot_protein1541... *
+>Cluster 797
+0	183aa, >pdb_protein1617... *
+>Cluster 798
+0	183aa, >pdb_protein1642... *
+>Cluster 799
+0	182aa, >disprot_protein2120... *
+>Cluster 800
+0	182aa, >pdb_protein1437... *
+>Cluster 801
+0	182aa, >pdb_protein1562... *
+>Cluster 802
+0	171aa, >pdb_protein1531... at 61.99%
+1	175aa, >pdb_protein1563... at 52.57%
+2	182aa, >pdb_protein1580... *
+3	176aa, >pdb_protein1605... at 64.77%
+>Cluster 803
+0	182aa, >pdb_protein1647... *
+>Cluster 804
+0	181aa, >disprot_protein1093... *
+>Cluster 805
+0	181aa, >pdb_protein1442... *
+>Cluster 806
+0	181aa, >pdb_protein1541... *
+>Cluster 807
+0	180aa, >disprot_protein1156... *
+>Cluster 808
+0	113aa, >disprot_protein1399... at 100.00%
+1	180aa, >disprot_protein1400... *
+>Cluster 809
+0	180aa, >disprot_protein1653... *
+>Cluster 810
+0	180aa, >disprot_protein1930... *
+>Cluster 811
+0	180aa, >disprot_protein1976... *
+>Cluster 812
+0	180aa, >pdb_protein1444... *
+>Cluster 813
+0	180aa, >pdb_protein1529... *
+>Cluster 814
+0	180aa, >pdb_protein1537... *
+>Cluster 815
+0	180aa, >pdb_protein1558... *
+>Cluster 816
+0	180aa, >pdb_protein1597... *
+>Cluster 817
+0	96aa, >disprot_protein360... at 82.29%
+1	66aa, >disprot_protein361... at 78.79%
+2	94aa, >disprot_protein380... at 92.55%
+3	96aa, >disprot_protein381... at 91.67%
+4	93aa, >disprot_protein383... at 92.47%
+5	94aa, >disprot_protein578... at 50.00%
+6	179aa, >disprot_protein676... *
+7	150aa, >disprot_protein677... at 100.00%
+8	92aa, >disprot_protein1725... at 91.30%
+>Cluster 818
+0	165aa, >disprot_protein1029... at 98.18%
+1	179aa, >disprot_protein1030... *
+>Cluster 819
+0	179aa, >disprot_protein1266... *
+>Cluster 820
+0	169aa, >disprot_protein1936... at 100.00%
+1	179aa, >disprot_protein1937... *
+>Cluster 821
+0	179aa, >pdb_protein1464... *
+>Cluster 822
+0	179aa, >pdb_protein1468... *
+>Cluster 823
+0	179aa, >pdb_protein1486... *
+>Cluster 824
+0	179aa, >pdb_protein1510... *
+>Cluster 825
+0	179aa, >pdb_protein1520... *
+>Cluster 826
+0	80aa, >disprot_protein845... at 100.00%
+1	115aa, >disprot_protein851... at 100.00%
+2	178aa, >disprot_protein852... *
+3	84aa, >disprot_protein853... at 100.00%
+>Cluster 827
+0	178aa, >disprot_protein2006... *
+1	150aa, >disprot_protein2007... at 72.67%
+>Cluster 828
+0	178aa, >pdb_protein1445... *
+>Cluster 829
+0	178aa, >pdb_protein1492... *
+>Cluster 830
+0	178aa, >pdb_protein1503... *
+>Cluster 831
+0	178aa, >pdb_protein1545... *
+>Cluster 832
+0	178aa, >pdb_protein1614... *
+>Cluster 833
+0	178aa, >pdb_protein1632... *
+>Cluster 834
+0	177aa, >disprot_protein1187... *
+>Cluster 835
+0	177aa, >disprot_protein1738... *
+1	71aa, >disprot_protein1739... at 100.00%
+>Cluster 836
+0	172aa, >pdb_protein1435... at 55.81%
+1	177aa, >pdb_protein1465... *
+2	172aa, >pdb_protein1487... at 51.16%
+>Cluster 837
+0	177aa, >pdb_protein1507... *
+>Cluster 838
+0	177aa, >pdb_protein1523... *
+>Cluster 839
+0	177aa, >pdb_protein1595... *
+>Cluster 840
+0	177aa, >pdb_protein1619... *
+>Cluster 841
+0	176aa, >disprot_protein303... *
+>Cluster 842
+0	176aa, >disprot_protein1486... *
+1	141aa, >disprot_protein1487... at 100.00%
+2	51aa, >disprot_protein1488... at 100.00%
+>Cluster 843
+0	176aa, >pdb_protein1489... *
+>Cluster 844
+0	176aa, >pdb_protein1564... *
+>Cluster 845
+0	176aa, >pdb_protein1573... *
+>Cluster 846
+0	176aa, >pdb_protein1579... *
+>Cluster 847
+0	176aa, >pdb_protein1583... *
+>Cluster 848
+0	65aa, >disprot_protein126... at 100.00%
+1	67aa, >disprot_protein127... at 100.00%
+2	175aa, >disprot_protein128... *
+3	92aa, >disprot_protein129... at 100.00%
+>Cluster 849
+0	112aa, >disprot_protein1567... at 40.18%
+1	79aa, >pdb_protein135... at 40.51%
+2	61aa, >pdb_protein289... at 44.26%
+3	57aa, >pdb_protein502... at 47.37%
+4	61aa, >pdb_protein645... at 44.26%
+5	61aa, >pdb_protein812... at 45.90%
+6	67aa, >pdb_protein939... at 46.27%
+7	63aa, >pdb_protein965... at 98.41%
+8	112aa, >pdb_protein1036... at 55.36%
+9	175aa, >pdb_protein1553... *
+>Cluster 850
+0	174aa, >disprot_protein386... *
+>Cluster 851
+0	174aa, >pdb_protein1479... *
+>Cluster 852
+0	174aa, >pdb_protein1551... *
+>Cluster 853
+0	173aa, >disprot_protein411... *
+1	158aa, >disprot_protein1129... at 61.39%
+>Cluster 854
+0	173aa, >pdb_protein1524... *
+>Cluster 855
+0	173aa, >pdb_protein1625... *
+>Cluster 856
+0	172aa, >disprot_protein422... *
+1	59aa, >disprot_protein1640... at 54.24%
+>Cluster 857
+0	172aa, >disprot_protein740... *
+>Cluster 858
+0	172aa, >disprot_protein1039... *
+1	87aa, >disprot_protein1040... at 100.00%
+>Cluster 859
+0	172aa, >disprot_protein1154... *
+>Cluster 860
+0	172aa, >disprot_protein1509... *
+1	56aa, >disprot_protein1510... at 100.00%
+2	156aa, >disprot_protein1511... at 100.00%
+3	84aa, >disprot_protein1512... at 100.00%
+4	88aa, >disprot_protein1513... at 100.00%
+>Cluster 861
+0	68aa, >disprot_protein999... at 98.53%
+1	172aa, >disprot_protein1732... *
+>Cluster 862
+0	172aa, >disprot_protein2085... *
+>Cluster 863
+0	172aa, >pdb_protein1505... *
+>Cluster 864
+0	172aa, >pdb_protein1533... *
+>Cluster 865
+0	89aa, >pdb_protein36... at 42.70%
+1	79aa, >pdb_protein175... at 53.16%
+2	78aa, >pdb_protein494... at 47.44%
+3	71aa, >pdb_protein597... at 40.85%
+4	94aa, >pdb_protein999... at 40.43%
+5	172aa, >pdb_protein1570... *
+>Cluster 866
+0	168aa, >pdb_protein1525... at 98.81%
+1	170aa, >pdb_protein1547... at 95.88%
+2	170aa, >pdb_protein1587... at 98.24%
+3	166aa, >pdb_protein1607... at 92.77%
+4	169aa, >pdb_protein1636... at 99.41%
+5	172aa, >pdb_protein1638... *
+6	171aa, >pdb_protein1645... at 90.64%
+>Cluster 867
+0	169aa, >disprot_protein47... at 91.72%
+1	109aa, >disprot_protein48... at 89.91%
+2	171aa, >disprot_protein189... *
+3	171aa, >disprot_protein410... at 91.23%
+4	169aa, >disprot_protein628... at 95.86%
+>Cluster 868
+0	171aa, >disprot_protein1630... *
+>Cluster 869
+0	171aa, >pdb_protein1460... *
+>Cluster 870
+0	56aa, >disprot_protein237... at 42.86%
+1	171aa, >pdb_protein1498... *
+>Cluster 871
+0	171aa, >pdb_protein1554... *
+>Cluster 872
+0	171aa, >pdb_protein1616... *
+>Cluster 873
+0	170aa, >disprot_protein107... *
+>Cluster 874
+0	170aa, >disprot_protein1499... *
+1	97aa, >disprot_protein1500... at 100.00%
+>Cluster 875
+0	168aa, >disprot_protein1489... at 82.14%
+1	170aa, >disprot_protein2081... *
+>Cluster 876
+0	170aa, >disprot_protein2100... *
+>Cluster 877
+0	170aa, >pdb_protein1434... *
+>Cluster 878
+0	170aa, >pdb_protein1504... *
+>Cluster 879
+0	170aa, >pdb_protein1539... *
+>Cluster 880
+0	170aa, >pdb_protein1602... *
+>Cluster 881
+0	170aa, >pdb_protein1630... *
+>Cluster 882
+0	169aa, >disprot_protein271... *
+>Cluster 883
+0	169aa, >disprot_protein992... *
+1	64aa, >disprot_protein993... at 100.00%
+2	98aa, >disprot_protein994... at 100.00%
+>Cluster 884
+0	169aa, >disprot_protein1613... *
+>Cluster 885
+0	169aa, >disprot_protein1984... *
+>Cluster 886
+0	169aa, >disprot_protein1991... *
+>Cluster 887
+0	169aa, >pdb_protein1458... *
+>Cluster 888
+0	169aa, >pdb_protein1535... *
+>Cluster 889
+0	88aa, >disprot_protein207... at 59.09%
+1	167aa, >disprot_protein208... at 60.48%
+2	143aa, >disprot_protein209... at 62.24%
+3	79aa, >disprot_protein210... at 63.29%
+4	168aa, >disprot_protein349... *
+>Cluster 890
+0	168aa, >disprot_protein653... *
+1	83aa, >disprot_protein1865... at 42.17%
+>Cluster 891
+0	168aa, >disprot_protein1176... *
+>Cluster 892
+0	82aa, >disprot_protein358... at 98.78%
+1	79aa, >disprot_protein359... at 98.73%
+2	168aa, >disprot_protein1703... *
+3	116aa, >disprot_protein1704... at 100.00%
+>Cluster 893
+0	168aa, >pdb_protein1490... *
+>Cluster 894
+0	168aa, >pdb_protein1495... *
+1	160aa, >pdb_protein1581... at 78.75%
+2	161aa, >pdb_protein1594... at 42.24%
+>Cluster 895
+0	167aa, >disprot_protein120... *
+>Cluster 896
+0	167aa, >disprot_protein1015... *
+>Cluster 897
+0	167aa, >disprot_protein1170... *
+>Cluster 898
+0	167aa, >disprot_protein1188... *
+>Cluster 899
+0	167aa, >disprot_protein1375... *
+>Cluster 900
+0	164aa, >pdb_protein1452... at 99.39%
+1	167aa, >pdb_protein1548... *
+2	164aa, >pdb_protein1565... at 99.39%
+>Cluster 901
+0	167aa, >pdb_protein1561... *
+>Cluster 902
+0	165aa, >pdb_protein1516... at 51.52%
+1	167aa, >pdb_protein1577... *
+>Cluster 903
+0	167aa, >pdb_protein1612... *
+>Cluster 904
+0	166aa, >disprot_protein190... *
+>Cluster 905
+0	166aa, >disprot_protein239... *
+>Cluster 906
+0	166aa, >disprot_protein397... *
+>Cluster 907
+0	166aa, >disprot_protein1163... *
+>Cluster 908
+0	166aa, >disprot_protein1200... *
+1	60aa, >disprot_protein1467... at 40.00%
+>Cluster 909
+0	166aa, >pdb_protein1598... *
+>Cluster 910
+0	157aa, >pdb_protein1521... at 42.68%
+1	166aa, >pdb_protein1618... *
+>Cluster 911
+0	68aa, >pdb_protein55... at 47.06%
+1	86aa, >pdb_protein262... at 47.67%
+2	54aa, >pdb_protein485... at 59.26%
+3	162aa, >pdb_protein1432... at 93.83%
+4	166aa, >pdb_protein1628... *
+5	153aa, >pdb_protein1633... at 79.08%
+>Cluster 912
+0	166aa, >pdb_protein1640... *
+>Cluster 913
+0	165aa, >disprot_protein72... *
+>Cluster 914
+0	164aa, >disprot_protein2008... at 100.00%
+1	165aa, >disprot_protein2009... *
+>Cluster 915
+0	163aa, >pdb_protein1493... at 99.39%
+1	165aa, >pdb_protein1586... *
+>Cluster 916
+0	164aa, >disprot_protein9... *
+1	94aa, >disprot_protein10... at 100.00%
+>Cluster 917
+0	122aa, >disprot_protein580... at 100.00%
+1	164aa, >disprot_protein581... *
+>Cluster 918
+0	164aa, >disprot_protein782... *
+>Cluster 919
+0	164aa, >pdb_protein1557... *
+>Cluster 920
+0	164aa, >pdb_protein1571... *
+>Cluster 921
+0	164aa, >pdb_protein1574... *
+>Cluster 922
+0	164aa, >pdb_protein1611... *
+>Cluster 923
+0	163aa, >disprot_protein1812... *
+>Cluster 924
+0	163aa, >disprot_protein1981... *
+1	58aa, >disprot_protein1982... at 100.00%
+2	61aa, >disprot_protein1983... at 100.00%
+>Cluster 925
+0	163aa, >pdb_protein1433... *
+>Cluster 926
+0	83aa, >pdb_protein333... at 55.42%
+1	163aa, >pdb_protein1646... *
+>Cluster 927
+0	162aa, >disprot_protein108... *
+>Cluster 928
+0	162aa, >disprot_protein2051... *
+>Cluster 929
+0	162aa, >pdb_protein1467... *
+>Cluster 930
+0	112aa, >pdb_protein1165... at 98.21%
+1	162aa, >pdb_protein1519... *
+>Cluster 931
+0	162aa, >pdb_protein1610... *
+>Cluster 932
+0	161aa, >disprot_protein1673... *
+>Cluster 933
+0	159aa, >disprot_protein2016... at 100.00%
+1	161aa, >disprot_protein2017... *
+>Cluster 934
+0	161aa, >pdb_protein1484... *
+>Cluster 935
+0	161aa, >pdb_protein1512... *
+>Cluster 936
+0	161aa, >pdb_protein1615... *
+>Cluster 937
+0	160aa, >disprot_protein989... *
+>Cluster 938
+0	160aa, >disprot_protein1007... *
+>Cluster 939
+0	160aa, >disprot_protein1095... *
+1	70aa, >disprot_protein1096... at 100.00%
+2	53aa, >disprot_protein1097... at 100.00%
+>Cluster 940
+0	160aa, >disprot_protein1528... *
+>Cluster 941
+0	160aa, >disprot_protein1856... *
+>Cluster 942
+0	160aa, >pdb_protein1449... *
+>Cluster 943
+0	160aa, >pdb_protein1470... *
+>Cluster 944
+0	160aa, >pdb_protein1476... *
+>Cluster 945
+0	65aa, >pdb_protein229... at 55.38%
+1	160aa, >pdb_protein1485... *
+>Cluster 946
+0	160aa, >pdb_protein1494... *
+>Cluster 947
+0	160aa, >pdb_protein1497... *
+>Cluster 948
+0	160aa, >pdb_protein1566... *
+>Cluster 949
+0	160aa, >pdb_protein1569... *
+>Cluster 950
+0	160aa, >pdb_protein1624... *
+>Cluster 951
+0	160aa, >pdb_protein1649... *
+>Cluster 952
+0	159aa, >disprot_protein2094... *
+1	100aa, >disprot_protein2095... at 100.00%
+>Cluster 953
+0	159aa, >pdb_protein1637... *
+>Cluster 954
+0	158aa, >disprot_protein218... *
+>Cluster 955
+0	158aa, >disprot_protein1085... *
+>Cluster 956
+0	158aa, >disprot_protein1776... *
+>Cluster 957
+0	65aa, >pdb_protein331... at 46.15%
+1	158aa, >pdb_protein1482... *
+>Cluster 958
+0	158aa, >pdb_protein1621... *
+>Cluster 959
+0	157aa, >disprot_protein141... *
+>Cluster 960
+0	157aa, >disprot_protein996... *
+>Cluster 961
+0	157aa, >disprot_protein1684... *
+>Cluster 962
+0	157aa, >pdb_protein1555... *
+>Cluster 963
+0	157aa, >pdb_protein1559... *
+>Cluster 964
+0	143aa, >pdb_protein1175... at 99.30%
+1	157aa, >pdb_protein1575... *
+>Cluster 965
+0	157aa, >pdb_protein1620... *
+>Cluster 966
+0	156aa, >disprot_protein65... *
+>Cluster 967
+0	156aa, >disprot_protein454... *
+>Cluster 968
+0	156aa, >disprot_protein1232... *
+>Cluster 969
+0	156aa, >disprot_protein1421... *
+1	78aa, >disprot_protein1422... at 100.00%
+>Cluster 970
+0	156aa, >disprot_protein1436... *
+>Cluster 971
+0	156aa, >disprot_protein1796... *
+>Cluster 972
+0	156aa, >pdb_protein1438... *
+>Cluster 973
+0	156aa, >pdb_protein1500... *
+>Cluster 974
+0	90aa, >pdb_protein204... at 46.67%
+1	90aa, >pdb_protein945... at 46.67%
+2	156aa, >pdb_protein1515... *
+>Cluster 975
+0	156aa, >pdb_protein1543... *
+>Cluster 976
+0	99aa, >pdb_protein143... at 68.69%
+1	109aa, >pdb_protein1249... at 55.96%
+2	156aa, >pdb_protein1613... *
+>Cluster 977
+0	156aa, >pdb_protein1629... *
+>Cluster 978
+0	156aa, >pdb_protein1631... *
+>Cluster 979
+0	155aa, >disprot_protein1126... *
+>Cluster 980
+0	155aa, >disprot_protein1974... *
+>Cluster 981
+0	155aa, >pdb_protein1455... *
+>Cluster 982
+0	155aa, >pdb_protein1540... *
+>Cluster 983
+0	154aa, >disprot_protein416... *
+>Cluster 984
+0	154aa, >disprot_protein541... *
+>Cluster 985
+0	154aa, >disprot_protein1206... *
+>Cluster 986
+0	154aa, >disprot_protein1366... *
+>Cluster 987
+0	133aa, >disprot_protein2012... at 100.00%
+1	154aa, >disprot_protein2013... *
+>Cluster 988
+0	154aa, >pdb_protein1474... *
+>Cluster 989
+0	73aa, >disprot_protein136... at 100.00%
+1	153aa, >disprot_protein137... *
+2	107aa, >disprot_protein138... at 100.00%
+3	69aa, >disprot_protein139... at 100.00%
+4	149aa, >disprot_protein140... at 100.00%
+>Cluster 990
+0	153aa, >disprot_protein407... *
+>Cluster 991
+0	153aa, >disprot_protein668... *
+>Cluster 992
+0	153aa, >pdb_protein1459... *
+>Cluster 993
+0	153aa, >pdb_protein1480... *
+>Cluster 994
+0	153aa, >pdb_protein1522... *
+>Cluster 995
+0	153aa, >pdb_protein1527... *
+>Cluster 996
+0	153aa, >pdb_protein1530... *
+>Cluster 997
+0	153aa, >pdb_protein1567... *
+>Cluster 998
+0	149aa, >disprot_protein648... at 100.00%
+1	148aa, >disprot_protein649... at 100.00%
+2	152aa, >disprot_protein650... *
+3	64aa, >pdb_protein948... at 100.00%
+4	148aa, >pdb_protein1466... at 100.00%
+>Cluster 999
+0	83aa, >disprot_protein256... at 44.58%
+1	61aa, >disprot_protein257... at 42.62%
+2	152aa, >disprot_protein651... *
+3	135aa, >disprot_protein1449... at 47.41%
+>Cluster 1000
+0	152aa, >disprot_protein1223... *
+>Cluster 1001
+0	152aa, >disprot_protein1699... *
+1	132aa, >disprot_protein1700... at 100.00%
+2	142aa, >disprot_protein1701... at 100.00%
+3	126aa, >disprot_protein2104... at 99.21%
+4	125aa, >disprot_protein2105... at 99.20%
+5	116aa, >disprot_protein2106... at 99.14%
+6	88aa, >disprot_protein2107... at 98.86%
+7	105aa, >disprot_protein2108... at 99.05%
+8	51aa, >disprot_protein2109... at 98.04%
+>Cluster 1002
+0	152aa, >disprot_protein2119... *
+>Cluster 1003
+0	152aa, >pdb_protein1436... *
+>Cluster 1004
+0	146aa, >pdb_protein1161... at 45.89%
+1	147aa, >pdb_protein1182... at 46.94%
+2	149aa, >pdb_protein1584... at 45.64%
+3	152aa, >pdb_protein1601... *
+>Cluster 1005
+0	151aa, >disprot_protein1844... *
+>Cluster 1006
+0	151aa, >disprot_protein1845... *
+>Cluster 1007
+0	151aa, >disprot_protein2060... *
+>Cluster 1008
+0	151aa, >pdb_protein1496... *
+>Cluster 1009
+0	151aa, >pdb_protein1572... *
+>Cluster 1010
+0	150aa, >disprot_protein589... *
+>Cluster 1011
+0	150aa, >disprot_protein683... *
+1	135aa, >disprot_protein684... at 100.00%
+>Cluster 1012
+0	150aa, >disprot_protein1438... *
+>Cluster 1013
+0	150aa, >disprot_protein1992... *
+>Cluster 1014
+0	150aa, >pdb_protein1443... *
+>Cluster 1015
+0	150aa, >pdb_protein1471... *
+>Cluster 1016
+0	150aa, >pdb_protein1502... *
+>Cluster 1017
+0	150aa, >pdb_protein1534... *
+>Cluster 1018
+0	150aa, >pdb_protein1600... *
+>Cluster 1019
+0	150aa, >pdb_protein1626... *
+>Cluster 1020
+0	150aa, >pdb_protein1639... *
+>Cluster 1021
+0	65aa, >disprot_protein682... at 40.00%
+1	149aa, >disprot_protein1678... *
+>Cluster 1022
+0	58aa, >disprot_protein981... at 44.83%
+1	149aa, >disprot_protein1842... *
+2	87aa, >disprot_protein1843... at 95.40%
+3	54aa, >disprot_protein1999... at 40.74%
+>Cluster 1023
+0	149aa, >pdb_protein1431... *
+>Cluster 1024
+0	149aa, >pdb_protein1440... *
+>Cluster 1025
+0	149aa, >pdb_protein1462... *
+>Cluster 1026
+0	149aa, >pdb_protein1481... *
+>Cluster 1027
+0	149aa, >pdb_protein1483... *
+>Cluster 1028
+0	149aa, >pdb_protein1536... *
+>Cluster 1029
+0	149aa, >pdb_protein1589... *
+>Cluster 1030
+0	149aa, >pdb_protein1641... *
+>Cluster 1031
+0	148aa, >disprot_protein673... *
+1	84aa, >disprot_protein674... at 100.00%
+>Cluster 1032
+0	148aa, >disprot_protein705... *
+>Cluster 1033
+0	148aa, >disprot_protein752... *
+>Cluster 1034
+0	148aa, >disprot_protein1252... *
+>Cluster 1035
+0	148aa, >disprot_protein1598... *
+>Cluster 1036
+0	148aa, >pdb_protein1513... *
+>Cluster 1037
+0	148aa, >pdb_protein1518... *
+>Cluster 1038
+0	148aa, >pdb_protein1549... *
+>Cluster 1039
+0	147aa, >disprot_protein268... *
+1	147aa, >disprot_protein270... at 95.24%
+>Cluster 1040
+0	147aa, >disprot_protein1131... *
+>Cluster 1041
+0	147aa, >disprot_protein1495... *
+>Cluster 1042
+0	147aa, >disprot_protein1777... *
+1	67aa, >disprot_protein1778... at 100.00%
+2	134aa, >disprot_protein1779... at 99.25%
+3	133aa, >disprot_protein1780... at 69.92%
+4	134aa, >disprot_protein1781... at 67.91%
+>Cluster 1043
+0	67aa, >disprot_protein1868... at 100.00%
+1	147aa, >disprot_protein1869... *
+>Cluster 1044
+0	54aa, >disprot_protein1012... at 40.74%
+1	147aa, >disprot_protein1953... *
+>Cluster 1045
+0	147aa, >pdb_protein1086... *
+>Cluster 1046
+0	147aa, >pdb_protein1129... *
+>Cluster 1047
+0	147aa, >pdb_protein1139... *
+>Cluster 1048
+0	147aa, >pdb_protein1236... *
+>Cluster 1049
+0	147aa, >pdb_protein1242... *
+>Cluster 1050
+0	144aa, >pdb_protein1110... at 40.97%
+1	147aa, >pdb_protein1282... *
+>Cluster 1051
+0	147aa, >pdb_protein1329... *
+1	141aa, >pdb_protein1399... at 100.00%
+>Cluster 1052
+0	147aa, >pdb_protein1373... *
+>Cluster 1053
+0	146aa, >disprot_protein2083... *
+>Cluster 1054
+0	146aa, >pdb_protein1049... *
+1	141aa, >pdb_protein1126... at 43.26%
+2	146aa, >pdb_protein1195... at 98.63%
+>Cluster 1055
+0	146aa, >pdb_protein1055... *
+>Cluster 1056
+0	146aa, >pdb_protein1187... *
+>Cluster 1057
+0	146aa, >pdb_protein1218... *
+>Cluster 1058
+0	146aa, >pdb_protein1225... *
+>Cluster 1059
+0	146aa, >pdb_protein1271... *
+>Cluster 1060
+0	146aa, >pdb_protein1304... *
+>Cluster 1061
+0	146aa, >pdb_protein1347... *
+>Cluster 1062
+0	146aa, >pdb_protein1378... *
+>Cluster 1063
+0	146aa, >pdb_protein1416... *
+>Cluster 1064
+0	146aa, >pdb_protein1424... *
+>Cluster 1065
+0	72aa, >disprot_protein501... at 43.06%
+1	145aa, >disprot_protein997... *
+2	73aa, >disprot_protein998... at 100.00%
+3	54aa, >disprot_protein1133... at 42.59%
+>Cluster 1066
+0	145aa, >disprot_protein1649... *
+>Cluster 1067
+0	145aa, >pdb_protein1131... *
+>Cluster 1068
+0	145aa, >pdb_protein1217... *
+>Cluster 1069
+0	145aa, >pdb_protein1263... *
+>Cluster 1070
+0	145aa, >pdb_protein1280... *
+>Cluster 1071
+0	145aa, >pdb_protein1281... *
+>Cluster 1072
+0	145aa, >pdb_protein1302... *
+>Cluster 1073
+0	145aa, >pdb_protein1375... *
+>Cluster 1074
+0	145aa, >pdb_protein1377... *
+>Cluster 1075
+0	145aa, >pdb_protein1389... *
+>Cluster 1076
+0	145aa, >pdb_protein1413... *
+>Cluster 1077
+0	144aa, >disprot_protein350... *
+>Cluster 1078
+0	144aa, >disprot_protein1662... *
+>Cluster 1079
+0	142aa, >pdb_protein1015... at 78.17%
+1	144aa, >pdb_protein1066... *
+>Cluster 1080
+0	144aa, >pdb_protein1122... *
+>Cluster 1081
+0	144aa, >pdb_protein1296... *
+>Cluster 1082
+0	144aa, >pdb_protein1385... *
+>Cluster 1083
+0	143aa, >disprot_protein156... *
+>Cluster 1084
+0	143aa, >disprot_protein809... *
+>Cluster 1085
+0	143aa, >disprot_protein879... *
+>Cluster 1086
+0	143aa, >pdb_protein1029... *
+>Cluster 1087
+0	77aa, >pdb_protein786... at 63.64%
+1	143aa, >pdb_protein1060... *
+2	143aa, >pdb_protein1309... at 97.20%
+>Cluster 1088
+0	143aa, >pdb_protein1096... *
+>Cluster 1089
+0	73aa, >pdb_protein488... at 56.16%
+1	64aa, >pdb_protein509... at 82.81%
+2	143aa, >pdb_protein1128... *
+>Cluster 1090
+0	143aa, >pdb_protein1170... *
+>Cluster 1091
+0	143aa, >pdb_protein1247... *
+>Cluster 1092
+0	143aa, >pdb_protein1252... *
+>Cluster 1093
+0	143aa, >pdb_protein1379... *
+>Cluster 1094
+0	142aa, >disprot_protein116... *
+>Cluster 1095
+0	142aa, >disprot_protein569... *
+>Cluster 1096
+0	142aa, >disprot_protein1004... *
+1	104aa, >disprot_protein1005... at 100.00%
+>Cluster 1097
+0	142aa, >disprot_protein1132... *
+>Cluster 1098
+0	142aa, >disprot_protein1280... *
+>Cluster 1099
+0	84aa, >disprot_protein1447... at 73.81%
+1	142aa, >disprot_protein1448... *
+2	104aa, >disprot_protein1450... at 100.00%
+>Cluster 1100
+0	142aa, >disprot_protein1910... *
+>Cluster 1101
+0	142aa, >disprot_protein1998... *
+1	51aa, >disprot_protein2053... at 43.14%
+>Cluster 1102
+0	142aa, >pdb_protein1376... *
+>Cluster 1103
+0	142aa, >pdb_protein1381... *
+>Cluster 1104
+0	141aa, >disprot_protein162... *
+1	99aa, >disprot_protein1102... at 67.68%
+>Cluster 1105
+0	141aa, >disprot_protein1164... *
+>Cluster 1106
+0	141aa, >disprot_protein1754... *
+>Cluster 1107
+0	141aa, >pdb_protein1083... *
+>Cluster 1108
+0	141aa, >pdb_protein1113... *
+>Cluster 1109
+0	141aa, >pdb_protein1256... *
+>Cluster 1110
+0	141aa, >pdb_protein1275... *
+>Cluster 1111
+0	141aa, >pdb_protein1294... *
+>Cluster 1112
+0	141aa, >pdb_protein1372... *
+>Cluster 1113
+0	140aa, >disprot_protein61... *
+1	102aa, >disprot_protein63... at 100.00%
+2	103aa, >disprot_protein64... at 100.00%
+3	134aa, >disprot_protein346... at 67.16%
+4	127aa, >disprot_protein393... at 55.91%
+>Cluster 1114
+0	140aa, >disprot_protein892... *
+1	79aa, >disprot_protein893... at 84.81%
+>Cluster 1115
+0	139aa, >disprot_protein938... at 100.00%
+1	140aa, >disprot_protein939... *
+>Cluster 1116
+0	140aa, >disprot_protein1604... *
+>Cluster 1117
+0	140aa, >disprot_protein1756... *
+>Cluster 1118
+0	140aa, >disprot_protein1918... *
+>Cluster 1119
+0	140aa, >pdb_protein1021... *
+>Cluster 1120
+0	140aa, >pdb_protein1027... *
+>Cluster 1121
+0	140aa, >pdb_protein1072... *
+1	125aa, >pdb_protein1088... at 72.00%
+>Cluster 1122
+0	140aa, >pdb_protein1097... *
+>Cluster 1123
+0	140aa, >pdb_protein1102... *
+>Cluster 1124
+0	140aa, >pdb_protein1246... *
+>Cluster 1125
+0	140aa, >pdb_protein1260... *
+>Cluster 1126
+0	140aa, >pdb_protein1323... *
+>Cluster 1127
+0	140aa, >pdb_protein1355... *
+>Cluster 1128
+0	140aa, >pdb_protein1395... *
+>Cluster 1129
+0	139aa, >disprot_protein390... *
+>Cluster 1130
+0	139aa, >disprot_protein1001... *
+1	71aa, >disprot_protein1002... at 49.30%
+>Cluster 1131
+0	139aa, >disprot_protein1760... *
+1	94aa, >disprot_protein1761... at 100.00%
+2	128aa, >disprot_protein1762... at 100.00%
+>Cluster 1132
+0	139aa, >pdb_protein1010... *
+>Cluster 1133
+0	139aa, >pdb_protein1033... *
+>Cluster 1134
+0	139aa, >pdb_protein1184... *
+>Cluster 1135
+0	139aa, >pdb_protein1259... *
+>Cluster 1136
+0	139aa, >pdb_protein1273... *
+>Cluster 1137
+0	139aa, >pdb_protein1330... *
+>Cluster 1138
+0	139aa, >pdb_protein1360... *
+>Cluster 1139
+0	138aa, >disprot_protein1263... *
+>Cluster 1140
+0	126aa, >disprot_protein1427... at 53.17%
+1	138aa, >disprot_protein1470... *
+>Cluster 1141
+0	63aa, >pdb_protein447... at 47.62%
+1	138aa, >pdb_protein1209... *
+>Cluster 1142
+0	138aa, >pdb_protein1235... *
+>Cluster 1143
+0	138aa, >pdb_protein1368... *
+>Cluster 1144
+0	138aa, >pdb_protein1371... *
+>Cluster 1145
+0	137aa, >disprot_protein252... *
+1	133aa, >pdb_protein1020... at 42.11%
+2	137aa, >pdb_protein1130... at 74.45%
+3	133aa, >pdb_protein1429... at 42.11%
+>Cluster 1146
+0	133aa, >disprot_protein254... at 100.00%
+1	137aa, >disprot_protein661... *
+2	126aa, >disprot_protein1367... at 92.86%
+>Cluster 1147
+0	137aa, >pdb_protein1035... *
+>Cluster 1148
+0	137aa, >pdb_protein1043... *
+>Cluster 1149
+0	137aa, >pdb_protein1168... *
+>Cluster 1150
+0	137aa, >pdb_protein1204... *
+>Cluster 1151
+0	76aa, >pdb_protein822... at 40.79%
+1	137aa, >pdb_protein1290... *
+>Cluster 1152
+0	137aa, >pdb_protein1301... *
+>Cluster 1153
+0	137aa, >pdb_protein1427... *
+>Cluster 1154
+0	136aa, >disprot_protein105... *
+>Cluster 1155
+0	136aa, >disprot_protein738... *
+1	130aa, >disprot_protein739... at 100.00%
+>Cluster 1156
+0	136aa, >disprot_protein1355... *
+>Cluster 1157
+0	104aa, >disprot_protein302... at 42.31%
+1	109aa, >disprot_protein1520... at 100.00%
+2	136aa, >disprot_protein1521... *
+3	104aa, >disprot_protein1557... at 41.35%
+>Cluster 1158
+0	136aa, >disprot_protein1556... *
+>Cluster 1159
+0	136aa, >disprot_protein1884... *
+>Cluster 1160
+0	136aa, >disprot_protein1902... *
+>Cluster 1161
+0	125aa, >disprot_protein2003... at 73.60%
+1	136aa, >disprot_protein2004... *
+>Cluster 1162
+0	136aa, >pdb_protein1012... *
+>Cluster 1163
+0	136aa, >pdb_protein1081... *
+>Cluster 1164
+0	136aa, >pdb_protein1112... *
+>Cluster 1165
+0	136aa, >pdb_protein1261... *
+>Cluster 1166
+0	136aa, >pdb_protein1343... *
+>Cluster 1167
+0	136aa, >pdb_protein1345... *
+>Cluster 1168
+0	136aa, >pdb_protein1356... *
+>Cluster 1169
+0	136aa, >pdb_protein1386... *
+>Cluster 1170
+0	124aa, >pdb_protein1051... at 49.19%
+1	136aa, >pdb_protein1393... *
+>Cluster 1171
+0	62aa, >disprot_protein131... at 100.00%
+1	135aa, >disprot_protein132... *
+>Cluster 1172
+0	135aa, >disprot_protein771... *
+>Cluster 1173
+0	135aa, >disprot_protein1709... *
+>Cluster 1174
+0	135aa, >disprot_protein2061... *
+>Cluster 1175
+0	135aa, >pdb_protein1006... *
+>Cluster 1176
+0	135aa, >pdb_protein1075... *
+>Cluster 1177
+0	135aa, >pdb_protein1090... *
+1	135aa, >pdb_protein1257... at 97.78%
+2	135aa, >pdb_protein1422... at 96.30%
+>Cluster 1178
+0	101aa, >disprot_protein2069... at 100.00%
+1	135aa, >pdb_protein1144... *
+>Cluster 1179
+0	135aa, >pdb_protein1233... *
+>Cluster 1180
+0	135aa, >pdb_protein1313... *
+>Cluster 1181
+0	135aa, >pdb_protein1396... *
+>Cluster 1182
+0	134aa, >pdb_protein1054... *
+>Cluster 1183
+0	134aa, >pdb_protein1132... *
+>Cluster 1184
+0	134aa, >pdb_protein1274... *
+>Cluster 1185
+0	134aa, >pdb_protein1348... *
+>Cluster 1186
+0	134aa, >pdb_protein1366... *
+>Cluster 1187
+0	134aa, >pdb_protein1391... *
+>Cluster 1188
+0	98aa, >pdb_protein58... at 90.82%
+1	86aa, >pdb_protein251... at 60.47%
+2	82aa, >pdb_protein596... at 93.90%
+3	88aa, >pdb_protein752... at 59.09%
+4	134aa, >pdb_protein1402... *
+>Cluster 1189
+0	134aa, >pdb_protein1407... *
+>Cluster 1190
+0	133aa, >disprot_protein424... *
+1	133aa, >disprot_protein425... at 74.44%
+>Cluster 1191
+0	133aa, >disprot_protein877... *
+>Cluster 1192
+0	133aa, >disprot_protein1623... *
+>Cluster 1193
+0	133aa, >pdb_protein1062... *
+>Cluster 1194
+0	133aa, >pdb_protein1134... *
+>Cluster 1195
+0	133aa, >pdb_protein1136... *
+>Cluster 1196
+0	133aa, >pdb_protein1150... *
+>Cluster 1197
+0	133aa, >pdb_protein1215... *
+>Cluster 1198
+0	133aa, >pdb_protein1336... *
+>Cluster 1199
+0	133aa, >pdb_protein1337... *
+>Cluster 1200
+0	133aa, >pdb_protein1342... *
+>Cluster 1201
+0	133aa, >pdb_protein1353... *
+>Cluster 1202
+0	133aa, >pdb_protein1361... *
+>Cluster 1203
+0	96aa, >pdb_protein37... at 94.79%
+1	98aa, >pdb_protein895... at 65.31%
+2	110aa, >pdb_protein1331... at 59.09%
+3	133aa, >pdb_protein1428... *
+>Cluster 1204
+0	132aa, >disprot_protein1166... *
+1	76aa, >disprot_protein1167... at 100.00%
+>Cluster 1205
+0	132aa, >pdb_protein1056... *
+>Cluster 1206
+0	132aa, >pdb_protein1169... *
+>Cluster 1207
+0	132aa, >pdb_protein1357... *
+>Cluster 1208
+0	132aa, >pdb_protein1397... *
+>Cluster 1209
+0	78aa, >disprot_protein329... at 100.00%
+1	131aa, >disprot_protein330... *
+2	52aa, >disprot_protein757... at 40.38%
+>Cluster 1210
+0	131aa, >disprot_protein642... *
+>Cluster 1211
+0	131aa, >disprot_protein667... *
+>Cluster 1212
+0	131aa, >disprot_protein1412... *
+>Cluster 1213
+0	131aa, >disprot_protein2062... *
+>Cluster 1214
+0	131aa, >pdb_protein1032... *
+>Cluster 1215
+0	98aa, >pdb_protein287... at 74.49%
+1	131aa, >pdb_protein1087... *
+>Cluster 1216
+0	131aa, >pdb_protein1158... *
+>Cluster 1217
+0	131aa, >pdb_protein1172... *
+>Cluster 1218
+0	131aa, >pdb_protein1173... *
+>Cluster 1219
+0	131aa, >pdb_protein1272... *
+>Cluster 1220
+0	113aa, >disprot_protein25... at 100.00%
+1	130aa, >disprot_protein26... *
+>Cluster 1221
+0	130aa, >disprot_protein56... *
+>Cluster 1222
+0	56aa, >disprot_protein147... at 100.00%
+1	53aa, >disprot_protein148... at 100.00%
+2	130aa, >disprot_protein149... *
+3	53aa, >pdb_protein761... at 100.00%
+>Cluster 1223
+0	130aa, >disprot_protein714... *
+>Cluster 1224
+0	83aa, >disprot_protein1481... at 100.00%
+1	130aa, >disprot_protein1482... *
+2	71aa, >disprot_protein1483... at 100.00%
+>Cluster 1225
+0	130aa, >disprot_protein1659... *
+>Cluster 1226
+0	130aa, >pdb_protein1007... *
+1	130aa, >pdb_protein1011... at 98.46%
+2	130aa, >pdb_protein1115... at 98.46%
+3	130aa, >pdb_protein1116... at 98.46%
+4	129aa, >pdb_protein1138... at 59.69%
+5	130aa, >pdb_protein1200... at 98.46%
+6	130aa, >pdb_protein1241... at 98.46%
+7	129aa, >pdb_protein1253... at 59.69%
+8	129aa, >pdb_protein1418... at 58.91%
+>Cluster 1227
+0	130aa, >pdb_protein1047... *
+>Cluster 1228
+0	130aa, >pdb_protein1089... *
+>Cluster 1229
+0	101aa, >pdb_protein1079... at 64.36%
+1	130aa, >pdb_protein1152... *
+>Cluster 1230
+0	127aa, >pdb_protein1202... at 82.68%
+1	130aa, >pdb_protein1222... *
+>Cluster 1231
+0	116aa, >pdb_protein1037... at 42.24%
+1	130aa, >pdb_protein1276... *
+2	110aa, >pdb_protein1300... at 82.73%
+>Cluster 1232
+0	130aa, >pdb_protein1328... *
+>Cluster 1233
+0	130aa, >pdb_protein1351... *
+>Cluster 1234
+0	116aa, >pdb_protein1085... at 50.00%
+1	109aa, >pdb_protein1228... at 49.54%
+2	130aa, >pdb_protein1383... *
+>Cluster 1235
+0	130aa, >pdb_protein1406... *
+>Cluster 1236
+0	130aa, >pdb_protein1410... *
+>Cluster 1237
+0	88aa, >pdb_protein929... at 44.32%
+1	130aa, >pdb_protein1426... *
+>Cluster 1238
+0	129aa, >disprot_protein1161... *
+>Cluster 1239
+0	129aa, >disprot_protein1177... *
+>Cluster 1240
+0	129aa, >pdb_protein1038... *
+>Cluster 1241
+0	129aa, >pdb_protein1093... *
+>Cluster 1242
+0	129aa, >pdb_protein1206... *
+>Cluster 1243
+0	129aa, >pdb_protein1266... *
+>Cluster 1244
+0	129aa, >pdb_protein1365... *
+>Cluster 1245
+0	60aa, >disprot_protein219... at 100.00%
+1	109aa, >disprot_protein220... at 100.00%
+2	56aa, >disprot_protein221... at 100.00%
+3	128aa, >disprot_protein222... *
+>Cluster 1246
+0	128aa, >disprot_protein718... *
+>Cluster 1247
+0	128aa, >disprot_protein1537... *
+>Cluster 1248
+0	128aa, >disprot_protein1810... *
+1	126aa, >disprot_protein1811... at 100.00%
+>Cluster 1249
+0	128aa, >pdb_protein1045... *
+>Cluster 1250
+0	128aa, >pdb_protein1167... *
+>Cluster 1251
+0	128aa, >pdb_protein1216... *
+>Cluster 1252
+0	128aa, >pdb_protein1289... *
+>Cluster 1253
+0	127aa, >disprot_protein652... *
+>Cluster 1254
+0	127aa, >disprot_protein1086... *
+>Cluster 1255
+0	127aa, >disprot_protein1592... *
+>Cluster 1256
+0	127aa, >disprot_protein1647... *
+>Cluster 1257
+0	127aa, >disprot_protein1753... *
+>Cluster 1258
+0	127aa, >disprot_protein1892... *
+>Cluster 1259
+0	127aa, >pdb_protein1024... *
+>Cluster 1260
+0	127aa, >pdb_protein1050... *
+1	121aa, >pdb_protein1109... at 73.55%
+2	122aa, >pdb_protein1230... at 72.95%
+>Cluster 1261
+0	124aa, >pdb_protein1022... at 99.19%
+1	127aa, >pdb_protein1074... *
+>Cluster 1262
+0	77aa, >pdb_protein63... at 93.51%
+1	78aa, >pdb_protein64... at 84.62%
+2	81aa, >pdb_protein121... at 77.78%
+3	83aa, >pdb_protein163... at 84.34%
+4	76aa, >pdb_protein281... at 93.42%
+5	76aa, >pdb_protein410... at 93.42%
+6	76aa, >pdb_protein458... at 93.42%
+7	79aa, >pdb_protein474... at 91.14%
+8	78aa, >pdb_protein693... at 92.31%
+9	76aa, >pdb_protein696... at 93.42%
+10	76aa, >pdb_protein715... at 85.53%
+11	88aa, >pdb_protein821... at 69.32%
+12	76aa, >pdb_protein829... at 92.11%
+13	81aa, >pdb_protein912... at 88.89%
+14	76aa, >pdb_protein963... at 93.42%
+15	127aa, >pdb_protein1094... *
+>Cluster 1263
+0	127aa, >pdb_protein1100... *
+1	107aa, >pdb_protein1162... at 57.94%
+2	114aa, >pdb_protein1420... at 61.40%
+>Cluster 1264
+0	127aa, >pdb_protein1105... *
+>Cluster 1265
+0	127aa, >pdb_protein1114... *
+1	123aa, >pdb_protein1198... at 40.65%
+>Cluster 1266
+0	127aa, >pdb_protein1208... *
+>Cluster 1267
+0	127aa, >pdb_protein1219... *
+>Cluster 1268
+0	113aa, >pdb_protein1177... at 84.07%
+1	102aa, >pdb_protein1180... at 92.16%
+2	127aa, >pdb_protein1299... *
+>Cluster 1269
+0	126aa, >disprot_protein173... *
+1	113aa, >disprot_protein174... at 100.00%
+>Cluster 1270
+0	121aa, >disprot_protein640... at 99.17%
+1	126aa, >disprot_protein641... *
+>Cluster 1271
+0	126aa, >disprot_protein950... *
+>Cluster 1272
+0	126aa, >disprot_protein1484... *
+>Cluster 1273
+0	126aa, >disprot_protein1707... *
+>Cluster 1274
+0	126aa, >disprot_protein1899... *
+>Cluster 1275
+0	126aa, >pdb_protein1046... *
+>Cluster 1276
+0	126aa, >pdb_protein1120... *
+>Cluster 1277
+0	126aa, >pdb_protein1133... *
+>Cluster 1278
+0	126aa, >pdb_protein1141... *
+>Cluster 1279
+0	126aa, >pdb_protein1238... *
+>Cluster 1280
+0	126aa, >pdb_protein1255... *
+>Cluster 1281
+0	119aa, >pdb_protein1107... at 40.34%
+1	126aa, >pdb_protein1262... *
+>Cluster 1282
+0	125aa, >disprot_protein277... *
+>Cluster 1283
+0	125aa, >disprot_protein313... *
+>Cluster 1284
+0	125aa, >disprot_protein729... *
+>Cluster 1285
+0	125aa, >disprot_protein743... *
+>Cluster 1286
+0	71aa, >disprot_protein857... at 77.46%
+1	125aa, >disprot_protein858... *
+2	124aa, >disprot_protein859... at 100.00%
+3	69aa, >disprot_protein860... at 100.00%
+4	55aa, >disprot_protein861... at 100.00%
+>Cluster 1287
+0	125aa, >disprot_protein1017... *
+>Cluster 1288
+0	125aa, >disprot_protein1463... *
+>Cluster 1289
+0	125aa, >disprot_protein1872... *
+1	56aa, >disprot_protein1873... at 100.00%
+2	71aa, >disprot_protein1874... at 100.00%
+3	54aa, >disprot_protein1875... at 40.74%
+>Cluster 1290
+0	125aa, >pdb_protein1031... *
+>Cluster 1291
+0	125aa, >pdb_protein1104... *
+>Cluster 1292
+0	125aa, >pdb_protein1214... *
+>Cluster 1293
+0	125aa, >pdb_protein1359... *
+>Cluster 1294
+0	124aa, >disprot_protein83... *
+1	65aa, >disprot_protein972... at 83.08%
+>Cluster 1295
+0	82aa, >disprot_protein391... at 100.00%
+1	124aa, >disprot_protein392... *
+>Cluster 1296
+0	124aa, >disprot_protein409... *
+>Cluster 1297
+0	124aa, >disprot_protein470... *
+>Cluster 1298
+0	124aa, >disprot_protein474... *
+>Cluster 1299
+0	124aa, >disprot_protein1562... *
+>Cluster 1300
+0	124aa, >disprot_protein1959... *
+1	86aa, >disprot_protein1960... at 100.00%
+2	52aa, >disprot_protein1961... at 100.00%
+>Cluster 1301
+0	124aa, >pdb_protein1019... *
+>Cluster 1302
+0	92aa, >pdb_protein438... at 41.30%
+1	92aa, >pdb_protein994... at 41.30%
+2	124aa, >pdb_protein1052... *
+>Cluster 1303
+0	124aa, >pdb_protein1065... *
+>Cluster 1304
+0	124aa, >pdb_protein1146... *
+>Cluster 1305
+0	124aa, >pdb_protein1213... *
+>Cluster 1306
+0	124aa, >pdb_protein1284... *
+>Cluster 1307
+0	124aa, >pdb_protein1384... *
+>Cluster 1308
+0	123aa, >disprot_protein23... *
+>Cluster 1309
+0	123aa, >disprot_protein553... *
+>Cluster 1310
+0	123aa, >disprot_protein1413... *
+>Cluster 1311
+0	123aa, >disprot_protein1833... *
+>Cluster 1312
+0	123aa, >disprot_protein1859... *
+1	115aa, >disprot_protein1861... at 100.00%
+>Cluster 1313
+0	123aa, >disprot_protein1901... *
+>Cluster 1314
+0	123aa, >disprot_protein2032... *
+1	58aa, >disprot_protein2033... at 100.00%
+>Cluster 1315
+0	123aa, >disprot_protein2080... *
+>Cluster 1316
+0	121aa, >pdb_protein1254... at 51.24%
+1	123aa, >pdb_protein1317... *
+2	121aa, >pdb_protein1380... at 44.63%
+>Cluster 1317
+0	123aa, >pdb_protein1335... *
+>Cluster 1318
+0	123aa, >pdb_protein1363... *
+>Cluster 1319
+0	123aa, >pdb_protein1367... *
+1	117aa, >pdb_protein1412... at 99.15%
+>Cluster 1320
+0	71aa, >disprot_protein431... at 100.00%
+1	122aa, >disprot_protein432... *
+>Cluster 1321
+0	122aa, >disprot_protein751... *
+>Cluster 1322
+0	122aa, >disprot_protein951... *
+>Cluster 1323
+0	122aa, >disprot_protein1533... *
+>Cluster 1324
+0	122aa, >disprot_protein1847... *
+>Cluster 1325
+0	122aa, >disprot_protein2089... *
+>Cluster 1326
+0	122aa, >pdb_protein1025... *
+>Cluster 1327
+0	122aa, >pdb_protein1098... *
+>Cluster 1328
+0	122aa, >pdb_protein1143... *
+>Cluster 1329
+0	122aa, >pdb_protein1205... *
+>Cluster 1330
+0	122aa, >pdb_protein1223... *
+>Cluster 1331
+0	122aa, >pdb_protein1232... *
+>Cluster 1332
+0	122aa, >pdb_protein1291... *
+>Cluster 1333
+0	122aa, >pdb_protein1321... *
+>Cluster 1334
+0	121aa, >disprot_protein341... *
+>Cluster 1335
+0	121aa, >disprot_protein496... *
+>Cluster 1336
+0	121aa, >disprot_protein510... *
+>Cluster 1337
+0	121aa, >disprot_protein934... *
+>Cluster 1338
+0	121aa, >disprot_protein1155... *
+>Cluster 1339
+0	121aa, >disprot_protein1883... *
+>Cluster 1340
+0	77aa, >pdb_protein128... at 49.35%
+1	79aa, >pdb_protein352... at 49.37%
+2	83aa, >pdb_protein429... at 46.99%
+3	91aa, >pdb_protein869... at 42.86%
+4	78aa, >pdb_protein880... at 51.28%
+5	121aa, >pdb_protein1040... *
+>Cluster 1341
+0	121aa, >pdb_protein1058... *
+>Cluster 1342
+0	121aa, >pdb_protein1181... *
+>Cluster 1343
+0	121aa, >pdb_protein1190... *
+>Cluster 1344
+0	120aa, >disprot_protein49... *
+1	93aa, >pdb_protein482... at 51.61%
+>Cluster 1345
+0	120aa, >disprot_protein274... *
+>Cluster 1346
+0	120aa, >disprot_protein340... *
+>Cluster 1347
+0	115aa, >disprot_protein30... at 58.26%
+1	114aa, >disprot_protein31... at 57.89%
+2	118aa, >disprot_protein32... at 57.63%
+3	120aa, >disprot_protein756... *
+>Cluster 1348
+0	120aa, >disprot_protein914... *
+1	96aa, >disprot_protein915... at 100.00%
+>Cluster 1349
+0	120aa, >disprot_protein957... *
+1	94aa, >disprot_protein958... at 100.00%
+>Cluster 1350
+0	120aa, >disprot_protein1866... *
+>Cluster 1351
+0	120aa, >pdb_protein1125... *
+>Cluster 1352
+0	120aa, >pdb_protein1227... *
+>Cluster 1353
+0	120aa, >pdb_protein1292... *
+>Cluster 1354
+0	120aa, >pdb_protein1293... *
+>Cluster 1355
+0	120aa, >pdb_protein1318... *
+>Cluster 1356
+0	120aa, >pdb_protein1320... *
+>Cluster 1357
+0	119aa, >disprot_protein331... *
+>Cluster 1358
+0	119aa, >disprot_protein602... *
+>Cluster 1359
+0	119aa, >disprot_protein713... *
+>Cluster 1360
+0	119aa, >disprot_protein956... *
+>Cluster 1361
+0	95aa, >disprot_protein1350... at 100.00%
+1	119aa, >disprot_protein1351... *
+>Cluster 1362
+0	119aa, >pdb_protein1145... *
+>Cluster 1363
+0	119aa, >pdb_protein1154... *
+1	104aa, >pdb_protein1178... at 96.15%
+2	103aa, >pdb_protein1245... at 43.69%
+>Cluster 1364
+0	119aa, >pdb_protein1174... *
+>Cluster 1365
+0	119aa, >pdb_protein1201... *
+>Cluster 1366
+0	118aa, >disprot_protein253... *
+1	110aa, >disprot_protein255... at 100.00%
+2	90aa, >disprot_protein659... at 98.89%
+3	95aa, >disprot_protein660... at 98.95%
+4	99aa, >disprot_protein662... at 98.99%
+5	101aa, >disprot_protein1368... at 92.08%
+>Cluster 1367
+0	118aa, >disprot_protein345... *
+>Cluster 1368
+0	103aa, >disprot_protein287... at 98.06%
+1	102aa, >disprot_protein517... at 100.00%
+2	118aa, >disprot_protein519... *
+>Cluster 1369
+0	118aa, >disprot_protein598... *
+>Cluster 1370
+0	98aa, >disprot_protein216... at 41.84%
+1	102aa, >disprot_protein294... at 40.20%
+2	110aa, >disprot_protein969... at 72.73%
+3	118aa, >disprot_protein970... *
+>Cluster 1371
+0	118aa, >disprot_protein1804... *
+>Cluster 1372
+0	118aa, >pdb_protein1044... *
+>Cluster 1373
+0	118aa, >pdb_protein1067... *
+1	108aa, >pdb_protein1354... at 53.70%
+>Cluster 1374
+0	118aa, >pdb_protein1106... *
+>Cluster 1375
+0	118aa, >pdb_protein1188... *
+>Cluster 1376
+0	118aa, >pdb_protein1196... *
+>Cluster 1377
+0	118aa, >pdb_protein1268... *
+>Cluster 1378
+0	118aa, >pdb_protein1333... *
+>Cluster 1379
+0	118aa, >pdb_protein1388... *
+>Cluster 1380
+0	118aa, >pdb_protein1390... *
+>Cluster 1381
+0	118aa, >pdb_protein1405... *
+>Cluster 1382
+0	118aa, >pdb_protein1411... *
+>Cluster 1383
+0	117aa, >disprot_protein755... *
+>Cluster 1384
+0	117aa, >disprot_protein807... *
+>Cluster 1385
+0	117aa, >disprot_protein1103... *
+>Cluster 1386
+0	117aa, >disprot_protein1530... *
+>Cluster 1387
+0	117aa, >disprot_protein2015... *
+>Cluster 1388
+0	117aa, >disprot_protein2036... *
+>Cluster 1389
+0	117aa, >pdb_protein1041... *
+>Cluster 1390
+0	117aa, >pdb_protein1099... *
+>Cluster 1391
+0	117aa, >pdb_protein1211... *
+>Cluster 1392
+0	116aa, >disprot_protein163... *
+>Cluster 1393
+0	116aa, >disprot_protein272... *
+>Cluster 1394
+0	116aa, >disprot_protein389... *
+>Cluster 1395
+0	116aa, >disprot_protein499... *
+>Cluster 1396
+0	116aa, >disprot_protein1543... *
+1	68aa, >disprot_protein1544... at 95.59%
+>Cluster 1397
+0	116aa, >disprot_protein1573... *
+1	113aa, >disprot_protein1824... at 74.34%
+>Cluster 1398
+0	116aa, >pdb_protein1111... *
+1	114aa, >pdb_protein1400... at 55.26%
+>Cluster 1399
+0	116aa, >pdb_protein1157... *
+>Cluster 1400
+0	116aa, >pdb_protein1159... *
+>Cluster 1401
+0	116aa, >pdb_protein1207... *
+>Cluster 1402
+0	116aa, >pdb_protein1237... *
+>Cluster 1403
+0	98aa, >pdb_protein744... at 48.98%
+1	116aa, >pdb_protein1283... *
+>Cluster 1404
+0	116aa, >pdb_protein1327... *
+>Cluster 1405
+0	115aa, >disprot_protein773... *
+>Cluster 1406
+0	115aa, >disprot_protein834... *
+>Cluster 1407
+0	115aa, >disprot_protein1669... *
+>Cluster 1408
+0	115aa, >disprot_protein1995... *
+>Cluster 1409
+0	115aa, >disprot_protein2086... *
+>Cluster 1410
+0	115aa, >pdb_protein1009... *
+>Cluster 1411
+0	115aa, >pdb_protein1048... *
+>Cluster 1412
+0	115aa, >pdb_protein1063... *
+1	108aa, >pdb_protein1251... at 99.07%
+2	107aa, >pdb_protein1349... at 99.07%
+>Cluster 1413
+0	115aa, >pdb_protein1073... *
+>Cluster 1414
+0	115aa, >pdb_protein1077... *
+>Cluster 1415
+0	115aa, >pdb_protein1191... *
+>Cluster 1416
+0	115aa, >pdb_protein1192... *
+>Cluster 1417
+0	115aa, >pdb_protein1226... *
+>Cluster 1418
+0	115aa, >pdb_protein1240... *
+>Cluster 1419
+0	115aa, >pdb_protein1322... *
+>Cluster 1420
+0	115aa, >pdb_protein1425... *
+>Cluster 1421
+0	114aa, >disprot_protein412... *
+>Cluster 1422
+0	114aa, >disprot_protein444... *
+>Cluster 1423
+0	114aa, >disprot_protein836... *
+1	76aa, >disprot_protein1771... at 59.21%
+>Cluster 1424
+0	114aa, >disprot_protein1253... *
+>Cluster 1425
+0	113aa, >disprot_protein1504... at 100.00%
+1	114aa, >disprot_protein1506... *
+>Cluster 1426
+0	114aa, >disprot_protein1535... *
+>Cluster 1427
+0	99aa, >disprot_protein1681... at 45.45%
+1	84aa, >disprot_protein1687... at 85.71%
+2	114aa, >disprot_protein1694... *
+>Cluster 1428
+0	114aa, >pdb_protein1034... *
+>Cluster 1429
+0	114aa, >pdb_protein1108... *
+>Cluster 1430
+0	114aa, >pdb_protein1250... *
+>Cluster 1431
+0	114aa, >pdb_protein1305... *
+>Cluster 1432
+0	114aa, >pdb_protein1346... *
+>Cluster 1433
+0	113aa, >disprot_protein385... *
+>Cluster 1434
+0	113aa, >disprot_protein420... *
+>Cluster 1435
+0	80aa, >disprot_protein1113... at 100.00%
+1	113aa, >disprot_protein1114... *
+>Cluster 1436
+0	109aa, >disprot_protein1376... at 100.00%
+1	113aa, >disprot_protein1377... *
+>Cluster 1437
+0	113aa, >disprot_protein1626... *
+1	105aa, >disprot_protein1627... at 100.00%
+>Cluster 1438
+0	68aa, >disprot_protein1456... at 80.88%
+1	113aa, >disprot_protein1952... *
+>Cluster 1439
+0	86aa, >disprot_protein2018... at 100.00%
+1	113aa, >disprot_protein2019... *
+>Cluster 1440
+0	113aa, >pdb_protein1070... *
+>Cluster 1441
+0	113aa, >pdb_protein1148... *
+>Cluster 1442
+0	112aa, >disprot_protein434... *
+1	70aa, >disprot_protein1023... at 40.00%
+>Cluster 1443
+0	112aa, >disprot_protein762... *
+>Cluster 1444
+0	112aa, >disprot_protein775... *
+>Cluster 1445
+0	112aa, >disprot_protein930... *
+>Cluster 1446
+0	112aa, >disprot_protein1654... *
+1	93aa, >disprot_protein1655... at 100.00%
+2	56aa, >disprot_protein1656... at 100.00%
+3	96aa, >disprot_protein1657... at 100.00%
+>Cluster 1447
+0	112aa, >disprot_protein1752... *
+1	53aa, >pdb_protein790... at 41.51%
+>Cluster 1448
+0	112aa, >disprot_protein1769... *
+>Cluster 1449
+0	112aa, >disprot_protein2074... *
+>Cluster 1450
+0	112aa, >pdb_protein1061... *
+>Cluster 1451
+0	112aa, >pdb_protein1117... *
+>Cluster 1452
+0	112aa, >pdb_protein1160... *
+>Cluster 1453
+0	112aa, >pdb_protein1398... *
+>Cluster 1454
+0	111aa, >disprot_protein89... *
+>Cluster 1455
+0	111aa, >disprot_protein808... *
+>Cluster 1456
+0	102aa, >disprot_protein815... at 46.08%
+1	111aa, >disprot_protein856... *
+>Cluster 1457
+0	51aa, >disprot_protein384... at 45.10%
+1	110aa, >disprot_protein487... at 98.18%
+2	101aa, >disprot_protein736... at 93.07%
+3	111aa, >disprot_protein976... *
+4	96aa, >disprot_protein977... at 100.00%
+>Cluster 1458
+0	111aa, >disprot_protein2102... *
+>Cluster 1459
+0	110aa, >disprot_protein206... *
+>Cluster 1460
+0	110aa, >disprot_protein495... *
+>Cluster 1461
+0	110aa, >disprot_protein525... *
+>Cluster 1462
+0	77aa, >disprot_protein296... at 40.26%
+1	87aa, >disprot_protein382... at 55.17%
+2	110aa, >disprot_protein579... *
+3	89aa, >disprot_protein1726... at 50.56%
+>Cluster 1463
+0	110aa, >disprot_protein1244... *
+>Cluster 1464
+0	110aa, >disprot_protein1414... *
+>Cluster 1465
+0	53aa, >disprot_protein476... at 64.15%
+1	110aa, >disprot_protein1638... *
+>Cluster 1466
+0	110aa, >disprot_protein1799... *
+1	109aa, >disprot_protein1800... at 100.00%
+>Cluster 1467
+0	110aa, >disprot_protein2090... *
+1	98aa, >disprot_protein2091... at 100.00%
+2	104aa, >disprot_protein2093... at 100.00%
+>Cluster 1468
+0	110aa, >pdb_protein1212... *
+>Cluster 1469
+0	110aa, >pdb_protein1231... *
+>Cluster 1470
+0	110aa, >pdb_protein1340... *
+>Cluster 1471
+0	110aa, >pdb_protein1358... *
+>Cluster 1472
+0	109aa, >disprot_protein403... *
+>Cluster 1473
+0	109aa, >disprot_protein433... *
+>Cluster 1474
+0	109aa, >disprot_protein516... *
+>Cluster 1475
+0	107aa, >disprot_protein42... at 48.60%
+1	67aa, >disprot_protein43... at 49.25%
+2	109aa, >disprot_protein1068... *
+>Cluster 1476
+0	109aa, >disprot_protein1747... *
+>Cluster 1477
+0	109aa, >disprot_protein1835... *
+>Cluster 1478
+0	109aa, >disprot_protein1922... *
+>Cluster 1479
+0	76aa, >disprot_protein1033... at 40.79%
+1	109aa, >disprot_protein1954... *
+>Cluster 1480
+0	109aa, >disprot_protein2026... *
+>Cluster 1481
+0	109aa, >pdb_protein1064... *
+>Cluster 1482
+0	75aa, >pdb_protein722... at 100.00%
+1	109aa, >pdb_protein1084... *
+>Cluster 1483
+0	109aa, >pdb_protein1101... *
+>Cluster 1484
+0	109aa, >pdb_protein1244... *
+>Cluster 1485
+0	109aa, >pdb_protein1369... *
+>Cluster 1486
+0	108aa, >disprot_protein342... *
+1	107aa, >disprot_protein576... at 55.14%
+2	108aa, >disprot_protein813... at 60.19%
+3	108aa, >pdb_protein1147... at 60.19%
+>Cluster 1487
+0	108aa, >disprot_protein902... *
+>Cluster 1488
+0	108aa, >disprot_protein1031... *
+>Cluster 1489
+0	108aa, >disprot_protein1117... *
+>Cluster 1490
+0	108aa, >disprot_protein1119... *
+1	105aa, >disprot_protein1527... at 100.00%
+>Cluster 1491
+0	72aa, >disprot_protein1242... at 100.00%
+1	108aa, >disprot_protein1243... *
+>Cluster 1492
+0	56aa, >disprot_protein1680... at 50.00%
+1	55aa, >disprot_protein1682... at 49.09%
+2	108aa, >disprot_protein1685... *
+3	76aa, >disprot_protein1686... at 100.00%
+4	70aa, >disprot_protein1688... at 44.29%
+5	80aa, >pdb_protein468... at 48.75%
+>Cluster 1493
+0	108aa, >disprot_protein1787... *
+>Cluster 1494
+0	104aa, >disprot_protein2... at 59.62%
+1	104aa, >disprot_protein3... at 59.62%
+2	108aa, >pdb_protein1017... *
+3	108aa, >pdb_protein1239... at 96.30%
+>Cluster 1495
+0	108aa, >pdb_protein1059... *
+>Cluster 1496
+0	108aa, >pdb_protein1155... *
+>Cluster 1497
+0	77aa, >disprot_protein123... at 100.00%
+1	108aa, >pdb_protein1220... *
+>Cluster 1498
+0	108aa, >pdb_protein1298... *
+>Cluster 1499
+0	108aa, >pdb_protein1334... *
+>Cluster 1500
+0	54aa, >disprot_protein1997... at 40.74%
+1	108aa, >pdb_protein1374... *
+>Cluster 1501
+0	107aa, >disprot_protein1... *
+>Cluster 1502
+0	107aa, >disprot_protein404... *
+>Cluster 1503
+0	107aa, >disprot_protein511... *
+>Cluster 1504
+0	107aa, >disprot_protein1261... *
+>Cluster 1505
+0	107aa, >disprot_protein1973... *
+>Cluster 1506
+0	107aa, >pdb_protein1068... *
+>Cluster 1507
+0	107aa, >pdb_protein1095... *
+>Cluster 1508
+0	107aa, >pdb_protein1278... *
+>Cluster 1509
+0	107aa, >pdb_protein1315... *
+>Cluster 1510
+0	78aa, >pdb_protein373... at 98.72%
+1	79aa, >pdb_protein653... at 96.20%
+2	107aa, >pdb_protein1325... *
+>Cluster 1511
+0	107aa, >pdb_protein1350... *
+>Cluster 1512
+0	106aa, >disprot_protein144... *
+>Cluster 1513
+0	106aa, >disprot_protein267... *
+>Cluster 1514
+0	106aa, >disprot_protein1189... *
+>Cluster 1515
+0	106aa, >disprot_protein1229... *
+>Cluster 1516
+0	106aa, >disprot_protein1423... *
+>Cluster 1517
+0	106aa, >disprot_protein1570... *
+>Cluster 1518
+0	106aa, >disprot_protein2111... *
+>Cluster 1519
+0	106aa, >pdb_protein1013... *
+>Cluster 1520
+0	106aa, >pdb_protein1039... *
+1	106aa, >pdb_protein1312... at 93.40%
+2	106aa, >pdb_protein1352... at 81.13%
+>Cluster 1521
+0	89aa, >pdb_protein603... at 47.19%
+1	106aa, >pdb_protein1078... *
+>Cluster 1522
+0	106aa, >pdb_protein1092... *
+>Cluster 1523
+0	106aa, >pdb_protein1194... *
+>Cluster 1524
+0	106aa, >pdb_protein1307... *
+>Cluster 1525
+0	106aa, >pdb_protein1326... *
+>Cluster 1526
+0	106aa, >pdb_protein1409... *
+>Cluster 1527
+0	105aa, >disprot_protein402... *
+1	105aa, >disprot_protein1881... at 84.76%
+>Cluster 1528
+0	105aa, >disprot_protein408... *
+>Cluster 1529
+0	105aa, >disprot_protein585... *
+1	92aa, >disprot_protein1055... at 82.61%
+2	92aa, >disprot_protein1916... at 80.43%
+>Cluster 1530
+0	105aa, >disprot_protein1003... *
+>Cluster 1531
+0	105aa, >disprot_protein1503... *
+1	103aa, >disprot_protein1505... at 100.00%
+>Cluster 1532
+0	105aa, >disprot_protein1550... *
+>Cluster 1533
+0	105aa, >disprot_protein1624... *
+>Cluster 1534
+0	105aa, >pdb_protein1127... *
+>Cluster 1535
+0	105aa, >pdb_protein1166... *
+>Cluster 1536
+0	105aa, >pdb_protein1258... *
+>Cluster 1537
+0	104aa, >disprot_protein570... *
+>Cluster 1538
+0	104aa, >disprot_protein918... *
+>Cluster 1539
+0	104aa, >disprot_protein924... *
+>Cluster 1540
+0	100aa, >disprot_protein1568... at 100.00%
+1	104aa, >disprot_protein1569... *
+>Cluster 1541
+0	104aa, >disprot_protein1970... *
+1	99aa, >disprot_protein1972... at 94.95%
+>Cluster 1542
+0	104aa, >pdb_protein1156... *
+>Cluster 1543
+0	104aa, >pdb_protein1183... *
+>Cluster 1544
+0	104aa, >pdb_protein1277... *
+>Cluster 1545
+0	104aa, >pdb_protein1295... *
+>Cluster 1546
+0	104aa, >pdb_protein1310... *
+>Cluster 1547
+0	79aa, >pdb_protein199... at 43.04%
+1	104aa, >pdb_protein1338... *
+>Cluster 1548
+0	104aa, >pdb_protein1341... *
+>Cluster 1549
+0	104aa, >pdb_protein1408... *
+>Cluster 1550
+0	103aa, >disprot_protein73... *
+>Cluster 1551
+0	103aa, >disprot_protein251... *
+>Cluster 1552
+0	103aa, >disprot_protein448... *
+>Cluster 1553
+0	103aa, >disprot_protein456... *
+1	85aa, >disprot_protein1676... at 54.12%
+>Cluster 1554
+0	103aa, >disprot_protein548... *
+>Cluster 1555
+0	103aa, >disprot_protein594... *
+>Cluster 1556
+0	103aa, >disprot_protein1008... *
+>Cluster 1557
+0	103aa, >disprot_protein1083... *
+>Cluster 1558
+0	103aa, >disprot_protein1426... *
+>Cluster 1559
+0	103aa, >disprot_protein1485... *
+>Cluster 1560
+0	103aa, >disprot_protein1632... *
+1	103aa, >disprot_protein1633... at 77.67%
+>Cluster 1561
+0	103aa, >disprot_protein1939... *
+>Cluster 1562
+0	103aa, >pdb_protein1008... *
+>Cluster 1563
+0	103aa, >pdb_protein1082... *
+>Cluster 1564
+0	103aa, >pdb_protein1124... *
+>Cluster 1565
+0	103aa, >pdb_protein1234... *
+>Cluster 1566
+0	103aa, >pdb_protein1269... *
+>Cluster 1567
+0	103aa, >pdb_protein1314... *
+>Cluster 1568
+0	103aa, >pdb_protein1319... *
+>Cluster 1569
+0	103aa, >pdb_protein1423... *
+>Cluster 1570
+0	71aa, >disprot_protein284... at 100.00%
+1	102aa, >disprot_protein285... *
+>Cluster 1571
+0	102aa, >disprot_protein417... *
+1	91aa, >disprot_protein418... at 100.00%
+>Cluster 1572
+0	102aa, >disprot_protein505... *
+1	90aa, >disprot_protein506... at 100.00%
+>Cluster 1573
+0	102aa, >disprot_protein810... *
+>Cluster 1574
+0	102aa, >disprot_protein979... *
+>Cluster 1575
+0	83aa, >disprot_protein50... at 48.19%
+1	99aa, >disprot_protein947... at 98.99%
+2	102aa, >disprot_protein1215... *
+3	77aa, >disprot_protein1749... at 41.56%
+>Cluster 1576
+0	102aa, >disprot_protein1274... *
+>Cluster 1577
+0	102aa, >disprot_protein1602... *
+>Cluster 1578
+0	102aa, >disprot_protein1658... *
+>Cluster 1579
+0	102aa, >disprot_protein1896... *
+>Cluster 1580
+0	102aa, >disprot_protein2103... *
+>Cluster 1581
+0	102aa, >disprot_protein2115... *
+>Cluster 1582
+0	102aa, >pdb_protein1076... *
+>Cluster 1583
+0	102aa, >pdb_protein1091... *
+>Cluster 1584
+0	102aa, >pdb_protein1103... *
+>Cluster 1585
+0	102aa, >pdb_protein1287... *
+>Cluster 1586
+0	102aa, >pdb_protein1324... *
+>Cluster 1587
+0	102aa, >pdb_protein1362... *
+>Cluster 1588
+0	101aa, >disprot_protein38... *
+1	88aa, >disprot_protein40... at 100.00%
+>Cluster 1589
+0	101aa, >disprot_protein51... *
+1	84aa, >disprot_protein52... at 100.00%
+>Cluster 1590
+0	84aa, >disprot_protein92... at 57.14%
+1	101aa, >disprot_protein201... *
+>Cluster 1591
+0	101aa, >disprot_protein289... *
+>Cluster 1592
+0	101aa, >disprot_protein523... *
+>Cluster 1593
+0	101aa, >disprot_protein603... *
+>Cluster 1594
+0	86aa, >disprot_protein498... at 76.74%
+1	57aa, >disprot_protein530... at 96.49%
+2	86aa, >disprot_protein531... at 89.53%
+3	72aa, >disprot_protein532... at 88.89%
+4	101aa, >disprot_protein621... *
+5	72aa, >disprot_protein1713... at 90.28%
+6	86aa, >disprot_protein1718... at 89.53%
+7	86aa, >disprot_protein1727... at 88.37%
+8	101aa, >disprot_protein1728... at 87.13%
+9	87aa, >disprot_protein1729... at 74.71%
+10	99aa, >disprot_protein1730... at 74.75%
+11	101aa, >disprot_protein1731... at 86.14%
+>Cluster 1595
+0	101aa, >disprot_protein715... *
+1	64aa, >disprot_protein1882... at 93.75%
+>Cluster 1596
+0	101aa, >disprot_protein898... *
+>Cluster 1597
+0	59aa, >disprot_protein1059... at 100.00%
+1	101aa, >disprot_protein1060... *
+2	56aa, >disprot_protein1061... at 100.00%
+>Cluster 1598
+0	96aa, >disprot_protein1079... at 100.00%
+1	101aa, >disprot_protein1080... *
+>Cluster 1599
+0	101aa, >disprot_protein1128... *
+>Cluster 1600
+0	101aa, >disprot_protein1757... *
+>Cluster 1601
+0	101aa, >disprot_protein1978... *
+>Cluster 1602
+0	57aa, >disprot_protein575... at 42.11%
+1	101aa, >disprot_protein2045... *
+>Cluster 1603
+0	101aa, >pdb_protein1030... *
+>Cluster 1604
+0	101aa, >pdb_protein1080... *
+>Cluster 1605
+0	101aa, >pdb_protein1149... *
+>Cluster 1606
+0	101aa, >pdb_protein1185... *
+>Cluster 1607
+0	77aa, >pdb_protein481... at 44.16%
+1	101aa, >pdb_protein1189... *
+>Cluster 1608
+0	101aa, >pdb_protein1288... *
+>Cluster 1609
+0	101aa, >pdb_protein1297... *
+>Cluster 1610
+0	101aa, >pdb_protein1364... *
+>Cluster 1611
+0	101aa, >pdb_protein1414... *
+>Cluster 1612
+0	101aa, >pdb_protein1417... *
+>Cluster 1613
+0	100aa, >disprot_protein81... *
+>Cluster 1614
+0	100aa, >disprot_protein145... *
+1	89aa, >disprot_protein146... at 100.00%
+>Cluster 1615
+0	100aa, >disprot_protein513... *
+1	100aa, >disprot_protein1818... at 67.00%
+>Cluster 1616
+0	100aa, >disprot_protein678... *
+1	56aa, >disprot_protein679... at 100.00%
+2	51aa, >disprot_protein833... at 45.10%
+>Cluster 1617
+0	100aa, >disprot_protein710... *
+1	64aa, >disprot_protein711... at 100.00%
+>Cluster 1618
+0	73aa, >disprot_protein780... at 100.00%
+1	100aa, >disprot_protein781... *
+>Cluster 1619
+0	100aa, >disprot_protein855... *
+>Cluster 1620
+0	100aa, >disprot_protein952... *
+>Cluster 1621
+0	100aa, >disprot_protein1178... *
+>Cluster 1622
+0	100aa, >disprot_protein1431... *
+>Cluster 1623
+0	100aa, >disprot_protein1534... *
+>Cluster 1624
+0	100aa, >disprot_protein1625... *
+>Cluster 1625
+0	100aa, >disprot_protein1817... *
+>Cluster 1626
+0	100aa, >disprot_protein1908... *
+>Cluster 1627
+0	100aa, >disprot_protein1944... *
+>Cluster 1628
+0	90aa, >disprot_protein161... at 50.00%
+1	100aa, >disprot_protein1996... *
+>Cluster 1629
+0	100aa, >pdb_protein1026... *
+>Cluster 1630
+0	56aa, >pdb_protein835... at 44.64%
+1	100aa, >pdb_protein1053... *
+>Cluster 1631
+0	100aa, >pdb_protein1118... *
+>Cluster 1632
+0	89aa, >pdb_protein6... at 59.55%
+1	100aa, >pdb_protein1135... *
+>Cluster 1633
+0	100aa, >pdb_protein1176... *
+>Cluster 1634
+0	100aa, >pdb_protein1193... *
+>Cluster 1635
+0	100aa, >pdb_protein1210... *
+>Cluster 1636
+0	100aa, >pdb_protein1279... *
+>Cluster 1637
+0	96aa, >pdb_protein902... at 91.67%
+1	100aa, >pdb_protein1392... *
+>Cluster 1638
+0	100aa, >pdb_protein1404... *
+>Cluster 1639
+0	99aa, >disprot_protein453... *
+>Cluster 1640
+0	84aa, >disprot_protein157... at 96.43%
+1	92aa, >disprot_protein217... at 88.04%
+2	99aa, >disprot_protein473... *
+>Cluster 1641
+0	99aa, >disprot_protein550... *
+>Cluster 1642
+0	99aa, >disprot_protein596... *
+1	99aa, >disprot_protein597... at 77.78%
+>Cluster 1643
+0	71aa, >disprot_protein373... at 40.85%
+1	99aa, >disprot_protein966... *
+>Cluster 1644
+0	99aa, >disprot_protein1345... *
+>Cluster 1645
+0	99aa, >disprot_protein1797... *
+>Cluster 1646
+0	99aa, >disprot_protein1798... *
+>Cluster 1647
+0	99aa, >disprot_protein1802... *
+>Cluster 1648
+0	99aa, >disprot_protein1816... *
+>Cluster 1649
+0	99aa, >disprot_protein2056... *
+>Cluster 1650
+0	99aa, >disprot_protein2092... *
+>Cluster 1651
+0	99aa, >pdb_protein77... *
+>Cluster 1652
+0	99aa, >pdb_protein83... *
+>Cluster 1653
+0	99aa, >pdb_protein146... *
+1	99aa, >pdb_protein162... at 90.91%
+2	99aa, >pdb_protein179... at 93.94%
+3	99aa, >pdb_protein240... at 85.86%
+4	99aa, >pdb_protein323... at 88.89%
+5	99aa, >pdb_protein393... at 91.92%
+6	99aa, >pdb_protein424... at 89.90%
+7	99aa, >pdb_protein440... at 86.87%
+8	99aa, >pdb_protein525... at 75.76%
+9	99aa, >pdb_protein569... at 89.90%
+10	99aa, >pdb_protein663... at 48.48%
+11	99aa, >pdb_protein717... at 90.91%
+12	99aa, >pdb_protein968... at 86.87%
+13	99aa, >pdb_protein991... at 89.90%
+14	99aa, >pdb_protein1002... at 89.90%
+>Cluster 1654
+0	99aa, >pdb_protein148... *
+>Cluster 1655
+0	99aa, >pdb_protein158... *
+>Cluster 1656
+0	99aa, >pdb_protein209... *
+>Cluster 1657
+0	99aa, >pdb_protein254... *
+>Cluster 1658
+0	98aa, >pdb_protein118... at 96.94%
+1	99aa, >pdb_protein258... *
+2	99aa, >pdb_protein285... at 75.76%
+>Cluster 1659
+0	99aa, >pdb_protein339... *
+>Cluster 1660
+0	99aa, >pdb_protein351... *
+>Cluster 1661
+0	99aa, >pdb_protein392... *
+>Cluster 1662
+0	99aa, >pdb_protein413... *
+>Cluster 1663
+0	99aa, >pdb_protein452... *
+>Cluster 1664
+0	99aa, >pdb_protein453... *
+>Cluster 1665
+0	99aa, >pdb_protein454... *
+1	77aa, >pdb_protein976... at 44.16%
+>Cluster 1666
+0	99aa, >pdb_protein588... *
+>Cluster 1667
+0	99aa, >pdb_protein661... *
+>Cluster 1668
+0	99aa, >pdb_protein667... *
+>Cluster 1669
+0	99aa, >pdb_protein710... *
+>Cluster 1670
+0	99aa, >pdb_protein713... *
+>Cluster 1671
+0	95aa, >pdb_protein253... at 40.00%
+1	92aa, >pdb_protein615... at 43.48%
+2	99aa, >pdb_protein756... *
+>Cluster 1672
+0	96aa, >pdb_protein100... at 40.62%
+1	61aa, >pdb_protein587... at 42.62%
+2	99aa, >pdb_protein843... *
+>Cluster 1673
+0	99aa, >pdb_protein898... *
+>Cluster 1674
+0	99aa, >pdb_protein937... *
+>Cluster 1675
+0	98aa, >disprot_protein75... *
+>Cluster 1676
+0	98aa, >disprot_protein198... *
+>Cluster 1677
+0	98aa, >disprot_protein447... *
+>Cluster 1678
+0	98aa, >disprot_protein759... *
+>Cluster 1679
+0	98aa, >disprot_protein1125... *
+>Cluster 1680
+0	98aa, >disprot_protein1193... *
+>Cluster 1681
+0	98aa, >disprot_protein1461... *
+>Cluster 1682
+0	98aa, >pdb_protein2... *
+>Cluster 1683
+0	98aa, >pdb_protein29... *
+>Cluster 1684
+0	98aa, >pdb_protein48... *
+>Cluster 1685
+0	98aa, >pdb_protein56... *
+>Cluster 1686
+0	67aa, >disprot_protein593... at 52.24%
+1	98aa, >pdb_protein80... *
+2	98aa, >pdb_protein868... at 53.06%
+>Cluster 1687
+0	98aa, >pdb_protein130... *
+1	61aa, >pdb_protein711... at 100.00%
+>Cluster 1688
+0	98aa, >pdb_protein139... *
+>Cluster 1689
+0	98aa, >pdb_protein155... *
+>Cluster 1690
+0	98aa, >pdb_protein234... *
+>Cluster 1691
+0	98aa, >pdb_protein257... *
+>Cluster 1692
+0	98aa, >pdb_protein310... *
+>Cluster 1693
+0	98aa, >pdb_protein327... *
+>Cluster 1694
+0	98aa, >pdb_protein411... *
+>Cluster 1695
+0	98aa, >pdb_protein442... *
+>Cluster 1696
+0	98aa, >pdb_protein478... *
+>Cluster 1697
+0	95aa, >disprot_protein562... at 62.11%
+1	95aa, >disprot_protein563... at 62.11%
+2	98aa, >pdb_protein504... *
+>Cluster 1698
+0	98aa, >pdb_protein523... *
+>Cluster 1699
+0	98aa, >pdb_protein579... *
+>Cluster 1700
+0	98aa, >pdb_protein646... *
+>Cluster 1701
+0	98aa, >pdb_protein692... *
+>Cluster 1702
+0	98aa, >pdb_protein701... *
+1	85aa, >pdb_protein876... at 43.53%
+>Cluster 1703
+0	98aa, >pdb_protein827... *
+>Cluster 1704
+0	98aa, >pdb_protein832... *
+>Cluster 1705
+0	98aa, >pdb_protein837... *
+>Cluster 1706
+0	96aa, >pdb_protein762... at 55.21%
+1	98aa, >pdb_protein997... *
+>Cluster 1707
+0	57aa, >disprot_protein28... at 100.00%
+1	97aa, >disprot_protein29... *
+>Cluster 1708
+0	97aa, >disprot_protein307... *
+>Cluster 1709
+0	97aa, >disprot_protein567... *
+1	79aa, >disprot_protein568... at 100.00%
+>Cluster 1710
+0	82aa, >disprot_protein316... at 41.46%
+1	97aa, >disprot_protein698... *
+>Cluster 1711
+0	97aa, >disprot_protein712... *
+>Cluster 1712
+0	97aa, >disprot_protein758... *
+>Cluster 1713
+0	97aa, >disprot_protein1160... *
+>Cluster 1714
+0	97aa, >pdb_protein1... *
+>Cluster 1715
+0	97aa, >pdb_protein49... *
+1	97aa, >pdb_protein269... at 83.51%
+2	94aa, >pdb_protein344... at 72.34%
+3	92aa, >pdb_protein499... at 86.96%
+4	94aa, >pdb_protein574... at 84.04%
+5	96aa, >pdb_protein787... at 80.21%
+>Cluster 1716
+0	97aa, >pdb_protein61... *
+>Cluster 1717
+0	97aa, >pdb_protein71... *
+>Cluster 1718
+0	97aa, >pdb_protein168... *
+>Cluster 1719
+0	97aa, >pdb_protein279... *
+>Cluster 1720
+0	97aa, >pdb_protein282... *
+>Cluster 1721
+0	97aa, >pdb_protein288... *
+>Cluster 1722
+0	97aa, >pdb_protein293... *
+1	94aa, >pdb_protein573... at 98.94%
+2	88aa, >pdb_protein769... at 90.91%
+>Cluster 1723
+0	97aa, >pdb_protein322... *
+>Cluster 1724
+0	97aa, >pdb_protein374... *
+>Cluster 1725
+0	97aa, >pdb_protein390... *
+>Cluster 1726
+0	97aa, >pdb_protein425... *
+>Cluster 1727
+0	97aa, >pdb_protein480... *
+1	95aa, >pdb_protein985... at 43.16%
+>Cluster 1728
+0	97aa, >pdb_protein557... *
+>Cluster 1729
+0	97aa, >pdb_protein638... *
+>Cluster 1730
+0	97aa, >pdb_protein641... *
+>Cluster 1731
+0	97aa, >pdb_protein728... *
+>Cluster 1732
+0	97aa, >pdb_protein760... *
+>Cluster 1733
+0	97aa, >pdb_protein763... *
+>Cluster 1734
+0	97aa, >pdb_protein785... *
+>Cluster 1735
+0	97aa, >pdb_protein889... *
+>Cluster 1736
+0	95aa, >disprot_protein94... at 100.00%
+1	94aa, >disprot_protein95... at 100.00%
+2	96aa, >disprot_protein96... *
+3	79aa, >disprot_protein97... at 100.00%
+>Cluster 1737
+0	96aa, >disprot_protein317... *
+>Cluster 1738
+0	96aa, >disprot_protein344... *
+>Cluster 1739
+0	96aa, >disprot_protein786... *
+>Cluster 1740
+0	96aa, >disprot_protein978... *
+1	52aa, >disprot_protein980... at 100.00%
+>Cluster 1741
+0	96aa, >disprot_protein1034... *
+>Cluster 1742
+0	96aa, >disprot_protein1343... *
+>Cluster 1743
+0	96aa, >disprot_protein1389... *
+>Cluster 1744
+0	96aa, >disprot_protein1595... *
+>Cluster 1745
+0	96aa, >disprot_protein1691... *
+1	59aa, >disprot_protein1692... at 91.53%
+2	94aa, >disprot_protein1693... at 100.00%
+>Cluster 1746
+0	96aa, >disprot_protein1720... *
+>Cluster 1747
+0	96aa, >disprot_protein1940... *
+>Cluster 1748
+0	96aa, >pdb_protein32... *
+>Cluster 1749
+0	96aa, >pdb_protein34... *
+1	96aa, >pdb_protein731... at 96.88%
+>Cluster 1750
+0	96aa, >pdb_protein35... *
+>Cluster 1751
+0	96aa, >pdb_protein42... *
+>Cluster 1752
+0	96aa, >pdb_protein125... *
+>Cluster 1753
+0	96aa, >pdb_protein169... *
+>Cluster 1754
+0	96aa, >pdb_protein192... *
+>Cluster 1755
+0	96aa, >pdb_protein233... *
+>Cluster 1756
+0	96aa, >pdb_protein290... *
+>Cluster 1757
+0	96aa, >pdb_protein315... *
+>Cluster 1758
+0	96aa, >pdb_protein389... *
+>Cluster 1759
+0	96aa, >pdb_protein403... *
+>Cluster 1760
+0	96aa, >pdb_protein534... *
+>Cluster 1761
+0	91aa, >pdb_protein355... at 42.86%
+1	96aa, >pdb_protein673... *
+2	95aa, >pdb_protein923... at 100.00%
+>Cluster 1762
+0	96aa, >pdb_protein703... *
+>Cluster 1763
+0	96aa, >pdb_protein857... *
+>Cluster 1764
+0	96aa, >pdb_protein908... *
+>Cluster 1765
+0	96aa, >pdb_protein919... *
+>Cluster 1766
+0	95aa, >disprot_protein249... *
+1	86aa, >disprot_protein250... at 100.00%
+2	87aa, >disprot_protein666... at 100.00%
+>Cluster 1767
+0	95aa, >disprot_protein542... *
+>Cluster 1768
+0	95aa, >disprot_protein785... *
+>Cluster 1769
+0	95aa, >disprot_protein1118... *
+>Cluster 1770
+0	95aa, >disprot_protein1591... *
+>Cluster 1771
+0	95aa, >pdb_protein14... *
+>Cluster 1772
+0	95aa, >pdb_protein60... *
+>Cluster 1773
+0	95aa, >pdb_protein84... *
+>Cluster 1774
+0	95aa, >pdb_protein108... *
+>Cluster 1775
+0	95aa, >pdb_protein123... *
+>Cluster 1776
+0	95aa, >pdb_protein191... *
+>Cluster 1777
+0	95aa, >pdb_protein217... *
+>Cluster 1778
+0	95aa, >pdb_protein243... *
+>Cluster 1779
+0	95aa, >pdb_protein256... *
+>Cluster 1780
+0	92aa, >pdb_protein90... at 55.43%
+1	95aa, >pdb_protein382... *
+2	79aa, >pdb_protein651... at 56.96%
+>Cluster 1781
+0	95aa, >pdb_protein451... *
+>Cluster 1782
+0	95aa, >pdb_protein473... *
+>Cluster 1783
+0	95aa, >pdb_protein492... *
+>Cluster 1784
+0	95aa, >pdb_protein545... *
+>Cluster 1785
+0	51aa, >pdb_protein265... at 100.00%
+1	94aa, >pdb_protein464... at 100.00%
+2	95aa, >pdb_protein640... *
+3	52aa, >pdb_protein847... at 100.00%
+4	95aa, >pdb_protein946... at 47.37%
+>Cluster 1786
+0	95aa, >pdb_protein725... *
+>Cluster 1787
+0	95aa, >pdb_protein778... *
+>Cluster 1788
+0	90aa, >pdb_protein260... at 50.00%
+1	95aa, >pdb_protein798... *
+>Cluster 1789
+0	95aa, >pdb_protein814... *
+>Cluster 1790
+0	94aa, >disprot_protein672... *
+>Cluster 1791
+0	94aa, >disprot_protein812... *
+>Cluster 1792
+0	94aa, >disprot_protein870... *
+>Cluster 1793
+0	94aa, >disprot_protein1021... *
+>Cluster 1794
+0	94aa, >disprot_protein1056... *
+>Cluster 1795
+0	94aa, >disprot_protein1733... *
+>Cluster 1796
+0	94aa, >disprot_protein1740... *
+1	93aa, >disprot_protein1741... at 100.00%
+>Cluster 1797
+0	90aa, >disprot_protein1945... at 100.00%
+1	87aa, >disprot_protein1946... at 100.00%
+2	88aa, >disprot_protein1947... at 100.00%
+3	94aa, >disprot_protein1950... *
+>Cluster 1798
+0	94aa, >disprot_protein2052... *
+>Cluster 1799
+0	94aa, >disprot_protein2054... *
+>Cluster 1800
+0	94aa, >pdb_protein43... *
+>Cluster 1801
+0	94aa, >pdb_protein149... *
+>Cluster 1802
+0	94aa, >pdb_protein249... *
+>Cluster 1803
+0	94aa, >pdb_protein325... *
+>Cluster 1804
+0	94aa, >pdb_protein336... *
+>Cluster 1805
+0	94aa, >pdb_protein561... *
+>Cluster 1806
+0	87aa, >pdb_protein396... at 52.87%
+1	90aa, >pdb_protein578... at 52.22%
+2	57aa, >pdb_protein616... at 43.86%
+3	94aa, >pdb_protein631... *
+>Cluster 1807
+0	94aa, >pdb_protein636... *
+>Cluster 1808
+0	94aa, >pdb_protein643... *
+>Cluster 1809
+0	94aa, >pdb_protein688... *
+>Cluster 1810
+0	94aa, >pdb_protein773... *
+>Cluster 1811
+0	93aa, >pdb_protein268... at 70.97%
+1	94aa, >pdb_protein796... *
+2	93aa, >pdb_protein877... at 87.10%
+>Cluster 1812
+0	94aa, >pdb_protein830... *
+>Cluster 1813
+0	94aa, >pdb_protein831... *
+>Cluster 1814
+0	94aa, >pdb_protein897... *
+>Cluster 1815
+0	93aa, >disprot_protein84... *
+1	73aa, >disprot_protein86... at 100.00%
+2	61aa, >disprot_protein87... at 100.00%
+>Cluster 1816
+0	93aa, >disprot_protein102... *
+1	91aa, >disprot_protein885... at 75.82%
+>Cluster 1817
+0	93aa, >disprot_protein772... *
+>Cluster 1818
+0	93aa, >disprot_protein829... *
+1	87aa, >disprot_protein830... at 100.00%
+>Cluster 1819
+0	93aa, >disprot_protein1052... *
+>Cluster 1820
+0	93aa, >disprot_protein1746... *
+>Cluster 1821
+0	93aa, >disprot_protein2029... *
+>Cluster 1822
+0	93aa, >pdb_protein72... *
+>Cluster 1823
+0	93aa, >pdb_protein156... *
+>Cluster 1824
+0	93aa, >pdb_protein170... *
+1	67aa, >pdb_protein625... at 40.30%
+>Cluster 1825
+0	93aa, >pdb_protein173... *
+>Cluster 1826
+0	93aa, >pdb_protein213... *
+>Cluster 1827
+0	93aa, >pdb_protein228... *
+>Cluster 1828
+0	93aa, >pdb_protein312... *
+>Cluster 1829
+0	93aa, >pdb_protein370... *
+>Cluster 1830
+0	93aa, >pdb_protein619... *
+>Cluster 1831
+0	93aa, >pdb_protein632... *
+>Cluster 1832
+0	93aa, >pdb_protein639... *
+>Cluster 1833
+0	93aa, >pdb_protein771... *
+1	93aa, >pdb_protein804... at 50.54%
+>Cluster 1834
+0	92aa, >pdb_protein201... at 40.22%
+1	76aa, >pdb_protein660... at 46.05%
+2	75aa, >pdb_protein747... at 46.67%
+3	93aa, >pdb_protein867... *
+>Cluster 1835
+0	93aa, >pdb_protein972... *
+>Cluster 1836
+0	77aa, >disprot_protein69... at 100.00%
+1	92aa, >disprot_protein70... *
+>Cluster 1837
+0	92aa, >disprot_protein524... *
+>Cluster 1838
+0	92aa, >disprot_protein582... *
+>Cluster 1839
+0	92aa, >disprot_protein896... *
+>Cluster 1840
+0	92aa, >disprot_protein1136... *
+1	90aa, >disprot_protein1137... at 100.00%
+>Cluster 1841
+0	92aa, >disprot_protein1196... *
+>Cluster 1842
+0	92aa, >disprot_protein1258... *
+>Cluster 1843
+0	92aa, >disprot_protein1314... *
+>Cluster 1844
+0	92aa, >disprot_protein1643... *
+>Cluster 1845
+0	92aa, >disprot_protein1648... *
+>Cluster 1846
+0	92aa, >disprot_protein1913... *
+1	83aa, >disprot_protein1914... at 50.60%
+2	71aa, >disprot_protein1915... at 42.25%
+3	82aa, >disprot_protein1917... at 48.78%
+>Cluster 1847
+0	92aa, >disprot_protein2110... *
+>Cluster 1848
+0	92aa, >pdb_protein27... *
+>Cluster 1849
+0	92aa, >pdb_protein28... *
+>Cluster 1850
+0	92aa, >pdb_protein41... *
+1	86aa, >pdb_protein106... at 68.60%
+>Cluster 1851
+0	92aa, >pdb_protein50... *
+>Cluster 1852
+0	92aa, >pdb_protein69... *
+1	60aa, >pdb_protein456... at 63.33%
+>Cluster 1853
+0	92aa, >pdb_protein95... *
+1	82aa, >pdb_protein563... at 41.46%
+>Cluster 1854
+0	92aa, >pdb_protein151... *
+>Cluster 1855
+0	92aa, >pdb_protein263... *
+>Cluster 1856
+0	92aa, >pdb_protein338... *
+>Cluster 1857
+0	92aa, >pdb_protein385... *
+1	92aa, >pdb_protein441... at 41.30%
+>Cluster 1858
+0	92aa, >pdb_protein408... *
+>Cluster 1859
+0	90aa, >pdb_protein435... at 40.00%
+1	92aa, >pdb_protein467... *
+>Cluster 1860
+0	92aa, >pdb_protein657... *
+>Cluster 1861
+0	92aa, >pdb_protein690... *
+>Cluster 1862
+0	92aa, >pdb_protein727... *
+>Cluster 1863
+0	92aa, >pdb_protein729... *
+>Cluster 1864
+0	92aa, >pdb_protein765... *
+>Cluster 1865
+0	92aa, >pdb_protein845... *
+>Cluster 1866
+0	92aa, >pdb_protein891... *
+>Cluster 1867
+0	92aa, >pdb_protein958... *
+>Cluster 1868
+0	83aa, >disprot_protein874... at 42.17%
+1	55aa, >disprot_protein875... at 41.82%
+2	92aa, >pdb_protein978... *
+>Cluster 1869
+0	92aa, >pdb_protein1003... *
+>Cluster 1870
+0	92aa, >pdb_protein1004... *
+>Cluster 1871
+0	91aa, >pdb_protein88... *
+>Cluster 1872
+0	91aa, >pdb_protein127... *
+>Cluster 1873
+0	91aa, >pdb_protein368... *
+1	86aa, >pdb_protein524... at 56.98%
+2	80aa, >pdb_protein899... at 53.75%
+>Cluster 1874
+0	85aa, >pdb_protein407... at 58.82%
+1	91aa, >pdb_protein566... *
+2	88aa, >pdb_protein732... at 43.18%
+3	84aa, >pdb_protein926... at 45.24%
+>Cluster 1875
+0	91aa, >pdb_protein581... *
+>Cluster 1876
+0	91aa, >pdb_protein719... *
+>Cluster 1877
+0	91aa, >pdb_protein748... *
+>Cluster 1878
+0	91aa, >pdb_protein986... *
+>Cluster 1879
+0	90aa, >disprot_protein265... *
+1	89aa, >disprot_protein266... at 100.00%
+>Cluster 1880
+0	90aa, >disprot_protein290... *
+1	89aa, >disprot_protein291... at 100.00%
+>Cluster 1881
+0	90aa, >disprot_protein304... *
+>Cluster 1882
+0	90aa, >disprot_protein889... *
+>Cluster 1883
+0	90aa, >disprot_protein959... *
+>Cluster 1884
+0	90aa, >disprot_protein1000... *
+>Cluster 1885
+0	90aa, >disprot_protein1670... *
+>Cluster 1886
+0	90aa, >pdb_protein16... *
+>Cluster 1887
+0	90aa, >pdb_protein57... *
+1	83aa, >pdb_protein365... at 98.80%
+>Cluster 1888
+0	90aa, >pdb_protein166... *
+>Cluster 1889
+0	90aa, >pdb_protein194... *
+>Cluster 1890
+0	90aa, >pdb_protein196... *
+>Cluster 1891
+0	90aa, >pdb_protein340... *
+>Cluster 1892
+0	90aa, >pdb_protein367... *
+>Cluster 1893
+0	90aa, >pdb_protein459... *
+1	76aa, >pdb_protein865... at 100.00%
+>Cluster 1894
+0	90aa, >pdb_protein465... *
+>Cluster 1895
+0	90aa, >pdb_protein471... *
+>Cluster 1896
+0	90aa, >pdb_protein598... *
+>Cluster 1897
+0	90aa, >pdb_protein605... *
+>Cluster 1898
+0	90aa, >pdb_protein612... *
+>Cluster 1899
+0	90aa, >pdb_protein634... *
+>Cluster 1900
+0	90aa, >pdb_protein766... *
+>Cluster 1901
+0	88aa, >pdb_protein132... at 54.55%
+1	56aa, >pdb_protein161... at 53.57%
+2	52aa, >pdb_protein187... at 55.77%
+3	51aa, >pdb_protein246... at 54.90%
+4	85aa, >pdb_protein248... at 40.00%
+5	60aa, >pdb_protein378... at 53.33%
+6	72aa, >pdb_protein486... at 44.44%
+7	68aa, >pdb_protein564... at 48.53%
+8	61aa, >pdb_protein576... at 52.46%
+9	57aa, >pdb_protein775... at 56.14%
+10	68aa, >pdb_protein793... at 42.65%
+11	53aa, >pdb_protein799... at 58.49%
+12	56aa, >pdb_protein816... at 55.36%
+13	90aa, >pdb_protein878... *
+14	63aa, >pdb_protein943... at 52.38%
+>Cluster 1902
+0	90aa, >pdb_protein924... *
+>Cluster 1903
+0	90aa, >pdb_protein1000... *
+>Cluster 1904
+0	71aa, >disprot_protein275... at 100.00%
+1	89aa, >disprot_protein276... *
+>Cluster 1905
+0	89aa, >disprot_protein564... *
+>Cluster 1906
+0	89aa, >disprot_protein573... *
+1	70aa, >disprot_protein574... at 100.00%
+>Cluster 1907
+0	89aa, >disprot_protein622... *
+>Cluster 1908
+0	89aa, >disprot_protein937... *
+>Cluster 1909
+0	89aa, >disprot_protein955... *
+>Cluster 1910
+0	89aa, >disprot_protein1104... *
+>Cluster 1911
+0	89aa, >disprot_protein1356... *
+>Cluster 1912
+0	89aa, >disprot_protein2077... *
+>Cluster 1913
+0	89aa, >pdb_protein10... *
+>Cluster 1914
+0	89aa, >pdb_protein103... *
+>Cluster 1915
+0	89aa, >pdb_protein264... *
+>Cluster 1916
+0	89aa, >pdb_protein274... *
+1	76aa, >pdb_protein560... at 98.68%
+>Cluster 1917
+0	89aa, >pdb_protein316... *
+>Cluster 1918
+0	89aa, >pdb_protein377... *
+>Cluster 1919
+0	89aa, >pdb_protein380... *
+>Cluster 1920
+0	89aa, >pdb_protein387... *
+>Cluster 1921
+0	89aa, >pdb_protein388... *
+>Cluster 1922
+0	89aa, >pdb_protein461... *
+>Cluster 1923
+0	89aa, >pdb_protein489... *
+>Cluster 1924
+0	89aa, >pdb_protein522... *
+>Cluster 1925
+0	89aa, >pdb_protein538... *
+>Cluster 1926
+0	89aa, >pdb_protein575... *
+>Cluster 1927
+0	89aa, >pdb_protein675... *
+>Cluster 1928
+0	89aa, >pdb_protein712... *
+>Cluster 1929
+0	89aa, >pdb_protein810... *
+>Cluster 1930
+0	89aa, >pdb_protein817... *
+>Cluster 1931
+0	76aa, >pdb_protein664... at 47.37%
+1	89aa, >pdb_protein928... *
+>Cluster 1932
+0	89aa, >pdb_protein962... *
+>Cluster 1933
+0	88aa, >pdb_protein266... at 55.68%
+1	86aa, >pdb_protein445... at 52.33%
+2	88aa, >pdb_protein469... at 52.27%
+3	89aa, >pdb_protein980... *
+>Cluster 1934
+0	68aa, >disprot_protein134... at 100.00%
+1	88aa, >disprot_protein135... *
+>Cluster 1935
+0	88aa, >disprot_protein158... *
+>Cluster 1936
+0	88aa, >disprot_protein281... *
+1	87aa, >disprot_protein282... at 94.25%
+>Cluster 1937
+0	88aa, >disprot_protein619... *
+>Cluster 1938
+0	88aa, >disprot_protein623... *
+1	59aa, >disprot_protein624... at 100.00%
+2	88aa, >pdb_protein487... at 100.00%
+>Cluster 1939
+0	88aa, >disprot_protein728... *
+>Cluster 1940
+0	78aa, >disprot_protein88... at 75.64%
+1	88aa, >disprot_protein961... *
+2	79aa, >disprot_protein962... at 100.00%
+>Cluster 1941
+0	88aa, >disprot_protein1369... *
+>Cluster 1942
+0	88aa, >disprot_protein1472... *
+>Cluster 1943
+0	66aa, >disprot_protein543... at 87.88%
+1	68aa, >disprot_protein1583... at 100.00%
+2	74aa, >disprot_protein1585... at 94.59%
+3	74aa, >disprot_protein1587... at 97.30%
+4	88aa, >disprot_protein1588... *
+>Cluster 1944
+0	88aa, >disprot_protein1941... *
+>Cluster 1945
+0	88aa, >disprot_protein1969... *
+>Cluster 1946
+0	53aa, >disprot_protein2000... at 100.00%
+1	88aa, >disprot_protein2001... *
+>Cluster 1947
+0	88aa, >pdb_protein3... *
+>Cluster 1948
+0	88aa, >pdb_protein39... *
+>Cluster 1949
+0	88aa, >pdb_protein116... *
+>Cluster 1950
+0	88aa, >pdb_protein371... *
+>Cluster 1951
+0	56aa, >disprot_protein459... at 69.64%
+1	67aa, >pdb_protein245... at 68.66%
+2	88aa, >pdb_protein422... *
+3	76aa, >pdb_protein836... at 68.42%
+>Cluster 1952
+0	88aa, >pdb_protein476... *
+>Cluster 1953
+0	88aa, >pdb_protein479... *
+>Cluster 1954
+0	88aa, >pdb_protein528... *
+>Cluster 1955
+0	88aa, >pdb_protein550... *
+>Cluster 1956
+0	88aa, >pdb_protein647... *
+>Cluster 1957
+0	85aa, >pdb_protein239... at 44.71%
+1	88aa, >pdb_protein687... *
+>Cluster 1958
+0	84aa, >pdb_protein394... at 100.00%
+1	88aa, >pdb_protein746... *
+>Cluster 1959
+0	88aa, >pdb_protein750... *
+>Cluster 1960
+0	88aa, >pdb_protein783... *
+>Cluster 1961
+0	88aa, >pdb_protein806... *
+>Cluster 1962
+0	88aa, >pdb_protein828... *
+>Cluster 1963
+0	87aa, >pdb_protein214... at 43.68%
+1	88aa, >pdb_protein885... *
+>Cluster 1964
+0	88aa, >pdb_protein894... *
+>Cluster 1965
+0	88aa, >pdb_protein957... *
+>Cluster 1966
+0	88aa, >pdb_protein964... *
+>Cluster 1967
+0	87aa, >disprot_protein59... *
+1	83aa, >pdb_protein684... at 97.59%
+>Cluster 1968
+0	87aa, >disprot_protein211... *
+1	73aa, >disprot_protein212... at 100.00%
+>Cluster 1969
+0	87aa, >disprot_protein260... *
+>Cluster 1970
+0	87aa, >disprot_protein507... *
+>Cluster 1971
+0	87aa, >disprot_protein1433... *
+1	80aa, >disprot_protein1434... at 100.00%
+>Cluster 1972
+0	87aa, >disprot_protein1551... *
+>Cluster 1973
+0	87aa, >disprot_protein1767... *
+1	61aa, >disprot_protein1768... at 100.00%
+>Cluster 1974
+0	87aa, >disprot_protein1819... *
+1	74aa, >pdb_protein62... at 79.73%
+>Cluster 1975
+0	87aa, >disprot_protein1927... *
+>Cluster 1976
+0	87aa, >disprot_protein1938... *
+>Cluster 1977
+0	87aa, >disprot_protein1956... *
+>Cluster 1978
+0	87aa, >pdb_protein242... *
+>Cluster 1979
+0	87aa, >pdb_protein308... *
+>Cluster 1980
+0	87aa, >pdb_protein536... *
+>Cluster 1981
+0	87aa, >pdb_protein642... *
+>Cluster 1982
+0	87aa, >pdb_protein781... *
+>Cluster 1983
+0	87aa, >pdb_protein838... *
+>Cluster 1984
+0	87aa, >pdb_protein938... *
+>Cluster 1985
+0	77aa, >pdb_protein595... at 97.40%
+1	87aa, >pdb_protein967... *
+>Cluster 1986
+0	86aa, >disprot_protein37... *
+>Cluster 1987
+0	86aa, >disprot_protein465... *
+>Cluster 1988
+0	86aa, >disprot_protein607... *
+>Cluster 1989
+0	86aa, >disprot_protein804... *
+1	75aa, >disprot_protein805... at 100.00%
+>Cluster 1990
+0	86aa, >disprot_protein936... *
+>Cluster 1991
+0	86aa, >disprot_protein990... *
+1	85aa, >disprot_protein991... at 100.00%
+>Cluster 1992
+0	86aa, >disprot_protein1089... *
+>Cluster 1993
+0	86aa, >disprot_protein1327... *
+>Cluster 1994
+0	86aa, >disprot_protein1497... *
+>Cluster 1995
+0	86aa, >pdb_protein86... *
+>Cluster 1996
+0	86aa, >pdb_protein110... *
+>Cluster 1997
+0	86aa, >pdb_protein129... *
+1	83aa, >pdb_protein223... at 100.00%
+2	80aa, >pdb_protein714... at 100.00%
+3	84aa, >pdb_protein758... at 100.00%
+>Cluster 1998
+0	86aa, >pdb_protein145... *
+>Cluster 1999
+0	86aa, >pdb_protein221... *
+>Cluster 2000
+0	82aa, >pdb_protein358... at 42.68%
+1	86aa, >pdb_protein497... *
+>Cluster 2001
+0	86aa, >pdb_protein659... *
+>Cluster 2002
+0	86aa, >pdb_protein666... *
+>Cluster 2003
+0	86aa, >pdb_protein807... *
+>Cluster 2004
+0	86aa, >pdb_protein914... *
+>Cluster 2005
+0	85aa, >disprot_protein124... *
+1	75aa, >pdb_protein706... at 100.00%
+2	85aa, >pdb_protein716... at 75.29%
+>Cluster 2006
+0	85aa, >disprot_protein767... *
+>Cluster 2007
+0	85aa, >disprot_protein849... *
+>Cluster 2008
+0	85aa, >disprot_protein940... *
+>Cluster 2009
+0	85aa, >disprot_protein1062... *
+1	78aa, >disprot_protein1063... at 100.00%
+2	80aa, >disprot_protein1064... at 100.00%
+>Cluster 2010
+0	85aa, >disprot_protein1386... *
+>Cluster 2011
+0	85aa, >disprot_protein1641... *
+>Cluster 2012
+0	85aa, >disprot_protein1791... *
+>Cluster 2013
+0	85aa, >disprot_protein1864... *
+>Cluster 2014
+0	85aa, >disprot_protein1934... *
+>Cluster 2015
+0	85aa, >pdb_protein23... *
+>Cluster 2016
+0	85aa, >pdb_protein46... *
+1	71aa, >pdb_protein107... at 46.48%
+2	76aa, >pdb_protein541... at 40.79%
+>Cluster 2017
+0	85aa, >pdb_protein76... *
+>Cluster 2018
+0	85aa, >pdb_protein150... *
+>Cluster 2019
+0	85aa, >pdb_protein298... *
+>Cluster 2020
+0	85aa, >pdb_protein346... *
+>Cluster 2021
+0	85aa, >pdb_protein409... *
+>Cluster 2022
+0	85aa, >pdb_protein417... *
+>Cluster 2023
+0	74aa, >pdb_protein122... at 40.54%
+1	85aa, >pdb_protein460... *
+>Cluster 2024
+0	85aa, >pdb_protein475... *
+>Cluster 2025
+0	85aa, >pdb_protein517... *
+1	85aa, >pdb_protein709... at 94.12%
+>Cluster 2026
+0	85aa, >pdb_protein592... *
+1	85aa, >pdb_protein874... at 56.47%
+>Cluster 2027
+0	85aa, >pdb_protein611... *
+>Cluster 2028
+0	85aa, >pdb_protein737... *
+>Cluster 2029
+0	85aa, >pdb_protein764... *
+>Cluster 2030
+0	85aa, >pdb_protein882... *
+>Cluster 2031
+0	85aa, >pdb_protein888... *
+>Cluster 2032
+0	85aa, >pdb_protein917... *
+>Cluster 2033
+0	84aa, >disprot_protein658... *
+>Cluster 2034
+0	84aa, >disprot_protein933... *
+>Cluster 2035
+0	84aa, >disprot_protein942... *
+>Cluster 2036
+0	84aa, >disprot_protein1100... *
+>Cluster 2037
+0	84aa, >disprot_protein1359... *
+>Cluster 2038
+0	79aa, >disprot_protein1440... at 100.00%
+1	84aa, >disprot_protein1441... *
+>Cluster 2039
+0	84aa, >disprot_protein1478... *
+>Cluster 2040
+0	84aa, >disprot_protein1832... *
+>Cluster 2041
+0	84aa, >pdb_protein20... *
+>Cluster 2042
+0	84aa, >pdb_protein38... *
+>Cluster 2043
+0	84aa, >pdb_protein66... *
+>Cluster 2044
+0	82aa, >pdb_protein113... at 41.46%
+1	84aa, >pdb_protein176... *
+2	77aa, >pdb_protein255... at 50.65%
+>Cluster 2045
+0	84aa, >pdb_protein184... *
+>Cluster 2046
+0	52aa, >disprot_protein973... at 42.31%
+1	84aa, >pdb_protein226... *
+>Cluster 2047
+0	84aa, >pdb_protein231... *
+>Cluster 2048
+0	84aa, >pdb_protein283... *
+>Cluster 2049
+0	84aa, >pdb_protein399... *
+>Cluster 2050
+0	84aa, >pdb_protein401... *
+1	70aa, >pdb_protein797... at 45.71%
+>Cluster 2051
+0	84aa, >pdb_protein582... *
+>Cluster 2052
+0	84aa, >pdb_protein757... *
+>Cluster 2053
+0	84aa, >pdb_protein809... *
+>Cluster 2054
+0	84aa, >pdb_protein905... *
+>Cluster 2055
+0	84aa, >pdb_protein941... *
+>Cluster 2056
+0	66aa, >disprot_protein150... at 100.00%
+1	83aa, >disprot_protein151... *
+>Cluster 2057
+0	83aa, >disprot_protein184... *
+1	74aa, >disprot_protein185... at 100.00%
+>Cluster 2058
+0	83aa, >disprot_protein438... *
+>Cluster 2059
+0	83aa, >disprot_protein481... *
+>Cluster 2060
+0	83aa, >disprot_protein968... *
+>Cluster 2061
+0	83aa, >disprot_protein1016... *
+>Cluster 2062
+0	83aa, >disprot_protein1539... *
+1	81aa, >disprot_protein1540... at 97.53%
+>Cluster 2063
+0	83aa, >disprot_protein1805... *
+>Cluster 2064
+0	83aa, >disprot_protein1905... *
+1	57aa, >disprot_protein1906... at 100.00%
+>Cluster 2065
+0	83aa, >pdb_protein4... *
+1	76aa, >pdb_protein134... at 68.42%
+2	76aa, >pdb_protein529... at 69.74%
+3	81aa, >pdb_protein930... at 69.14%
+>Cluster 2066
+0	83aa, >pdb_protein24... *
+>Cluster 2067
+0	83aa, >pdb_protein91... *
+1	64aa, >pdb_protein973... at 56.25%
+>Cluster 2068
+0	83aa, >pdb_protein208... *
+>Cluster 2069
+0	83aa, >pdb_protein295... *
+>Cluster 2070
+0	83aa, >pdb_protein307... *
+>Cluster 2071
+0	83aa, >pdb_protein369... *
+>Cluster 2072
+0	83aa, >pdb_protein552... *
+>Cluster 2073
+0	82aa, >pdb_protein532... at 100.00%
+1	83aa, >pdb_protein570... *
+>Cluster 2074
+0	83aa, >pdb_protein683... *
+>Cluster 2075
+0	83aa, >pdb_protein743... *
+>Cluster 2076
+0	57aa, >pdb_protein133... at 92.98%
+1	57aa, >pdb_protein803... at 96.49%
+2	83aa, >pdb_protein823... *
+>Cluster 2077
+0	83aa, >pdb_protein834... *
+>Cluster 2078
+0	83aa, >pdb_protein990... *
+>Cluster 2079
+0	82aa, >disprot_protein60... *
+1	75aa, >pdb_protein500... at 92.00%
+>Cluster 2080
+0	82aa, >disprot_protein133... *
+1	54aa, >disprot_protein1862... at 46.30%
+>Cluster 2081
+0	82aa, >disprot_protein293... *
+>Cluster 2082
+0	82aa, >disprot_protein452... *
+>Cluster 2083
+0	82aa, >disprot_protein537... *
+>Cluster 2084
+0	82aa, >disprot_protein768... *
+1	81aa, >disprot_protein802... at 93.83%
+>Cluster 2085
+0	61aa, >disprot_protein491... at 40.98%
+1	82aa, >disprot_protein1035... *
+>Cluster 2086
+0	82aa, >disprot_protein1416... *
+>Cluster 2087
+0	82aa, >disprot_protein1590... *
+>Cluster 2088
+0	82aa, >disprot_protein1689... *
+>Cluster 2089
+0	82aa, >disprot_protein1736... *
+>Cluster 2090
+0	82aa, >disprot_protein1834... *
+>Cluster 2091
+0	82aa, >disprot_protein1885... *
+>Cluster 2092
+0	82aa, >disprot_protein1888... *
+>Cluster 2093
+0	82aa, >disprot_protein2075... *
+>Cluster 2094
+0	82aa, >disprot_protein2087... *
+>Cluster 2095
+0	82aa, >pdb_protein81... *
+>Cluster 2096
+0	82aa, >pdb_protein152... *
+>Cluster 2097
+0	82aa, >pdb_protein190... *
+>Cluster 2098
+0	82aa, >pdb_protein276... *
+>Cluster 2099
+0	82aa, >pdb_protein362... *
+1	70aa, >pdb_protein466... at 48.57%
+>Cluster 2100
+0	81aa, >pdb_protein87... at 96.30%
+1	82aa, >pdb_protein562... *
+>Cluster 2101
+0	82aa, >pdb_protein577... *
+>Cluster 2102
+0	82aa, >pdb_protein708... *
+>Cluster 2103
+0	82aa, >pdb_protein753... *
+>Cluster 2104
+0	82aa, >pdb_protein776... *
+>Cluster 2105
+0	82aa, >pdb_protein854... *
+>Cluster 2106
+0	82aa, >pdb_protein890... *
+>Cluster 2107
+0	82aa, >pdb_protein944... *
+>Cluster 2108
+0	82aa, >pdb_protein975... *
+>Cluster 2109
+0	81aa, >disprot_protein115... *
+>Cluster 2110
+0	81aa, >disprot_protein171... *
+1	76aa, >disprot_protein172... at 100.00%
+>Cluster 2111
+0	81aa, >disprot_protein463... *
+>Cluster 2112
+0	78aa, >disprot_protein286... at 98.72%
+1	80aa, >disprot_protein518... at 100.00%
+2	78aa, >disprot_protein520... at 100.00%
+3	81aa, >disprot_protein521... *
+>Cluster 2113
+0	81aa, >disprot_protein681... *
+>Cluster 2114
+0	81aa, >disprot_protein699... *
+>Cluster 2115
+0	81aa, >disprot_protein864... *
+>Cluster 2116
+0	81aa, >disprot_protein935... *
+>Cluster 2117
+0	81aa, >disprot_protein954... *
+>Cluster 2118
+0	81aa, >disprot_protein1130... *
+>Cluster 2119
+0	81aa, >disprot_protein1197... *
+>Cluster 2120
+0	81aa, >pdb_protein19... *
+>Cluster 2121
+0	81aa, >pdb_protein137... *
+1	74aa, >pdb_protein627... at 98.65%
+>Cluster 2122
+0	81aa, >pdb_protein159... *
+>Cluster 2123
+0	81aa, >pdb_protein343... *
+>Cluster 2124
+0	81aa, >pdb_protein375... *
+1	76aa, >pdb_protein513... at 40.79%
+>Cluster 2125
+0	81aa, >pdb_protein391... *
+>Cluster 2126
+0	81aa, >pdb_protein495... *
+>Cluster 2127
+0	81aa, >pdb_protein549... *
+>Cluster 2128
+0	81aa, >pdb_protein556... *
+>Cluster 2129
+0	81aa, >pdb_protein571... *
+1	81aa, >pdb_protein680... at 69.14%
+>Cluster 2130
+0	81aa, >pdb_protein626... *
+>Cluster 2131
+0	81aa, >pdb_protein770... *
+>Cluster 2132
+0	58aa, >pdb_protein186... at 53.45%
+1	70aa, >pdb_protein324... at 60.00%
+2	70aa, >pdb_protein463... at 60.00%
+3	80aa, >pdb_protein674... at 80.00%
+4	81aa, >pdb_protein820... *
+>Cluster 2133
+0	81aa, >pdb_protein825... *
+>Cluster 2134
+0	81aa, >pdb_protein892... *
+>Cluster 2135
+0	81aa, >pdb_protein913... *
+>Cluster 2136
+0	81aa, >pdb_protein935... *
+>Cluster 2137
+0	81aa, >pdb_protein953... *
+>Cluster 2138
+0	79aa, >pdb_protein629... at 97.47%
+1	81aa, >pdb_protein974... *
+>Cluster 2139
+0	81aa, >pdb_protein992... *
+>Cluster 2140
+0	80aa, >disprot_protein500... *
+>Cluster 2141
+0	80aa, >disprot_protein941... *
+>Cluster 2142
+0	80aa, >disprot_protein1067... *
+>Cluster 2143
+0	80aa, >disprot_protein1370... *
+>Cluster 2144
+0	80aa, >disprot_protein1545... *
+1	55aa, >disprot_protein1546... at 92.73%
+>Cluster 2145
+0	80aa, >disprot_protein1549... *
+>Cluster 2146
+0	80aa, >disprot_protein1696... *
+1	52aa, >disprot_protein1697... at 100.00%
+>Cluster 2147
+0	80aa, >disprot_protein1710... *
+>Cluster 2148
+0	80aa, >disprot_protein1748... *
+>Cluster 2149
+0	80aa, >disprot_protein1750... *
+>Cluster 2150
+0	80aa, >disprot_protein1850... *
+>Cluster 2151
+0	80aa, >disprot_protein1894... *
+>Cluster 2152
+0	80aa, >disprot_protein1980... *
+>Cluster 2153
+0	80aa, >pdb_protein89... *
+>Cluster 2154
+0	80aa, >pdb_protein104... *
+1	80aa, >pdb_protein558... at 88.75%
+2	80aa, >pdb_protein853... at 91.25%
+>Cluster 2155
+0	80aa, >pdb_protein154... *
+>Cluster 2156
+0	80aa, >pdb_protein218... *
+>Cluster 2157
+0	80aa, >pdb_protein297... *
+1	78aa, >pdb_protein457... at 98.72%
+>Cluster 2158
+0	80aa, >pdb_protein299... *
+>Cluster 2159
+0	80aa, >pdb_protein314... *
+>Cluster 2160
+0	80aa, >pdb_protein356... *
+>Cluster 2161
+0	80aa, >pdb_protein361... *
+1	58aa, >pdb_protein648... at 62.07%
+2	60aa, >pdb_protein808... at 50.00%
+3	64aa, >pdb_protein881... at 46.88%
+>Cluster 2162
+0	80aa, >pdb_protein381... *
+1	80aa, >pdb_protein668... at 98.75%
+>Cluster 2163
+0	80aa, >pdb_protein420... *
+>Cluster 2164
+0	80aa, >pdb_protein521... *
+>Cluster 2165
+0	80aa, >pdb_protein751... *
+>Cluster 2166
+0	80aa, >pdb_protein788... *
+>Cluster 2167
+0	80aa, >pdb_protein811... *
+>Cluster 2168
+0	80aa, >pdb_protein875... *
+>Cluster 2169
+0	80aa, >pdb_protein921... *
+>Cluster 2170
+0	79aa, >disprot_protein279... *
+>Cluster 2171
+0	79aa, >disprot_protein604... *
+>Cluster 2172
+0	79aa, >disprot_protein770... *
+>Cluster 2173
+0	79aa, >pdb_protein26... *
+>Cluster 2174
+0	62aa, >disprot_protein1207... at 98.39%
+1	79aa, >pdb_protein117... *
+>Cluster 2175
+0	79aa, >pdb_protein302... *
+>Cluster 2176
+0	79aa, >pdb_protein319... *
+>Cluster 2177
+0	79aa, >pdb_protein395... *
+>Cluster 2178
+0	79aa, >pdb_protein510... *
+>Cluster 2179
+0	79aa, >pdb_protein559... *
+>Cluster 2180
+0	79aa, >pdb_protein637... *
+>Cluster 2181
+0	79aa, >pdb_protein672... *
+>Cluster 2182
+0	79aa, >pdb_protein720... *
+>Cluster 2183
+0	79aa, >pdb_protein909... *
+>Cluster 2184
+0	78aa, >disprot_protein179... *
+>Cluster 2185
+0	78aa, >disprot_protein540... *
+>Cluster 2186
+0	78aa, >disprot_protein869... *
+>Cluster 2187
+0	78aa, >disprot_protein882... *
+>Cluster 2188
+0	78aa, >disprot_protein1221... *
+>Cluster 2189
+0	78aa, >disprot_protein1239... *
+>Cluster 2190
+0	78aa, >disprot_protein1411... *
+>Cluster 2191
+0	78aa, >disprot_protein1493... *
+1	73aa, >disprot_protein1494... at 100.00%
+>Cluster 2192
+0	78aa, >disprot_protein1886... *
+>Cluster 2193
+0	78aa, >pdb_protein59... *
+>Cluster 2194
+0	78aa, >pdb_protein210... *
+>Cluster 2195
+0	78aa, >pdb_protein241... *
+>Cluster 2196
+0	78aa, >pdb_protein360... *
+>Cluster 2197
+0	78aa, >pdb_protein363... *
+>Cluster 2198
+0	78aa, >pdb_protein427... *
+>Cluster 2199
+0	78aa, >pdb_protein490... *
+>Cluster 2200
+0	78aa, >pdb_protein589... *
+>Cluster 2201
+0	78aa, >pdb_protein618... *
+>Cluster 2202
+0	78aa, >pdb_protein969... *
+>Cluster 2203
+0	77aa, >disprot_protein153... *
+>Cluster 2204
+0	77aa, >disprot_protein241... *
+>Cluster 2205
+0	77aa, >disprot_protein264... *
+>Cluster 2206
+0	77aa, >disprot_protein343... *
+>Cluster 2207
+0	77aa, >disprot_protein480... *
+>Cluster 2208
+0	77aa, >disprot_protein556... *
+>Cluster 2209
+0	77aa, >disprot_protein565... *
+>Cluster 2210
+0	60aa, >disprot_protein54... at 75.00%
+1	76aa, >disprot_protein55... at 68.42%
+2	77aa, >disprot_protein617... *
+>Cluster 2211
+0	77aa, >disprot_protein745... *
+>Cluster 2212
+0	77aa, >disprot_protein754... *
+>Cluster 2213
+0	77aa, >disprot_protein1073... *
+>Cluster 2214
+0	77aa, >disprot_protein1501... *
+1	61aa, >disprot_protein1502... at 100.00%
+>Cluster 2215
+0	77aa, >disprot_protein1524... *
+>Cluster 2216
+0	77aa, >disprot_protein1814... *
+>Cluster 2217
+0	77aa, >disprot_protein2055... *
+>Cluster 2218
+0	77aa, >pdb_protein96... *
+>Cluster 2219
+0	77aa, >pdb_protein98... *
+>Cluster 2220
+0	77aa, >pdb_protein101... *
+>Cluster 2221
+0	77aa, >pdb_protein136... *
+>Cluster 2222
+0	77aa, >pdb_protein261... *
+>Cluster 2223
+0	77aa, >pdb_protein432... *
+>Cluster 2224
+0	73aa, >pdb_protein102... at 64.38%
+1	77aa, >pdb_protein449... *
+>Cluster 2225
+0	77aa, >pdb_protein515... *
+>Cluster 2226
+0	68aa, >pdb_protein119... at 57.35%
+1	68aa, >pdb_protein540... at 54.41%
+2	77aa, >pdb_protein555... *
+3	69aa, >pdb_protein704... at 55.07%
+>Cluster 2227
+0	73aa, >pdb_protein470... at 47.95%
+1	77aa, >pdb_protein623... *
+2	75aa, >pdb_protein698... at 42.67%
+>Cluster 2228
+0	77aa, >pdb_protein702... *
+>Cluster 2229
+0	76aa, >pdb_protein649... at 97.37%
+1	77aa, >pdb_protein833... *
+>Cluster 2230
+0	73aa, >pdb_protein94... at 100.00%
+1	77aa, >pdb_protein855... *
+>Cluster 2231
+0	77aa, >pdb_protein858... *
+>Cluster 2232
+0	77aa, >pdb_protein883... *
+>Cluster 2233
+0	77aa, >pdb_protein932... *
+>Cluster 2234
+0	76aa, >disprot_protein8... *
+>Cluster 2235
+0	76aa, >disprot_protein536... *
+>Cluster 2236
+0	76aa, >disprot_protein620... *
+>Cluster 2237
+0	76aa, >disprot_protein1234... *
+>Cluster 2238
+0	76aa, >disprot_protein1382... *
+1	72aa, >disprot_protein1935... at 41.67%
+>Cluster 2239
+0	76aa, >disprot_protein1401... *
+>Cluster 2240
+0	76aa, >disprot_protein1406... *
+>Cluster 2241
+0	56aa, >disprot_protein1442... at 100.00%
+1	76aa, >disprot_protein1443... *
+>Cluster 2242
+0	76aa, >disprot_protein1977... *
+>Cluster 2243
+0	76aa, >pdb_protein172... *
+1	51aa, >pdb_protein278... at 78.43%
+2	51aa, >pdb_protein805... at 66.67%
+>Cluster 2244
+0	76aa, >pdb_protein206... *
+>Cluster 2245
+0	76aa, >pdb_protein225... *
+>Cluster 2246
+0	76aa, >pdb_protein280... *
+1	76aa, >pdb_protein342... at 96.05%
+>Cluster 2247
+0	76aa, >pdb_protein300... *
+1	71aa, >pdb_protein873... at 100.00%
+>Cluster 2248
+0	76aa, >pdb_protein309... *
+>Cluster 2249
+0	76aa, >pdb_protein335... *
+>Cluster 2250
+0	76aa, >pdb_protein349... *
+>Cluster 2251
+0	76aa, >pdb_protein535... *
+>Cluster 2252
+0	76aa, >pdb_protein697... *
+>Cluster 2253
+0	76aa, >pdb_protein950... *
+>Cluster 2254
+0	75aa, >disprot_protein186... *
+1	75aa, >disprot_protein306... at 86.67%
+>Cluster 2255
+0	75aa, >disprot_protein332... *
+>Cluster 2256
+0	75aa, >disprot_protein446... *
+>Cluster 2257
+0	75aa, >disprot_protein527... *
+>Cluster 2258
+0	75aa, >disprot_protein691... *
+1	73aa, >disprot_protein692... at 100.00%
+>Cluster 2259
+0	75aa, >disprot_protein894... *
+>Cluster 2260
+0	75aa, >disprot_protein1360... *
+>Cluster 2261
+0	75aa, >disprot_protein1531... *
+>Cluster 2262
+0	75aa, >disprot_protein1563... *
+>Cluster 2263
+0	75aa, >disprot_protein1788... *
+>Cluster 2264
+0	75aa, >disprot_protein1858... *
+>Cluster 2265
+0	75aa, >disprot_protein1909... *
+>Cluster 2266
+0	75aa, >disprot_protein2014... *
+>Cluster 2267
+0	75aa, >pdb_protein47... *
+>Cluster 2268
+0	75aa, >pdb_protein78... *
+>Cluster 2269
+0	75aa, >pdb_protein79... *
+>Cluster 2270
+0	75aa, >pdb_protein182... *
+>Cluster 2271
+0	75aa, >pdb_protein421... *
+>Cluster 2272
+0	75aa, >pdb_protein547... *
+>Cluster 2273
+0	75aa, >pdb_protein594... *
+>Cluster 2274
+0	75aa, >pdb_protein671... *
+>Cluster 2275
+0	75aa, >pdb_protein759... *
+>Cluster 2276
+0	75aa, >pdb_protein922... *
+>Cluster 2277
+0	74aa, >disprot_protein435... *
+>Cluster 2278
+0	74aa, >disprot_protein445... *
+>Cluster 2279
+0	74aa, >disprot_protein761... *
+>Cluster 2280
+0	74aa, >disprot_protein886... *
+1	74aa, >disprot_protein887... at 95.95%
+>Cluster 2281
+0	74aa, >disprot_protein1158... *
+>Cluster 2282
+0	74aa, >disprot_protein1354... *
+1	73aa, >disprot_protein1826... at 91.78%
+>Cluster 2283
+0	74aa, >disprot_protein1462... *
+>Cluster 2284
+0	74aa, >disprot_protein1474... *
+1	68aa, >pdb_protein45... at 55.88%
+2	66aa, >pdb_protein433... at 50.00%
+>Cluster 2285
+0	74aa, >disprot_protein1782... *
+>Cluster 2286
+0	74aa, >disprot_protein2078... *
+>Cluster 2287
+0	74aa, >pdb_protein40... *
+>Cluster 2288
+0	74aa, >pdb_protein115... *
+>Cluster 2289
+0	74aa, >pdb_protein160... *
+>Cluster 2290
+0	74aa, >pdb_protein180... *
+>Cluster 2291
+0	74aa, >pdb_protein350... *
+>Cluster 2292
+0	74aa, >pdb_protein491... *
+>Cluster 2293
+0	74aa, >pdb_protein580... *
+>Cluster 2294
+0	74aa, >pdb_protein721... *
+>Cluster 2295
+0	74aa, >pdb_protein933... *
+>Cluster 2296
+0	67aa, >pdb_protein167... at 95.52%
+1	74aa, >pdb_protein940... *
+>Cluster 2297
+0	74aa, >pdb_protein1001... *
+>Cluster 2298
+0	73aa, >disprot_protein121... *
+>Cluster 2299
+0	73aa, >disprot_protein232... *
+1	57aa, >disprot_protein233... at 100.00%
+2	58aa, >disprot_protein234... at 100.00%
+>Cluster 2300
+0	73aa, >disprot_protein483... *
+>Cluster 2301
+0	73aa, >disprot_protein693... *
+>Cluster 2302
+0	73aa, >disprot_protein723... *
+>Cluster 2303
+0	73aa, >disprot_protein811... *
+>Cluster 2304
+0	73aa, >disprot_protein1078... *
+>Cluster 2305
+0	73aa, >disprot_protein1201... *
+1	61aa, >disprot_protein1202... at 100.00%
+2	71aa, >disprot_protein1203... at 49.30%
+3	73aa, >disprot_protein1204... at 49.32%
+4	64aa, >disprot_protein1205... at 46.88%
+>Cluster 2306
+0	73aa, >disprot_protein1490... *
+>Cluster 2307
+0	73aa, >disprot_protein1547... *
+>Cluster 2308
+0	73aa, >disprot_protein1744... *
+>Cluster 2309
+0	73aa, >disprot_protein1758... *
+>Cluster 2310
+0	73aa, >disprot_protein1857... *
+>Cluster 2311
+0	56aa, >disprot_protein1525... at 98.21%
+1	73aa, >disprot_protein2027... *
+>Cluster 2312
+0	73aa, >disprot_protein2088... *
+>Cluster 2313
+0	73aa, >pdb_protein112... *
+1	68aa, >pdb_protein900... at 69.12%
+2	68aa, >pdb_protein987... at 69.12%
+>Cluster 2314
+0	73aa, >pdb_protein267... *
+>Cluster 2315
+0	73aa, >pdb_protein311... *
+>Cluster 2316
+0	73aa, >pdb_protein379... *
+>Cluster 2317
+0	73aa, >pdb_protein484... *
+>Cluster 2318
+0	60aa, >pdb_protein144... at 40.00%
+1	73aa, >pdb_protein496... *
+>Cluster 2319
+0	73aa, >pdb_protein530... *
+>Cluster 2320
+0	67aa, >pdb_protein584... at 53.73%
+1	73aa, >pdb_protein635... *
+>Cluster 2321
+0	73aa, >pdb_protein842... *
+>Cluster 2322
+0	72aa, >disprot_protein98... *
+>Cluster 2323
+0	72aa, >disprot_protein467... *
+>Cluster 2324
+0	72aa, >disprot_protein504... *
+>Cluster 2325
+0	72aa, >disprot_protein529... *
+>Cluster 2326
+0	72aa, >disprot_protein784... *
+>Cluster 2327
+0	72aa, >disprot_protein1209... *
+>Cluster 2328
+0	72aa, >disprot_protein1313... *
+>Cluster 2329
+0	72aa, >disprot_protein1325... *
+>Cluster 2330
+0	72aa, >disprot_protein1378... *
+>Cluster 2331
+0	72aa, >disprot_protein1403... *
+>Cluster 2332
+0	72aa, >disprot_protein1599... *
+1	69aa, >disprot_protein1600... at 100.00%
+>Cluster 2333
+0	72aa, >disprot_protein1601... *
+>Cluster 2334
+0	72aa, >disprot_protein1603... *
+>Cluster 2335
+0	72aa, >disprot_protein1773... *
+>Cluster 2336
+0	72aa, >disprot_protein1803... *
+>Cluster 2337
+0	72aa, >disprot_protein2073... *
+>Cluster 2338
+0	72aa, >pdb_protein12... *
+>Cluster 2339
+0	71aa, >pdb_protein53... at 49.30%
+1	72aa, >pdb_protein177... *
+>Cluster 2340
+0	72aa, >pdb_protein195... *
+>Cluster 2341
+0	72aa, >pdb_protein320... *
+>Cluster 2342
+0	72aa, >pdb_protein328... *
+>Cluster 2343
+0	72aa, >pdb_protein501... *
+>Cluster 2344
+0	72aa, >pdb_protein567... *
+>Cluster 2345
+0	72aa, >pdb_protein590... *
+>Cluster 2346
+0	64aa, >pdb_protein337... at 92.19%
+1	72aa, >pdb_protein662... *
+>Cluster 2347
+0	72aa, >pdb_protein685... *
+>Cluster 2348
+0	72aa, >pdb_protein689... *
+>Cluster 2349
+0	72aa, >pdb_protein794... *
+>Cluster 2350
+0	72aa, >pdb_protein826... *
+>Cluster 2351
+0	72aa, >pdb_protein872... *
+>Cluster 2352
+0	72aa, >pdb_protein934... *
+>Cluster 2353
+0	71aa, >disprot_protein258... *
+>Cluster 2354
+0	71aa, >disprot_protein400... *
+>Cluster 2355
+0	71aa, >disprot_protein414... *
+>Cluster 2356
+0	71aa, >disprot_protein451... *
+>Cluster 2357
+0	71aa, >disprot_protein462... *
+>Cluster 2358
+0	71aa, >disprot_protein469... *
+>Cluster 2359
+0	71aa, >disprot_protein497... *
+>Cluster 2360
+0	71aa, >disprot_protein503... *
+>Cluster 2361
+0	71aa, >disprot_protein881... *
+>Cluster 2362
+0	71aa, >disprot_protein953... *
+>Cluster 2363
+0	71aa, >disprot_protein975... *
+>Cluster 2364
+0	71aa, >disprot_protein1383... *
+>Cluster 2365
+0	71aa, >disprot_protein1571... *
+>Cluster 2366
+0	71aa, >disprot_protein1867... *
+>Cluster 2367
+0	71aa, >disprot_protein1993... *
+>Cluster 2368
+0	71aa, >disprot_protein2037... *
+>Cluster 2369
+0	71aa, >pdb_protein185... *
+1	54aa, >pdb_protein211... at 48.15%
+>Cluster 2370
+0	71aa, >pdb_protein220... *
+>Cluster 2371
+0	71aa, >pdb_protein252... *
+>Cluster 2372
+0	59aa, >disprot_protein202... at 100.00%
+1	71aa, >pdb_protein416... *
+>Cluster 2373
+0	71aa, >pdb_protein426... *
+>Cluster 2374
+0	71aa, >pdb_protein439... *
+>Cluster 2375
+0	71aa, >pdb_protein591... *
+>Cluster 2376
+0	71aa, >pdb_protein628... *
+>Cluster 2377
+0	63aa, >disprot_protein1468... at 98.41%
+1	71aa, >pdb_protein681... *
+>Cluster 2378
+0	71aa, >pdb_protein699... *
+>Cluster 2379
+0	71aa, >pdb_protein754... *
+>Cluster 2380
+0	71aa, >pdb_protein772... *
+>Cluster 2381
+0	71aa, >pdb_protein795... *
+>Cluster 2382
+0	63aa, >pdb_protein601... at 93.65%
+1	71aa, >pdb_protein818... *
+2	63aa, >pdb_protein879... at 93.65%
+>Cluster 2383
+0	71aa, >pdb_protein839... *
+>Cluster 2384
+0	71aa, >pdb_protein893... *
+>Cluster 2385
+0	71aa, >pdb_protein915... *
+>Cluster 2386
+0	71aa, >pdb_protein918... *
+>Cluster 2387
+0	71aa, >pdb_protein942... *
+>Cluster 2388
+0	71aa, >pdb_protein970... *
+>Cluster 2389
+0	70aa, >disprot_protein259... *
+>Cluster 2390
+0	70aa, >disprot_protein324... *
+>Cluster 2391
+0	70aa, >disprot_protein559... *
+>Cluster 2392
+0	70aa, >disprot_protein783... *
+>Cluster 2393
+0	70aa, >disprot_protein806... *
+1	70aa, >disprot_protein1712... at 95.71%
+>Cluster 2394
+0	70aa, >disprot_protein828... *
+>Cluster 2395
+0	70aa, >disprot_protein1006... *
+>Cluster 2396
+0	70aa, >disprot_protein1087... *
+>Cluster 2397
+0	70aa, >disprot_protein1165... *
+>Cluster 2398
+0	70aa, >disprot_protein1195... *
+>Cluster 2399
+0	70aa, >disprot_protein1238... *
+>Cluster 2400
+0	70aa, >disprot_protein1660... *
+1	62aa, >disprot_protein1705... at 98.39%
+>Cluster 2401
+0	70aa, >disprot_protein1772... *
+>Cluster 2402
+0	70aa, >disprot_protein1831... *
+>Cluster 2403
+0	70aa, >pdb_protein22... *
+>Cluster 2404
+0	70aa, >pdb_protein99... *
+>Cluster 2405
+0	70aa, >pdb_protein109... *
+>Cluster 2406
+0	67aa, >pdb_protein188... at 97.01%
+1	70aa, >pdb_protein247... *
+>Cluster 2407
+0	70aa, >pdb_protein317... *
+>Cluster 2408
+0	70aa, >pdb_protein419... *
+>Cluster 2409
+0	57aa, >pdb_protein140... at 45.61%
+1	70aa, >pdb_protein450... *
+>Cluster 2410
+0	70aa, >pdb_protein544... *
+>Cluster 2411
+0	70aa, >pdb_protein551... *
+>Cluster 2412
+0	70aa, >pdb_protein585... *
+>Cluster 2413
+0	70aa, >pdb_protein593... *
+>Cluster 2414
+0	70aa, >pdb_protein609... *
+>Cluster 2415
+0	70aa, >pdb_protein718... *
+>Cluster 2416
+0	70aa, >pdb_protein802... *
+>Cluster 2417
+0	70aa, >pdb_protein849... *
+>Cluster 2418
+0	65aa, >disprot_protein419... at 58.46%
+1	70aa, >pdb_protein916... *
+>Cluster 2419
+0	69aa, >disprot_protein492... *
+>Cluster 2420
+0	69aa, >disprot_protein884... *
+>Cluster 2421
+0	69aa, >disprot_protein971... *
+>Cluster 2422
+0	69aa, >disprot_protein1459... *
+>Cluster 2423
+0	69aa, >disprot_protein1943... *
+>Cluster 2424
+0	69aa, >disprot_protein2020... *
+>Cluster 2425
+0	69aa, >pdb_protein5... *
+1	61aa, >pdb_protein305... at 49.18%
+2	66aa, >pdb_protein819... at 45.45%
+3	58aa, >pdb_protein901... at 48.28%
+>Cluster 2426
+0	69aa, >pdb_protein74... *
+>Cluster 2427
+0	69aa, >pdb_protein114... *
+>Cluster 2428
+0	69aa, >pdb_protein193... *
+>Cluster 2429
+0	69aa, >pdb_protein230... *
+>Cluster 2430
+0	69aa, >pdb_protein271... *
+>Cluster 2431
+0	69aa, >pdb_protein326... *
+>Cluster 2432
+0	69aa, >pdb_protein334... *
+1	54aa, >pdb_protein548... at 98.15%
+>Cluster 2433
+0	69aa, >pdb_protein436... *
+>Cluster 2434
+0	69aa, >pdb_protein537... *
+>Cluster 2435
+0	67aa, >pdb_protein227... at 98.51%
+1	69aa, >pdb_protein658... *
+2	68aa, >pdb_protein995... at 97.06%
+>Cluster 2436
+0	69aa, >pdb_protein677... *
+>Cluster 2437
+0	69aa, >pdb_protein700... *
+>Cluster 2438
+0	69aa, >pdb_protein840... *
+>Cluster 2439
+0	69aa, >pdb_protein936... *
+>Cluster 2440
+0	68aa, >disprot_protein152... *
+>Cluster 2441
+0	68aa, >disprot_protein240... *
+>Cluster 2442
+0	68aa, >disprot_protein458... *
+>Cluster 2443
+0	58aa, >disprot_protein82... at 100.00%
+1	68aa, >disprot_protein626... *
+>Cluster 2444
+0	68aa, >disprot_protein709... *
+>Cluster 2445
+0	68aa, >disprot_protein724... *
+>Cluster 2446
+0	68aa, >disprot_protein841... *
+>Cluster 2447
+0	66aa, >disprot_protein1173... at 100.00%
+1	68aa, >disprot_protein1174... *
+>Cluster 2448
+0	68aa, >disprot_protein1250... *
+>Cluster 2449
+0	68aa, >disprot_protein1464... *
+>Cluster 2450
+0	68aa, >disprot_protein1542... *
+>Cluster 2451
+0	68aa, >disprot_protein1552... *
+>Cluster 2452
+0	68aa, >disprot_protein1578... *
+>Cluster 2453
+0	68aa, >disprot_protein1584... *
+>Cluster 2454
+0	68aa, >disprot_protein1667... *
+>Cluster 2455
+0	68aa, >disprot_protein1893... *
+>Cluster 2456
+0	68aa, >disprot_protein1925... *
+>Cluster 2457
+0	68aa, >disprot_protein2028... *
+>Cluster 2458
+0	68aa, >pdb_protein18... *
+>Cluster 2459
+0	68aa, >pdb_protein82... *
+>Cluster 2460
+0	68aa, >pdb_protein97... *
+>Cluster 2461
+0	68aa, >pdb_protein207... *
+>Cluster 2462
+0	68aa, >pdb_protein216... *
+>Cluster 2463
+0	68aa, >pdb_protein318... *
+>Cluster 2464
+0	68aa, >pdb_protein462... *
+>Cluster 2465
+0	68aa, >pdb_protein518... *
+>Cluster 2466
+0	68aa, >pdb_protein670... *
+>Cluster 2467
+0	64aa, >pdb_protein11... at 92.19%
+1	60aa, >pdb_protein197... at 58.33%
+2	68aa, >pdb_protein734... *
+>Cluster 2468
+0	68aa, >pdb_protein741... *
+1	60aa, >pdb_protein784... at 40.00%
+>Cluster 2469
+0	68aa, >pdb_protein863... *
+>Cluster 2470
+0	68aa, >pdb_protein907... *
+>Cluster 2471
+0	68aa, >pdb_protein954... *
+>Cluster 2472
+0	67aa, >disprot_protein74... *
+>Cluster 2473
+0	67aa, >disprot_protein93... *
+>Cluster 2474
+0	67aa, >disprot_protein475... *
+>Cluster 2475
+0	67aa, >disprot_protein643... *
+>Cluster 2476
+0	67aa, >disprot_protein716... *
+>Cluster 2477
+0	67aa, >disprot_protein801... *
+>Cluster 2478
+0	67aa, >disprot_protein818... *
+>Cluster 2479
+0	67aa, >disprot_protein819... *
+>Cluster 2480
+0	67aa, >disprot_protein964... *
+>Cluster 2481
+0	67aa, >disprot_protein1172... *
+>Cluster 2482
+0	67aa, >disprot_protein1346... *
+1	66aa, >disprot_protein1347... at 100.00%
+2	64aa, >disprot_protein1348... at 100.00%
+>Cluster 2483
+0	67aa, >disprot_protein1526... *
+>Cluster 2484
+0	67aa, >disprot_protein1564... *
+1	64aa, >disprot_protein1565... at 100.00%
+>Cluster 2485
+0	67aa, >disprot_protein1668... *
+>Cluster 2486
+0	67aa, >disprot_protein1695... *
+>Cluster 2487
+0	67aa, >disprot_protein1836... *
+>Cluster 2488
+0	67aa, >disprot_protein1928... *
+>Cluster 2489
+0	67aa, >pdb_protein30... *
+>Cluster 2490
+0	67aa, >pdb_protein250... *
+1	66aa, >pdb_protein303... at 95.45%
+2	67aa, >pdb_protein397... at 55.22%
+3	67aa, >pdb_protein815... at 55.22%
+4	67aa, >pdb_protein884... at 98.51%
+>Cluster 2491
+0	67aa, >pdb_protein313... *
+>Cluster 2492
+0	67aa, >pdb_protein354... *
+>Cluster 2493
+0	67aa, >pdb_protein526... *
+>Cluster 2494
+0	67aa, >pdb_protein553... *
+>Cluster 2495
+0	67aa, >pdb_protein583... *
+1	62aa, >pdb_protein961... at 41.94%
+>Cluster 2496
+0	67aa, >pdb_protein656... *
+>Cluster 2497
+0	67aa, >pdb_protein931... *
+>Cluster 2498
+0	67aa, >pdb_protein955... *
+>Cluster 2499
+0	66aa, >disprot_protein295... *
+>Cluster 2500
+0	63aa, >disprot_protein442... at 100.00%
+1	66aa, >disprot_protein443... *
+>Cluster 2501
+0	66aa, >disprot_protein625... *
+>Cluster 2502
+0	66aa, >disprot_protein817... *
+1	53aa, >pdb_protein321... at 94.34%
+>Cluster 2503
+0	66aa, >disprot_protein1439... *
+>Cluster 2504
+0	66aa, >disprot_protein1548... *
+>Cluster 2505
+0	66aa, >disprot_protein1734... *
+>Cluster 2506
+0	66aa, >disprot_protein1840... *
+>Cluster 2507
+0	66aa, >disprot_protein1851... *
+>Cluster 2508
+0	66aa, >disprot_protein2002... *
+>Cluster 2509
+0	66aa, >pdb_protein75... *
+>Cluster 2510
+0	66aa, >pdb_protein205... *
+1	64aa, >pdb_protein856... at 50.00%
+>Cluster 2511
+0	66aa, >pdb_protein400... *
+>Cluster 2512
+0	66aa, >pdb_protein402... *
+>Cluster 2513
+0	66aa, >pdb_protein404... *
+>Cluster 2514
+0	66aa, >pdb_protein455... *
+>Cluster 2515
+0	66aa, >pdb_protein477... *
+>Cluster 2516
+0	66aa, >pdb_protein505... *
+>Cluster 2517
+0	66aa, >pdb_protein665... *
+>Cluster 2518
+0	66aa, >pdb_protein705... *
+>Cluster 2519
+0	66aa, >pdb_protein979... *
+>Cluster 2520
+0	65aa, >disprot_protein27... *
+>Cluster 2521
+0	65aa, >disprot_protein572... *
+>Cluster 2522
+0	65aa, >disprot_protein583... *
+>Cluster 2523
+0	65aa, >disprot_protein586... *
+>Cluster 2524
+0	65aa, >disprot_protein776... *
+>Cluster 2525
+0	65aa, >disprot_protein816... *
+>Cluster 2526
+0	65aa, >disprot_protein832... *
+>Cluster 2527
+0	65aa, >disprot_protein1153... *
+1	65aa, >disprot_protein1171... at 41.54%
+>Cluster 2528
+0	65aa, >disprot_protein1518... *
+>Cluster 2529
+0	65aa, >disprot_protein1566... *
+>Cluster 2530
+0	65aa, >disprot_protein1580... *
+>Cluster 2531
+0	65aa, >disprot_protein1755... *
+>Cluster 2532
+0	65aa, >disprot_protein1837... *
+1	64aa, >disprot_protein1838... at 100.00%
+2	65aa, >disprot_protein1839... at 98.46%
+>Cluster 2533
+0	65aa, >disprot_protein1897... *
+>Cluster 2534
+0	65aa, >disprot_protein1949... *
+>Cluster 2535
+0	65aa, >pdb_protein178... *
+>Cluster 2536
+0	65aa, >pdb_protein212... *
+>Cluster 2537
+0	65aa, >pdb_protein359... *
+>Cluster 2538
+0	62aa, >pdb_protein235... at 74.19%
+1	65aa, >pdb_protein366... *
+2	62aa, >pdb_protein531... at 72.58%
+>Cluster 2539
+0	65aa, >pdb_protein372... *
+1	64aa, >pdb_protein844... at 48.44%
+>Cluster 2540
+0	60aa, >pdb_protein200... at 98.33%
+1	65aa, >pdb_protein434... *
+>Cluster 2541
+0	65aa, >pdb_protein600... *
+>Cluster 2542
+0	65aa, >pdb_protein617... *
+>Cluster 2543
+0	65aa, >pdb_protein686... *
+>Cluster 2544
+0	65aa, >pdb_protein848... *
+>Cluster 2545
+0	64aa, >disprot_protein292... *
+>Cluster 2546
+0	64aa, >disprot_protein514... *
+1	61aa, >disprot_protein515... at 100.00%
+>Cluster 2547
+0	64aa, >disprot_protein850... *
+>Cluster 2548
+0	64aa, >disprot_protein883... *
+>Cluster 2549
+0	64aa, >disprot_protein1385... *
+>Cluster 2550
+0	64aa, >disprot_protein1903... *
+1	60aa, >disprot_protein1904... at 100.00%
+>Cluster 2551
+0	64aa, >disprot_protein1924... *
+>Cluster 2552
+0	64aa, >disprot_protein2116... *
+>Cluster 2553
+0	64aa, >pdb_protein142... *
+>Cluster 2554
+0	64aa, >pdb_protein347... *
+>Cluster 2555
+0	64aa, >pdb_protein446... *
+>Cluster 2556
+0	64aa, >pdb_protein539... *
+>Cluster 2557
+0	64aa, >pdb_protein586... *
+>Cluster 2558
+0	64aa, >pdb_protein630... *
+>Cluster 2559
+0	64aa, >pdb_protein682... *
+>Cluster 2560
+0	64aa, >pdb_protein694... *
+>Cluster 2561
+0	64aa, >pdb_protein723... *
+>Cluster 2562
+0	64aa, >pdb_protein860... *
+>Cluster 2563
+0	64aa, >pdb_protein993... *
+>Cluster 2564
+0	64aa, >pdb_protein998... *
+>Cluster 2565
+0	63aa, >disprot_protein175... *
+>Cluster 2566
+0	63aa, >disprot_protein269... *
+>Cluster 2567
+0	63aa, >disprot_protein339... *
+>Cluster 2568
+0	63aa, >disprot_protein449... *
+>Cluster 2569
+0	63aa, >disprot_protein618... *
+>Cluster 2570
+0	63aa, >disprot_protein721... *
+>Cluster 2571
+0	63aa, >disprot_protein891... *
+>Cluster 2572
+0	63aa, >disprot_protein1024... *
+>Cluster 2573
+0	63aa, >disprot_protein1069... *
+1	62aa, >disprot_protein1260... at 75.81%
+>Cluster 2574
+0	63aa, >disprot_protein1262... *
+>Cluster 2575
+0	63aa, >disprot_protein1264... *
+>Cluster 2576
+0	63aa, >disprot_protein1465... *
+>Cluster 2577
+0	63aa, >disprot_protein1498... *
+>Cluster 2578
+0	63aa, >disprot_protein1848... *
+>Cluster 2579
+0	63aa, >disprot_protein1962... *
+>Cluster 2580
+0	63aa, >disprot_protein1963... *
+1	54aa, >disprot_protein1964... at 100.00%
+2	60aa, >disprot_protein1965... at 100.00%
+3	62aa, >disprot_protein1966... at 100.00%
+>Cluster 2581
+0	63aa, >pdb_protein15... *
+>Cluster 2582
+0	63aa, >pdb_protein17... *
+>Cluster 2583
+0	63aa, >pdb_protein85... *
+>Cluster 2584
+0	63aa, >pdb_protein157... *
+>Cluster 2585
+0	63aa, >pdb_protein181... *
+>Cluster 2586
+0	54aa, >pdb_protein70... at 44.44%
+1	63aa, >pdb_protein215... *
+>Cluster 2587
+0	63aa, >pdb_protein291... *
+>Cluster 2588
+0	63aa, >pdb_protein398... *
+>Cluster 2589
+0	63aa, >pdb_protein527... *
+>Cluster 2590
+0	61aa, >disprot_protein769... at 100.00%
+1	63aa, >pdb_protein755... *
+>Cluster 2591
+0	63aa, >pdb_protein910... *
+>Cluster 2592
+0	58aa, >pdb_protein67... at 62.07%
+1	58aa, >pdb_protein292... at 96.55%
+2	63aa, >pdb_protein911... *
+3	58aa, >pdb_protein981... at 75.86%
+4	56aa, >pdb_protein982... at 75.00%
+>Cluster 2593
+0	62aa, >disprot_protein91... *
+>Cluster 2594
+0	62aa, >disprot_protein273... *
+>Cluster 2595
+0	62aa, >disprot_protein366... *
+>Cluster 2596
+0	62aa, >disprot_protein399... *
+>Cluster 2597
+0	62aa, >disprot_protein842... *
+>Cluster 2598
+0	62aa, >disprot_protein1022... *
+>Cluster 2599
+0	62aa, >disprot_protein1082... *
+>Cluster 2600
+0	57aa, >disprot_protein1139... at 98.25%
+1	62aa, >disprot_protein1142... *
+>Cluster 2601
+0	62aa, >disprot_protein1353... *
+>Cluster 2602
+0	62aa, >disprot_protein1553... *
+>Cluster 2603
+0	62aa, >disprot_protein1610... *
+>Cluster 2604
+0	62aa, >disprot_protein1629... *
+>Cluster 2605
+0	62aa, >disprot_protein1737... *
+>Cluster 2606
+0	62aa, >disprot_protein1852... *
+>Cluster 2607
+0	62aa, >disprot_protein1890... *
+>Cluster 2608
+0	62aa, >pdb_protein65... *
+>Cluster 2609
+0	62aa, >pdb_protein68... *
+>Cluster 2610
+0	62aa, >pdb_protein270... *
+>Cluster 2611
+0	62aa, >pdb_protein286... *
+1	60aa, >pdb_protein414... at 45.00%
+>Cluster 2612
+0	62aa, >pdb_protein498... *
+>Cluster 2613
+0	62aa, >pdb_protein695... *
+>Cluster 2614
+0	62aa, >pdb_protein824... *
+>Cluster 2615
+0	62aa, >pdb_protein841... *
+>Cluster 2616
+0	61aa, >disprot_protein288... *
+>Cluster 2617
+0	61aa, >disprot_protein415... *
+>Cluster 2618
+0	61aa, >disprot_protein450... *
+>Cluster 2619
+0	61aa, >disprot_protein494... *
+>Cluster 2620
+0	60aa, >disprot_protein558... at 71.67%
+1	61aa, >disprot_protein560... *
+>Cluster 2621
+0	61aa, >disprot_protein592... *
+>Cluster 2622
+0	61aa, >disprot_protein821... *
+>Cluster 2623
+0	61aa, >disprot_protein873... *
+>Cluster 2624
+0	61aa, >disprot_protein1066... *
+>Cluster 2625
+0	51aa, >disprot_protein1071... at 100.00%
+1	61aa, >disprot_protein1072... *
+>Cluster 2626
+0	61aa, >disprot_protein1407... *
+>Cluster 2627
+0	61aa, >disprot_protein1577... *
+>Cluster 2628
+0	61aa, >disprot_protein1631... *
+>Cluster 2629
+0	61aa, >disprot_protein1735... *
+>Cluster 2630
+0	61aa, >disprot_protein1887... *
+>Cluster 2631
+0	61aa, >disprot_protein2034... *
+>Cluster 2632
+0	61aa, >pdb_protein147... *
+>Cluster 2633
+0	61aa, >pdb_protein171... *
+>Cluster 2634
+0	61aa, >pdb_protein183... *
+>Cluster 2635
+0	61aa, >pdb_protein219... *
+>Cluster 2636
+0	61aa, >pdb_protein275... *
+>Cluster 2637
+0	61aa, >pdb_protein383... *
+>Cluster 2638
+0	61aa, >pdb_protein624... *
+>Cluster 2639
+0	61aa, >pdb_protein650... *
+>Cluster 2640
+0	61aa, >pdb_protein852... *
+>Cluster 2641
+0	59aa, >pdb_protein174... at 76.27%
+1	60aa, >pdb_protein859... at 76.67%
+2	61aa, >pdb_protein984... *
+>Cluster 2642
+0	60aa, >disprot_protein694... *
+>Cluster 2643
+0	60aa, >disprot_protein719... *
+>Cluster 2644
+0	60aa, >disprot_protein760... *
+>Cluster 2645
+0	60aa, >disprot_protein800... *
+>Cluster 2646
+0	60aa, >disprot_protein831... *
+>Cluster 2647
+0	60aa, >disprot_protein949... *
+>Cluster 2648
+0	60aa, >disprot_protein1105... *
+>Cluster 2649
+0	60aa, >disprot_protein1138... *
+>Cluster 2650
+0	60aa, >disprot_protein1192... *
+>Cluster 2651
+0	60aa, >disprot_protein1410... *
+>Cluster 2652
+0	60aa, >disprot_protein1417... *
+1	57aa, >disprot_protein1418... at 100.00%
+>Cluster 2653
+0	60aa, >disprot_protein1523... *
+>Cluster 2654
+0	60aa, >disprot_protein1628... *
+>Cluster 2655
+0	60aa, >disprot_protein1645... *
+>Cluster 2656
+0	60aa, >disprot_protein1895... *
+>Cluster 2657
+0	60aa, >disprot_protein2025... *
+>Cluster 2658
+0	60aa, >disprot_protein2038... *
+>Cluster 2659
+0	60aa, >pdb_protein31... *
+1	59aa, >pdb_protein610... at 52.54%
+2	59aa, >pdb_protein960... at 42.37%
+3	59aa, >pdb_protein988... at 52.54%
+>Cluster 2660
+0	60aa, >pdb_protein51... *
+>Cluster 2661
+0	60aa, >pdb_protein105... *
+>Cluster 2662
+0	60aa, >pdb_protein304... *
+>Cluster 2663
+0	60aa, >pdb_protein516... *
+>Cluster 2664
+0	60aa, >pdb_protein608... *
+>Cluster 2665
+0	60aa, >pdb_protein655... *
+>Cluster 2666
+0	60aa, >pdb_protein676... *
+>Cluster 2667
+0	60aa, >pdb_protein742... *
+>Cluster 2668
+0	60aa, >pdb_protein780... *
+>Cluster 2669
+0	60aa, >pdb_protein920... *
+>Cluster 2670
+0	59aa, >disprot_protein368... *
+1	56aa, >disprot_protein369... at 92.86%
+2	53aa, >disprot_protein1088... at 54.72%
+>Cluster 2671
+0	59aa, >disprot_protein460... *
+1	58aa, >disprot_protein461... at 100.00%
+>Cluster 2672
+0	59aa, >disprot_protein561... *
+>Cluster 2673
+0	59aa, >disprot_protein868... *
+>Cluster 2674
+0	59aa, >disprot_protein1120... *
+>Cluster 2675
+0	59aa, >disprot_protein1121... *
+>Cluster 2676
+0	59aa, >disprot_protein1159... *
+>Cluster 2677
+0	59aa, >disprot_protein1255... *
+>Cluster 2678
+0	59aa, >disprot_protein1265... *
+>Cluster 2679
+0	59aa, >disprot_protein1364... *
+>Cluster 2680
+0	59aa, >disprot_protein1419... *
+>Cluster 2681
+0	59aa, >disprot_protein1644... *
+>Cluster 2682
+0	59aa, >disprot_protein1711... *
+>Cluster 2683
+0	59aa, >disprot_protein2021... *
+>Cluster 2684
+0	59aa, >disprot_protein2035... *
+>Cluster 2685
+0	59aa, >pdb_protein21... *
+>Cluster 2686
+0	59aa, >pdb_protein44... *
+>Cluster 2687
+0	59aa, >pdb_protein124... *
+>Cluster 2688
+0	59aa, >pdb_protein364... *
+>Cluster 2689
+0	59aa, >pdb_protein546... *
+1	55aa, >pdb_protein861... at 52.73%
+>Cluster 2690
+0	59aa, >pdb_protein554... *
+>Cluster 2691
+0	59aa, >pdb_protein707... *
+>Cluster 2692
+0	59aa, >pdb_protein738... *
+>Cluster 2693
+0	59aa, >pdb_protein740... *
+>Cluster 2694
+0	59aa, >pdb_protein887... *
+>Cluster 2695
+0	59aa, >pdb_protein952... *
+>Cluster 2696
+0	59aa, >pdb_protein956... *
+>Cluster 2697
+0	58aa, >disprot_protein100... *
+>Cluster 2698
+0	58aa, >disprot_protein125... *
+>Cluster 2699
+0	58aa, >disprot_protein482... *
+>Cluster 2700
+0	58aa, >disprot_protein823... *
+1	56aa, >disprot_protein825... at 100.00%
+>Cluster 2701
+0	58aa, >disprot_protein931... *
+>Cluster 2702
+0	58aa, >disprot_protein1135... *
+>Cluster 2703
+0	58aa, >disprot_protein1259... *
+>Cluster 2704
+0	58aa, >disprot_protein1454... *
+>Cluster 2705
+0	57aa, >disprot_protein544... at 84.21%
+1	57aa, >disprot_protein1586... at 100.00%
+2	58aa, >disprot_protein1589... *
+>Cluster 2706
+0	58aa, >disprot_protein1698... *
+>Cluster 2707
+0	58aa, >disprot_protein1721... *
+>Cluster 2708
+0	58aa, >disprot_protein1759... *
+>Cluster 2709
+0	58aa, >disprot_protein1853... *
+>Cluster 2710
+0	58aa, >disprot_protein1863... *
+>Cluster 2711
+0	58aa, >pdb_protein7... *
+>Cluster 2712
+0	58aa, >pdb_protein9... *
+>Cluster 2713
+0	58aa, >pdb_protein120... *
+>Cluster 2714
+0	58aa, >pdb_protein726... *
+>Cluster 2715
+0	58aa, >pdb_protein896... *
+>Cluster 2716
+0	55aa, >pdb_protein508... at 87.27%
+1	58aa, >pdb_protein903... *
+>Cluster 2717
+0	58aa, >pdb_protein927... *
+>Cluster 2718
+0	57aa, >disprot_protein468... *
+>Cluster 2719
+0	57aa, >disprot_protein545... *
+>Cluster 2720
+0	57aa, >disprot_protein1140... *
+1	55aa, >disprot_protein1141... at 100.00%
+2	56aa, >disprot_protein1143... at 100.00%
+>Cluster 2721
+0	57aa, >disprot_protein1150... *
+>Cluster 2722
+0	57aa, >disprot_protein1220... *
+>Cluster 2723
+0	57aa, >disprot_protein1409... *
+>Cluster 2724
+0	57aa, >disprot_protein1607... *
+>Cluster 2725
+0	57aa, >disprot_protein1751... *
+>Cluster 2726
+0	57aa, >disprot_protein1763... *
+>Cluster 2727
+0	57aa, >disprot_protein2046... *
+>Cluster 2728
+0	55aa, >pdb_protein203... at 47.27%
+1	57aa, >pdb_protein332... *
+>Cluster 2729
+0	57aa, >pdb_protein357... *
+>Cluster 2730
+0	57aa, >pdb_protein412... *
+>Cluster 2731
+0	57aa, >pdb_protein472... *
+>Cluster 2732
+0	57aa, >pdb_protein519... *
+>Cluster 2733
+0	57aa, >pdb_protein565... *
+>Cluster 2734
+0	57aa, >pdb_protein768... *
+>Cluster 2735
+0	56aa, >disprot_protein546... *
+>Cluster 2736
+0	56aa, >disprot_protein680... *
+>Cluster 2737
+0	56aa, >disprot_protein742... *
+>Cluster 2738
+0	56aa, >disprot_protein847... *
+>Cluster 2739
+0	56aa, >disprot_protein897... *
+>Cluster 2740
+0	56aa, >disprot_protein1127... *
+>Cluster 2741
+0	56aa, >disprot_protein1194... *
+>Cluster 2742
+0	56aa, >disprot_protein1231... *
+>Cluster 2743
+0	56aa, >disprot_protein1246... *
+>Cluster 2744
+0	56aa, >disprot_protein1473... *
+>Cluster 2745
+0	56aa, >disprot_protein1519... *
+>Cluster 2746
+0	56aa, >disprot_protein1532... *
+>Cluster 2747
+0	56aa, >disprot_protein1764... *
+>Cluster 2748
+0	56aa, >disprot_protein1870... *
+>Cluster 2749
+0	56aa, >disprot_protein1878... *
+>Cluster 2750
+0	56aa, >disprot_protein1942... *
+>Cluster 2751
+0	56aa, >pdb_protein141... *
+1	53aa, >pdb_protein745... at 73.58%
+>Cluster 2752
+0	53aa, >pdb_protein259... at 43.40%
+1	56aa, >pdb_protein384... *
+2	52aa, >pdb_protein801... at 42.31%
+3	56aa, >pdb_protein864... at 91.07%
+>Cluster 2753
+0	56aa, >pdb_protein443... *
+1	56aa, >pdb_protein602... at 76.79%
+>Cluster 2754
+0	56aa, >pdb_protein622... *
+>Cluster 2755
+0	56aa, >pdb_protein669... *
+>Cluster 2756
+0	56aa, >pdb_protein730... *
+>Cluster 2757
+0	56aa, >pdb_protein949... *
+>Cluster 2758
+0	56aa, >pdb_protein989... *
+>Cluster 2759
+0	55aa, >disprot_protein160... *
+>Cluster 2760
+0	55aa, >disprot_protein283... *
+>Cluster 2761
+0	55aa, >disprot_protein314... *
+1	51aa, >disprot_protein315... at 100.00%
+>Cluster 2762
+0	55aa, >disprot_protein528... *
+1	51aa, >disprot_protein1458... at 47.06%
+>Cluster 2763
+0	55aa, >disprot_protein1162... *
+>Cluster 2764
+0	55aa, >disprot_protein1254... *
+1	53aa, >disprot_protein1639... at 56.60%
+>Cluster 2765
+0	55aa, >disprot_protein1379... *
+>Cluster 2766
+0	55aa, >disprot_protein1581... *
+>Cluster 2767
+0	55aa, >disprot_protein1979... *
+>Cluster 2768
+0	55aa, >pdb_protein73... *
+>Cluster 2769
+0	55aa, >pdb_protein93... *
+>Cluster 2770
+0	55aa, >pdb_protein428... *
+>Cluster 2771
+0	54aa, >disprot_protein1415... at 100.00%
+1	55aa, >pdb_protein483... *
+>Cluster 2772
+0	55aa, >pdb_protein621... *
+>Cluster 2773
+0	55aa, >pdb_protein691... *
+>Cluster 2774
+0	55aa, >pdb_protein739... *
+>Cluster 2775
+0	55aa, >pdb_protein774... *
+>Cluster 2776
+0	55aa, >pdb_protein971... *
+>Cluster 2777
+0	55aa, >pdb_protein996... *
+>Cluster 2778
+0	54aa, >disprot_protein493... *
+>Cluster 2779
+0	54aa, >disprot_protein848... *
+>Cluster 2780
+0	54aa, >disprot_protein1011... *
+>Cluster 2781
+0	54aa, >disprot_protein1408... *
+>Cluster 2782
+0	54aa, >disprot_protein1420... *
+>Cluster 2783
+0	53aa, >disprot_protein236... at 94.34%
+1	54aa, >disprot_protein1435... *
+>Cluster 2784
+0	54aa, >disprot_protein1572... *
+>Cluster 2785
+0	54aa, >disprot_protein1652... *
+>Cluster 2786
+0	54aa, >disprot_protein1679... *
+>Cluster 2787
+0	54aa, >disprot_protein1815... *
+>Cluster 2788
+0	54aa, >disprot_protein2068... *
+>Cluster 2789
+0	54aa, >pdb_protein13... *
+>Cluster 2790
+0	54aa, >pdb_protein54... *
+>Cluster 2791
+0	54aa, >pdb_protein126... *
+>Cluster 2792
+0	54aa, >pdb_protein138... *
+>Cluster 2793
+0	54aa, >pdb_protein164... *
+>Cluster 2794
+0	54aa, >pdb_protein232... *
+>Cluster 2795
+0	54aa, >pdb_protein238... *
+>Cluster 2796
+0	54aa, >pdb_protein294... *
+>Cluster 2797
+0	54aa, >pdb_protein330... *
+>Cluster 2798
+0	54aa, >pdb_protein506... *
+>Cluster 2799
+0	54aa, >pdb_protein736... *
+>Cluster 2800
+0	54aa, >pdb_protein846... *
+>Cluster 2801
+0	54aa, >pdb_protein851... *
+>Cluster 2802
+0	53aa, >pdb_protein153... at 64.15%
+1	54aa, >pdb_protein947... *
+>Cluster 2803
+0	53aa, >disprot_protein388... *
+>Cluster 2804
+0	53aa, >disprot_protein590... *
+>Cluster 2805
+0	53aa, >disprot_protein616... *
+>Cluster 2806
+0	53aa, >disprot_protein726... *
+>Cluster 2807
+0	53aa, >disprot_protein741... *
+>Cluster 2808
+0	53aa, >disprot_protein746... *
+>Cluster 2809
+0	53aa, >disprot_protein835... *
+>Cluster 2810
+0	53aa, >disprot_protein865... *
+>Cluster 2811
+0	53aa, >disprot_protein888... *
+>Cluster 2812
+0	53aa, >disprot_protein890... *
+1	53aa, >pdb_protein237... at 100.00%
+>Cluster 2813
+0	53aa, >disprot_protein945... *
+>Cluster 2814
+0	53aa, >disprot_protein1098... *
+>Cluster 2815
+0	53aa, >disprot_protein1298... *
+>Cluster 2816
+0	53aa, >disprot_protein1496... *
+>Cluster 2817
+0	53aa, >disprot_protein1723... *
+>Cluster 2818
+0	53aa, >disprot_protein1743... *
+1	53aa, >disprot_protein1745... at 45.28%
+>Cluster 2819
+0	53aa, >disprot_protein1793... *
+>Cluster 2820
+0	53aa, >disprot_protein1794... *
+>Cluster 2821
+0	53aa, >disprot_protein1907... *
+>Cluster 2822
+0	53aa, >disprot_protein1933... *
+>Cluster 2823
+0	53aa, >disprot_protein1971... *
+>Cluster 2824
+0	53aa, >pdb_protein341... *
+>Cluster 2825
+0	53aa, >pdb_protein503... *
+>Cluster 2826
+0	53aa, >pdb_protein520... *
+>Cluster 2827
+0	53aa, >pdb_protein542... *
+>Cluster 2828
+0	53aa, >pdb_protein604... *
+>Cluster 2829
+0	52aa, >disprot_protein183... *
+>Cluster 2830
+0	52aa, >disprot_protein223... *
+>Cluster 2831
+0	52aa, >disprot_protein387... *
+>Cluster 2832
+0	52aa, >disprot_protein512... *
+>Cluster 2833
+0	52aa, >disprot_protein675... *
+>Cluster 2834
+0	52aa, >disprot_protein1208... *
+>Cluster 2835
+0	52aa, >disprot_protein1237... *
+>Cluster 2836
+0	52aa, >disprot_protein1380... *
+>Cluster 2837
+0	52aa, >disprot_protein1451... *
+>Cluster 2838
+0	52aa, >disprot_protein1460... *
+>Cluster 2839
+0	52aa, >disprot_protein1529... *
+>Cluster 2840
+0	52aa, >disprot_protein1854... *
+>Cluster 2841
+0	52aa, >disprot_protein1891... *
+>Cluster 2842
+0	52aa, >disprot_protein1926... *
+>Cluster 2843
+0	52aa, >disprot_protein2058... *
+>Cluster 2844
+0	52aa, >pdb_protein224... *
+>Cluster 2845
+0	52aa, >pdb_protein296... *
+>Cluster 2846
+0	52aa, >pdb_protein423... *
+>Cluster 2847
+0	52aa, >pdb_protein444... *
+>Cluster 2848
+0	52aa, >pdb_protein866... *
+>Cluster 2849
+0	52aa, >pdb_protein871... *
+>Cluster 2850
+0	52aa, >pdb_protein906... *
+>Cluster 2851
+0	52aa, >pdb_protein1005... *
+>Cluster 2852
+0	51aa, >disprot_protein90... *
+>Cluster 2853
+0	51aa, >disprot_protein155... *
+>Cluster 2854
+0	51aa, >disprot_protein215... *
+>Cluster 2855
+0	51aa, >disprot_protein557... *
+>Cluster 2856
+0	51aa, >disprot_protein735... *
+>Cluster 2857
+0	51aa, >disprot_protein867... *
+>Cluster 2858
+0	51aa, >disprot_protein912... *
+>Cluster 2859
+0	51aa, >disprot_protein929... *
+>Cluster 2860
+0	51aa, >disprot_protein1037... *
+>Cluster 2861
+0	51aa, >disprot_protein1094... *
+>Cluster 2862
+0	51aa, >disprot_protein1241... *
+>Cluster 2863
+0	51aa, >disprot_protein1432... *
+>Cluster 2864
+0	51aa, >disprot_protein1492... *
+>Cluster 2865
+0	51aa, >disprot_protein1554... *
+>Cluster 2866
+0	51aa, >disprot_protein1605... *
+>Cluster 2867
+0	51aa, >disprot_protein1650... *
+>Cluster 2868
+0	51aa, >disprot_protein1742... *
+>Cluster 2869
+0	51aa, >disprot_protein1994... *
+>Cluster 2870
+0	51aa, >pdb_protein131... *
+>Cluster 2871
+0	51aa, >pdb_protein244... *
+1	51aa, >pdb_protein607... at 98.04%
+>Cluster 2872
+0	51aa, >pdb_protein353... *
+>Cluster 2873
+0	51aa, >pdb_protein511... *
+>Cluster 2874
+0	51aa, >pdb_protein813... *
