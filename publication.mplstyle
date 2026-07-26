@@ -1,0 +1,15 @@
+pdf.fonttype: 42
+font.family: Arial
+font.size: 6
+axes.linewidth: 0.5
+axes.spines.top: False
+axes.spines.right: False
+xtick.major.width: 0.5
+ytick.major.width: 0.5
+xtick.major.size: 2
+ytick.major.size: 2
+xtick.labelsize: 6
+ytick.labelsize: 6
+legend.fontsize: 6
+legend.frameon: False
+lines.linewidth: 1
