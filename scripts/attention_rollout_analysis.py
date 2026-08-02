@@ -166,7 +166,8 @@ protein_sets['cluster'] = protein_sets['ProteinID'].map(seq_to_cluster)
 esm2_embeddings = esm2_embeddings.merge(protein_sets[['ProteinID', 'cluster']].drop_duplicates(), on='ProteinID', how='left')
 
 X_cv = esm2_embeddings[embedding_cols]
-y_cv = esm2_embeddings['Group'].map({'pdb': 0, 'disprot': 1})
+labels = esm2_embeddings['Group'].map({'pdb': 0, 'disprot': 1})
+y_cv = labels
 groups = esm2_embeddings['cluster'].astype(int)
 n_splits = 5
 print(f"{n_splits}-fold GroupKFold over {groups.nunique()} clusters")
@@ -187,7 +188,7 @@ idr_df.to_csv(f'{BASE_PATH}/data/figure_data/idr_df.csv', index = False)
 fig, ax = plt.subplots(dpi=300, layout='constrained')
 fig.get_layout_engine().set(w_pad=0.15, h_pad=0.15)  
 for g in ['DisProt', 'PDB']:
-    vals = idr_df[idr_df['Group'] == g, 'idr'].dropna().values
+    vals = idr_df.loc[idr_df['Group'] == g, 'idr'].dropna().values
     kde = gaussian_kde(vals)
     xs = np.linspace(vals.min(), vals.max(), 300)
     ax.plot(xs, kde(xs), color=GROUP_COLORS[g], linewidth=1.2, label=g)
@@ -373,7 +374,7 @@ fig, ax = plt.subplots(figsize=(7.2, 1.53))
 x_grid = np.linspace(0, 5, 300)
 colors = ['#deebf7', '#9ecae1', '#3182bd', '#08519c']
 groups = sorted(disorder_comp_concat['idr_bin_str'].unique())
-for i, g in enumerate(['DisProt', 'PDB']):
+for i, g in enumerate(groups):
     vals = disorder_comp_concat.loc[disorder_comp_concat['idr_bin_str'] == g, 'attn_received'].dropna().values
     kde = gaussian_kde(vals)
     density = kde(x_grid)
