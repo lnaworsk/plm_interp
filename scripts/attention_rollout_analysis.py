@@ -375,7 +375,6 @@ colors = ['#deebf7', '#9ecae1', '#3182bd', '#08519c']
 groups = sorted(disorder_comp_concat['idr_bin_str'].unique())
 for i, g in enumerate(['DisProt', 'PDB']):
     vals = disorder_comp_concat.loc[disorder_comp_concat['idr_bin_str'] == g, 'attn_received'].dropna().values
-    if len(vals) < 2:
     kde = gaussian_kde(vals)
     density = kde(x_grid)
     ax.plot(x_grid, density, linewidth=3, color=colors[i % len(colors)], label=g)
