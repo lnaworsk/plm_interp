@@ -384,6 +384,7 @@ ax.set_yscale('log')
 ax.set_xlabel("Attention Rollout Received")
 ax.set_ylabel("Probability Density")
 ax.set_title("Distribution of Attention by Disorder Probability Bin")
+plt.savefig(f"{BASE_PATH}/figures/attention_disorder_kde.svg", dpi=300)
 
 # -------------------------------------------------------------
 # TDP 43 Case Study  # and SI Examples 
