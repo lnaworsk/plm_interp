@@ -6,11 +6,10 @@ from joblib import Parallel, delayed
 import os 
 import torch 
 from scipy import stats
-import altair as alt
-alt.data_transformers.enable("vegafusion")
-from attention_functions import publication_theme
-alt.themes.register('publication', publication_theme)
-alt.themes.enable('publication')
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+from matplotlib.colors import ListedColormap
+from matplotlib.colors import TwoSlopeNorm
 from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent 
 BASE_PATH = SCRIPT_DIR.parent 
@@ -34,15 +33,13 @@ def compute_null_distribution_for_protein(seq_name, df_seq, n_permutations = 100
     # Create matrix of permuted indices
     rng = np.random.default_rng(seed)
 
-    perm_indices = np.array([rng.permutation(n_contacts)
-                             for _ in range(n_permutations)])
+    perm_indices = np.array([rng.permutation(n_contacts) for _ in range(n_permutations)])
 
     # Apply all permutations at once
     shuffled_matrix = contact_strengths[perm_indices]
     
     # Compute correlations for all permutations 
-    null_corrs = np.array([spearmanr(shuffled_matrix[i], frac_values)[0] 
-                           for i in range(n_permutations)])
+    null_corrs = np.array([spearmanr(shuffled_matrix[i], frac_values)[0] for i in range(n_permutations)])
     
     # Calculate statistics
     null_mean = np.mean(null_corrs)
@@ -151,15 +148,23 @@ null_data = pd.DataFrame({'value': null_df['null_mean'], 'type': 'Mean Null (Per
 combined_data = pd.concat([observed_data, null_data], ignore_index=True)
 combined_data.to_csv(f'{BASE_PATH}/data/figure_data/combined_data.csv', index = False)
 
-hist_chart = alt.Chart(combined_data).mark_bar(opacity=0.7).encode(
-    x=alt.X('value:Q', bin=alt.Bin(maxbins=20),title='Spearman Correlation'),
-    y=alt.Y('count()', title='Count'),
-    color=alt.Color('type:N', title='Distribution', legend=alt.Legend(labelLimit=300))
-).properties(width=300,height=300,title=f'Observed vs Null Distribution (n={n_total} proteins, 100 permutations each)')
+fig, ax = plt.subplots(dpi=300)
+type_color_map = {'Observed': 'steelblue', 'Mean Null (Permuted)': 'orange'}
+types = combined_data['type'].unique()
+bin_edges = np.histogram_bin_edges(combined_data['value'], bins=15)
+for t in types:
+    sub = combined_data[combined_data['type'] == t]
+    ax.hist(sub['value'], bins=bin_edges, alpha=0.7, label=t,
+            color=type_color_map[t])
 
-zero_line = alt.Chart(pd.DataFrame({'x': [0]})).mark_rule(color='black',strokeDash=[5, 5],size=2).encode(x='x:Q')
-final_chart = (hist_chart + zero_line )
-final_chart.save(f'{BASE_PATH}/figures/jac_md_observed_vs_null_distribution.svg')
+ax.axvline(0, color='black', linestyle='--', linewidth=1.2, dashes=(5, 3))
+ax.set_xlabel('Spearman Correlation')
+ax.set_ylabel('Count')
+ax.set_title('Observed vs Null Distribution (100 permutations each)', fontsize=7)
+ax.legend(title='Distribution', fontsize=6, title_fontsize=6, frameon=False)
+fig.subplots_adjust(left=0.20, right=0.95, top=0.83, bottom=0.22)  # left raised from 0.10
+plt.savefig(f'{BASE_PATH}/figures/jac_md_observed_vs_null_distribution.svg', dpi=300)
+plt.show()
 
 # -------------------------
 #     Top Decile Analysis  
@@ -199,38 +204,89 @@ count_top_10_md['scaled_counts'] = count_top_10_md['counts'] / count_top_10_md['
 
 count_top_10_jac['method'] = 'ESM-2 Jacobian'
 count_top_10_md['method'] = 'MD Fraction in Contact'
-comb_counts = pd.concat([count_top_10_jac, count_top_10_md]).rename(columns = {'counts' : 'Counts', 'scaled_counts' : 'Scaled Counts'})
-comb_counts["res1"], comb_counts["res2"] = comb_counts["Residue Pair"].str.split("-", expand=True).T.values
-melted_comb_counts = comb_counts[['Counts', 'Scaled Counts', 'res1', 'res2', 'method']].melt(id_vars = ['res1', 'res2', 'method'], value_vars = ['Scaled Counts', 'Counts'])
+comb_counts = (pd.concat([count_top_10_jac, count_top_10_md], ignore_index=True).rename(columns={'counts': 'Counts','scaled_counts': 'Scaled Counts'}))
+comb_counts[['res1', 'res2']] = comb_counts['Residue Pair'].str.split('-', expand=True)
 
-wide = (melted_comb_counts.pivot(index=['res1', 'res2', 'method'],columns='variable',values='value').reset_index())
-wide['Residue Pair'] = wide['res1'] + '-' + wide['res2']
-top10_total_pair = pd.DataFrame(wide.groupby('method')['Counts'].sum()).reset_index()
+method_totals = (comb_counts.groupby('method')['Counts'].sum().rename('method_total').reset_index())
 all_residue_pairs = total_count_df['total_count'].sum()
-total_count_df['tot_prop_freq'] = total_count_df['total_count']/all_residue_pairs* 100
-wide = wide.merge(top10_total_pair.rename(columns={'Counts': 'method_total'}), on='method')
-wide['top_decile_prop_freq'] = wide['Counts'] / wide['method_total'] * 100
-wide = wide.merge(total_count_df, on = 'Residue Pair')
-wide['delta'] = wide['top_decile_prop_freq'] - wide['tot_prop_freq']
-wide['enriched'] = np.where(wide['delta'] > 0, 'Enriched', 'Depleted')
-comparison = wide.pivot_table(index=['res1', 'res2'], columns='method', values='delta').reset_index()
-comparison.columns.name = None
-comparison = comparison.rename(columns={
-    'MD Fraction in Contact': 'delta_md',
-    'ESM-2 Jacobian': 'delta_esm'
-})
-comparison['Agreement'] = 'Disagree'
-comparison.loc[(comparison['delta_md'] > 0) & (comparison['delta_esm'] > 0), 'Agreement'] = 'Both Enriched'
-comparison.loc[(comparison['delta_md'] < 0) & (comparison['delta_esm'] < 0), 'Agreement'] = 'Both Depleted'
-comparison.to_csv(f'{BASE_PATH}/data/figure_data/comparison.csv', index = False)
 
-agreement_plot = alt.Chart(comparison).mark_rect().encode(
-    x=alt.X('res1:N', title='', axis=alt.Axis(labelAngle=0)),
-    y=alt.Y('res2:N', title=''),
-    tooltip=['res1', 'res2', 'delta_md', 'delta_esm'],
-    color=alt.Color('Agreement:N', title='',
-                    scale=alt.Scale(
-                        domain=['Both Enriched', 'Both Depleted', 'Disagree'],
-                        range=['#2166ac', '#d6604d', '#d3d3d3']))
-).properties(width=300, height=300, title='MD vs ESM-2 Top Decile Enrichment Agreement')
-agreement_plot.save(f'{BASE_PATH}/figures/md_esm_top_decile_agreement.svg')
+# Calculate enrichment/depletion
+
+comb_counts['tot_prop_freq'] = (comb_counts['total_count'] / all_residue_pairs * 100)
+wide = comb_counts.merge(method_totals, on='method')
+wide['top_decile_prop_freq'] = (wide['Counts'] / wide['method_total'] * 100)
+wide['delta'] = (wide['top_decile_prop_freq'] - wide['tot_prop_freq'])
+wide['enriched'] = np.where(wide['delta'] > 0, 'Enriched', 'Depleted')
+comparison = (wide.pivot_table(index=['res1', 'res2'],columns='method', values='delta').reset_index())
+comparison.columns.name = None
+comparison = comparison.rename(columns={'MD Fraction in Contact': 'delta_md','ESM-2 Jacobian': 'delta_esm'})
+comparison['Agreement'] = np.select([(comparison['delta_md'] > 0) & (comparison['delta_esm'] > 0),(comparison['delta_md'] < 0) & (comparison['delta_esm'] < 0)],['Both Enriched','Both Depleted'],default='Disagree')
+comparison.to_csv(f'{BASE_PATH}/data/figure_data/comparison.csv',index=False)
+
+
+# plotting agreement map 
+
+agreement_color_map = {'Both Enriched': '#2166ac','Both Depleted': '#d6604d','Disagree': '#d3d3d3',}
+pivot = comparison.pivot(index='res2', columns='res1', values='Agreement')
+res1_order = sorted(comparison['res1'].unique())
+res2_order = sorted(comparison['res2'].unique())
+pivot = pivot.reindex(index=res2_order, columns=res1_order)
+
+categories = list(agreement_color_map.keys())
+cat_to_code = {c: i for i, c in enumerate(categories)}
+code_grid = pivot.replace(cat_to_code).values.astype(float)
+cmap = ListedColormap([agreement_color_map[c] for c in categories])
+
+fig, ax = plt.subplots(dpi=300)
+im = ax.imshow(code_grid, cmap=cmap, vmin=-0.5, vmax=len(categories) - 0.5, aspect='auto')
+ax.set_xticks(range(len(res1_order)))
+ax.set_xticklabels(res1_order, rotation=0, fontsize=5)
+ax.set_yticks(range(len(res2_order)))
+ax.set_yticklabels(res2_order, fontsize=5)
+ax.set_xlabel('')
+ax.set_ylabel('')
+ax.set_title('MD vs ESM-2 Top Decile\nEnrichment Agreement', fontsize=6.5)
+
+handles = [plt.Rectangle((0, 0), 1, 1, facecolor=agreement_color_map[c]) for c in categories]
+fig.legend(handles, categories, loc='center left', bbox_to_anchor=(0.70, 0.5),
+           frameon=False, fontsize=5.5, borderaxespad=0)
+fig.subplots_adjust(left=0.16, right=0.68, top=0.82, bottom=0.14)
+plt.savefig(f'{BASE_PATH}/figures/md_esm_top_decile_agreement.svg', dpi=300)
+plt.show()
+
+# plotting agreement map with magnitudes 
+
+esm_pivot = comparison.pivot(index='res2',columns='res1',values='delta_esm')
+md_pivot = comparison.pivot(index='res2',columns='res1',values='delta_md')
+# Ensure same residue ordering
+res1_order = sorted(comparison['res1'].unique())
+res2_order = sorted(comparison['res2'].unique())
+esm_pivot = esm_pivot.reindex(index=res2_order, columns=res1_order)
+md_pivot = md_pivot.reindex(index=res2_order, columns=res1_order)
+cmap = 'RdBu_r'   # red = negative, blue = positive
+
+
+def plot_enrichment_heatmap(data, title, filename):
+    fig, ax = plt.subplots(dpi=300)
+
+    im = ax.imshow(data,cmap=cmap,aspect='auto')
+    ax.set_xticks(range(len(res1_order)))
+    ax.set_xticklabels(res1_order, fontsize=5)
+    ax.set_yticks(range(len(res2_order)))
+    ax.set_yticklabels(res2_order, fontsize=5)
+    ax.set_xlabel('')
+    ax.set_ylabel('')
+    ax.set_title(title, fontsize=7)
+
+    cbar = fig.colorbar(im,ax=ax,fraction=0.046,pad=0.04)
+    cbar.set_label('Enrichment Δ (%)', fontsize=6)
+    cbar.ax.tick_params(labelsize=5)
+
+    fig.subplots_adjust(left=0.16,right=0.88,top=0.85,bottom=0.14)
+
+    plt.savefig(f'{BASE_PATH}/figures/{filename}.svg',dpi=300,bbox_inches='tight')
+    plt.show()
+
+
+plot_enrichment_heatmap(esm_pivot.values,'ESM-2 Jacobian Top Decile\nResidue Pair Enrichment','esm2_top_decile_enrichment')
+plot_enrichment_heatmap(md_pivot.values,'MD Fraction in Contact Top Decile\nResidue Pair Enrichment','md_top_decile_enrichment')
