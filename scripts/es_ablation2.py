@@ -5,15 +5,14 @@ from esm import FastaBatchedDataset
 import torch.nn as nn
 from scipy.stats import spearmanr, pearsonr
 from scipy import stats
-import altair as alt
 from sklearn.model_selection import GroupShuffleSplit
 from scipy.stats import ks_2samp
 from statsmodels.stats.multitest import multipletests
 from attention_functions import *
 warnings.filterwarnings('ignore')
-alt.data_transformers.enable("vegafusion")
-alt.themes.register('publication', publication_theme)
-alt.themes.enable('publication')
+import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent 
 BASE_PATH = SCRIPT_DIR.parent 
@@ -28,6 +27,7 @@ evaluate ablation effect on MLP Rg prediction
 # -------------------------------------------------------
 # Constants
 # -------------------------------------------------------
+
 OVERWRITE_NUM_HEADS = 29
 MAX_HEADS_ABLATE = 50
 SEED             = 42
@@ -42,6 +42,7 @@ print(f"Using device: {device}")
 # -------------------------------------------------------
 # Models
 # -------------------------------------------------------
+
 class RgMLP(nn.Module):
     def __init__(self, input_dim=EMB_DIM, hidden_dim=HIDDEN_DIM, dropout=DROPOUT):
         super().__init__()
@@ -86,7 +87,7 @@ def load_idrome():
     supp_table = pd.read_excel(f'{BASE_PATH}/data/Supplementary_Table_3.xlsx')
     df_tesei   = pd.read_csv("https://raw.githubusercontent.com/KULL-Centre/_2023_Tesei_IDRome/main/IDRome_DB.csv")
     df_tesei['Rg_A'] = df_tesei['Rg/nm'] * 10
-    df_tesei   = df_tesei.merge(supp_table[['seq_name', 'sequence']], on='seq_name').drop_duplicates()
+    df_tesei   = df_tesei.merge(supp_table[['seq_name', 'sequence']], on='seq_name').drop_duplicates().dropna()
 
     seq_to_cluster = {}
     with open(f"{BASE_PATH}/data/idrome_clustered.fasta.clstr") as f:
@@ -140,14 +141,36 @@ heads_pos_ranked = mean_pos.sort_values('attn_occur_norm', ascending=False).rese
 heads_neg_ranked = mean_neg.sort_values('attn_occur_norm', ascending=False).reset_index(drop=True)
 
 # check attention heatmap patterns
-heatmaps = alt.Chart(attn_occur_norm).mark_rect().encode(
-    x=alt.X('layer:O', title='Layer'),
-    y=alt.Y('head:O', title='Head'),
-    tooltip=['head', 'layer', 'attn_occur_norm'],
-    color=alt.Color('attn_occur_norm:Q', title='', scale=alt.Scale())
-).properties(height=250, width=360).facet(facet=alt.Facet('aa:N',header=alt.Header(title=None)),columns=2, title = 'Mean(Summed Attention/Occurrence)')
-heatmaps.save(f'{BASE_PATH}/figures/DEKR_heatmaps.svg')
+vmin = attn_occur_norm['attn_occur_norm'].min()
+vmax = attn_occur_norm['attn_occur_norm'].max()
+fig, axes = plt.subplots(2, 2, dpi=300)
+axes_flat = axes.flatten()
+im = None
+for i, ax in enumerate(axes_flat):
+    aa = attn_occur_norm.aa.unique()[i]
+    sub = attn_occur_norm[attn_occur_norm['aa'] == aa]
+    pivot = sub.pivot(index='head', columns='layer', values='attn_occur_norm').sort_index(ascending=True)
+    im = ax.imshow(pivot.values, aspect='auto', cmap='Blues', vmin=vmin, vmax=vmax, origin='lower')
+    ax.set_title(aa, fontsize=6)
+    ax.set_xlabel('Layer', fontsize=4.5, labelpad=2)
+    ax.set_ylabel('Head', fontsize=4.5, labelpad=2)
+    ax.tick_params(labelsize=3.2, pad=1)
+    step_l = max(1, len(pivot.columns) // 6)
+    ax.set_xticks(range(0, len(pivot.columns), step_l))
+    ax.set_xticklabels(pivot.columns[::step_l], fontsize=3)
+    step_h = max(1, len(pivot.index) // 5)
+    ax.set_yticks(range(0, len(pivot.index), step_h))
+    ax.set_yticklabels(pivot.index[::step_h], fontsize=3)
 
+fig.suptitle('Mean(Summed Attention/Occurrence)', fontsize=7, y=0.99)
+fig.subplots_adjust(left=0.12, right=0.85, top=0.93, bottom=0.06, hspace=0.62, wspace=0.20)
+cax = fig.add_axes([0.88, 0.15, 0.03, 0.65])
+cbar = fig.colorbar(im, cax=cax)
+cbar.ax.tick_params(labelsize=4)
+plt.savefig(f"{BASE_PATH}/figures/DEKR_heatmaps.svg", dpi=300)
+plt.show()
+
+# check correlations of heatmaps 
 spread = attn_occur_norm.pivot(columns='aa', index=['layer', 'head']).reset_index()
 corr_DE = round(np.corrcoef(spread[('attn_occur_norm', 'D')], spread[('attn_occur_norm', 'E')])[0,1],3)
 corr_KR = np.corrcoef(spread[('attn_occur_norm', 'R')], spread[('attn_occur_norm', 'K')])[0,1]
@@ -208,21 +231,37 @@ def evaluate(pred, true):
     mae    = np.abs(pred - true).mean()
     return r_s, r_p, mae
 
-def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=30, color=None, color_title=''):
-    df = pd.DataFrame({xlabel: x, ylabel: y, 'color': color})
-    abs_max = df['color'].abs().max()
-    lim     = [min(df[xlabel].min(), df[ylabel].min()), max(df[xlabel].max(), df[ylabel].max())]
-    scatter = alt.Chart(df).mark_point(opacity=alpha, size=s, filled=True).encode(
-        x=alt.X(xlabel, scale=alt.Scale(domain=lim)),
-        y=alt.Y(ylabel, scale=alt.Scale(domain=lim)),
-        color=alt.Color('color', title=color_title,
-                        scale=alt.Scale(domain=[0, abs_max], range=['white', '#2367B0'])))
-    line = alt.Chart(pd.DataFrame({xlabel: lim, ylabel: lim})).mark_line(
-        strokeDash=[5,5], color='red').encode(x=xlabel, y=ylabel)
-    chart = (scatter + line).properties(title=title, width=300, height=300)
+
+blue_scale_cmap = LinearSegmentedColormap.from_list('white_blue', ['white', '#2367B0'])
+def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=20,
+                           color=None, color_title='', figsize=(1.65, 1.53), dpi=300):
+    x = np.asarray(x); y = np.asarray(y); color = np.asarray(color)
+    abs_max = np.abs(color).max()
+    lim_min = min(x.min(), y.min())
+    lim_max = max(x.max(), y.max())
+
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
+    divider = make_axes_locatable(ax)
+    cax = divider.append_axes('right', size='6%', pad=0.05)   
+    sc = ax.scatter(x, y, c=color, cmap=blue_scale_cmap, vmin=0, vmax=abs_max,alpha=alpha, s=s, edgecolors='none')
+    cbar = plt.colorbar(sc, cax=cax)
+    cbar.set_label(color_title, fontsize=3.8)
+    cbar.ax.tick_params(labelsize=3.2, pad=1)
+    ax.plot([lim_min, lim_max], [lim_min, lim_max], linestyle='--', color='red', linewidth=0.7)
+    ax.set_xlim(lim_min, lim_max)
+    ax.set_ylim(lim_min, lim_max)
+    ax.set_xlabel(xlabel, fontsize=3.8, linespacing=1.1, labelpad=2)
+    ax.set_ylabel(ylabel, fontsize=3.8, linespacing=1.1, labelpad=2)
+    ax.tick_params(labelsize=3.2, pad=1)
+    ax.set_title(title, fontsize=4.2, pad=2)
+    ax.set_box_aspect(1)
+    fig.subplots_adjust(left=0.22, right=0.72, top=0.86, bottom=0.24)
+
     if save_path:
-        chart.save(save_path)
-    return chart
+        fig.savefig(save_path, dpi=dpi)
+
+    return fig, ax
+
 
 def cohen_d(distr1, distr2): 
     mean1 = np.mean(distr1)
@@ -235,6 +274,7 @@ def cohen_d(distr1, distr2):
 
     cohens_d = (mean1 - mean2) / pooled_std if pooled_std > 0 else 0
     return cohens_d
+
 # -------------------------------------------------------
 # Main sweep + evaluation function
 # -------------------------------------------------------
@@ -351,34 +391,42 @@ def run_sweep(proteins, true_col, label, heads_neg_ranked, heads_pos_ranked):
         domain=['Negative (D/E)', 'Positive (K/R)', 'Random'],
         range=['#E8300C', '#2367B0', '#999999'])
  
-    band = alt.Chart(sweep_long[sweep_long['ablation'] == 'Random']).mark_area(opacity=0.2).encode(
-        x='n_heads:Q',
-        y='delta_lower:Q',
-        y2='delta_upper:Q',
-        color=alt.Color('ablation:N', scale=color_scale))
- 
-    lines = alt.Chart(sweep_long).mark_line().encode(
-        x=alt.X('n_heads:Q', title='Number of Heads Ablated'),
-        y=alt.Y('delta:Q', title=['Change in Spearman Correlation',
-                                   'of Predicted & True Rg (Ablated − Baseline)']),
-        color=alt.Color('ablation:N', title='Ablation', scale=color_scale))
- 
-    points = alt.Chart(sweep_long).mark_point(size=50, filled=True).encode(
-        x='n_heads:Q',
-        y='delta:Q',
-        color=alt.Color('ablation:N', scale=color_scale))
- 
-    sweep_chart = (band + lines + points).properties(
-        width=500, height=350,
-        title=f'Head Ablation Sweep — {label.upper()}')
-    sweep_chart.save(os.path.join(BASE_PATH, f'figures/es_sweep_{label}_random_consecutive.svg'))
-    print(f"Saved: figures/es_sweep_{label}.svg")
+    fig, ax = plt.subplots(dpi=300)
+
+    # --- band: shaded confidence region, Random ablation only ---
+    random_sub = sweep_long[sweep_long['ablation'] == 'Random'].sort_values('n_heads')
+    ax.fill_between(
+        random_sub['n_heads'], random_sub['delta_lower'], random_sub['delta_upper'],
+        color=color_scale['Random'], alpha=0.2, linewidth=0
+    )
+
+    # --- lines + points, one pass per ablation category ---
+    for ablation, color in color_scale.items():
+        sub = sweep_long[sweep_long['ablation'] == ablation].sort_values('n_heads')
+        ax.plot(sub['n_heads'], sub['delta'], color=color, linewidth=1.2, label=ablation)
+        ax.scatter(sub['n_heads'], sub['delta'], color=color, s=8, zorder=3, edgecolors='none')
+
+    ax.set_xlabel('Number of Heads Ablated', fontsize=5.5)
+    ax.set_ylabel('Δ(Ablated − Baseline) \n Corr(Pred & True Rg) ',
+                fontsize=5.5, linespacing=1.3)
+    ax.set_title(f'Head Ablation Sweep', fontsize=6.5)
+    ax.tick_params(labelsize=4.5)
+
+    ax.legend(title='Ablation', fontsize=5, title_fontsize=5.5, frameon=False,
+            bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+
+    fig.subplots_adjust(left=0.16, right=0.72, top=0.78, bottom=0.32)
+    plt.savefig(f'{BASE_PATH}/figures/head_ablation_sweep_.svg', dpi=300)
+    plt.show()
+
+    print(f"Saved: figures/head_ablation_sweep_.svg")
  
     return sweep_df, sweep_chart
 
 # -------------------------------------------------------
 #  evaluation on targeted number of heads 
 # -------------------------------------------------------
+
 def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
     N       = proteins['seqlen'].values
     rg_true = proteins[true_col].values / (R0_fit * (N ** nu_fit))
@@ -444,33 +492,38 @@ results_df.to_csv(f'{BASE_PATH}/data/figure_data/results_df.csv', index = False)
 
 
 ### Analysis ####
-
      
 results_df['bigger_or_smaller'] = results_df['rg_ablated_scaled'] - results_df['rg_baseline_scaled']
 results_df['frac_DE_quartile'] = pd.qcut(results_df['frac_DE'], q=10, labels=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'])
 
-vline = alt.Chart(pd.DataFrame({'x': [0]})).mark_rule(color='red', strokeWidth=2).encode(x='x:Q')
+deciles = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10']
+blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6',
+               '#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
+decile_color_map = dict(zip(deciles, blue_colors))
 
-blue_scale = alt.Scale(
-    domain=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'],
-    range=['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6', '#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
-)
-
-def kde_chart(data, field, title, color_field='frac_DE_quartile', width=600, height=120):
-    return alt.Chart(data).transform_density(
-        field,
-        as_=[field, 'density'],
-        groupby=[color_field]
-    ).mark_line().encode(
-        alt.X(f'{field}:Q', title=title),
-        alt.Y('density:Q', title='Density'),
-        alt.Color(f'{color_field}:N', title='Frac DE Decile', sort=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'], scale=blue_scale)
-    ).properties(width=width, height=height)
-
-p1 = alt.layer(kde_chart(results_df, 'bigger_or_smaller', 'Ablated Pred Rg - Baseline Pred Rg'), vline)
-p2 = kde_chart(results_df, 'rg_baseline_scaled', 'Rg Baseline')
-kde_plot = alt.vconcat(p1, p2, spacing=20).properties(title=alt.TitleParams('Negative Head Ablation - IDRome', dy=-14))
-kde_plot.save(f'{BASE_PATH}/figures/es_ablation_kde.svg')
+def plot_kde_by_decile(ax, data, field, xlabel, color_field='frac_DE_quartile'):
+    for q in deciles:
+        vals = data.loc[data[color_field] == q, field].dropna().values
+        if len(vals) < 2:
+            continue
+        kde = gaussian_kde(vals)
+        xs = np.linspace(vals.min(), vals.max(), 200)
+        ax.plot(xs, kde(xs), color=decile_color_map[q], linewidth=0.8, label=q)
+    ax.set_xlabel(xlabel, fontsize=4.2, labelpad=2)
+    ax.set_ylabel('Density', fontsize=4.2, labelpad=2)
+    ax.tick_params(labelsize=3.2, pad=1)
+fig, axes = plt.subplots(2, 1, dpi=300)
+plot_kde_by_decile(axes[0], results_df, 'bigger_or_smaller', 'Ablated Pred Rg -\nBaseline Pred Rg')
+axes[0].axvline(0, color='red', linewidth=1.0)
+plot_kde_by_decile(axes[1], results_df, 'rg_baseline_scaled', 'Rg Baseline')
+handles, labels = axes[0].get_legend_handles_labels()
+fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,
+           loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,
+           handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
+fig.suptitle('Negative Head Ablation - IDRome', fontsize=4.6, y=0.99)
+fig.subplots_adjust(left=0.20, right=0.82, top=0.94, bottom=0.10, hspace=0.42)
+plt.savefig(f'{BASE_PATH}/figures/final/es_ablation_kde.svg', dpi=300)
+plt.show()
 
 q10 = results_df.loc[results_df['frac_DE_quartile'] == 'Q10', 'delta_mae'].values
 rows = []
