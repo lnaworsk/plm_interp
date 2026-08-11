@@ -9,17 +9,16 @@ from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 import warnings
 warnings.filterwarnings('ignore')
-import altair as alt
 import esm
 from esm import FastaBatchedDataset
 from sklearn.model_selection import GroupShuffleSplit
 from scipy.stats import linregress
-from attention_functions import *
-alt.themes.register('publication', publication_theme)
-alt.themes.enable('publication')
+import matplotlib.pyplot as plt
 from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent 
+from attention_functions import get_esm2_embeddings
 BASE_PATH = SCRIPT_DIR.parent 
+
 '''
 Script to train Rg prediction model and evaluate on IDRome MD-derived Rg and experimental SAXS Rg 
 
@@ -58,30 +57,35 @@ torch.backends.cudnn.benchmark     = False
 
 #---- Functions --------------------------------------------------------
 
-def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=30, color=None, color_title=""):
-    df = pd.DataFrame({xlabel: x, ylabel: y,})
-    if color is not None:
-        df["color"] = color
-        abs_max = max(np.abs(df["color"]))
-
-    lim_min = min(df[xlabel].min(), df[ylabel].min())
-    lim_max = max(df[xlabel].max(), df[ylabel].max())
-
-    encoding = {"x": alt.X(xlabel, scale=alt.Scale(domain=[lim_min, lim_max])), "y": alt.Y(ylabel, scale=alt.Scale(domain=[lim_min, lim_max])),}
+def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30,
+                           color=None, color_title='', cbar_ax=None):
+    x = np.asarray(x); y = np.asarray(y)
+    lim_min = min(x.min(), y.min())
+    lim_max = max(x.max(), y.max())
 
     if color is not None:
-        encoding["color"] = alt.Color("color:Q", title=color_title, scale=alt.Scale(domain=[-abs_max, 0, abs_max],range=["#E8300C", "white", "#2367B0"]))
+        color = np.asarray(color)
+        abs_max = np.abs(color).max()
+        sc = ax.scatter(x, y, c=color, cmap='RdBu', vmin=-abs_max, vmax=abs_max,
+                          alpha=alpha, s=s, edgecolors='none')
+        if cbar_ax is not None:
+            cbar = plt.colorbar(sc, cax=cbar_ax)
+            cbar.set_label(color_title, fontsize=5.5)
+            cbar.ax.tick_params(labelsize=4.5)
+    else:
+        ax.scatter(x, y, color='steelblue', alpha=alpha, s=s, edgecolors='none')
 
-    scatter = (alt.Chart(df).mark_point(opacity=alpha, size=s, filled=True).encode(**encoding))
-
-    line_df = pd.DataFrame({xlabel: [lim_min, lim_max],ylabel: [lim_min, lim_max]})
-    line = (alt.Chart(line_df).mark_line(strokeDash=[5, 5], color="red").encode(x=xlabel, y=ylabel))
-    chart = (scatter + line).properties(title=title, width=400, height=400)
-
-    if save_path:
-        chart.save(save_path)
-
-    return chart
+    ax.plot([lim_min, lim_max], [lim_min, lim_max], linestyle='--', color='red', linewidth=1)
+    ax.set_xlim(lim_min, lim_max)
+    ax.set_ylim(lim_min, lim_max)
+    ax.set_xlabel(xlabel, fontsize=5.5)
+    ax.set_ylabel(ylabel, fontsize=5.5)
+    ax.tick_params(labelsize=4.5)
+    if isinstance(title, (list, tuple)):
+        ax.set_title('\n'.join(title), fontsize=6, linespacing=1.3)
+    else:
+        ax.set_title(title, fontsize=6)
+    ax.set_box_aspect(1)
 
 def to_target(name):
     """Raw Rg --> residual (training target, in Å)."""
@@ -173,6 +177,7 @@ with open(f"{BASE_PATH}/data/idrome_clustered.fasta.clstr") as f:
             seq_id_part = parts[1].strip()
             seq_id = seq_id_part.split()[0].lstrip(">").rstrip("...")
             seq_to_cluster[seq_id] = current_cluster
+
 print(f"Sequences in clustered file: {len(seq_to_cluster)}")
 df_tesei['cluster'] = df_tesei['seq_name'].map(seq_to_cluster)
 unmapped = df_tesei['cluster'].isna()
@@ -291,16 +296,22 @@ for epoch in range(EPOCHS):
 training_curve_df = pd.DataFrame({"epoch": np.arange(len(train_hist)), "Training": train_hist, "Validation": val_hist })
 training_curve_long = training_curve_df.melt(id_vars="epoch", value_vars=["Training", "Validation"], var_name="dataset", value_name="mse_loss")
 training_curve_long.to_csv(f'{BASE_PATH}/data/figure_data/training_curve_long.csv')
-best_epoch = int(np.argmin(val_hist))
+best_epoch = int(np.argmin(training_curve_long[training_curve_long['dataset']=='Validation'].mse_loss))
 
-lines = (alt.Chart(training_curve_long).mark_line().encode(
-        x=alt.X("epoch:Q", title="Epoch"),
-        y=alt.Y("mse_loss:Q", title="MSE Loss"),
-        color=alt.Color("dataset:N", title="")))
-best_val_line = (alt.Chart(pd.DataFrame({"best_epoch": [best_epoch]})).mark_rule(color="red", strokeDash=[5, 5], opacity=0.5)
-    .encode(x="best_epoch:Q"))
-chart = ((lines + best_val_line).properties(width=800,height=400,title="Training vs Validation Loss"))
-chart.save( os.path.join(BASE_PATH, "figures/mlp_final_curves.svg"))
+dataset_color_map = {'Training': 'steelblue', 'Validation': 'orange'}  
+fig, ax = plt.subplots(dpi=300)
+for ds, color in dataset_color_map.items():
+    sub = training_curve_long[training_curve_long['dataset'] == ds].sort_values('epoch')
+    ax.plot(sub['epoch'], sub['mse_loss'], color=color, linewidth=1.2, label=ds)
+ax.axvline(best_epoch, color='red', linestyle='--', linewidth=1.0, alpha=0.5)
+ax.set_xlabel('Epoch', fontsize=6, labelpad=3)
+ax.set_ylabel('MSE Loss', fontsize=6)
+ax.set_title('Training vs Validation Loss', fontsize=7)
+ax.tick_params(labelsize=5)
+ax.legend(fontsize=5.5, frameon=False, loc='upper right')
+fig.subplots_adjust(left=0.14, right=0.95, top=0.96, bottom=0.08)
+plt.savefig(os.path.join(BASE_PATH, "figures/mlp_final_curves.svg"), dpi=300)
+plt.show()
 
 # ---- Evaluate on IDRome test set ------------------------------------------------
 model.load_state_dict(torch.load(os.path.join(BASE_PATH, 'mlp_final.pt')))
@@ -329,13 +340,6 @@ df_eval = pd.DataFrame({'seq_name': test_names, 'Rg_true':  true_raw, 'Rg_pred':
 df_eval['Rg_true_norm'] = df_eval['Rg_true'] / (R0_fit * (df_eval['N'] ** nu_fit))
 df_eval['Rg_pred_norm'] = df_eval['Rg_pred'] / (R0_fit * (df_eval['N'] ** nu_fit))
 df_eval.to_csv(f'{BASE_PATH}/data/figure_data/df_eval.csv', index = False)
-r_idrome, _ = pearsonr(df_eval['Rg_true_norm'], df_eval['Rg_pred_norm'])
-r_s_idrome, _ = spearmanr(df_eval['Rg_true_norm'], df_eval['Rg_pred_norm'])
-p1 = plot_comparison_color(
-    x=df_eval['Rg_true_norm'], y=df_eval['Rg_pred_norm'],
-    xlabel = 'Tesei Rg Flory Normalized (Å)', ylabel = 'MLP Predicted Rg Flory Normalized (Å)',
-    title=[f'IDRome-MLP',  f'Pearson r = {r_idrome:.3f}, Spearman r = {r_s_idrome:.3f}'],
-    save_path=os.path.join(BASE_PATH, 'figures/mlp_idrome_scatter.svg'), alpha = 1, s = 20)
 
 # ---------------------------------------------------------------------------
 # PART 2: SAXS validation
@@ -373,26 +377,38 @@ with torch.no_grad():
 pred_saxs_raw = np.array([to_rg(p, n) for p, n in zip(pred_saxs_scaled, N_saxs)])
 saxs_proteins['Rg_pred'] = pred_saxs_raw
 saxs_proteins['Rg_pred_flory_norm'] = saxs_proteins['Rg_pred'] / (R0_fit * (saxs_proteins['seqlen'] ** nu_fit))
+saxs_proteins.to_csv(f'{BASE_PATH}/data/figure_data/saxs_proteins.csv', index = False)
+
+# ---------------------------------------------------------------------------
+# PART 3: Plotting
+# ---------------------------------------------------------------------------
+
+r_idrome, _ = pearsonr(df_eval['Rg_true_norm'], df_eval['Rg_pred_norm'])
+r_s_idrome, _ = spearmanr(df_eval['Rg_true_norm'], df_eval['Rg_pred_norm'])
 r_flory_saxs, _       = pearsonr(saxs_proteins['saxs_norm'], saxs_proteins['Rg_pred_flory_norm'])
 r_s_flory_saxs, _       = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['Rg_pred_flory_norm'])
+r_starling, _ = pearsonr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
+r_s_starling, _ = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
 
+fig, axes = plt.subplots(1, 3, dpi=300)
+plot_comparison_color(
+    axes[0], x=df_eval['Rg_true_norm'], y=df_eval['Rg_pred_norm'],
+    xlabel='Tesei Rg\nFlory Normalized (Å)', ylabel='MLP Predicted Rg\nFlory Normalized (Å)',
+    title=['IDRome-MLP', f'Pearson r = {r_idrome:.3f}, Spearman r = {r_s_idrome:.3f}'],
+    alpha=1, s=8)
 
-# plot MLP-SAXS 
-p2 = plot_comparison_color(
-    x=saxs_proteins['saxs_norm'], y=saxs_proteins['Rg_pred_flory_norm'],
-    xlabel='Experimental SAXS Rg Flory Normalized (Å)', ylabel='Predicted Rg Flory Normalized (Å)',
-    title=[f'SAXS-MLP',  f'Pearson r = {r_flory_saxs:.3f}, Spearman r = {r_s_flory_saxs:.3f}'],
-    save_path=os.path.join(BASE_PATH, 'figures/mlp_saxs_scatter.svg'), alpha=1, s=20)
+plot_comparison_color(
+    axes[1], x=saxs_proteins['saxs_norm'], y=saxs_proteins['Rg_pred_flory_norm'],
+    xlabel='Experimental SAXS Rg\nFlory Normalized (Å)', ylabel='Predicted Rg\nFlory Normalized (Å)',
+    title=['SAXS-MLP', f'Pearson r = {r_flory_saxs:.3f}, Spearman r = {r_s_flory_saxs:.3f}'],
+    alpha=1, s=8)
 
-# plot STARLING-SAXS performance with length removed 
-r_starling, _  = pearsonr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
-r_s_starling, _  = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
-saxs_proteins.to_csv(f'{BASE_PATH}/data/figure_data/saxs_proteins.csv', index = False)
-p3 = plot_comparison_color(
-    x=saxs_proteins['saxs_norm'], y=saxs_proteins['starling_cuda_norm'],
-    xlabel='Experimental SAXS Rg Flory Normalized (Å)', ylabel='STARLING Cuda Rg Flory Normalized (Å)',
-    title=[f'SAXS-STARLING',  f'Pearson r = {r_starling:.3f}, Spearman r = {r_s_starling:.3f}'],
-    save_path=os.path.join(BASE_PATH, 'figures/saxs_starling_scatter.svg'), alpha=1, s=20)
+plot_comparison_color(
+    axes[2], x=saxs_proteins['saxs_norm'], y=saxs_proteins['starling_cuda_norm'],
+    xlabel='Experimental SAXS Rg\nFlory Normalized (Å)', ylabel='STARLING Cuda Rg\nFlory Normalized (Å)',
+    title=['SAXS-STARLING', f'Pearson r = {r_starling:.3f}, Spearman r = {r_s_starling:.3f}'],
+    alpha=1, s=8)
 
-figure7 = alt.hconcat(p1, p2, p3).properties(spacing=50)
-figure7.save(f'{BASE_PATH}/figures/figure7.svg')
+fig.subplots_adjust(left=0.055, right=0.99, top=0.82, bottom=0.23, wspace=0.22)
+plt.savefig(f'{BASE_PATH}/figures/rg_mlp.svg', dpi=300)
+plt.show()
