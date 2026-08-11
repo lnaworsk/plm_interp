@@ -365,63 +365,38 @@ def run_sweep(proteins, true_col, label, heads_neg_ranked, heads_pos_ranked):
             print(f"Checkpoint saved at n_heads={n_heads}")
             
     sweep_df = pd.DataFrame(sweep_results)
-    sweep_df.to_csv(f'{BASE_PATH}/data/figure_data/es_ablation_sweep_df_{label}_random_consecutive.csv', index = False)
     sweep_df['delta_spearman_random_se'] = sweep_df['delta_spearman_random_std'] / np.sqrt(N_RANDOM_RUNS)
+    sweep_df.to_csv(f'{BASE_PATH}/data/figure_data/es_ablation_sweep_df_{label}_random_consecutive.csv', index = False)
     
-    sweep_long = sweep_df.melt(
-        'n_heads',
-        value_vars=['delta_spearman_neg', 'delta_spearman_pos', 'delta_spearman_random'],
-        var_name='condition', value_name='delta')
- 
-    sweep_long['ablation'] = sweep_long['condition'].map({
-        'delta_spearman_neg':    'Negative (D/E)',
-        'delta_spearman_pos':    'Positive (K/R)',
-        'delta_spearman_random': 'Random'
-    })
- 
-    # merge std for random band
-    std_df     = sweep_df[['n_heads', 'delta_spearman_random_se']].rename(
-        columns={'delta_spearman_random_se': 'se'})
+    sweep_long = sweep_df.melt('n_heads', value_vars=['delta_spearman_neg', 'delta_spearman_pos', 'delta_spearman_random'], var_name='condition', value_name='delta')
+    sweep_long['ablation'] = sweep_long['condition'].map({'delta_spearman_neg': 'Negative (D/E)','delta_spearman_pos': 'Positive (K/R)','delta_spearman_random': 'Random'})
+    std_df = sweep_df[['n_heads', 'delta_spearman_random_se']].rename(columns={'delta_spearman_random_se': 'se'})
     sweep_long = sweep_long.merge(std_df, on='n_heads', how='left')
     sweep_long['se']         = sweep_long['se'].where(sweep_long['ablation'] == 'Random', 0)
     sweep_long['delta_upper'] = sweep_long['delta'] + sweep_long['se']
     sweep_long['delta_lower'] = sweep_long['delta'] - sweep_long['se']
  
-    color_scale = alt.Scale(
-        domain=['Negative (D/E)', 'Positive (K/R)', 'Random'],
-        range=['#E8300C', '#2367B0', '#999999'])
- 
+    color_scale = {'Negative (D/E)': '#E8300C','Positive (K/R)': '#2367B0','Random': '#999999'}
     fig, ax = plt.subplots(dpi=300)
-
     # --- band: shaded confidence region, Random ablation only ---
     random_sub = sweep_long[sweep_long['ablation'] == 'Random'].sort_values('n_heads')
-    ax.fill_between(
-        random_sub['n_heads'], random_sub['delta_lower'], random_sub['delta_upper'],
-        color=color_scale['Random'], alpha=0.2, linewidth=0
-    )
-
+    ax.fill_between(random_sub['n_heads'], random_sub['delta_lower'], random_sub['delta_upper'],color=color_scale['Random'], alpha=0.2, linewidth=0)
     # --- lines + points, one pass per ablation category ---
     for ablation, color in color_scale.items():
         sub = sweep_long[sweep_long['ablation'] == ablation].sort_values('n_heads')
         ax.plot(sub['n_heads'], sub['delta'], color=color, linewidth=1.2, label=ablation)
         ax.scatter(sub['n_heads'], sub['delta'], color=color, s=8, zorder=3, edgecolors='none')
-
     ax.set_xlabel('Number of Heads Ablated', fontsize=5.5)
-    ax.set_ylabel('Δ(Ablated − Baseline) \n Corr(Pred & True Rg) ',
-                fontsize=5.5, linespacing=1.3)
+    ax.set_ylabel('Δ(Ablated − Baseline) \n Corr(Pred & True Rg) ', fontsize=5.5, linespacing=1.3)
     ax.set_title(f'Head Ablation Sweep', fontsize=6.5)
     ax.tick_params(labelsize=4.5)
-
-    ax.legend(title='Ablation', fontsize=5, title_fontsize=5.5, frameon=False,
-            bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
-
+    ax.legend(title='Ablation', fontsize=5, title_fontsize=5.5, frameon=False,bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
     fig.subplots_adjust(left=0.16, right=0.72, top=0.78, bottom=0.32)
     plt.savefig(f'{BASE_PATH}/figures/head_ablation_sweep_.svg', dpi=300)
     plt.show()
 
     print(f"Saved: figures/head_ablation_sweep_.svg")
- 
-    return sweep_df, sweep_chart
+    return sweep_df
 
 # -------------------------------------------------------
 #  evaluation on targeted number of heads 
