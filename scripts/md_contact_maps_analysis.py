@@ -263,7 +263,7 @@ res1_order = sorted(comparison['res1'].unique())
 res2_order = sorted(comparison['res2'].unique())
 esm_pivot = esm_pivot.reindex(index=res2_order, columns=res1_order)
 md_pivot = md_pivot.reindex(index=res2_order, columns=res1_order)
-cmap = 'RdBu_r'   # red = negative, blue = positive
+cmap = 'RdBu'   # red = negative, blue = positive
 
 
 def plot_enrichment_heatmap(data, title, filename):
