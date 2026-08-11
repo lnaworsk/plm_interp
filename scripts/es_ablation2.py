@@ -17,6 +17,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent 
 BASE_PATH = SCRIPT_DIR.parent 
 from tqdm import tqdm
+from scipy.stats import gaussian_kde
 
 '''
 Script to Ablate Heads of ESM-2 likely to be associated with electrostatics and 
@@ -432,7 +433,6 @@ def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
     print(f"Baseline Flory Norm | Spearman={r_s_base:.3f} | Pearson={r_p_base:.3f} | MAE={mae_base:.4f}")
     print(f"Ablated Flory Norm | Spearman={r_s_abl:.3f} | Pearson={r_p_abl:.3f} | MAE={mae_abl:.4f}")
 
-
     t_stat, p_val = stats.ttest_1samp(results_df['delta_mae'], 0)
     print(f"MAE increase: {results_df['delta_mae'].mean():+.3f} ± {results_df['delta_mae'].std():.3f} | t={t_stat:.3f}, p={p_val:.4f}")
     n_worse  = (results_df['delta_mae'] > 0).sum()
@@ -441,13 +441,13 @@ def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
 
     color_col = 'frac_KR' if title == 'pos' else 'frac_DE'
     color_title = 'Frac KR' if title == 'pos' else 'Frac DE'
-    plot = plot_comparison_color(
+    plot_comparison_color(
         results_df['rg_baseline_scaled'], results_df['rg_ablated_scaled'],
         'Baseline Predicted Rg (Flory Normalized)', 'Ablated Predicted Rg (Flory Normalized)',
         f'{label.upper()} - {title.upper()}', save_path=f'{BASE_PATH}/figures/es_{title}_{label}_scatter.svg',
         alpha=1, s=30, color=results_df[color_col], color_title=color_title)
 
-    return results_df, plot
+    return results_df
 
 
 
@@ -460,11 +460,10 @@ saxs_proteins,   saxs_true_col   = load_saxs()
 heads_final = list(zip(heads_neg_ranked['layer'][:OVERWRITE_NUM_HEADS], heads_neg_ranked['head'][:OVERWRITE_NUM_HEADS]))
 
 run_sweep(idrome_proteins, idrome_true_col, 'idrome', heads_neg_ranked, heads_pos_ranked)
-saxs_results_df, neg_eval_saxs = run_eval(saxs_proteins, saxs_true_col, heads_final, label = 'saxs', title = 'neg')
-results_df, neg_eval_idrome = run_eval(idrome_proteins, idrome_true_col, heads_final, label = 'idrome', title = 'neg')
+saxs_results_df = run_eval(saxs_proteins, saxs_true_col, heads_final, label = 'saxs', title = 'neg')
+results_df = run_eval(idrome_proteins, idrome_true_col, heads_final, label = 'idrome', title = 'neg')
 saxs_results_df.to_csv(f'{BASE_PATH}/data/figure_data/saxs_results_df.csv', index = False)
 results_df.to_csv(f'{BASE_PATH}/data/figure_data/results_df.csv', index = False)
-
 
 ### Analysis ####
      
@@ -472,32 +471,28 @@ results_df['bigger_or_smaller'] = results_df['rg_ablated_scaled'] - results_df['
 results_df['frac_DE_quartile'] = pd.qcut(results_df['frac_DE'], q=10, labels=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'])
 
 deciles = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10']
-blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6',
-               '#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
+blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6','#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
 decile_color_map = dict(zip(deciles, blue_colors))
 
 def plot_kde_by_decile(ax, data, field, xlabel, color_field='frac_DE_quartile'):
     for q in deciles:
         vals = data.loc[data[color_field] == q, field].dropna().values
-        if len(vals) < 2:
-            continue
         kde = gaussian_kde(vals)
         xs = np.linspace(vals.min(), vals.max(), 200)
         ax.plot(xs, kde(xs), color=decile_color_map[q], linewidth=0.8, label=q)
     ax.set_xlabel(xlabel, fontsize=4.2, labelpad=2)
     ax.set_ylabel('Density', fontsize=4.2, labelpad=2)
     ax.tick_params(labelsize=3.2, pad=1)
+
 fig, axes = plt.subplots(2, 1, dpi=300)
 plot_kde_by_decile(axes[0], results_df, 'bigger_or_smaller', 'Ablated Pred Rg -\nBaseline Pred Rg')
 axes[0].axvline(0, color='red', linewidth=1.0)
 plot_kde_by_decile(axes[1], results_df, 'rg_baseline_scaled', 'Rg Baseline')
 handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,
-           loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,
-           handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
+fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
 fig.suptitle('Negative Head Ablation - IDRome', fontsize=4.6, y=0.99)
 fig.subplots_adjust(left=0.20, right=0.82, top=0.94, bottom=0.10, hspace=0.42)
-plt.savefig(f'{BASE_PATH}/figures/final/es_ablation_kde.svg', dpi=300)
+plt.savefig(f'{BASE_PATH}/figures/es_ablation_kde.svg', dpi=300)
 plt.show()
 
 q10 = results_df.loc[results_df['frac_DE_quartile'] == 'Q10', 'delta_mae'].values
