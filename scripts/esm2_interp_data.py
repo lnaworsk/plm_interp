@@ -3,7 +3,7 @@
 All external data utilized in this work is detailed below: 
 
 -------------------
-⚠️  VERSION WARNING
+ VERSION WARNING
 -------------------
 The following sources are living databases with no version pinned in the URL.
 Files downloaded today WILL differ from those used in this study:
@@ -14,7 +14,7 @@ Files downloaded today WILL differ from those used in this study:
   - DisProt      (accessed July 28, 2025)
 
 --------------------------------------
-⚠️ Reproducibility Instructions
+ Reproducibility Instructions
 --------------------------------------
 
 1) To exactly reproduce the results in this paper, you can directly use the same sequences committed to this repo and skip the data gathering/filtering 
@@ -119,12 +119,12 @@ def decompress_gz(gz_path, out_path):
 # Accessed:  July 16, 2025
 # Source:    RCSB PDB
 # Derived:   data/protein_input_sets.csv, data/pdb_disprot.fasta
-# ⚠️  Updated weekly — will differ from version used in this study
+#  Updated weekly — will differ from version used in this study
 
 def download_pdb():
     print("\n── PDB ──────────────────────────────────────────────────────────────")
     print("  Accessed: July 16, 2025")
-    print("  ⚠️  PDB sequences are updated weekly.")
+    print("    PDB sequences are updated weekly.")
     print("     File downloaded today will differ from version used in this study.")
     print("     Derived files (data/protein_input_sets.csv, data/pdb_disprot.fasta)")
     print("     were generated from the July 16, 2025 snapshot.")
@@ -137,12 +137,12 @@ def download_pdb():
 # Accessed:  Feb 3, 2026
 # Source:    NCBI ClinVar (public domain)
 # Derived:   data/clinvar_sequences.csv
-# ⚠️  Updated weekly — will differ from version used in this study
+# Updated weekly — will differ from version used in this study
 
 def download_clinvar():
     print("\n── ClinVar ──────────────────────────────────────────────────────────")
     print("  Accessed: Feb 3, 2026")
-    print("  ⚠️  ClinVar is updated weekly.")
+    print("   ClinVar is updated weekly.")
     print("     File downloaded today will differ from version used in this study.")
     print("     Derived file (data/clinvar_sequences.csv) was generated from")
     print("     the Feb 3, 2026 snapshot.")
@@ -155,12 +155,12 @@ def download_clinvar():
 # Accessed:  Feb 3, 2026
 # Source:    NCBI Gene (public domain)
 # Note:      Decompressed to TSV; read with pd.read_csv(..., sep='\t')
-# ⚠️  Updated regularly — will differ from version used in this study
+#   Updated regularly — will differ from version used in this study
 
 def download_gene2refseq():
     print("\n── gene2refseq ──────────────────────────────────────────────────────")
     print("  Accessed: Feb 3, 2026")
-    print("  ⚠️  gene2refseq is updated regularly.")
+    print("   gene2refseq is updated regularly.")
     print("     File downloaded today will differ from version used in this study.")
     url  = "https://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq.gz"
     gz   = os.path.join(DATA_DIR, "gene2refseq.gz")
@@ -173,12 +173,12 @@ def download_gene2refseq():
 # Accessed:  Feb 3, 2026
 # Source:    NCBI RefSeq (public domain)
 # Note:      Decompressed to .faa
-# ⚠️  'latest' in URL is not version-pinned — will differ from version used
+#  'latest' in URL is not version-pinned — will differ from version used
 
 def download_grch38():
     print("\n── GRCh38 latest protein ────────────────────────────────────────────")
     print("  Accessed: Feb 3, 2026")
-    print("  ⚠️  'GRCh38_latest' is not version-pinned.")
+    print("  'GRCh38_latest' is not version-pinned.")
     print("     File downloaded today will differ from version used in this study.")
     url  = (
         "https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/"
@@ -221,7 +221,7 @@ if __name__ == "__main__":
     print("Downloading external data sources")
     print("=" * 70)
     print(
-        "\n⚠️  Some sources are living databases. Files downloaded today may"
+        "\n Some sources are living databases. Files downloaded today may"
         "\n   differ from those used in this study. \n"
     )
 
