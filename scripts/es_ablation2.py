@@ -129,11 +129,11 @@ def load_saxs():
 # -------------------------------------------------------
 
 print('running aa attention analysis per head/layer normalized by occurrence')
-# attn = run_aa_analysis_head_layer(normalize = 'occurrence', model = 'original')
-# attn_occur_norm = attn.groupby(['layer', 'head', 'aa'])['attn_occur_norm'].mean().reset_index()
-# attn_occur_norm = attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E', 'K', 'R'])]
-# attn_occur_norm.to_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
-attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
+attn = run_aa_analysis_head_layer(normalize = 'occurrence', model = 'original')
+attn_occur_norm = attn.groupby(['layer', 'head', 'aa'])['attn_occur_norm'].mean().reset_index()
+attn_occur_norm = attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E', 'K', 'R'])]
+attn_occur_norm.to_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
+#attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
 
 mean_pos = (attn_occur_norm[attn_occur_norm['aa'].isin(['R', 'K'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
 mean_neg = (attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
