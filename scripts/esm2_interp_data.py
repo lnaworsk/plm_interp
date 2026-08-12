@@ -119,7 +119,7 @@ def decompress_gz(gz_path, out_path):
 # Accessed:  July 16, 2025
 # Source:    RCSB PDB
 # Derived:   data/protein_input_sets.csv, data/pdb_disprot.fasta
-#  Updated weekly — will differ from version used in this study
+# Updated weekly — will differ from version used in this study
 
 def download_pdb():
     print("\n── PDB ──────────────────────────────────────────────────────────────")
