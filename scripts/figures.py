@@ -271,40 +271,23 @@ aa_groups = {
     **{aa: "Anion"      for aa in ['D', 'E']},
     **{aa: "Aromatic"   for aa in ['W', 'Y', 'F']},
 }
-
 comb_data["AA_group"] = comb_data["AA"].map(aa_groups)
 group_order = ['Hydrophobic', 'Polar', 'Cation', 'Anion', 'Aromatic']
-colors = {'Non-Disease-Relevant': 'steelblue', 'Disease-Relevant': 'orange'}
 labels = ['Non-Disease-Relevant', 'Disease-Relevant']
 width = 0.35
 group_sizes = [len(set(aa for aa, g in aa_groups.items() if g == grp)) for grp in group_order]
-
-w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53)
-fig, axes = plt.subplots(1, len(group_order), figsize=(w, h), sharey=True,
-                          gridspec_kw={'width_ratios': group_sizes, 'wspace': 0.12})
-
+fig, axes = plt.subplots(1, len(group_order), figsize=(panel_size(cols=4, rows=1)), sharey=True, gridspec_kw={'width_ratios': group_sizes, 'wspace': 0.12})
 for i, g in enumerate(group_order):
     ax = axes[i]
     data = comb_data[comb_data['AA_group'] == g]
     aas = sorted(data.groupby('AA')['attn_perc'].median().sort_values(ascending=False).index)
     x = np.arange(len(aas))
-
     for j, (label, offset) in enumerate(zip(labels, [-width/2, width/2])):
-        data_by_aa = [
-            data[(data['AA'] == aa) & (data['mut_label_desc'] == label)]['attn_perc'].dropna()
-            for aa in aas
-        ]
-        ax.boxplot(data_by_aa,
-                   positions=x + offset,
-                   widths=width * 0.8,
-                   patch_artist=True,
-                   manage_ticks=False,
-                   boxprops=dict(facecolor=colors[label], alpha=0.7, linewidth=0.4),
-                   medianprops=dict(color='black', linewidth=0.6),
-                   whiskerprops=dict(linewidth=0.4),
-                   capprops=dict(linewidth=0.4),
+        data_by_aa = [data[(data['AA'] == aa) & (data['mut_label_desc'] == label)]['attn_perc'].dropna()for aa in aas]
+        ax.boxplot(data_by_aa, positions=x + offset,widths=width * 0.8,patch_artist=True,manage_ticks=False,
+                   boxprops=dict(facecolor=colors[label], alpha=0.7, linewidth=0.4),medianprops=dict(color='black', linewidth=0.6),
+                   whiskerprops=dict(linewidth=0.4),capprops=dict(linewidth=0.4),
                    flierprops=dict(marker='o', markersize=1, alpha=0.3))
-
     ax.set_xticks(x)
     ax.set_xticklabels(aas, fontsize=4.5)
     ax.set_xlabel('')
@@ -314,11 +297,7 @@ for i, g in enumerate(group_order):
         ax.set_ylabel('Attention Percentile', fontsize=5.5)
 
 handles = [plt.Rectangle((0,0),1,1, facecolor=colors[l], alpha=0.7) for l in labels]
-fig.legend(handles, [l.replace('-', '-\n') for l in labels], loc='center left',
-           bbox_to_anchor=(0.905, 0.5), fontsize=4.5, labelspacing=0.8,
-           handlelength=1.0, handletextpad=0.4, frameon=False)
-
-fig.suptitle('Attention Percentile Distributions by Amino Acid Group', fontsize=6, y=0.99)
+fig.legend(handles, [l.replace('-', '-\n') for l in labels], loc='center left',bbox_to_anchor=(0.905, 0.5), fontsize=4.5, labelspacing=0.8,handlelength=1.0, handletextpad=0.4, frameon=False)
 fig.subplots_adjust(left=0.06, right=0.90, top=0.66, bottom=0.20)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attn_percentile_by_aa_group.svg', dpi=300)
 plt.show()
