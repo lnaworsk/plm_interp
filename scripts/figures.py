@@ -169,7 +169,7 @@ vmax = np.nanmax(attn_occur_norm["attn_occur_norm"])
 fig, axes = plt.subplots(nrows=2,ncols=2,figsize=(7.2, 3.25),constrained_layout=True, dpi =300)
 im = None
 for i, aa in enumerate(["C", "D"]):
-    for j, g in enumerate(groups):
+    for j, g in enumerate(['PDB', 'DisProt']):
         if aa == "C":
             label = "Cys"
         elif aa == "D":
@@ -246,7 +246,7 @@ ax.set_ylim(0, 1)
 legend_labels = ['Non-Disease-\nRelevant', 'Disease-\nRelevant']
 handles = [plt.Rectangle((0,0),1,1, facecolor=colors[l], alpha=0.7) for l in ['Non-Disease-Relevant', 'Disease-Relevant']]
 ax.legend(handles, legend_labels, loc='center left', bbox_to_anchor=(1, 0.5),fontsize=5, labelspacing=1.0, handlelength=1.2, handletextpad=0.5)
-fig.subplots_adjust(left=0.16, right=0.76, top=0.72, bottom=0.28)
+fig.subplots_adjust(left=0.16, right=0.76, top=.9, bottom=0.28)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attention_percentile_by_idr_percentile_bins.svg', dpi=300)
 plt.show()
 
@@ -298,7 +298,7 @@ for i, g in enumerate(group_order):
 
 handles = [plt.Rectangle((0,0),1,1, facecolor=colors[l], alpha=0.7) for l in labels]
 fig.legend(handles, [l.replace('-', '-\n') for l in labels], loc='center left',bbox_to_anchor=(0.905, 0.5), fontsize=4.5, labelspacing=0.8,handlelength=1.0, handletextpad=0.4, frameon=False)
-fig.subplots_adjust(left=0.06, right=0.90, top=0.66, bottom=0.20)
+fig.subplots_adjust(left=0.06, right=0.90, top=0.8, bottom=0.20)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attn_percentile_by_aa_group.svg', dpi=300)
 plt.show()
 
@@ -332,7 +332,7 @@ for i, idr_bin in enumerate(idr_bins):
 handles = [plt.Rectangle((0,0),1,1, color=color_map[v]) for v in variables]
 short_labels = ['Rollout (z)', 'Conservation (z)']
 fig.legend(handles, short_labels, loc='center left', bbox_to_anchor=(0.80, 0.5),fontsize=4.5, frameon=False, handlelength=1.0, handletextpad=0.4,labelspacing=0.8)
-fig.subplots_adjust(left=0.12, right=0.79, top=0.70, bottom=0.10, wspace=0.15)
+fig.subplots_adjust(left=0.12, right=0.79, top=0.80, bottom=0.10, wspace=0.15)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_log_reg.svg', dpi=300)
 plt.show()
 
