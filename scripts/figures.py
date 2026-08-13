@@ -206,88 +206,51 @@ plt.show()
 #########################
 # Figure 3 - Pathogenicity
 #########################
-# import data
+
+########### attention histograms
 comb_data = pd.read_csv(f'{BASE_PATH}/data/figure_data/comb_data.csv')
-log_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/log_df.csv')
-ols_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/ols_df.csv')
 
-# plot
-# attention histograms
-w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53) — matches your other 4x1 panels
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(w, h))
-
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(panel_size(cols=4, rows=1) ))
 # Disease-Relevant
 ax1.hist(comb_data[comb_data['path_mut'] == True]['attn_perc'], bins=20, color = 'steelblue')
 ax1.set_xlabel('Attention Received Percentile')
 ax1.set_ylabel('Count of Residues')
 ax1.set_title('Disease-Relevant Positions')
-
 # Non-Disease-Relevant
 ax2.hist(comb_data[comb_data['path_mut'] == False]['attn_perc'], bins=20, color='steelblue')
 ax2.set_xlabel('Attention Received Percentile')
 ax2.set_ylabel('Count of Residues')
 ax2.set_title('Non-Disease-Relevant Positions')
-
 fig.subplots_adjust(left=0.09, right=0.98, top=0.82, bottom=0.28, wspace=0.35)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attention_percentile_distr.svg', dpi=300)
 plt.show()
 
-# attention by disorder percentile 
+########### attention by disorder percentile 
 fig, ax = plt.subplots(figsize=(3.5, 1.53))
 bins = sorted(comb_data['idr_perc_bin'].unique())
 x = np.arange(len(bins))
 width = 0.35
 colors = {'Non-Disease-Relevant': 'steelblue', 'Disease-Relevant': 'orange'}
 for i, (label, offset) in enumerate(zip(['Non-Disease-Relevant', 'Disease-Relevant'], [-width/2, width/2])):
-    data_by_bin = [
-        comb_data[(comb_data['idr_perc_bin'] == b) & (comb_data['mut_label_desc'] == label)]['attn_perc'].dropna()
-        for b in bins
-    ]
-    bp = ax.boxplot(
-        data_by_bin,
-        positions=x + offset,
-        widths=width * 0.8,
-        patch_artist=True,
-        manage_ticks=False,
-        boxprops=dict(
-            facecolor=colors[label],
-            alpha=0.7,
-            linewidth=0.4
-        ),
-        medianprops=dict(
-            color='black',
-            linewidth=0.6
-        ),
-        whiskerprops=dict(
-            linewidth=0.4
-        ),
-        capprops=dict(
-            linewidth=0.4
-        ),
-        flierprops=dict(
-            marker='o',
-            markersize=2,
-            alpha=0.3
-        )
-    )
+    data_by_bin = [comb_data[(comb_data['idr_perc_bin'] == b) & (comb_data['mut_label_desc'] == label)]['attn_perc'].dropna()for b in bins ]
+    bp = ax.boxplot(data_by_bin, positions=x + offset, widths=width * 0.8, patch_artist=True, manage_ticks=False, boxprops=dict(facecolor=colors[label], alpha=0.7, linewidth=0.4),
+        medianprops=dict(color='black',linewidth=0.6),
+        whiskerprops=dict(linewidth=0.4),
+        capprops=dict(linewidth=0.4),
+        flierprops=dict(marker='o',markersize=2,alpha=0.3))
 ax.set_xticks(x)
 ax.set_xticklabels(bins)
 ax.set_xlabel('Disorder Percentile Bins')
 ax.set_ylabel('Attention Percentile')
 ax.set_ylim(0, 1)
-ax.set_title('Attention Percentile across Degrees of Disorder')
-
-# wrap each label onto two lines so the legend box is narrower
 legend_labels = ['Non-Disease-\nRelevant', 'Disease-\nRelevant']
 handles = [plt.Rectangle((0,0),1,1, facecolor=colors[l], alpha=0.7) for l in ['Non-Disease-Relevant', 'Disease-Relevant']]
-ax.legend(handles, legend_labels, loc='center left', bbox_to_anchor=(1, 0.5),
-          fontsize=5, labelspacing=1.0, handlelength=1.2, handletextpad=0.5)
-
+ax.legend(handles, legend_labels, loc='center left', bbox_to_anchor=(1, 0.5),fontsize=5, labelspacing=1.0, handlelength=1.2, handletextpad=0.5)
 fig.subplots_adjust(left=0.16, right=0.76, top=0.72, bottom=0.28)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attention_percentile_by_idr_percentile_bins.svg', dpi=300)
 plt.show()
 
-# disease aa counts 
+########## disease aa counts 
 mut_aa_counts = comb_data[comb_data['path_mut']==True].groupby('AA').size().reset_index()
 mut_aa_counts.columns = ['AA', 'count']
 mut_aa_counts = mut_aa_counts.sort_values('count', ascending=False)
@@ -295,12 +258,11 @@ fig, ax = plt.subplots(figsize=(3.5, 1.53))
 ax.bar(mut_aa_counts['AA'], mut_aa_counts['count'], color = 'steelblue')
 ax.set_xlabel('Amino Acid Type')
 ax.set_ylabel('Count')
-ax.set_title('Amino Acid Counts of\nDisease-Relevant WT Residues')
 plt.tight_layout()
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_disease_aa_count.svg', bbox_inches='tight')
 plt.show()
 
-# attention distribution by aa identity 
+############ attention distribution by aa identity 
 
 aa_groups = {
     **{aa: "Hydrophobic" for aa in ['A', 'I', 'L', 'M', 'F', 'V']},
@@ -317,7 +279,6 @@ labels = ['Non-Disease-Relevant', 'Disease-Relevant']
 width = 0.35
 group_sizes = [len(set(aa for aa, g in aa_groups.items() if g == grp)) for grp in group_order]
 
-print(comb_data[comb_data['AA_group'].isna()])
 w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53)
 fig, axes = plt.subplots(1, len(group_order), figsize=(w, h), sharey=True,
                           gridspec_kw={'width_ratios': group_sizes, 'wspace': 0.12})
@@ -357,16 +318,12 @@ fig.legend(handles, [l.replace('-', '-\n') for l in labels], loc='center left',
            bbox_to_anchor=(0.905, 0.5), fontsize=4.5, labelspacing=0.8,
            handlelength=1.0, handletextpad=0.4, frameon=False)
 
-# suptitle now sits INSIDE the canvas (y < 1) instead of floating above it
 fig.suptitle('Attention Percentile Distributions by Amino Acid Group', fontsize=6, y=0.99)
 fig.subplots_adjust(left=0.06, right=0.90, top=0.66, bottom=0.20)
-
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attn_percentile_by_aa_group.svg', dpi=300)
-# NOT: bbox_inches='tight' — that's what let the canvas grow past 7.2 x 1.53
 plt.show()
 
-
-# log regression
+######### log regression
 log_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/log_df.csv')
 log_df_melted = log_df[['idr_bin', 'rollout_z coef (adjusted)', 'conservation_z coef (adjusted)', 'LR_test']].rename(columns = {'rollout_z coef (adjusted)': 'Attention Rollout (z)', 'conservation_z coef (adjusted)' : 'Conservation (z)'})
 log_df_melted = log_df_melted.melt(id_vars = 'idr_bin')
@@ -408,7 +365,7 @@ fig.subplots_adjust(left=0.12, right=0.79, top=0.70, bottom=0.10, wspace=0.15)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_log_reg.svg', dpi=300)
 plt.show()
 
-# ols regression
+####### ols regression
 ols_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/ols_df.csv')
 ols_df_melted = ols_df[['beta_path_mut_adjusted', 'beta_path_mut_unadjusted', 'idr_bin']].melt(id_vars='idr_bin')
 ols_df_melted['variable_label'] = ols_df_melted['variable'].str.extract(r'(unadjusted|adjusted)', flags=re.IGNORECASE)[0].str.capitalize()
