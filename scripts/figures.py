@@ -304,6 +304,7 @@ plt.show()
 
 ######### log regression
 log_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/log_df.csv')
+
 log_df_melted = log_df[['idr_bin', 'rollout_z coef (adjusted)', 'conservation_z coef (adjusted)', 'LR_test']].rename(columns = {'rollout_z coef (adjusted)': 'Attention Rollout (z)', 'conservation_z coef (adjusted)' : 'Conservation (z)'})
 log_df_melted = log_df_melted.melt(id_vars = 'idr_bin')
 data = log_df_melted[log_df_melted['variable'] != 'LR_test']
@@ -312,17 +313,14 @@ variables = data['variable'].unique()
 n_bins = len(idr_bins)
 x = np.arange(len(variables))
 width = 0.6 / len(variables)
-#colors = plt.cm.tab10(np.linspace(0, 1, len(variables)))
 color_map = dict(zip(variables, ['orange', 'steelblue']))
-w, h = panel_size(cols=2, rows=1)  # (3.5, 1.53)
-fig, axes = plt.subplots(1, n_bins, figsize=(w, h), sharey=True)
+fig, axes = plt.subplots(1, n_bins, figsize=(panel_size(cols=2, rows=1) ), sharey=True)
 for i, idr_bin in enumerate(idr_bins):
     ax = axes[i]
     bin_data = data[data['idr_bin'] == idr_bin]
     for j, var in enumerate(variables):
         val = bin_data[bin_data['variable'] == var]['value'].values
-        if len(val) > 0:
-            ax.bar(j, val[0], color=color_map[var])
+        ax.bar(j, val[0], color=color_map[var])
     ax.set_xticks(range(len(variables)))
     ax.set_xticklabels([])
     ax.tick_params(axis='x', length=0)
@@ -331,15 +329,9 @@ for i, idr_bin in enumerate(idr_bins):
     ax.tick_params(axis='y', labelsize=4.5)
     if i == 0:
         ax.set_ylabel('Adjusted Beta', fontsize=5.5)
-
-fig.suptitle('Disease Relevancy ~\nAttention, Conservation', fontsize=6, y=0.99)
-
 handles = [plt.Rectangle((0,0),1,1, color=color_map[v]) for v in variables]
 short_labels = ['Rollout (z)', 'Conservation (z)']
-fig.legend(handles, short_labels, loc='center left', bbox_to_anchor=(0.80, 0.5),
-           fontsize=4.5, frameon=False, handlelength=1.0, handletextpad=0.4,
-           labelspacing=0.8)
-
+fig.legend(handles, short_labels, loc='center left', bbox_to_anchor=(0.80, 0.5),fontsize=4.5, frameon=False, handlelength=1.0, handletextpad=0.4,labelspacing=0.8)
 fig.subplots_adjust(left=0.12, right=0.79, top=0.70, bottom=0.10, wspace=0.15)
 plt.savefig(f'{BASE_PATH}/figures/final/clinvar_log_reg.svg', dpi=300)
 plt.show()
