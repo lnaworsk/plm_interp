@@ -61,14 +61,14 @@ plot_order = sorted(umap_df['Group'].unique(), key=lambda g: g == 'PDB') # draw 
 for g in plot_order:
     mask = umap_df['Group'] == g
     alpha = 0.05 if g == 'PDB' else 1.0
-    ax.scatter(umap_df['0'][mask], umap_df['1'][mask], label=g, alpha=alpha, s=10, color=group_color_map[g], edgecolors='none', zorder=2 if g == 'PDB' else 1)
+    ax.scatter(umap_df['0'][mask], umap_df['1'][mask], label=g, alpha=alpha, s=5, color=group_color_map[g], edgecolors='none', zorder=2 if g == 'PDB' else 1)
 ax.set_xlabel("")
 ax.set_ylabel("")
 ax.legend(title="Group", bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.set_box_aspect(1)
 # --- Right panel ---
 ax = axes[1]
-sc = ax.scatter(umap_df['0'], umap_df['1'], c=umap_df['IDR Frac'], cmap='viridis', s=10)
+sc = ax.scatter(umap_df['0'], umap_df['1'], c=umap_df['IDR Frac'], cmap='viridis', s=5)
 ax.set_xlabel("")
 ax.set_ylabel("")
 ax.set_box_aspect(1)
@@ -122,10 +122,10 @@ for _, row in regions.iterrows():
     ax.text(row['label_pos'], y_top * 1.02, row['region'], ha='center', va='bottom', fontsize=5)
 ax.set_xlabel("Position")
 ax.set_ylabel("Value")
-ax.set_ylim(top=y_top * 1.22)
+ax.set_ylim(top=y_top * 1.15)
 ax.legend(loc='upper left',bbox_to_anchor=(1.02, 1),frameon=False)
 
-fig.subplots_adjust(left=0.09, right=0.80, top=0.72, bottom=0.28)
+fig.subplots_adjust(left=0.09, right=0.80, top=0.92, bottom=0.28)
 plt.savefig(f"{BASE_PATH}/figures/final/tdp43.svg", dpi=300)
 plt.show()
 
