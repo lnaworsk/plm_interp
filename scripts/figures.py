@@ -18,9 +18,10 @@ from scipy.stats import gaussian_kde
 # Helpers & Theme 
 ############################
 
-plt.style.use(f'{BASE_PATH}/data/figure_data/publication.mplstyle')
+plt.style.use(f'{BASE_PATH}/publication.mplstyle')
 plt.rcParams['axes.prop_cycle'] = cycler(color=['#56B4E9', '#E69F00', '#CC79A7', '#009E73','#F0E442', '#0072B2', '#D55E00', '#000000'])
 mpl.rcParams['svg.fonttype'] = 'none'
+group_color_map = {'PDB': 'orange', 'DisProt': 'steelblue'}
 # Base dimensions (mm)
 CANVAS_W: float = 183.0
 CANVAS_H: float = 170.0
@@ -31,7 +32,6 @@ ROWS: int = 4
 UNIT_W: float = (CANVAS_W - (COLS - 1) * GAP) / COLS  # 42.0 mm
 UNIT_H: float = (CANVAS_H - (ROWS - 1) * GAP) / ROWS  # 38.75 mm
 MM_TO_IN: float = 1 / 25.4
-
 
 def panel_size(cols: int = 1, rows: int = 1) -> Tuple[float, float]:
     """Return (width, height) in inches for a panel spanning cols x rows grid units."""
@@ -54,44 +54,28 @@ for c, r in [(1,1), (2,1), (1,2), (2,2), (3,1), (4,1), (4,2), (4,4)]:
 ###### umap
 umap_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/umap_df.csv')
 
-x = umap_df['0']
-y = umap_df['1']
-
 fig, axes = plt.subplots(1, 2, figsize=(7.2, 1.53), dpi=300)
-
 # --- Left panel ---
 ax = axes[0]
-group_color_map = {'PDB': 'orange', 'DisProt': 'steelblue'}
-
-# draw DisProt first (opaque, background), then PDB last (transparent, on top)
-plot_order = sorted(umap_df['Group'].unique(), key=lambda g: g == 'PDB')
-
+plot_order = sorted(umap_df['Group'].unique(), key=lambda g: g == 'PDB') # draw DisProt first (opaque, background), then PDB last (transparent, on top)
 for g in plot_order:
     mask = umap_df['Group'] == g
     alpha = 0.05 if g == 'PDB' else 1.0
-    ax.scatter(x[mask], y[mask], label=g, alpha=alpha, s=10,
-               color=group_color_map[g], edgecolors='none',
-               zorder=2 if g == 'PDB' else 1)
-
-ax.set_title("UMAP of ESM-2 Embeddings")
+    ax.scatter(umap_df['0'][mask], umap_df['1'][mask], label=g, alpha=alpha, s=10, color=group_color_map[g], edgecolors='none', zorder=2 if g == 'PDB' else 1)
 ax.set_xlabel("")
 ax.set_ylabel("")
 ax.legend(title="Group", bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.set_box_aspect(1)
-
 # --- Right panel ---
 ax = axes[1]
-sc = ax.scatter(x, y, c=umap_df['IDR Frac'], cmap='viridis', s=10)
-ax.set_title("UMAP of ESM-2 Embeddings")
+sc = ax.scatter(umap_df['0'], umap_df['1'], c=umap_df['IDR Frac'], cmap='viridis', s=10)
 ax.set_xlabel("")
 ax.set_ylabel("")
 ax.set_box_aspect(1)
-
 divider = make_axes_locatable(ax)
 cax = divider.append_axes("right", size="5%", pad=0.1)
 cbar = fig.colorbar(sc, cax=cax)
 cbar.set_label("IDR Fraction")
-
 plt.tight_layout()
 plt.savefig(f"{BASE_PATH}/figures/final/umap.svg", dpi=300)
 plt.show()
