@@ -338,14 +338,12 @@ plt.show()
 
 ####### ols regression
 ols_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/ols_df.csv')
+
 ols_df_melted = ols_df[['beta_path_mut_adjusted', 'beta_path_mut_unadjusted', 'idr_bin']].melt(id_vars='idr_bin')
 ols_df_melted['variable_label'] = ols_df_melted['variable'].str.extract(r'(unadjusted|adjusted)', flags=re.IGNORECASE)[0].str.capitalize()
-
 idr_bins = sorted(ols_df_melted['idr_bin'].unique())
 variable_labels = ols_df_melted['variable_label'].unique()
-
-fig, axes = plt.subplots(1, n_bins, figsize=(w, h), sharey=True)
-
+fig, axes = plt.subplots(1, n_bins, figsize=(panel_size(cols=2, rows=1)), sharey=True)
 for i, idr_bin in enumerate(idr_bins):
     ax = axes[i]
     bin_data = ols_df_melted[ols_df_melted['idr_bin'] == idr_bin]
@@ -355,8 +353,6 @@ for i, idr_bin in enumerate(idr_bins):
     ax.tick_params(axis='x', rotation=0)
     if i == 0:
         ax.set_ylabel('Beta on Disease Relevancy')
-
-fig.suptitle('Attention Rollout ~\nDisease Relevancy, Conservation')
 plt.tight_layout()
 plt.savefig(f'{BASE_PATH}/figures/final/ols_clinvar.svg')
 plt.show()
