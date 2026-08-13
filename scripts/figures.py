@@ -123,7 +123,8 @@ for _, row in regions.iterrows():
 ax.set_xlabel("Position")
 ax.set_ylabel("Value")
 ax.set_ylim(top=y_top * 1.22)
-ax.legend(fontsize=5,frameon=False,bbox_to_anchor=(1.02, 1),loc='upper left',borderaxespad=0)
+ax.legend(loc='upper left',bbox_to_anchor=(1.02, 1),frameon=False)
+
 fig.subplots_adjust(left=0.09, right=0.80, top=0.72, bottom=0.28)
 plt.savefig(f"{BASE_PATH}/figures/final/tdp43.svg", dpi=300)
 plt.show()
