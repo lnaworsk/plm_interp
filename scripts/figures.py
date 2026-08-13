@@ -105,54 +105,26 @@ plt.savefig(f"{BASE_PATH}/figures/final/attn_kde.svg", dpi=300)
 plt.show()
 
 ###### tdp43 
-df_altair_input = pd.read_csv(f'{BASE_PATH}/data/figure_data/tdp43.csv')
-regions = pd.DataFrame({
-    'region': ['NTD', 'RRM1', 'RRM2', 'CTD'],
-    'start': [1, 104, 191, 274],
-    'end': [103, 200, 262, 413],
-})
+df_altair_input = pd.read_csv(f'{BASE_PATH}/data/figure_data/si_examples.csv')
+df_altair_input = df_altair_input[df_altair_input['pid'] == 'TDP-43']
+
+regions = pd.DataFrame({'region': ['NTD', 'RRM1', 'RRM2', 'CTD'],'start': [1, 104, 191, 274],'end': [103, 200, 262, 413],})
 regions['label_pos'] = (regions['start'] + regions['end']) / 2
-
-line_color_map = {
-    'Attention Received': 'steelblue',
-    'Disorder': 'orange',
-}
-
-w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53)
-fig, ax = plt.subplots(figsize=(w, h))
-
+line_color_map = {'Attention Received': 'steelblue','Disorder': 'orange'}
+fig, ax = plt.subplots(figsize=(panel_size(cols=4, rows=1)))
 for i, row in regions.iterrows():
-    ax.axvspan(
-        row['start'], row['end'],
-        color=colors[i % len(colors)],
-        alpha=0.2,
-        label=row['region']
-    )
-
+    ax.axvspan(row['start'], row['end'],color=colors[i % len(colors)],alpha=0.2,label=row['region'])
 for var in df_altair_input['variable'].unique():
     sub = df_altair_input[df_altair_input['variable'] == var]
-    ax.plot(sub['pos'], sub['value'], label=var, linewidth=1.2,
-             color=line_color_map[var])
-
+    ax.plot(sub['pos'], sub['value'], label=var, linewidth=1.2,color=line_color_map[var])
 y_top = ax.get_ylim()[1]
 for _, row in regions.iterrows():
     ax.text(row['label_pos'], y_top * 1.02, row['region'], ha='center', va='bottom', fontsize=5)
-
 ax.set_xlabel("Position")
 ax.set_ylabel("Value")
-ax.set_title("TDP-43 Attention Rollout Received vs. Disorder Profile")
 ax.set_ylim(top=y_top * 1.22)
-
-ax.legend(
-    fontsize=5,
-    frameon=False,
-    bbox_to_anchor=(1.02, 1),
-    loc='upper left',
-    borderaxespad=0
-)
-
+ax.legend(fontsize=5,frameon=False,bbox_to_anchor=(1.02, 1),loc='upper left',borderaxespad=0)
 fig.subplots_adjust(left=0.09, right=0.80, top=0.72, bottom=0.28)
-
 plt.savefig(f"{BASE_PATH}/figures/final/tdp43.svg", dpi=300)
 plt.show()
 
