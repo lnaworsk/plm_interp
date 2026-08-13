@@ -133,54 +133,42 @@ plt.show()
 # Figure 2 - AA Attention Allocation 
 #########################################
 
-###### import data
+###### mean AA attention rollout received plot
 mean_aa_attn = pd.read_csv(f'{BASE_PATH}/data/figure_data/mean_aa_attn.csv')
-attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data/attn_occur_norm.csv')
 
-###### plot 
-# mean AA attention rollout received plot
 amino_acids = mean_aa_attn["amino_acid"].unique()
-groups = mean_aa_attn["Group"].unique()
 x = np.arange(len(amino_acids))
-width = 0.8 / len(groups)
-
-group_color_map = {'PDB': 'orange', 'DisProt': 'steelblue'}
-
 fig, ax = plt.subplots(figsize=(7.2, 3.25), dpi=300)
-for i, g in enumerate(groups):
+for i, g in enumerate(['PDB', 'DisProt']):
     sub = mean_aa_attn[mean_aa_attn["Group"] == g]
     sub = sub.set_index("amino_acid").reindex(amino_acids)
-    offsets = x + (i - len(groups)/2) * width + width/2
-    ax.bar(offsets, sub["mean"], width=width, label=g, yerr=sub["se"], capsize=2,
-           linewidth=0.8, color=group_color_map[g])
-
+    offsets = x + (i - 1) * 0.6
+    ax.bar(offsets, sub["mean"], width=0.4, label=g, yerr=sub["se"], capsize=2, linewidth=0.8, color=group_color_map[g])
 ax.set_xticks(x)
 ax.set_xticklabels(amino_acids, rotation=0)
 ax.set_xlabel("Amino Acid")
 ax.set_ylabel("Mean Attention Rollout Received")
-ax.set_title("Mean Attention Received per Amino Acid with Standard Error")
 ax.legend(title="")
 plt.tight_layout()
 plt.savefig(f"{BASE_PATH}/figures/final/mean_aa_attn_received.svg", dpi=300)
 plt.show()
 
-# Asp and Cys Heatmaps 
-aas = ["C", "D"]
-groups = ["PDB", "DisProt"]
+####### Asp and Cys Heatmaps 
+attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data/attn_occur_norm.csv')
+
 mats = {}
-for aa in aas:
+for aa in ["C", "D"]:
     mats[aa] = {}
-    for g in groups:
+    for g in ['PDB', 'DisProt']:
         sub = attn_occur_norm[(attn_occur_norm["aa"] == aa) & (attn_occur_norm["Group"] == g)]
         mat = sub.pivot(index="head", columns="layer", values="attn_occur_norm")
         mats[aa][g] = mat
 
 vmin = np.nanmin(attn_occur_norm["attn_occur_norm"])
 vmax = np.nanmax(attn_occur_norm["attn_occur_norm"])
-
-fig, axes = plt.subplots( nrows=2,ncols=2,figsize=(7.2, 3.25),constrained_layout=True, dpi =300)
+fig, axes = plt.subplots(nrows=2,ncols=2,figsize=(7.2, 3.25),constrained_layout=True, dpi =300)
 im = None
-for i, aa in enumerate(aas):
+for i, aa in enumerate(["C", "D"]):
     for j, g in enumerate(groups):
         if aa == "C":
             label = "Cys"
@@ -202,9 +190,12 @@ for i, aa in enumerate(aas):
         else:
             ax.set_yticklabels([])
         ax.set_xticks(np.arange(len(mat.columns)))
-        ax.set_xticklabels(mat.columns, rotation=90)
+        xlabels = [str(c) if idx % 2 == 0 else "" for idx, c in enumerate(mat.columns)]
+        ax.set_xticklabels(xlabels, rotation=90)
+
         ax.set_yticks(np.arange(len(mat.index)))
-        ax.set_yticklabels(mat.index)
+        ylabels = [str(h) if idx % 2 == 0 else "" for idx, h in enumerate(mat.index)]
+        ax.set_yticklabels(ylabels)
 cbar = fig.colorbar(im, ax=axes, shrink=0.8)
 cbar.set_label("Average Attention Rollout", rotation=270, labelpad=12)
 plt.savefig(f"{BASE_PATH}/figures/final/asp_cys_heatmaps.svg", dpi=300)
