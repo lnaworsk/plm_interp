@@ -88,33 +88,19 @@ fig, ax = plt.subplots(figsize=(7.2, 1.53))
 x_grid = np.linspace(0, 5, 300)
 colors = ['#deebf7', '#9ecae1', '#3182bd', '#08519c']
 groups = sorted(disorder_comp_concat['idr_bin_str'].unique())
-
 for i, g in enumerate(groups):
     vals = disorder_comp_concat.loc[disorder_comp_concat['idr_bin_str'] == g, 'attn_received'].dropna().values
-    if len(vals) < 2:
-        continue  # KDE requires at least 2 points
     kde = gaussian_kde(vals)
     density = kde(x_grid)
     ax.plot(x_grid, density, linewidth=3, color=colors[i % len(colors)], label=g)
-
 ax.set_xlim(0, 5)
 ax.set_yscale('log')
 ax.set_xlabel("Attention Rollout Received")
 ax.set_ylabel("Probability Density")
-ax.set_title("Distribution of Attention by Disorder Probability Bin")
-
-# Place legend outside the axes, to the right
-ax.legend(
-    title="Disorder / Probability Bin",
-    bbox_to_anchor=(1.02, 1),
-    loc='upper left',
-    borderaxespad=0
-)
-
+ax.legend(title="Disorder Probability Bin",bbox_to_anchor=(1.02, 1),loc='upper left',borderaxespad=0) # Place legend outside the axes, to the right
 # Reserve room for the legend WITHIN the fixed 7.2 x 1.53 canvas
 # instead of letting tight_layout() or the legend itself resize the figure
 fig.subplots_adjust(left=0.09, right=0.78, top=0.82, bottom=0.28)
-
 plt.savefig(f"{BASE_PATH}/figures/final/attn_kde.svg", dpi=300)
 plt.show()
 
