@@ -13,6 +13,7 @@ from scipy.stats import spearmanr, pearsonr
 from matplotlib.colors import LinearSegmentedColormap
 import matplotlib as mpl
 from scipy.stats import gaussian_kde
+from matplotlib.colors import ListedColormap
 
 ############################
 # Helpers & Theme 
@@ -360,69 +361,50 @@ plt.show()
 ########################################
 # Figure 4 - Structure/Contact Maps
 ########################################
-# import data
+
 combined_data = pd.read_csv(f'{BASE_PATH}/data/figure_data/combined_data.csv')
 
 ######### correlation distribution 
-w, h = panel_size(cols=2, rows=2)  # (3.5, 3.25)
-fig, ax = plt.subplots(figsize=(w, h), dpi=300)
-
+fig, ax = plt.subplots(figsize=(panel_size(cols=2, rows=2)), dpi=300)
 type_color_map = {'Observed': 'steelblue', 'Mean Null (Permuted)': 'orange'}
 types = combined_data['type'].unique()
 bin_edges = np.histogram_bin_edges(combined_data['value'], bins=15)
-
 for t in types:
     sub = combined_data[combined_data['type'] == t]
-    ax.hist(sub['value'], bins=bin_edges, alpha=0.7, label=t,
-            color=type_color_map[t])
-
+    ax.hist(sub['value'], bins=bin_edges, alpha=0.7, label=t,color=type_color_map[t])
 ax.axvline(0, color='black', linestyle='--', linewidth=1.2, dashes=(5, 3))
-
 ax.set_xlabel('Spearman Correlation')
 ax.set_ylabel('Count')
-ax.set_title('Observed vs Null Distribution (100 permutations each)', fontsize=7)
 ax.legend(title='Distribution', fontsize=6, title_fontsize=6, frameon=False)
-
-fig.subplots_adjust(left=0.20, right=0.95, top=0.83, bottom=0.22)  # left raised from 0.10
+fig.subplots_adjust(left=0.20, right=0.95, top=0.83, bottom=0.22) 
 plt.savefig(f'{BASE_PATH}/figures/final/jac_md_observed_vs_null_distribution.svg', dpi=300)
 plt.show()
 
 ##### agreement map 
-agreement_color_map = {
-    'Both Enriched': '#2166ac',
-    'Both Depleted': '#d6604d',
-    'Disagree': '#d3d3d3',
-}
 comparison = pd.read_csv(f'{BASE_PATH}/data/figure_data/comparison.csv')
-pivot = comparison.pivot(index='res2', columns='res1', values='Agreement')
-res1_order = sorted(comparison['res1'].unique())
-res2_order = sorted(comparison['res2'].unique())
-pivot = pivot.reindex(index=res2_order, columns=res1_order)
 
+agreement_color_map = {'Both Enriched': '#2166ac', 'Both Depleted': '#d6604d', 'Disagree': '#d3d3d3'}
+category_order = ["Hydrophobic", "Polar", "Cation", "Anion", "Aromatic"]
+# symmetrize: each pair should exist as both (res1,res2) and (res2,res1)
+mirrored = comparison.rename(columns={'res1': 'res2', 'res2': 'res1'})
+comparison_sym = pd.concat([comparison, mirrored], ignore_index=True).drop_duplicates(subset=['res1', 'res2'])
+all_aas = set(comparison_sym['res1'].unique()) | set(comparison_sym['res2'].unique())
+res_order = [aa for cat in category_order for aa in sorted(all_aas) if aa_groups.get(aa) == cat]
+pivot = comparison_sym.pivot(index='res2', columns='res1', values='Agreement').reindex(index=res_order, columns=res_order)
+print(pivot.isna().sum().sum(), "NaN cells remaining")  # should now only be the true diagonal, if any
 categories = list(agreement_color_map.keys())
-cat_to_code = {c: i for i, c in enumerate(categories)}
-code_grid = pivot.replace(cat_to_code).values.astype(float)
-
-from matplotlib.colors import ListedColormap
+code_grid = pivot.replace({c: i for i, c in enumerate(categories)}).values.astype(float)
+n = len(res_order)
+code_grid[np.triu_indices(n, k=1)] = np.nan  # keep lower triangle + diagonal only
 cmap = ListedColormap([agreement_color_map[c] for c in categories])
-
-w, h = panel_size(cols=2, rows=2)  # (3.5, 3.25)
+cmap.set_bad(color='white')
+w, h = panel_size(cols=2, rows=2)
 fig, ax = plt.subplots(figsize=(w, h), dpi=300)
-im = ax.imshow(code_grid, cmap=cmap, vmin=-0.5, vmax=len(categories) - 0.5, aspect='auto')
-
-ax.set_xticks(range(len(res1_order)))
-ax.set_xticklabels(res1_order, rotation=0, fontsize=5)
-ax.set_yticks(range(len(res2_order)))
-ax.set_yticklabels(res2_order, fontsize=5)
-ax.set_xlabel('')
-ax.set_ylabel('')
-ax.set_title('MD vs ESM-2 Top Decile\nEnrichment Agreement', fontsize=6.5)
-
-handles = [plt.Rectangle((0, 0), 1, 1, facecolor=agreement_color_map[c]) for c in categories]
-fig.legend(handles, categories, loc='center left', bbox_to_anchor=(0.70, 0.5),
-           frameon=False, fontsize=5.5, borderaxespad=0)
-
-fig.subplots_adjust(left=0.16, right=0.68, top=0.82, bottom=0.14)
+ax.imshow(code_grid, cmap=cmap, vmin=-0.5, vmax=len(categories) - 0.5, aspect='auto')
+ax.set_xticks(range(n)); ax.set_xticklabels(res_order, fontsize=5)
+ax.set_yticks(range(n)); ax.set_yticklabels(res_order, fontsize=5)
+fig.legend(handles, categories, loc='center left', bbox_to_anchor=(0.74, 0.5), frameon=False, fontsize=5.5, borderaxespad=0)
+fig.subplots_adjust(left=0.16, right=0.64, top=0.72, bottom=0.20)
 plt.savefig(f'{BASE_PATH}/figures/final/md_esm_top_decile_agreement.svg', dpi=300)
 plt.show()
 
