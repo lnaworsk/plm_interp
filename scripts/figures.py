@@ -416,10 +416,7 @@ plt.show()
 df_eval = pd.read_csv(f'{BASE_PATH}/data/figure_data/df_eval.csv')
 saxs_proteins = pd.read_csv(f'{BASE_PATH}/data/figure_data/saxs_proteins.csv')
 
-# plot
-
-def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30,
-                           color=None, color_title='', cbar_ax=None):
+def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30, color=None, color_title='', cbar_ax=None):
     x = np.asarray(x); y = np.asarray(y)
     lim_min = min(x.min(), y.min())
     lim_max = max(x.max(), y.max())
@@ -427,8 +424,7 @@ def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30,
     if color is not None:
         color = np.asarray(color)
         abs_max = np.abs(color).max()
-        sc = ax.scatter(x, y, c=color, cmap='RdBu', vmin=-abs_max, vmax=abs_max,
-                          alpha=alpha, s=s, edgecolors='none')
+        sc = ax.scatter(x, y, c=color, cmap='RdBu', vmin=-abs_max, vmax=abs_max, alpha=alpha, s=s, edgecolors='none')
         if cbar_ax is not None:
             cbar = plt.colorbar(sc, cax=cbar_ax)
             cbar.set_label(color_title, fontsize=5.5)
@@ -443,7 +439,7 @@ def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30,
     ax.set_ylabel(ylabel, fontsize=5.5)
     ax.tick_params(labelsize=4.5)
     if isinstance(title, (list, tuple)):
-        ax.set_title('\n'.join(title), fontsize=6, linespacing=1.3)
+        ax.set_title(title, fontsize=6, linespacing=1.3)
     else:
         ax.set_title(title, fontsize=6)
     ax.set_box_aspect(1)
@@ -456,38 +452,27 @@ r_s_flory_saxs, _       = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['R
 r_starling, _ = pearsonr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
 r_s_starling, _ = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
 
-# --- build the combined 4x1 figure ---
 w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53)
 fig, axes = plt.subplots(1, 3, figsize=(w, h), dpi=300)
-
 plot_comparison_color(
     axes[0], x=df_eval['Rg_true_norm'], y=df_eval['Rg_pred_norm'],
     xlabel='Tesei Rg\nFlory Normalized (Å)', ylabel='MLP Predicted Rg\nFlory Normalized (Å)',
     title=['IDRome-MLP', f'Pearson r = {r_idrome:.3f}, Spearman r = {r_s_idrome:.3f}'],
-    alpha=1, s=8
-)
+    alpha=1, s=8)
 
 plot_comparison_color(
     axes[1], x=saxs_proteins['saxs_norm'], y=saxs_proteins['Rg_pred_flory_norm'],
     xlabel='Experimental SAXS Rg\nFlory Normalized (Å)', ylabel='Predicted Rg\nFlory Normalized (Å)',
     title=['SAXS-MLP', f'Pearson r = {r_flory_saxs:.3f}, Spearman r = {r_s_flory_saxs:.3f}'],
-    alpha=1, s=8
-)
+    alpha=1, s=8)
 
 plot_comparison_color(
     axes[2], x=saxs_proteins['saxs_norm'], y=saxs_proteins['starling_cuda_norm'],
     xlabel='Experimental SAXS Rg\nFlory Normalized (Å)', ylabel='STARLING Cuda Rg\nFlory Normalized (Å)',
     title=['SAXS-STARLING', f'Pearson r = {r_starling:.3f}, Spearman r = {r_s_starling:.3f}'],
-    alpha=1, s=8
-)
+    alpha=1, s=8)
 
-fig.subplots_adjust(
-    left=0.055,
-    right=0.99,
-    top=0.82,
-    bottom=0.23,
-    wspace=0.22
-)
+fig.subplots_adjust(left=0.055, right=0.99, top=0.82, bottom=0.23, wspace=0.22)
 plt.savefig(f'{BASE_PATH}/figures/final/rg_mlp.svg', dpi=300)
 plt.show()
 
@@ -807,10 +792,13 @@ fig.subplots_adjust(left=0.14, right=0.95, top=0.96, bottom=0.08)
 plt.savefig(os.path.join(BASE_PATH, "figures/final/mlp_final_curves.svg"), dpi=300)
 plt.show()
 
+#####################################
+# Figure A4 - MD/ESM2 contact agreement - magnitude
+#####################################
 
 
 #################
-# Figure A4
+# Figure A6
 #################
 attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data/attn_corr_norm_es.csv')
 
