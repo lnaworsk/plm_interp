@@ -675,36 +675,28 @@ si_examples = pd.read_csv(f'{BASE_PATH}/data/figure_data/si_examples.csv')
 line_color_map = {'Attention Received': 'steelblue', 'Disorder': 'orange'}
 pids = si_examples['pid'].unique()
 n = len(pids)
-
-# Keep the same overall figure footprint as a 4x4 grid,
-# but lay out pids as n rows x 1 column
-w, h = panel_size(cols=4, rows=4)  # (7.2, 7.2) — total canvas size unchanged
+w, h = panel_size(cols=4, rows=4)  
 fig, axes = plt.subplots(n, 1, figsize=(w, h), dpi=300)
-axes_flat = np.atleast_1d(axes)  # handles n=1 gracefully
-
+axes_flat = np.atleast_1d(axes)  
 for i, ax in enumerate(axes_flat):
     pid = pids[i]
     sub = si_examples[si_examples['pid'] == pid]
-
     for var, color in line_color_map.items():
         vsub = sub[sub['variable'] == var].sort_values('pos')
         ax.plot(vsub['pos'], vsub['value'], color=color, linewidth=0.8, label=var)
-
     ax.set_title(pid, fontsize=5)
     ax.tick_params(labelsize=3.5)
     ax.set_xlabel('Position', fontsize=4)
     ax.set_ylabel('Value', fontsize=4)
-
 handles = [plt.Line2D([0], [0], color=c, linewidth=1.2) for c in line_color_map.values()]
-fig.legend(handles, line_color_map.keys(), loc='center left', bbox_to_anchor=(0.885, 0.5),
-           fontsize=5, frameon=False, title='Variable', title_fontsize=5.5,
-           handlelength=0.9, borderaxespad=0, handletextpad=0.4)
-
-fig.suptitle('SI Examples: Attention Rollout Received vs. Disorder Profile', fontsize=8, y=0.995)
+fig.legend(handles, line_color_map.keys(), loc='center left', bbox_to_anchor=(0.885, 0.5),fontsize=5, frameon=False, title='Variable', title_fontsize=5.5,handlelength=0.9, borderaxespad=0, handletextpad=0.4)
 fig.subplots_adjust(left=0.055, right=0.86, top=0.94, bottom=0.05, hspace=0.65, wspace=0.40)
-
 plt.savefig(f"{BASE_PATH}/figures/final/si_examples.svg", dpi=300)
 plt.show()
+
+#################
+# Figure A3
+#################
 
 #################
 # Figure A4
