@@ -14,6 +14,9 @@ from matplotlib.colors import LinearSegmentedColormap
 import matplotlib as mpl
 from scipy.stats import gaussian_kde
 from matplotlib.colors import ListedColormap
+from matplotlib.colors import LinearSegmentedColormap
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+from scipy.stats import gaussian_kde
 
 ############################
 # Helpers & Theme 
@@ -485,7 +488,6 @@ plt.show()
 
 N_RANDOM_RUNS=25
 sweep_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/es_ablation_sweep_df_idrome_random_consecutive.csv')
-sweep_df['delta_spearman_random_se'] = sweep_df['delta_spearman_random_std'] / np.sqrt(N_RANDOM_RUNS)
     
 sweep_long = sweep_df.melt(
     'n_heads',
@@ -499,29 +501,18 @@ sweep_long['ablation'] = sweep_long['condition'].map({
 })
 
 # merge std for random band
-std_df = sweep_df[['n_heads', 'delta_spearman_random_se']].rename(
-    columns={'delta_spearman_random_se': 'se'})
+std_df = sweep_df[['n_heads', 'delta_spearman_random_se']].rename(columns={'delta_spearman_random_se': 'se'})
 sweep_long = sweep_long.merge(std_df, on='n_heads', how='left')
 sweep_long['se']         = sweep_long['se'].where(sweep_long['ablation'] == 'Random', 0)
 sweep_long['delta_upper'] = sweep_long['delta'] + sweep_long['se']
 sweep_long['delta_lower'] = sweep_long['delta'] - sweep_long['se']
 
-color_scale = {
-    'Negative (D/E)': '#E8300C',
-    'Positive (K/R)': '#2367B0',
-    'Random': '#999999',
-}
-
-w, h = panel_size(cols=2, rows=1)  # (3.5, 1.53)
+color_scale = {'Negative (D/E)': '#E8300C', 'Positive (K/R)': '#2367B0', 'Random': '#999999',}
+w, h = panel_size(cols=2, rows=1) 
 fig, ax = plt.subplots(figsize=(w, h), dpi=300)
-
 # --- band: shaded confidence region, Random ablation only ---
 random_sub = sweep_long[sweep_long['ablation'] == 'Random'].sort_values('n_heads')
-ax.fill_between(
-    random_sub['n_heads'], random_sub['delta_lower'], random_sub['delta_upper'],
-    color=color_scale['Random'], alpha=0.2, linewidth=0
-)
-
+ax.fill_between(random_sub['n_heads'], random_sub['delta_lower'], random_sub['delta_upper'],color=color_scale['Random'], alpha=0.2, linewidth=0)
 # --- lines + points, one pass per ablation category ---
 for ablation, color in color_scale.items():
     sub = sweep_long[sweep_long['ablation'] == ablation].sort_values('n_heads')
@@ -529,14 +520,9 @@ for ablation, color in color_scale.items():
     ax.scatter(sub['n_heads'], sub['delta'], color=color, s=8, zorder=3, edgecolors='none')
 
 ax.set_xlabel('Number of Heads Ablated', fontsize=5.5)
-ax.set_ylabel('Δ(Ablated − Baseline) \n Corr(Pred & True Rg) ',
-               fontsize=5.5, linespacing=1.3)
-ax.set_title(f'Head Ablation Sweep', fontsize=6.5)
+ax.set_ylabel('Δ(Ablated − Baseline) \n Corr(Pred & True Rg) ',fontsize=5.5, linespacing=1.3)
 ax.tick_params(labelsize=4.5)
-
-ax.legend(title='Ablation', fontsize=5, title_fontsize=5.5, frameon=False,
-          bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
-
+ax.legend(title='Ablation', fontsize=5, title_fontsize=5.5, frameon=False,bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
 fig.subplots_adjust(left=0.16, right=0.72, top=0.78, bottom=0.32)
 plt.savefig(f'{BASE_PATH}/figures/final/head_ablation_sweep_.svg', dpi=300)
 plt.show()
@@ -546,12 +532,8 @@ plt.show()
 results_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/results_df.csv')
 saxs_results_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/saxs_results_df.csv')
 
-from matplotlib.colors import LinearSegmentedColormap
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-
 blue_scale_cmap = LinearSegmentedColormap.from_list('white_blue', ['white', '#2367B0'])
-
-def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=20,
+def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=15,
                            color=None, color_title='', figsize=(1.65, 1.53), dpi=300):
     x = np.asarray(x); y = np.asarray(y); color = np.asarray(color)
     abs_max = np.abs(color).max()
@@ -560,23 +542,18 @@ def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3
 
     fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
     divider = make_axes_locatable(ax)
-    cax = divider.append_axes('right', size='6%', pad=0.05)   # tighter than before
-
-    sc = ax.scatter(x, y, c=color, cmap=blue_scale_cmap, vmin=0, vmax=abs_max,
-                      alpha=alpha, s=s, edgecolors='none')
+    cax = divider.append_axes('right', size='6%', pad=0.05)   
+    sc = ax.scatter(x, y, c=color, cmap=blue_scale_cmap, vmin=0, vmax=abs_max, alpha=alpha, s=s, edgecolors='none')
     cbar = plt.colorbar(sc, cax=cax)
     cbar.set_label(color_title, fontsize=3.8)
     cbar.ax.tick_params(labelsize=3.2, pad=1)
-
     ax.plot([lim_min, lim_max], [lim_min, lim_max], linestyle='--', color='red', linewidth=0.7)
     ax.set_xlim(lim_min, lim_max)
     ax.set_ylim(lim_min, lim_max)
     ax.set_xlabel(xlabel, fontsize=3.8, linespacing=1.1, labelpad=2)
     ax.set_ylabel(ylabel, fontsize=3.8, linespacing=1.1, labelpad=2)
     ax.tick_params(labelsize=3.2, pad=1)
-    ax.set_title(title, fontsize=4.2, pad=2)
     ax.set_box_aspect(1)
-
     fig.subplots_adjust(left=0.22, right=0.72, top=0.86, bottom=0.24)
 
     if save_path:
@@ -589,26 +566,22 @@ plot = plot_comparison_color(
     results_df['rg_baseline_scaled'], results_df['rg_ablated_scaled'],
     'Baseline Predicted Rg\n(Flory Normalized)', 'Ablated Predicted Rg\n(Flory Normalized)',
     f'{label.upper()} - Negative', save_path=f'{BASE_PATH}/figures/final/es_negative_{label}_scatter.svg',
-    alpha=1, s=12, color=results_df['frac_DE'], color_title='Frac DE')
+    alpha=1, s=5, color=results_df['frac_DE'], color_title='Frac DE')
 
 label = 'saxs'
 plot = plot_comparison_color(
     saxs_results_df['rg_baseline_scaled'], saxs_results_df['rg_ablated_scaled'],
     'Baseline Predicted Rg\n(Flory Normalized)', 'Ablated Predicted Rg\n(Flory Normalized)',
     f'{label.upper()} - Negative', save_path=f'{BASE_PATH}/figures/final/es_negative_{label}_scatter.svg',
-    alpha=1, s=12, color=saxs_results_df['frac_DE'], color_title='Frac DE')
+    alpha=1, s=5, color=saxs_results_df['frac_DE'], color_title='Frac DE')
 
 ####### kde 
 
-from scipy.stats import gaussian_kde
-
 results_df['bigger_or_smaller'] = results_df['rg_ablated_scaled'] - results_df['rg_baseline_scaled']
-results_df['frac_DE_quartile'] = pd.qcut(results_df['frac_DE'], q=10,
-                                          labels=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'])
+results_df['frac_DE_quartile'] = pd.qcut(results_df['frac_DE'], q=10,labels=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'])
 
 deciles = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10']
-blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6',
-               '#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
+blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6','#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
 decile_color_map = dict(zip(deciles, blue_colors))
 
 def plot_kde_by_decile(ax, data, field, xlabel, color_field='frac_DE_quartile'):
@@ -623,22 +596,14 @@ def plot_kde_by_decile(ax, data, field, xlabel, color_field='frac_DE_quartile'):
     ax.set_ylabel('Density', fontsize=4.2, labelpad=2)
     ax.tick_params(labelsize=3.2, pad=1)
 
-w, h = panel_size(cols=2, rows=1)  # (1.65, 3.25)
+w, h = panel_size(cols=2, rows=1)  
 fig, axes = plt.subplots(2, 1, figsize=(w, h), dpi=300)
-
 plot_kde_by_decile(axes[0], results_df, 'bigger_or_smaller', 'Ablated Pred Rg -\nBaseline Pred Rg')
 axes[0].axvline(0, color='red', linewidth=1.0)
-
 plot_kde_by_decile(axes[1], results_df, 'rg_baseline_scaled', 'Rg Baseline')
-
 handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,
-           loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,
-           handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
-
-fig.suptitle('Negative Head Ablation - IDRome', fontsize=4.6, y=0.99)
+fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,  loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
 fig.subplots_adjust(left=0.20, right=0.82, top=0.94, bottom=0.10, hspace=0.42)
-
 plt.savefig(f'{BASE_PATH}/figures/final/es_ablation_kde.svg', dpi=300)
 plt.show()
 
