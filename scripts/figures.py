@@ -612,78 +612,55 @@ plt.show()
 #########################
 
 protein_sets = pd.read_csv(f'{BASE_PATH}/data/protein_input_sets.csv')
-protein_sets['Group'] = np.where(
-    protein_sets['ProteinID'].str.contains('pdb', case=False, na=False), 'pdb',
-    np.where(protein_sets['ProteinID'].str.contains('disprot', case=False, na=False), 'disprot', None)
-)
+protein_sets['Group'] = np.where(protein_sets['ProteinID'].str.contains('pdb', case=False, na=False), 'pdb',np.where(protein_sets['ProteinID'].str.contains('disprot', case=False, na=False), 'disprot', None))
 protein_lengths = protein_sets.copy()
 protein_lengths['seq_len'] = protein_lengths['Sequence'].apply(len)
 protein_lengths['Group'] = protein_lengths['Group'].replace({'pdb': 'PDB', 'disprot': 'DisProt'})
-
-GROUP_COLORS = {'PDB': 'orange', 'DisProt': 'steelblue'}
-
 groups = ['DisProt', 'PDB']
 bins = np.histogram_bin_edges(protein_lengths['seq_len'], bins=40)  # shared edges so bars align
 fig, ax = plt.subplots(figsize=panel_size(cols=2, rows=1), layout='constrained')
 for g in groups:
-    ax.hist(protein_lengths.loc[protein_lengths.Group == g, 'seq_len'],
-            bins=bins, label=g, color=GROUP_COLORS[g], alpha=0.55, edgecolor='none')
+    ax.hist(protein_lengths.loc[protein_lengths.Group == g, 'seq_len'], bins=bins, label=g, color=GROUP_COLORS[g], alpha=0.55, edgecolor='none')
 ax.set_xlabel("Sequence Length")
 ax.set_ylabel("Count")
-ax.set_title("PDB & DisProt Sequence Length")
 ax.legend(title="Group", loc='upper right')
 plt.savefig(f"{BASE_PATH}/figures/final/input_sets_seqlen_distribution.svg", dpi=300)
 plt.show()
 
 
 idr_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/idr_df.csv')
-
-GROUP_COLORS = {'PDB': 'orange', 'DisProt': 'steelblue'}
 groups = ['DisProt', 'PDB']
-
-w, h = panel_size(cols=2, rows=1)  # (3.5, 1.53)
+w, h = panel_size(cols=2, rows=1)
 fig, ax = plt.subplots(figsize=(w, h), dpi=300, layout='constrained')
-fig.get_layout_engine().set(w_pad=0.15, h_pad=0.15)  # extra buffer so labels don't sit right on the edge
-
+fig.get_layout_engine().set(w_pad=0.15, h_pad=0.15)
 for g in groups:
     vals = idr_df.loc[idr_df['Group'] == g, 'idr'].dropna().values
-    kde = gaussian_kde(vals)
-    xs = np.linspace(vals.min(), vals.max(), 300)
-    ax.plot(xs, kde(xs), color=GROUP_COLORS[g], linewidth=1.2, label=g)
-
+    ax.hist(vals, bins=30, density=True, alpha=0.5, color=GROUP_COLORS[g], label=g, edgecolor='none')
 ax.set_xlabel('# of Disordered Residues per Sequence', fontsize=5.5)
 ax.set_ylabel('Density', fontsize=5.5)
 ax.tick_params(labelsize=4.5)
-ax.legend(title='Group', fontsize=5, title_fontsize=5.5, frameon=False, loc='upper right')
-
-plt.savefig(f"{BASE_PATH}/figures/final/input_sets_disorder.svg", dpi=300)
+ax.legend(title='Group',fontsize=5,title_fontsize=5.5,frameon=False,loc='upper right')
+plt.savefig(f"{BASE_PATH}/figures/final/input_sets_disorder.svg",dpi=300)
 plt.show()
 
 
 comb_props = pd.read_csv(f'{BASE_PATH}/data/figure_data/comb_props.csv')
-
-GROUP_COLORS = {'PDB': 'orange', 'DisProt': 'steelblue'}
-groups = ['DisProt', 'PDB']
 amino_acids = sorted(comb_props['amino_acid'].unique())
 x = np.arange(len(amino_acids))
 width = 0.8 / len(groups)
-
-w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53)
+w, h = panel_size(cols=4, rows=1)  
 fig, ax = plt.subplots(figsize=(w, h), dpi=300, layout='constrained')
 fig.get_layout_engine().set(w_pad=0.1, h_pad=0.1)
-
 for i, g in enumerate(groups):
     sub = comb_props[comb_props['Group'] == g].set_index('amino_acid').reindex(amino_acids)
     offsets = x + (i - len(groups)/2) * width + width/2
     ax.bar(offsets, sub['occurrence'], width=width, label=g, color=GROUP_COLORS[g])
-
 ax.set_xticks(x)
 ax.set_xticklabels(amino_acids, fontsize=5)
 ax.set_xlabel('Amino Acid', fontsize=6)
 ax.set_ylabel('Proportional\nFrequency (%)', fontsize=6, linespacing=1.1)
 ax.tick_params(axis='y', labelsize=5)
 ax.legend(title='Group', fontsize=5.5, title_fontsize=6, frameon=False, loc='upper right')
-
 plt.savefig(f"{BASE_PATH}/figures/final/aa_proportional_frequency.svg", dpi=300)
 plt.show()
 print('saved aa proportional frequency plot')
