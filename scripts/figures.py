@@ -704,9 +704,8 @@ plt.show()
 training_curve_long = pd.read_csv(f'{BASE_PATH}/data/figure_data/training_curve_long.csv')
 best_epoch = int(np.argmin(training_curve_long[training_curve_long['dataset']=='Validation'].mse_loss))
 
-dataset_color_map = {'Training': 'steelblue', 'Validation': 'orange'}  # replace with your actual 'dataset' values
-
-w, h = panel_size(cols=4, rows=2)  # (3.5, 6.69)
+dataset_color_map = {'Training': 'steelblue', 'Validation': 'orange'} 
+w, h = panel_size(cols=4, rows=2) 
 fig, ax = plt.subplots(figsize=(w, h), dpi=300)
 
 for ds, color in dataset_color_map.items():
@@ -714,15 +713,11 @@ for ds, color in dataset_color_map.items():
     ax.plot(sub['epoch'], sub['mse_loss'], color=color, linewidth=1.2, label=ds)
 
 ax.axvline(best_epoch, color='red', linestyle='--', linewidth=1.0, alpha=0.5)
-
 ax.set_xlabel('Epoch', fontsize=6, labelpad=3)
 ax.set_ylabel('MSE Loss', fontsize=6)
-ax.set_title('Training vs Validation Loss', fontsize=7)
 ax.tick_params(labelsize=5)
 ax.legend(fontsize=5.5, frameon=False, loc='upper right')
-
 fig.subplots_adjust(left=0.14, right=0.95, top=0.96, bottom=0.08)
-
 plt.savefig(os.path.join(BASE_PATH, "figures/final/mlp_final_curves.svg"), dpi=300)
 plt.show()
 
