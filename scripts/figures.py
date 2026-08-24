@@ -721,19 +721,13 @@ fig.subplots_adjust(left=0.14, right=0.95, top=0.96, bottom=0.08)
 plt.savefig(os.path.join(BASE_PATH, "figures/final/mlp_final_curves.svg"), dpi=300)
 plt.show()
 
-#####################################
-# Figure A4 - MD/ESM2 contact agreement - magnitude
-#####################################
-
-
 #################
-# Figure A6
+# Figure A5
 #################
 attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data/attn_corr_norm_es.csv')
 
 mean_pos = (attn_occur_norm[attn_occur_norm['aa'].isin(['R', 'K'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
 mean_neg = (attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
-
 heads_pos_ranked = mean_pos.sort_values('attn_occur_norm', ascending=False).reset_index(drop=True)
 heads_neg_ranked = mean_neg.sort_values('attn_occur_norm', ascending=False).reset_index(drop=True)
 
@@ -741,11 +735,9 @@ unique_aas = sorted(attn_occur_norm['aa'].unique())
 n = len(unique_aas)
 ncols = 2
 nrows = int(np.ceil(n / ncols))
-
 vmin = attn_occur_norm['attn_occur_norm'].min()
 vmax = attn_occur_norm['attn_occur_norm'].max()
-
-w, h = panel_size(cols=4, rows=2)  # (3.5, 6.69) — was cols=4, rows=4, which gave (7.2, 7.2)
+w, h = panel_size(cols=4, rows=2) 
 fig, axes = plt.subplots(nrows, ncols, figsize=(w, h), dpi=300)
 axes_flat = axes.flatten()
 
@@ -768,13 +760,9 @@ for i, ax in enumerate(axes_flat):
     step_h = max(1, len(pivot.index) // 5)
     ax.set_yticks(range(0, len(pivot.index), step_h))
     ax.set_yticklabels(pivot.index[::step_h], fontsize=3)
-
-fig.suptitle('Mean(Summed Attention/Occurrence)', fontsize=7, y=0.99)
-fig.subplots_adjust(left=0.12, right=0.85, top=0.93, bottom=0.06, hspace=0.62, wspace=0.20)  # wspace was 0.55
-
+fig.subplots_adjust(left=0.12, right=0.85, top=0.93, bottom=0.06, hspace=0.62, wspace=0.20)  
 cax = fig.add_axes([0.88, 0.15, 0.03, 0.65])
 cbar = fig.colorbar(im, cax=cax)
 cbar.ax.tick_params(labelsize=4)
-
 plt.savefig(f"{BASE_PATH}/figures/final/DEKR_heatmaps.svg", dpi=300)
 plt.show()
