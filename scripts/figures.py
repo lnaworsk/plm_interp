@@ -698,6 +698,40 @@ plt.show()
 # Figure A3
 #################
 
+esm_pivot = comparison.pivot(index='res2',columns='res1',values='delta_esm')
+md_pivot = comparison.pivot(index='res2',columns='res1',values='delta_md')
+mirrored = comparison.rename(columns={'res1': 'res2', 'res2': 'res1'})
+comparison = pd.concat([comparison, mirrored], ignore_index=True).drop_duplicates(subset=['res1', 'res2'])
+
+all_aas = set(comparison['res1']) | set(comparison['res2'])
+res_order = [aa for cat in category_order for aa in sorted(all_aas) if aa_groups.get(aa) == cat]
+n = len(res_order)
+esm_pivot = esm_pivot.reindex(index=res_order, columns=res_order)
+md_pivot = md_pivot.reindex(index=res_order, columns=res_order)
+mask = np.triu_indices(n, k=1)
+esm_pivot.values[mask] = np.nan
+md_pivot.values[mask] = np.nan
+cmap = 'RdBu'   
+
+def plot_enrichment_heatmap(data, title, filename):
+    fig, ax = plt.subplots(dpi=300, figsize=(panel_size(cols=2, rows=2)))
+    vmax = np.nanmax(np.abs(data))
+    im = ax.imshow(data, cmap=cmap, aspect='auto', vmin=-vmax, vmax=vmax)
+    ax.set_xticks(range(len(res_order)))
+    ax.set_xticklabels(res_order, fontsize=5)
+    ax.set_yticks(range(len(res_order)))
+    ax.set_yticklabels(res_order, fontsize=5)
+    ax.set_xlabel('')
+    ax.set_ylabel('')
+    cbar = fig.colorbar(im,ax=ax,fraction=0.046,pad=0.04)
+    cbar.set_label(f'{title} Enrichment Δ (%)', fontsize=6)
+    cbar.ax.tick_params(labelsize=5)
+    plt.savefig(f'{BASE_PATH}/figures/final/{filename}.svg',dpi=300,bbox_inches='tight')
+    plt.show()
+
+plot_enrichment_heatmap(esm_pivot.values,'ESM-2 Jacobian','esm2_top_decile_enrichment')
+plot_enrichment_heatmap(md_pivot.values,'MD','md_top_decile_enrichment')
+
 #################
 # Figure A4
 #################
