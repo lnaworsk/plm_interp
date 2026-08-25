@@ -88,7 +88,7 @@ def load_idrome():
     supp_table = pd.read_excel(f'{BASE_PATH}/data/Supplementary_Table_3.xlsx')
     df_tesei   = pd.read_csv("https://raw.githubusercontent.com/KULL-Centre/_2023_Tesei_IDRome/main/IDRome_DB.csv")
     df_tesei['Rg_A'] = df_tesei['Rg/nm'] * 10
-    df_tesei   = df_tesei.merge(supp_table[['seq_name', 'sequence']], on='seq_name').drop_duplicates().dropna()
+    df_tesei   = df_tesei.merge(supp_table[['seq_name', 'sequence']], on='seq_name').drop_duplicates()
 
     seq_to_cluster = {}
     with open(f"{BASE_PATH}/data/idrome_clustered.fasta.clstr") as f:
