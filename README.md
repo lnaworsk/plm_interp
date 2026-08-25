@@ -44,8 +44,8 @@ NOTE: As many external databases are continuously updated, this repo provides ab
 > **PDB/DisProt Attention Analyses**
 - DisProt Sequences (accessed July 28, 2025): Sequences come frome DisProt release_2025_06 with_ambiguous_evidences. The filtered dervived set of sequences used in this analysis are already stored in data/protein_input_sets.csv and pdb_disprot.fasta
 - PDB Sequences (accessed July 16, 2025): Sequences come from https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt.gz. The filtered derived data utilized in this work are already stored in data/protein_input_sets.csv and pdb_disprot.fasta 
-- Attention Matrices: Data is not committed to GitHub and must be rerun: python scripts/get_attention_matrices.py. Data is output to data/attention_matrices_chunks
-- Attention Rollout: Data is not committed to GitHub and must be rerun: python scripts/get_esm2_attention_rollout.py. Data is output to data/attention_matrices_chunks
+- Attention Matrices: Data is not committed to GitHub and must be rerun: python scripts/get_attention_matrices.py. Data is output to /attention_matrices_chunks
+- Attention Rollout: Data is not committed to GitHub and must be rerun: python scripts/get_esm2_attention_rollout.py. Data is output to /attention_matrices_chunks
 
 > **Attention to Disease Residues**
 - ClinVar Variants (accessed Feb 3, 2026): Sequences of variants utilized in this study are already stored in data/clinvar_sequences.csv
@@ -70,10 +70,10 @@ NOTE: As many external databases are continuously updated, this repo provides ab
 |-----------------------|---------|
 | Figure 1 | 1. `python get_esm2_attention_matrices.py`<br>2. `python get_esm2_attention_rollout.py`<br>3. `python attention_rollout_analysis.py` |
 | Figure 2 | 1. `python get_esm2_attention_matrices.py`<br>2. `python get_esm2_attention_rollout.py`<br>3. `python attention_rollout_analysis.py` |
-| Figure 3 | 1. `python esm2_interp_data.py`<br>2. 2. `python clinvar_expanded.py` |
-| Figure 4| 1. `python get_contact_maps.py`<br>2. 2. `python md_variable_cutoff.py`<br>3. 3. `python md_contact_maps_analysis.py` |
-| Figure 5 | 1. `python esm2_interp_data.py`<br>2. 2. `python rg_mlp.py` |
-| Figure 6 | 1. `python esm2_interp_data.py`<br>2. 2. `python es_ablations2.py` |
+| Figure 3 | 1. `python esm2_interp_data.py`<br>2. `python clinvar_expanded.py` |
+| Figure 4| 1. `python get_contact_maps.py`<br>2. `python md_variable_cutoff.py`<br>3. 3. `python md_contact_maps_analysis.py` |
+| Figure 5 | 1. `python esm2_interp_data.py`<br>2.`python rg_mlp.py` |
+| Figure 6 | 1. `python esm2_interp_data.py`<br>2.`python es_ablations2.py` |
 
 ---
 
