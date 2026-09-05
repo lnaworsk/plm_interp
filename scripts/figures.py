@@ -480,13 +480,9 @@ plt.savefig(f'{BASE_PATH}/figures/final/rg_mlp.svg', dpi=300)
 plt.show()
 
 
-#########################
-# Figure 6 - ES Ablation 
-########################## 
-
 ######## sweep df 
 
-N_RANDOM_RUNS=25
+N_RANDOM_RUNS=5
 sweep_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/es_ablation_sweep_df_idrome_random_consecutive.csv')
     
 sweep_long = sweep_df.melt(
@@ -527,85 +523,6 @@ fig.subplots_adjust(left=0.16, right=0.72, top=0.78, bottom=0.32)
 plt.savefig(f'{BASE_PATH}/figures/final/head_ablation_sweep_.svg', dpi=300)
 plt.show()
 
-##### scatter plots 
-
-results_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/results_df.csv')
-saxs_results_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/saxs_results_df.csv')
-
-blue_scale_cmap = LinearSegmentedColormap.from_list('white_blue', ['white', '#2367B0'])
-def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=15,
-                           color=None, color_title='', figsize=(1.65, 1.53), dpi=300):
-    x = np.asarray(x); y = np.asarray(y); color = np.asarray(color)
-    abs_max = np.abs(color).max()
-    lim_min = min(x.min(), y.min())
-    lim_max = max(x.max(), y.max())
-
-    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
-    divider = make_axes_locatable(ax)
-    cax = divider.append_axes('right', size='6%', pad=0.05)   
-    sc = ax.scatter(x, y, c=color, cmap=blue_scale_cmap, vmin=0, vmax=abs_max, alpha=alpha, s=s, edgecolors='none')
-    cbar = plt.colorbar(sc, cax=cax)
-    cbar.set_label(color_title, fontsize=3.8)
-    cbar.ax.tick_params(labelsize=3.2, pad=1)
-    ax.plot([lim_min, lim_max], [lim_min, lim_max], linestyle='--', color='red', linewidth=0.7)
-    ax.set_xlim(lim_min, lim_max)
-    ax.set_ylim(lim_min, lim_max)
-    ax.set_xlabel(xlabel, fontsize=3.8, linespacing=1.1, labelpad=2)
-    ax.set_ylabel(ylabel, fontsize=3.8, linespacing=1.1, labelpad=2)
-    ax.tick_params(labelsize=3.2, pad=1)
-    ax.set_box_aspect(1)
-    fig.subplots_adjust(left=0.22, right=0.72, top=0.86, bottom=0.24)
-
-    if save_path:
-        fig.savefig(save_path, dpi=dpi)
-
-    return fig, ax
-
-label = 'idrome'
-plot = plot_comparison_color(
-    results_df['rg_baseline_scaled'], results_df['rg_ablated_scaled'],
-    'Baseline Predicted Rg\n(Flory Normalized)', 'Ablated Predicted Rg\n(Flory Normalized)',
-    f'{label.upper()} - Negative', save_path=f'{BASE_PATH}/figures/final/es_negative_{label}_scatter.svg',
-    alpha=1, s=5, color=results_df['frac_DE'], color_title='Frac DE')
-
-label = 'saxs'
-plot = plot_comparison_color(
-    saxs_results_df['rg_baseline_scaled'], saxs_results_df['rg_ablated_scaled'],
-    'Baseline Predicted Rg\n(Flory Normalized)', 'Ablated Predicted Rg\n(Flory Normalized)',
-    f'{label.upper()} - Negative', save_path=f'{BASE_PATH}/figures/final/es_negative_{label}_scatter.svg',
-    alpha=1, s=5, color=saxs_results_df['frac_DE'], color_title='Frac DE')
-
-####### kde 
-
-results_df['bigger_or_smaller'] = results_df['rg_ablated_scaled'] - results_df['rg_baseline_scaled']
-results_df['frac_DE_quartile'] = pd.qcut(results_df['frac_DE'], q=10,labels=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'])
-
-deciles = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10']
-blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6','#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
-decile_color_map = dict(zip(deciles, blue_colors))
-
-def plot_kde_by_decile(ax, data, field, xlabel, color_field='frac_DE_quartile'):
-    for q in deciles:
-        vals = data.loc[data[color_field] == q, field].dropna().values
-        if len(vals) < 2:
-            continue
-        kde = gaussian_kde(vals)
-        xs = np.linspace(vals.min(), vals.max(), 200)
-        ax.plot(xs, kde(xs), color=decile_color_map[q], linewidth=0.8, label=q)
-    ax.set_xlabel(xlabel, fontsize=4.2, labelpad=2)
-    ax.set_ylabel('Density', fontsize=4.2, labelpad=2)
-    ax.tick_params(labelsize=3.2, pad=1)
-
-w, h = panel_size(cols=2, rows=1)  
-fig, axes = plt.subplots(2, 1, figsize=(w, h), dpi=300)
-plot_kde_by_decile(axes[0], results_df, 'bigger_or_smaller', 'Ablated Pred Rg -\nBaseline Pred Rg')
-axes[0].axvline(0, color='red', linewidth=1.0)
-plot_kde_by_decile(axes[1], results_df, 'rg_baseline_scaled', 'Rg Baseline')
-handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,  loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
-fig.subplots_adjust(left=0.20, right=0.82, top=0.94, bottom=0.10, hspace=0.42)
-plt.savefig(f'{BASE_PATH}/figures/final/es_ablation_kde.svg', dpi=300)
-plt.show()
 
 #########################
 # Figure A1 
@@ -620,7 +537,7 @@ groups = ['DisProt', 'PDB']
 bins = np.histogram_bin_edges(protein_lengths['seq_len'], bins=40)  # shared edges so bars align
 fig, ax = plt.subplots(figsize=panel_size(cols=2, rows=1), layout='constrained')
 for g in groups:
-    ax.hist(protein_lengths.loc[protein_lengths.Group == g, 'seq_len'], bins=bins, label=g, color=GROUP_COLORS[g], alpha=0.55, edgecolor='none')
+    ax.hist(protein_lengths.loc[protein_lengths.Group == g, 'seq_len'], bins=bins, label=g, color=group_color_map[g], alpha=0.55, edgecolor='none')
 ax.set_xlabel("Sequence Length")
 ax.set_ylabel("Count")
 ax.legend(title="Group", loc='upper right')
@@ -635,9 +552,10 @@ fig, ax = plt.subplots(figsize=(w, h), dpi=300, layout='constrained')
 fig.get_layout_engine().set(w_pad=0.15, h_pad=0.15)
 for g in groups:
     vals = idr_df.loc[idr_df['Group'] == g, 'idr'].dropna().values
-    ax.hist(vals, bins=30, density=True, alpha=0.5, color=GROUP_COLORS[g], label=g, edgecolor='none')
+    ax.hist(vals, bins=30, density=True, alpha=0.5, color=group_color_map[g], label=g, edgecolor='none')
 ax.set_xlabel('# of Disordered Residues per Sequence', fontsize=5.5)
 ax.set_ylabel('Density', fontsize=5.5)
+ax.set_xlim(0, 300)
 ax.tick_params(labelsize=4.5)
 ax.legend(title='Group',fontsize=5,title_fontsize=5.5,frameon=False,loc='upper right')
 plt.savefig(f"{BASE_PATH}/figures/final/input_sets_disorder.svg",dpi=300)
@@ -654,7 +572,7 @@ fig.get_layout_engine().set(w_pad=0.1, h_pad=0.1)
 for i, g in enumerate(groups):
     sub = comb_props[comb_props['Group'] == g].set_index('amino_acid').reindex(amino_acids)
     offsets = x + (i - len(groups)/2) * width + width/2
-    ax.bar(offsets, sub['occurrence'], width=width, label=g, color=GROUP_COLORS[g])
+    ax.bar(offsets, sub['occurrence'], width=width, label=g, color=group_color_map[g])
 ax.set_xticks(x)
 ax.set_xticklabels(amino_acids, fontsize=5)
 ax.set_xlabel('Amino Acid', fontsize=6)
