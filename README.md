@@ -72,8 +72,7 @@ NOTE: As many external databases are continuously updated, this repo provides ab
 | Figure 2 | 1. `python get_esm2_attention_matrices.py`<br>2. `python get_esm2_attention_rollout.py`<br>3. `python attention_rollout_analysis.py` |
 | Figure 3 | 1. `python esm2_interp_data.py`<br>2. `python clinvar_expanded.py` |
 | Figure 4| 1. `python get_contact_maps.py`<br>2. `python md_variable_cutoff.py`<br>3. 3. `python md_contact_maps_analysis.py` |
-| Figure 5 | 1. `python esm2_interp_data.py`<br>2.`python rg_mlp.py` |
-| Figure 6 | 1. `python esm2_interp_data.py`<br>2.`python es_ablations2.py` |
+| Figure 5 | 1. `python esm2_interp_data.py`<br>2.`python rg_mlp.py`  <br>3.`python es_ablations2.py`|
 
 ---
 
