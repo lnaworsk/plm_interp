@@ -435,7 +435,7 @@ saxs_proteins,   saxs_true_col   = load_saxs()
 heads_final = list(zip(heads_neg_ranked['layer'][:OVERWRITE_NUM_HEADS], heads_neg_ranked['head'][:OVERWRITE_NUM_HEADS]))
 heads_final_pos = list(zip(heads_pos_ranked['layer'][:OVERWRITE_NUM_HEADS], heads_pos_ranked['head'][:OVERWRITE_NUM_HEADS]))
 
-run_sweep(idrome_proteins, idrome_true_col, 'idrome', heads_neg_ranked, heads_pos_ranked)
+#run_sweep(idrome_proteins, idrome_true_col, 'idrome', heads_neg_ranked, heads_pos_ranked)
 
 # #negative snapshot
 saxs_results_df = run_eval(saxs_proteins, saxs_true_col, heads_final, label = 'saxs', title = 'neg')
@@ -511,14 +511,14 @@ def run_eval_residual(proteins, true_col, heads_final, label = 'saxs', title = '
 
     ######## residualize embeddings
     # baseline 
-    int_cols = [c for c in base_emb_df.columns if to_int_or_none(c) is not None]
+    int_cols = [c for c in base_emb_df.columns if isinstance(c, int)]
     X = sm.add_constant(proteins[[f'{frac_col}']])
     y = base_emb_df[int_cols]
     model = sm.OLS(y, X).fit()
     residual_baseline_embeddings = model.resid
 
     # ablated
-    int_cols = [c for c in abl_emb_df.columns if to_int_or_none(c) is not None]
+    int_cols = [c for c in abl_emb_df.columns if isinstance(c, int)]
     X = sm.add_constant(proteins[[f'{frac_col}']])
     y = abl_emb_df[int_cols]
     model = sm.OLS(y, X).fit()
