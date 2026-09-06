@@ -17,7 +17,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent 
 BASE_PATH = SCRIPT_DIR.parent 
 from tqdm import tqdm
-from scipy.stats import gaussian_kde
+import statsmodels.api as sm
 
 '''
 Script to Ablate Heads of ESM-2 likely to be associated with electrostatics and 
@@ -29,11 +29,11 @@ evaluate ablation effect on MLP Rg prediction
 # Constants
 # -------------------------------------------------------
 
-OVERWRITE_NUM_HEADS = 29
+OVERWRITE_NUM_HEADS = 50
 MAX_HEADS_ABLATE = 50
 SEED             = 42
 DROPOUT, HIDDEN_DIM, REPR_LAYER = 0.3, 512, 33
-SEQ_LENGTH, TOKENS_PER_BATCH, EMB_DIM = 1022, 4096, 1280
+SEQ_LENGTH, TOKENS_PER_BATCH, EMB_DIM = 1022, 8192, 1280
 nu_fit, R0_fit   = 0.533, 2.420
 coeffs           = np.array([5.18129864, -31.57633081, 63.38468187])
 baseline_poly    = np.poly1d(coeffs)
@@ -128,12 +128,12 @@ def load_saxs():
 # Head selection (largest only)
 # -------------------------------------------------------
 
-print('running aa attention analysis per head/layer normalized by occurrence')
-attn = run_aa_analysis_head_layer(normalize = 'occurrence', model = 'original')
-attn_occur_norm = attn.groupby(['layer', 'head', 'aa'])['attn_occur_norm'].mean().reset_index()
-attn_occur_norm = attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E', 'K', 'R'])]
-attn_occur_norm.to_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
-#attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
+# print('running aa attention analysis per head/layer normalized by occurrence')
+# attn = run_aa_analysis_head_layer(normalize = 'occurrence', model = 'original')
+# attn_occur_norm = attn.groupby(['layer', 'head', 'aa'])['attn_occur_norm'].mean().reset_index()
+# attn_occur_norm = attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E', 'K', 'R'])]
+# attn_occur_norm.to_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
+attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
 
 mean_pos = (attn_occur_norm[attn_occur_norm['aa'].isin(['R', 'K'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
 mean_neg = (attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
@@ -196,21 +196,33 @@ def to_rg(pred_resid, n):
     return pred_resid + baseline_poly(np.log(n))
 
 def register_esm_ablation_hooks(model, heads_to_ablate, num_heads=20, head_dim=64):
+    """
+    True zero-ablation of ESM-2 attention heads: Att_h(x) -> 0.
+
+    Hooks out_proj's INPUT (register_forward_pre_hook), which is the
+    concatenated per-head output [Att_0(x), ..., Att_19(x)] BEFORE
+    out_proj mixes heads together. Zeroing the h-th 64-dim slice here
+    sets Att_h(x) = 0 while leaving every other head untouched, and
+    out_proj then runs normally on the modified input.
+    """
     by_layer = {}
     for layer_idx, head_idx in heads_to_ablate:
         by_layer.setdefault(layer_idx, []).append(head_idx)
     handles = []
     for layer_idx, head_indices in by_layer.items():
-        def make_hook(hidxs):
-            def hook(module, input, output):
-                out = output[0].clone()
-                L, B, D = out.shape
-                out = out.view(L, B, num_heads, head_dim)
+        def make_pre_hook(hidxs):
+            def pre_hook(module, args):
+                x = args[0].clone()  # (tgt_len, bsz, embed_dim), pre-out_proj
                 for h in hidxs:
-                    out[:, :, h, :] = 0.0
-                return (out.view(L, B, D),) + output[1:]
-            return hook
-        handles.append(model.layers[layer_idx].self_attn.register_forward_hook(make_hook(head_indices)))
+                    start, end = h * head_dim, (h + 1) * head_dim
+                    x[:, :, start:end] = 0.0
+                return (x,) + args[1:]
+            return pre_hook
+        handles.append(
+            model.layers[layer_idx].self_attn.out_proj.register_forward_pre_hook(
+                make_pre_hook(head_indices)
+            )
+        )
     return handles
 
 def remove_hooks(handles):
@@ -231,38 +243,6 @@ def evaluate(pred, true):
     r_p, _ = pearsonr(true, pred)
     mae    = np.abs(pred - true).mean()
     return r_s, r_p, mae
-
-
-blue_scale_cmap = LinearSegmentedColormap.from_list('white_blue', ['white', '#2367B0'])
-def plot_comparison_color(x, y, xlabel, ylabel, title, save_path=None, alpha=0.3, s=20,
-                           color=None, color_title='', figsize=(1.65, 1.53), dpi=300):
-    x = np.asarray(x); y = np.asarray(y); color = np.asarray(color)
-    abs_max = np.abs(color).max()
-    lim_min = min(x.min(), y.min())
-    lim_max = max(x.max(), y.max())
-
-    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
-    divider = make_axes_locatable(ax)
-    cax = divider.append_axes('right', size='6%', pad=0.05)   
-    sc = ax.scatter(x, y, c=color, cmap=blue_scale_cmap, vmin=0, vmax=abs_max,alpha=alpha, s=s, edgecolors='none')
-    cbar = plt.colorbar(sc, cax=cax)
-    cbar.set_label(color_title, fontsize=3.8)
-    cbar.ax.tick_params(labelsize=3.2, pad=1)
-    ax.plot([lim_min, lim_max], [lim_min, lim_max], linestyle='--', color='red', linewidth=0.7)
-    ax.set_xlim(lim_min, lim_max)
-    ax.set_ylim(lim_min, lim_max)
-    ax.set_xlabel(xlabel, fontsize=3.8, linespacing=1.1, labelpad=2)
-    ax.set_ylabel(ylabel, fontsize=3.8, linespacing=1.1, labelpad=2)
-    ax.tick_params(labelsize=3.2, pad=1)
-    ax.set_title(title, fontsize=4.2, pad=2)
-    ax.set_box_aspect(1)
-    fig.subplots_adjust(left=0.22, right=0.72, top=0.86, bottom=0.24)
-
-    if save_path:
-        fig.savefig(save_path, dpi=dpi)
-
-    return fig, ax
-
 
 def cohen_d(distr1, distr2): 
     mean1 = np.mean(distr1)
@@ -286,14 +266,14 @@ def run_sweep(proteins, true_col, label, heads_neg_ranked, heads_pos_ranked):
 
     # get baseline 
     print(f"\n[{label}] Getting baseline embeddings...")
-    base_emb_df   = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence')
+    base_emb_df   = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH)
     rg_base       = predict_rg(base_emb_df, N)
     base_spearman, base_pearson, base_mae = evaluate(rg_base, rg_true)
     print(f"Baseline | Spearman={base_spearman:.3f} | Pearson={base_pearson:.3f} | MAE={base_mae:.4f}")
 
     rng       = np.random.default_rng(SEED)
     all_heads = [(l, h) for l in range(len(esm_model.layers)) for h in range(NUM_HEADS)]
-    N_RANDOM_RUNS = 25
+    N_RANDOM_RUNS = 5
 
     # Pre-build cumulative random head sequences for all 25 runs
     # Each run is a list of length MAX_HEADS_ABLATE, where entry i is the head added at step i+1
@@ -315,7 +295,7 @@ def run_sweep(proteins, true_col, label, heads_neg_ranked, heads_pos_ranked):
         heads_neg = list(zip(heads_neg_ranked['layer'][:n_heads], heads_neg_ranked['head'][:n_heads]))
         handles = register_esm_ablation_hooks(esm_model, heads_neg, NUM_HEADS, HEAD_DIM)
         try:
-            rg_abl_neg = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence'), N)
+            rg_abl_neg = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH), N)
         finally:
             remove_hooks(handles)
 
@@ -323,7 +303,7 @@ def run_sweep(proteins, true_col, label, heads_neg_ranked, heads_pos_ranked):
         heads_pos = list(zip(heads_pos_ranked['layer'][:n_heads], heads_pos_ranked['head'][:n_heads]))
         handles = register_esm_ablation_hooks(esm_model, heads_pos, NUM_HEADS, HEAD_DIM)
         try:
-            rg_abl_pos = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence'), N)
+            rg_abl_pos = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH), N)
         finally:
             remove_hooks(handles)
 
@@ -333,7 +313,7 @@ def run_sweep(proteins, true_col, label, heads_neg_ranked, heads_pos_ranked):
             rand_heads = random_head_sequences[run_idx][:n_heads]
             handles = register_esm_ablation_hooks(esm_model, rand_heads, NUM_HEADS, HEAD_DIM)
             try:
-                rg_rand = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence'), N)
+                rg_rand = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH), N)
             finally:
                 remove_hooks(handles)
             r_s_rand, r_p_rand, _ = evaluate(rg_rand, rg_true)
@@ -408,14 +388,15 @@ def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
     rg_true = proteins[true_col].values / (R0_fit * (N ** nu_fit))
 
     print(f"\n{[label]} Getting baseline embeddings...")
-    base_emb_df = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence')
+    base_emb_df = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH)
     rg_base     = predict_rg(base_emb_df, N)
     base_spearman, base_pearson, base_mae = evaluate(rg_base, rg_true)
     print(f"Baseline | Spearman={base_spearman:.3f} | Pearson={base_pearson:.3f} | MAE={base_mae:.4f}")
 
     handles = register_esm_ablation_hooks(esm_model, heads_final, NUM_HEADS, HEAD_DIM)
     try:
-        rg_abl = predict_rg(get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence'), N)
+        abl_emb_df = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH)
+        rg_abl = predict_rg(abl_emb_df, N)
     finally:
         remove_hooks(handles)
 
@@ -427,6 +408,7 @@ def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
     results_df['frac_KR']   = results_df['sequence'].str.count('[KR]') / results_df['sequence'].str.len() * 100
     results_df['delta_mae'] = (np.abs(results_df['rg_ablated_scaled'] - results_df['rg_true_scaled']) -
                                 np.abs(results_df['rg_baseline_scaled'] - results_df['rg_true_scaled']))
+    results_df['bigger_or_smaller'] = results_df['rg_ablated_scaled'] - results_df['rg_baseline_scaled']
 
     r_s_base, r_p_base, mae_base = evaluate(results_df['rg_baseline_scaled'], results_df['rg_true_scaled'])
     r_s_abl, r_p_abl, mae_abl = evaluate(results_df['rg_ablated_scaled'],  results_df['rg_true_scaled'])
@@ -439,14 +421,6 @@ def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
     n_better = (results_df['delta_mae'] < 0).sum()
     print(f"Worse: {n_worse} ({100*n_worse/len(results_df):.1f}%) | Better: {n_better} ({100*n_better/len(results_df):.1f}%)")
 
-    color_col = 'frac_KR' if title == 'pos' else 'frac_DE'
-    color_title = 'Frac KR' if title == 'pos' else 'Frac DE'
-    plot_comparison_color(
-        results_df['rg_baseline_scaled'], results_df['rg_ablated_scaled'],
-        'Baseline Predicted Rg (Flory Normalized)', 'Ablated Predicted Rg (Flory Normalized)',
-        f'{label.upper()} - {title.upper()}', save_path=f'{BASE_PATH}/figures/es_{title}_{label}_scatter.svg',
-        alpha=1, s=30, color=results_df[color_col], color_title=color_title)
-
     return results_df
 
 
@@ -457,61 +431,131 @@ def run_eval(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
 
 idrome_proteins, idrome_true_col = load_idrome()
 saxs_proteins,   saxs_true_col   = load_saxs()
+
 heads_final = list(zip(heads_neg_ranked['layer'][:OVERWRITE_NUM_HEADS], heads_neg_ranked['head'][:OVERWRITE_NUM_HEADS]))
+heads_final_pos = list(zip(heads_pos_ranked['layer'][:OVERWRITE_NUM_HEADS], heads_pos_ranked['head'][:OVERWRITE_NUM_HEADS]))
 
 run_sweep(idrome_proteins, idrome_true_col, 'idrome', heads_neg_ranked, heads_pos_ranked)
+
+# #negative snapshot
 saxs_results_df = run_eval(saxs_proteins, saxs_true_col, heads_final, label = 'saxs', title = 'neg')
 results_df = run_eval(idrome_proteins, idrome_true_col, heads_final, label = 'idrome', title = 'neg')
 saxs_results_df.to_csv(f'{BASE_PATH}/data/figure_data/saxs_results_df.csv', index = False)
 results_df.to_csv(f'{BASE_PATH}/data/figure_data/results_df.csv', index = False)
 
-### Analysis ####
-     
-results_df['bigger_or_smaller'] = results_df['rg_ablated_scaled'] - results_df['rg_baseline_scaled']
-results_df['frac_DE_quartile'] = pd.qcut(results_df['frac_DE'], q=10, labels=['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10'])
+# #positive snapshot
+saxs_results_df_pos = run_eval(saxs_proteins, saxs_true_col, heads_final_pos, label = 'saxs', title = 'pos')
+results_df_pos = run_eval(idrome_proteins, idrome_true_col, heads_final_pos, label = 'idrome', title = 'pos')
+saxs_results_df_pos.to_csv(f'{BASE_PATH}/data/figure_data/saxs_results_df_pos.csv', index = False)
+results_df_pos.to_csv(f'{BASE_PATH}/data/figure_data/results_df_pos.csv', index = False)
 
-deciles = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10']
-blue_colors = ['#dbeafe', '#bfdbfe', '#93c5fd', '#60a5fa', '#3b82f6','#2563eb', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554']
-decile_color_map = dict(zip(deciles, blue_colors))
+######## residualization of DEKR 
 
-def plot_kde_by_decile(ax, data, field, xlabel, color_field='frac_DE_quartile'):
-    for q in deciles:
-        vals = data.loc[data[color_field] == q, field].dropna().values
-        kde = gaussian_kde(vals)
-        xs = np.linspace(vals.min(), vals.max(), 200)
-        ax.plot(xs, kde(xs), color=decile_color_map[q], linewidth=0.8, label=q)
-    ax.set_xlabel(xlabel, fontsize=4.2, labelpad=2)
-    ax.set_ylabel('Density', fontsize=4.2, labelpad=2)
-    ax.tick_params(labelsize=3.2, pad=1)
+# baseline embedding ~ DEKR --> residual baseline embedding 
+# ablated embedding ~ DEKR --> residual ablated embedding 
+# residual baseline embedding  --> residual baseline rg prediction 
+# residual ablated embedding --> residual ablated rg prediction 
+# ablated embedding --> ablated rg prediction 
+# baseline embedding --> baseline rg prediction 
+# residual baseline - residual ablated --> any gap between them is NOT attributed to DEKR so has to come from some other electrostatics 
 
-fig, axes = plt.subplots(2, 1, dpi=300)
-plot_kde_by_decile(axes[0], results_df, 'bigger_or_smaller', 'Ablated Pred Rg -\nBaseline Pred Rg')
-axes[0].axvline(0, color='red', linewidth=1.0)
-plot_kde_by_decile(axes[1], results_df, 'rg_baseline_scaled', 'Rg Baseline')
-handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, title='Frac DE\nDecile', fontsize=3.0, title_fontsize=3.2,loc='center left', bbox_to_anchor=(0.83, 0.5), frameon=False, handlelength=0.8,handletextpad=0.3, labelspacing=0.25, borderaxespad=0)
-fig.suptitle('Negative Head Ablation - IDRome', fontsize=4.6, y=0.99)
-fig.subplots_adjust(left=0.20, right=0.82, top=0.94, bottom=0.10, hspace=0.42)
-plt.savefig(f'{BASE_PATH}/figures/es_ablation_kde.svg', dpi=300)
-plt.show()
+def bootstrap_gap_test(rg_true, pred_base_res, pred_abl_res, n_boot=5000, seed=SEED, method='pearson'):
+    """Paired bootstrap over proteins. Returns observed gap, 95% CI, and a
+    two-sided bootstrap p-value."""
+    corr_fn = pearsonr if method == 'pearson' else spearmanr
+    rg_true = np.asarray(rg_true)
+    pred_base_res = np.asarray(pred_base_res)
+    pred_abl_res = np.asarray(pred_abl_res)
+    n = len(rg_true)
 
-q10 = results_df.loc[results_df['frac_DE_quartile'] == 'Q10', 'delta_mae'].values
-rows = []
-for q in ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9']:
-    qx = results_df.loc[results_df['frac_DE_quartile'] == q, 'delta_mae'].values
-    ks_stat, p_val = ks_2samp(qx, q10)
-    cohens_d = cohen_d(q10, qx)
-    rows.append({
-        'Comparison': f'{q} vs Q10',
-        'mean_delta (Q)': round(np.mean(qx), 5),
-        'mean_delta (Q10)': round(np.mean(q10), 5),
-        'KS': round(ks_stat, 3),
-        'p': p_val, 
-        'cohen_d' : cohens_d})
+    observed_gap = corr_fn(rg_true, pred_abl_res)[0] - corr_fn(rg_true, pred_base_res)[0]
 
-ks_df = pd.DataFrame(rows)
-reject, p_corrected, _, _ = multipletests(ks_df['p'], method='bonferroni')
-ks_df['p_corrected'] = p_corrected.round(4)
-ks_df['significant'] = reject
-print(ks_df.to_string(index=False))
+    rng = np.random.default_rng(seed)
+    gaps = np.empty(n_boot)
+    for i in range(n_boot):
+        idx = rng.integers(0, n, n)  # same resample applied to both predictions -- paired
+        r_abl = corr_fn(rg_true[idx], pred_abl_res[idx])[0]
+        r_base = corr_fn(rg_true[idx], pred_base_res[idx])[0]
+        gaps[i] = r_abl - r_base
+
+    ci_lo, ci_hi = np.percentile(gaps, [2.5, 97.5])
+
+    if observed_gap < 0:
+        p_boot = 2 * (gaps > 0).mean()
+    else:
+        p_boot = 2 * (gaps < 0).mean()
+    p_boot = min(p_boot, 1.0)
+
+    return observed_gap, ci_lo, ci_hi, p_boot
+
+def run_eval_residual(proteins, true_col, heads_final, label = 'saxs', title = 'neg'):
+    print(f'running {title}')
+    proteins = proteins.copy()
+    proteins['frac_DE']   = proteins['sequence'].str.count('[DE]') / proteins['sequence'].str.len() * 100
+    proteins['frac_KR']   = proteins['sequence'].str.count('[KR]') / proteins['sequence'].str.len() * 100
+    frac_col = 'frac_KR' if title =='pos' else 'frac_DE'
+    N       = proteins['seqlen'].values
+    rg_true = proteins[true_col].values / (R0_fit * (N ** nu_fit))
+
+    ######### get embeddings 
+    print(f"\n{[label]} Getting baseline embeddings...")
+    #baseline 
+    base_emb_df = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH)
+
+    #ablated 
+    handles = register_esm_ablation_hooks(esm_model, heads_final, NUM_HEADS, HEAD_DIM)
+    try:
+        abl_emb_df = get_esm2_embeddings(proteins, esm_model, alphabet, device, 'sequence', tokens_per_batch=TOKENS_PER_BATCH)
+    finally:
+        remove_hooks(handles)
+
+    ######## residualize embeddings
+    # baseline 
+    int_cols = [c for c in base_emb_df.columns if to_int_or_none(c) is not None]
+    X = sm.add_constant(proteins[[f'{frac_col}']])
+    y = base_emb_df[int_cols]
+    model = sm.OLS(y, X).fit()
+    residual_baseline_embeddings = model.resid
+
+    # ablated
+    int_cols = [c for c in abl_emb_df.columns if to_int_or_none(c) is not None]
+    X = sm.add_constant(proteins[[f'{frac_col}']])
+    y = abl_emb_df[int_cols]
+    model = sm.OLS(y, X).fit()
+    residual_abl_embeddings = model.resid
+
+    ######### predict rg 
+
+    # baseline
+    rg_base = predict_rg(base_emb_df[int_cols], N)
+    base_spearman, base_pearson, base_mae = evaluate(rg_base, rg_true)
+    print(f"Baseline | Spearman={base_spearman:.3f} | Pearson={base_pearson:.3f} | MAE={base_mae:.4f}")
+
+    # baseline residual
+    rg_base_res = predict_rg(residual_baseline_embeddings, N)
+    base_res_spearman, base_res_pearson, base_res_mae = evaluate(rg_base_res, rg_true)
+    print(f"Baseline Res | Spearman={base_res_spearman:.3f} | Pearson={base_res_pearson:.3f} | MAE={base_res_mae:.4f}")
+
+    # ablated
+    rg_abl = predict_rg(abl_emb_df[int_cols], N)
+    abl_spearman, abl_pearson, abl_mae = evaluate(rg_abl, rg_true)
+    print(f"Abl | Spearman={abl_spearman:.3f} | Pearson={abl_pearson:.3f} | MAE={abl_mae:.4f}")
+
+    # ablated residual
+    rg_abl_res = predict_rg(residual_abl_embeddings, N)
+    abl_res_spearman, abl_res_pearson, abl_res_mae = evaluate(rg_abl_res, rg_true)
+    print(f"Abl Res | Spearman={abl_res_spearman:.3f} | Pearson={abl_res_pearson:.3f} | MAE={abl_res_mae:.4f}")
+
+    ##### analyse 
+    print(f'BEYOND COMPOSITION GAP: Ablated Residual - Baseline Residual: Spearman - {abl_res_spearman - base_res_spearman}, Pearson {abl_res_pearson - base_res_pearson}')
+
+    ##### significance test
+    for method in ['pearson', 'spearman']:
+        gap, ci_lo, ci_hi, p = bootstrap_gap_test(rg_true, rg_base_res, rg_abl_res, method=method)
+        print(f"[{title}] {method} bootstrap: gap={gap:.4f}, 95% CI=[{ci_lo:.4f}, {ci_hi:.4f}], p={p:.4g}")
+
+    return ''
+
+run_eval_residual(idrome_proteins, 'Rg_A', heads_final, label = 'idrome', title = 'neg')
+run_eval_residual(idrome_proteins, 'Rg_A', heads_final_pos, label = 'idrome', title = 'pos')
 
