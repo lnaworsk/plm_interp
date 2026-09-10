@@ -420,7 +420,7 @@ plt.show()
 df_eval = pd.read_csv(f'{BASE_PATH}/data/figure_data/df_eval.csv')
 saxs_proteins = pd.read_csv(f'{BASE_PATH}/data/figure_data/saxs_proteins.csv')
 
-def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30, color=None, color_title='', cbar_ax=None):
+def plot_comparison_color(ax, x, y, xlabel, ylabel, alpha=0.3, s=30, color=None, color_title='', cbar_ax=None):
     x = np.asarray(x); y = np.asarray(y)
     lim_min = min(x.min(), y.min())
     lim_max = max(x.max(), y.max())
@@ -442,41 +442,26 @@ def plot_comparison_color(ax, x, y, xlabel, ylabel, title, alpha=0.3, s=30, colo
     ax.set_xlabel(xlabel, fontsize=5.5)
     ax.set_ylabel(ylabel, fontsize=5.5)
     ax.tick_params(labelsize=4.5)
-    if isinstance(title, (list, tuple)):
-        ax.set_title(title, fontsize=6, linespacing=1.3)
-    else:
-        ax.set_title(title, fontsize=6)
     ax.set_box_aspect(1)
-
-
-r_idrome, _ = pearsonr(df_eval['Rg_true_norm'], df_eval['Rg_pred_norm'])
-r_s_idrome, _ = spearmanr(df_eval['Rg_true_norm'], df_eval['Rg_pred_norm'])
-r_flory_saxs, _       = pearsonr(saxs_proteins['saxs_norm'], saxs_proteins['Rg_pred_flory_norm'])
-r_s_flory_saxs, _       = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['Rg_pred_flory_norm'])
-r_starling, _ = pearsonr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
-r_s_starling, _ = spearmanr(saxs_proteins['saxs_norm'], saxs_proteins['starling_cuda_norm'])
 
 w, h = panel_size(cols=4, rows=1)  # (7.2, 1.53)
 fig, axes = plt.subplots(1, 3, figsize=(w, h), dpi=300)
 plot_comparison_color(
     axes[0], x=df_eval['Rg_true_norm'], y=df_eval['Rg_pred_norm'],
-    xlabel='Tesei Rg\nFlory Normalized (Å)', ylabel='MLP Predicted Rg\nFlory Normalized (Å)',
-    title=['IDRome-MLP', f'Pearson r = {r_idrome:.3f}, Spearman r = {r_s_idrome:.3f}'],
+    xlabel='Tesei Rg Normalized', ylabel='MLP Predicted Rg Normalized',
     alpha=1, s=8)
 
 plot_comparison_color(
     axes[1], x=saxs_proteins['saxs_norm'], y=saxs_proteins['Rg_pred_flory_norm'],
-    xlabel='Experimental SAXS Rg\nFlory Normalized (Å)', ylabel='Predicted Rg\nFlory Normalized (Å)',
-    title=['SAXS-MLP', f'Pearson r = {r_flory_saxs:.3f}, Spearman r = {r_s_flory_saxs:.3f}'],
+    xlabel='SAXS Rg Normalized', ylabel='Predicted Rg Normalized',
     alpha=1, s=8)
 
 plot_comparison_color(
     axes[2], x=saxs_proteins['saxs_norm'], y=saxs_proteins['starling_cuda_norm'],
-    xlabel='Experimental SAXS Rg\nFlory Normalized (Å)', ylabel='STARLING Cuda Rg\nFlory Normalized (Å)',
-    title=['SAXS-STARLING', f'Pearson r = {r_starling:.3f}, Spearman r = {r_s_starling:.3f}'],
+    xlabel='SAXS Rg Normalized', ylabel='STARLING Rg Normalized',
     alpha=1, s=8)
 
-fig.subplots_adjust(left=0.055, right=0.99, top=0.82, bottom=0.23, wspace=0.22)
+fig.subplots_adjust(left=0.055, right=0.99, top=0.82, bottom=0.23)
 plt.savefig(f'{BASE_PATH}/figures/final/rg_mlp.svg', dpi=300)
 plt.show()
 
