@@ -2,7 +2,7 @@
 
 > plm_interp contains code related to analyzing ESM-2 interpretability for intrinisically disordered proteins.
 
- **Paper:** [Title of preprint](https://arxiv.org/abs/XXXX.XXXXX)  
+ **Paper:** [Mechanistic Interpretability of Protein Language Models Reveals Encoded Structural and Functional Properties of Intrinsically Disordered Proteins](https://arxiv.org/abs/XXXX.XXXXX)  
  **Authors:** [Lauren Naworski] (https://github.com/lnaworsk), [Rob Scrutton], [Lydia Good]
 
 
