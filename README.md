@@ -1,21 +1,21 @@
-# [plm_interp]
+# plm_interp
 
-> plm_interp contains code related to analyzing ESM-2 interpretability for intrinisically disordered proteins.
+> plm_interp contains code related to analyzing ESM-2 interpretability for intrinsically disordered proteins.
 
  **Paper:** [Mechanistic Interpretability of Protein Language Models Reveals Encoded Structural and Functional Properties of Intrinsically Disordered Proteins](https://www.biorxiv.org/content/10.64898/2026.09.10.750691v1)  
- **Authors:** [Lauren Naworski](https://github.com/lnaworsk), [Rob Scrutton](https://github.com/Rob-Scrutton/), [Lydia Good](https://github.com/lydia-good/)
+ **Authors:** [Lauren Naworski](https://github.com/lnaworsk), [Lydia Good](https://github.com/lydia-good/), [Rob Scrutton](https://github.com/Rob-Scrutton/), Tuomas P. J. Knowles
 
 
 ## Installation
 ---
 ```bash
 git clone https://github.com/lnaworsk/plm_interp.git
-cd [plm_interp]
+cd plm_interp
 conda env create -f environment.yml
 conda activate torch-gpu
 ```
 
-NOTE: You will need to install Iupred2a https://iupred2a.elte.hu/ to run and upate iupred_filepath (line 25) of scripts/attention_functions.py to redirect to your local copy. 
+NOTE: You will need to install Iupred2a https://iupred2a.elte.hu/ to run and update iupred_filepath (line 25) of scripts/attention_functions.py to redirect to your local copy. 
 
 ---
 
@@ -27,7 +27,7 @@ NOTE: You will need to install Iupred2a https://iupred2a.elte.hu/ to run and upa
 ├── figures/          # [Folder for saving all figures]
 ├── scripts/        # [Code to run all analyses ]
 ├── environment.yml
-├── mlp_final.py #[Rg Predictor]
+├── mlp_final.pt #[Rg Predictor]
 └── README.md
 ```
 
@@ -35,32 +35,53 @@ NOTE: You will need to install Iupred2a https://iupred2a.elte.hu/ to run and upa
 
 ## Data
 
-Most required data is already committed to this repo. Most data requiring downloads can be downloaded by running scripts/esm2_interp_data.py. See esm2_interp_data.py for manual download of one additional data file. Run python scripts/get_esm2_attention_matrices.py followed by python get_esm2_attention_rollout.py to generate necessary attention data. 
+Most required data is already committed to this repo. Most data requiring downloads can be downloaded by running scripts/esm2_interp_data.py. See esm2_interp_data.py for manual download of one additional data file. Run python scripts/get_esm2_attention_matrices.py followed by python scripts/get_esm2_attention_rollout.py to generate necessary attention data. 
 
 Please see scripts/esm2_interp_data.py for information on external data and how to access/download external data utilized for this work. Run python scripts/esm2_interp_data.py for automatic download of external data. 
 
-NOTE: As many external databases are continuously updated, this repo provides ability to download directly from the external DBs (getting most up-to-date) or to utilize the exact sequences and data we utilized for this work for reproducability. The repo is automatically set up for reproducing the same analyses in this work (see scripts/esm2_interp_data.py)
+NOTE: As many external databases are continuously updated, this repo provides ability to download directly from the external DBs (getting most up-to-date) or to utilize the exact sequences and data we utilized for this work for reproducibility. The repo is automatically set up for reproducing the same analyses in this work (see scripts/esm2_interp_data.py)
 
 > **PDB/DisProt Attention Analyses**
-- DisProt Sequences (accessed July 28, 2025): Sequences come frome DisProt release_2025_06 with_ambiguous_evidences. The filtered dervived set of sequences used in this analysis are already stored in data/protein_input_sets.csv and pdb_disprot.fasta
-- PDB Sequences (accessed July 16, 2025): Sequences come from https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt.gz. The filtered derived data utilized in this work are already stored in data/protein_input_sets.csv and pdb_disprot.fasta 
-- Attention Matrices: Data is not committed to GitHub and must be rerun: python scripts/get_attention_matrices.py. Data is output to /attention_matrices_chunks
+- DisProt Sequences (accessed July 28, 2025): Sequences come from DisProt release_2025_06 with_ambiguous_evidences (data/disprot.fasta). The filtered derived set of sequences used in this analysis are already stored in data/protein_input_sets.csv, pdb_disprot.fasta, clustered_input.fasta, and clustered_input.fasta.clstr
+- PDB Sequences (accessed July 16, 2025): Sequences come from https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt.gz. The filtered derived data utilized in this work are already stored in data/protein_input_sets.csv, pdb_disprot.fasta, clustered_input.fasta, and clustered_input.fasta.clstr
+- Attention Matrices: Data is not committed to GitHub and must be rerun: python scripts/get_esm2_attention_matrices.py. Data is output to /attention_matrices_chunks
 - Attention Rollout: Data is not committed to GitHub and must be rerun: python scripts/get_esm2_attention_rollout.py. Data is output to /attention_matrices_chunks
 
 > **Attention to Disease Residues**
 - ClinVar Variants (accessed Feb 3, 2026): Sequences of variants utilized in this study are already stored in data/clinvar_sequences.csv
 - gene2refseq (accessed Feb 3, 2026): is from https://ftp.ncbi.nlm.nih.gov/gene/DATA/ and to be stored in data/gene2refseq. Run python scripts/esm2_interp_data.py to automatically download. 
 - GRCh38_latest_protein (accessed Feb 3, 2026): is from https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/ and to be stored in data/GRCh38_latest_protein_copy.faa. Run python scripts/esm2_interp_data.py to automatically download. 
-- DescribeProt Evolutionary Conservation: 9606_database comes from describprot - https://biomine.cs.vcu.edu/server-handler/?type=servers&target=DESCRIBEPROT/ and should be saved to data/9606_database.json. See esm2_interp_data.py for instructions.
+- DescribeProt Evolutionary Conservation: 9606_database comes from DescribeProt - https://biomine.cs.vcu.edu/server-handler/?type=servers&target=DESCRIBEPROT/ and should be saved to data/9606_database.json. See esm2_interp_data.py for instructions.
 
 > **IDR Contact Maps**
-- IDRome Supplementary Table 3: https://www.nature.com/articles/s41592-023-02159-5#MOESM1; run python scripts/esm2_interp_data.py to download
+- IDRome Supplementary Table 3: https://www.nature.com/articles/s41586-023-07004-5#Sec20; run python scripts/esm2_interp_data.py to download
 - IDRome Link to MD Trajectories: "https://sid.erda.dk/share_redirect/AVZAJvJnCO/IDRome"
 
 > **Rg Predictor &  Ablations**
 - IDRome: "https://raw.githubusercontent.com/KULL-Centre/_2023_Tesei_IDRome/main/IDRome_DB.csv"
-- IDRome Supplementary Table 3: https://www.nature.com/articles/s41592-023-02159-5#MOESM1; run python scripts/esm2_interp_data.py to download
+- IDRome Supplementary Table 3: https://www.nature.com/articles/s41586-023-07004-5#Sec20; run python scripts/esm2_interp_data.py to download
 - Experimental SAXS: https://github.com/holehouse-lab/supportingdata/blob/master/2026/starling_2026/analysis/experimental_comparison/saxs_rg/data_out/all_comparison_data_WITH_STARTING.csv. run python scripts/esm2_interp_data.py
+
+---
+
+> **Third-Party Data & Licenses**
+
+The MIT license in this repository applies to the code only. Third-party data included in this repository remain under their original licenses:
+
+| File(s) | Source | License | Citation |
+|---|---|---|---|
+| `data/disprot.fasta`; DisProt-derived entries in `data/protein_input_sets.csv`, `data/pdb_disprot.fasta`, `data/clustered_input.fasta`, `data/clustered_input.fasta.clstr` | DisProt release_2025_06 | CC BY 4.0 | Nugnes et al., *Nucleic Acids Res.* 54, D383 (2026) |
+| PDB-derived entries in `data/protein_input_sets.csv`, `data/pdb_disprot.fasta`, `data/clustered_input.fasta`, `data/clustered_input.fasta.clstr` | RCSB PDB | CC0 1.0 | Burley et al., *Nucleic Acids Res.* 53, D564 (2025) |
+| `data/idrome.fasta`, `data/idrome_clustered.fasta` | IDRome | GPL-3.0 | Tesei et al., *Nature* (2024), doi:10.1038/s41586-023-07004-5 |
+| `data/clinvar_sequences.csv` (derived) | NCBI ClinVar / RefSeq | Public domain | Landrum et al., *Nucleic Acids Res.* 42, D980-5 (2014) |
+
+Data downloaded by `scripts/esm2_interp_data.py` or obtained following the instructions above are not redistributed here and are subject to the terms of their providers. Full references for all data sources are provided in the [paper](https://www.biorxiv.org/content/10.64898/2026.09.10.750691v1).
+
+---
+
+> **Third-Party Code**
+
+`do_apc`, `get_categorical_jacobian`, and `get_contacts` in `scripts/get_contact_maps.py` are adapted from https://github.com/zzhangzzhang/pLMs-interpretability (Zhang et al., *PNAS* 2024), which has no stated license; these functions are not covered by this repository's MIT license.
 
 ---
 
@@ -71,8 +92,8 @@ NOTE: As many external databases are continuously updated, this repo provides ab
 | Figure 1 | 1. `python get_esm2_attention_matrices.py`<br>2. `python get_esm2_attention_rollout.py`<br>3. `python attention_rollout_analysis.py` |
 | Figure 2 | 1. `python get_esm2_attention_matrices.py`<br>2. `python get_esm2_attention_rollout.py`<br>3. `python attention_rollout_analysis.py` |
 | Figure 3 | 1. `python esm2_interp_data.py`<br>2. `python clinvar_expanded.py` |
-| Figure 4| 1. `python get_contact_maps.py`<br>2. `python md_variable_cutoff.py`<br>3. 3. `python md_contact_maps_analysis.py` |
-| Figure 5 | 1. `python esm2_interp_data.py`<br>2.`python rg_mlp.py`  <br>3.`python es_ablations2.py`|
+| Figure 4| 1. `python get_contact_maps.py`<br>2. `python md_variable_cutoff.py`<br>3. `python md_contact_maps_analysis.py` |
+| Figure 5 | 1. `python esm2_interp_data.py`<br>2.`python rg_mlp.py`  <br>3.`python es_ablation2.py`|
 
 ---
 
@@ -86,4 +107,4 @@ If you use this code, please cite our work:
 
 ## Contact
 
-For questions, open a [GitHub issue](https://github.com/[lnaworsk]/[plm_interp]/issues).
+For questions, open a [GitHub issue](https://github.com/lnaworsk/plm_interp/issues).
