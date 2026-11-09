@@ -118,8 +118,8 @@ def load_idrome():
 def load_saxs():
     proteins = pd.read_csv(f'{BASE_PATH}/data/all_comparison_data_WITH_STARTING.csv').reset_index(drop=True)
     proteins.columns = proteins.columns.str.strip()
-    proteins['seqlen'] = proteins['sequence'].apply(len)
     proteins = proteins.groupby('sequence', as_index=False)['saxs'].mean().reset_index(drop=True)
+    proteins['sequence'] = proteins['sequence'].str.strip()
     proteins['seqlen'] = proteins['sequence'].apply(len)
     print(f"SAXS proteins: {len(proteins)}")
     return proteins, 'saxs'
