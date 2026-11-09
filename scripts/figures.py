@@ -18,7 +18,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from scipy.stats import gaussian_kde
 import os
-
+from matplotlib.patches import Patch
 ############################
 # Helpers & Theme 
 ############################
@@ -57,7 +57,7 @@ for c, r in [(1,1), (2,1), (1,2), (2,2), (3,1), (4,1), (4,2), (4,4)]:
 #####################################
 
 ###### umap
-umap_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/umap_df.csv')
+umap_df = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/umap_df.csv')
 
 fig, axes = plt.subplots(1, 2, figsize=(7.2, 1.53), dpi=300)
 # --- Left panel ---
@@ -86,7 +86,7 @@ plt.savefig(f"{BASE_PATH}/figures/final/umap.svg", dpi=300)
 plt.show()
 
 ###### disorder attn kde 
-disorder_comp_concat = pd.read_csv(f'{BASE_PATH}/data/figure_data/disorder_comp_concat.csv')
+disorder_comp_concat = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/disorder_comp_concat.csv.gz')
 disorder_comp_concat = disorder_comp_concat[disorder_comp_concat['attn_received'] < 5]
 
 fig, ax = plt.subplots(figsize=(7.2, 1.53))
@@ -110,7 +110,7 @@ plt.savefig(f"{BASE_PATH}/figures/final/attn_kde.svg", dpi=300)
 plt.show()
 
 ###### tdp43 
-df_altair_input = pd.read_csv(f'{BASE_PATH}/data/figure_data/si_examples.csv')
+df_altair_input = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/si_examples.csv')
 df_altair_input = df_altair_input[df_altair_input['pid'] == 'TDP-43']
 
 regions = pd.DataFrame({'region': ['NTD', 'RRM1', 'RRM2', 'CTD'],'start': [1, 104, 191, 274],'end': [103, 200, 262, 413],})
@@ -139,7 +139,7 @@ plt.show()
 #########################################
 
 ###### mean AA attention rollout received plot
-mean_aa_attn = pd.read_csv(f'{BASE_PATH}/data/figure_data/mean_aa_attn.csv')
+mean_aa_attn = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/mean_aa_attn.csv')
 
 amino_acids = mean_aa_attn["amino_acid"].unique()
 x = np.arange(len(amino_acids))
@@ -147,8 +147,7 @@ fig, ax = plt.subplots(figsize=(7.2, 3.25), dpi=300)
 for i, g in enumerate(['PDB', 'DisProt']):
     sub = mean_aa_attn[mean_aa_attn["Group"] == g]
     sub = sub.set_index("amino_acid").reindex(amino_acids)
-    offsets = x + (i - 1) * 0.6
-    ax.bar(offsets, sub["mean"], width=0.4, label=g, yerr=sub["se"], capsize=2, linewidth=0.8, color=group_color_map[g])
+    ax.bar(x + (i - 0.5) * 0.4, sub["mean"], width=0.4, label=g, yerr=sub["se"], capsize=2, linewidth=0.8, color=group_color_map[g])
 ax.set_xticks(x)
 ax.set_xticklabels(amino_acids, rotation=0)
 ax.set_xlabel("Amino Acid")
@@ -159,7 +158,7 @@ plt.savefig(f"{BASE_PATH}/figures/final/mean_aa_attn_received.svg", dpi=300)
 plt.show()
 
 ####### Asp and Cys Heatmaps 
-attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data/attn_occur_norm.csv')
+attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/attn_occur_norm.csv')
 
 mats = {}
 for aa in ["C", "D"]:
@@ -213,7 +212,7 @@ plt.show()
 #########################
 
 ########### attention histograms
-comb_data = pd.read_csv(f'{BASE_PATH}/data/figure_data/comb_data.csv')
+comb_data = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/comb_data.csv.gz')
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(panel_size(cols=4, rows=1) ))
 # Disease-Relevant
@@ -308,7 +307,7 @@ plt.savefig(f'{BASE_PATH}/figures/final/clinvar_expanded_attn_percentile_by_aa_g
 plt.show()
 
 ######### log regression
-log_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/log_df.csv')
+log_df = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/log_df.csv')
 
 log_df_melted = log_df[['idr_bin', 'rollout_z coef (adjusted)', 'conservation_z coef (adjusted)', 'LR_test']].rename(columns = {'rollout_z coef (adjusted)': 'Attention Rollout (z)', 'conservation_z coef (adjusted)' : 'Conservation (z)'})
 log_df_melted = log_df_melted.melt(id_vars = 'idr_bin')
@@ -342,7 +341,7 @@ plt.savefig(f'{BASE_PATH}/figures/final/clinvar_log_reg.svg', dpi=300)
 plt.show()
 
 ####### ols regression
-ols_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/ols_df.csv')
+ols_df = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/ols_df.csv')
 
 ols_df_melted = ols_df[['beta_path_mut_adjusted', 'beta_path_mut_unadjusted', 'idr_bin']].melt(id_vars='idr_bin')
 ols_df_melted['variable_label'] = ols_df_melted['variable'].str.extract(r'(unadjusted|adjusted)', flags=re.IGNORECASE)[0].str.capitalize()
@@ -366,7 +365,7 @@ plt.show()
 # Figure 4 - Structure/Contact Maps
 ########################################
 
-combined_data = pd.read_csv(f'{BASE_PATH}/data/figure_data/combined_data.csv')
+combined_data = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/combined_data.csv')
 
 ######### correlation distribution 
 fig, ax = plt.subplots(figsize=(panel_size(cols=2, rows=2)), dpi=300)
@@ -385,7 +384,7 @@ plt.savefig(f'{BASE_PATH}/figures/final/jac_md_observed_vs_null_distribution.svg
 plt.show()
 
 ##### agreement map 
-comparison = pd.read_csv(f'{BASE_PATH}/data/figure_data/comparison.csv')
+comparison = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/comparison.csv')
 
 agreement_color_map = {'Both Enriched': '#2166ac', 'Both Depleted': '#d6604d', 'Disagree': '#d3d3d3'}
 category_order = ["Hydrophobic", "Polar", "Cation", "Anion", "Aromatic"]
@@ -407,6 +406,7 @@ fig, ax = plt.subplots(figsize=(w, h), dpi=300)
 ax.imshow(code_grid, cmap=cmap, vmin=-0.5, vmax=len(categories) - 0.5, aspect='auto')
 ax.set_xticks(range(n)); ax.set_xticklabels(res_order, fontsize=5)
 ax.set_yticks(range(n)); ax.set_yticklabels(res_order, fontsize=5)
+handles = [Patch(color=agreement_color_map[c]) for c in categories]
 fig.legend(handles, categories, loc='center left', bbox_to_anchor=(0.74, 0.5), frameon=False, fontsize=5.5, borderaxespad=0)
 fig.subplots_adjust(left=0.16, right=0.64, top=0.72, bottom=0.20)
 plt.savefig(f'{BASE_PATH}/figures/final/md_esm_top_decile_agreement.svg', dpi=300)
@@ -417,8 +417,26 @@ plt.show()
 #########################
 
 # import data
-df_eval = pd.read_csv(f'{BASE_PATH}/data/figure_data/df_eval.csv')
-saxs_proteins = pd.read_csv(f'{BASE_PATH}/data/figure_data/saxs_proteins.csv')
+df_eval = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/df_eval.csv')
+df_eval = df_eval[['seq_name', 'N', 'Rg_pred', 'Rg_pred_norm']]
+df_tesei = pd.read_csv("https://raw.githubusercontent.com/KULL-Centre/_2023_Tesei_IDRome/main/IDRome_DB.csv")
+df_tesei['Rg_true'] = df_tesei['Rg/nm'] * 10
+df_eval = df_eval.merge(df_tesei[['seq_name', 'Rg_true']].drop_duplicates('seq_name'), on='seq_name', how='left')
+df_eval['Rg_true_norm'] = df_eval['Rg_true'] / (df_eval['Rg_pred'] / df_eval['Rg_pred_norm'])
+ 
+
+saxs_proteins = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/saxs_proteins.csv', skipinitialspace=True)
+saxs_proteins = saxs_proteins[['sequence', 'seqlen', 'Rg_pred', 'Rg_pred_flory_norm']]
+saxs_ext = pd.read_csv(f'{BASE_PATH}/data/all_comparison_data_WITH_STARTING.csv', skipinitialspace=True)
+saxs_ext.columns = saxs_ext.columns.str.strip()
+saxs_ext = saxs_ext.groupby('sequence', as_index=False)[['saxs', 'starling_mps', 'starling_cuda']].mean()
+saxs_proteins = saxs_proteins.merge(saxs_ext, on='sequence', how='left')
+flory_denom = saxs_proteins['Rg_pred'] / saxs_proteins['Rg_pred_flory_norm']
+for col in ['saxs', 'starling_mps', 'starling_cuda']:
+    saxs_proteins[f'{col}_norm'] = saxs_proteins[col] / flory_denom
+ 
+assert df_eval['Rg_true'].notna().all(), "Some IDRome seq_names did not match IDRome_DB.csv"
+assert saxs_proteins['saxs'].notna().all(), "Some SAXS sequences did not match the SAXS comparison file"
 
 def plot_comparison_color(ax, x, y, xlabel, ylabel, alpha=0.3, s=30, color=None, color_title='', cbar_ax=None):
     x = np.asarray(x); y = np.asarray(y)
@@ -469,7 +487,7 @@ plt.show()
 ######## sweep df 
 
 N_RANDOM_RUNS=5
-sweep_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/es_ablation_sweep_df_idrome_random_consecutive.csv')
+sweep_df = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/es_ablation_sweep_df_idrome_random_consecutive.csv')
     
 sweep_long = sweep_df.melt(
     'n_heads',
@@ -531,7 +549,7 @@ plt.savefig(f"{BASE_PATH}/figures/final/input_sets_seqlen_distribution.svg", dpi
 plt.show()
 
 
-idr_df = pd.read_csv(f'{BASE_PATH}/data/figure_data/idr_df.csv')
+idr_df = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/idr_df.csv')
 groups = ['DisProt', 'PDB']
 w, h = panel_size(cols=2, rows=1)
 fig, ax = plt.subplots(figsize=(w, h), dpi=300, layout='constrained')
@@ -548,7 +566,7 @@ plt.savefig(f"{BASE_PATH}/figures/final/input_sets_disorder.svg",dpi=300)
 plt.show()
 
 
-comb_props = pd.read_csv(f'{BASE_PATH}/data/figure_data/comb_props.csv')
+comb_props = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/comb_props.csv')
 amino_acids = sorted(comb_props['amino_acid'].unique())
 x = np.arange(len(amino_acids))
 width = 0.8 / len(groups)
@@ -574,7 +592,7 @@ print('saved aa proportional frequency plot')
 #########################
 # Figure A2
 #########################
-si_examples = pd.read_csv(f'{BASE_PATH}/data/figure_data/si_examples.csv')
+si_examples = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/si_examples.csv')
 
 line_color_map = {'Attention Received': 'steelblue', 'Disorder': 'orange'}
 pids = si_examples['pid'].unique()
@@ -602,44 +620,36 @@ plt.show()
 # Figure A3
 #################
 
-esm_pivot = comparison.pivot(index='res2',columns='res1',values='delta_esm')
-md_pivot = comparison.pivot(index='res2',columns='res1',values='delta_md')
-mirrored = comparison.rename(columns={'res1': 'res2', 'res2': 'res1'})
-comparison = pd.concat([comparison, mirrored], ignore_index=True).drop_duplicates(subset=['res1', 'res2'])
+esm_pivot = comparison_sym.pivot(index='res2', columns='res1', values='delta_esm').reindex(index=res_order, columns=res_order)
+md_pivot = comparison_sym.pivot(index='res2', columns='res1', values='delta_md').reindex(index=res_order, columns=res_order)
 
-all_aas = set(comparison['res1']) | set(comparison['res2'])
-res_order = [aa for cat in category_order for aa in sorted(all_aas) if aa_groups.get(aa) == cat]
-n = len(res_order)
-esm_pivot = esm_pivot.reindex(index=res_order, columns=res_order)
-md_pivot = md_pivot.reindex(index=res_order, columns=res_order)
-mask = np.triu_indices(n, k=1)
+mask = np.triu_indices(len(res_order), k=1)
 esm_pivot.values[mask] = np.nan
 md_pivot.values[mask] = np.nan
-cmap = 'RdBu'   
+
+cmap = 'RdBu'
 
 def plot_enrichment_heatmap(data, title, filename):
-    fig, ax = plt.subplots(dpi=300, figsize=(panel_size(cols=2, rows=2)))
+    fig, ax = plt.subplots(dpi=300, figsize=panel_size(cols=2, rows=2))
     vmax = np.nanmax(np.abs(data))
     im = ax.imshow(data, cmap=cmap, aspect='auto', vmin=-vmax, vmax=vmax)
     ax.set_xticks(range(len(res_order)))
     ax.set_xticklabels(res_order, fontsize=5)
     ax.set_yticks(range(len(res_order)))
     ax.set_yticklabels(res_order, fontsize=5)
-    ax.set_xlabel('')
-    ax.set_ylabel('')
-    cbar = fig.colorbar(im,ax=ax,fraction=0.046,pad=0.04)
+    cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     cbar.set_label(f'{title} Enrichment Δ (%)', fontsize=6)
     cbar.ax.tick_params(labelsize=5)
-    plt.savefig(f'{BASE_PATH}/figures/final/{filename}.svg',dpi=300,bbox_inches='tight')
+    plt.savefig(f'{BASE_PATH}/figures/final/{filename}.svg', dpi=300, bbox_inches='tight')
     plt.show()
 
-plot_enrichment_heatmap(esm_pivot.values,'ESM-2 Jacobian','esm2_top_decile_enrichment')
-plot_enrichment_heatmap(md_pivot.values,'MD','md_top_decile_enrichment')
+plot_enrichment_heatmap(esm_pivot.values, 'ESM-2 Jacobian', 'esm2_top_decile_enrichment')
+plot_enrichment_heatmap(md_pivot.values, 'MD', 'md_top_decile_enrichment')
 
 #################
 # Figure A4
 #################
-training_curve_long = pd.read_csv(f'{BASE_PATH}/data/figure_data/training_curve_long.csv')
+training_curve_long = pd.read_csv(f'{BASE_PATH}/data/figure_data_public/training_curve_long.csv')
 best_epoch = int(np.argmin(training_curve_long[training_curve_long['dataset']=='Validation'].mse_loss))
 
 dataset_color_map = {'Training': 'steelblue', 'Validation': 'orange'} 
@@ -662,7 +672,7 @@ plt.show()
 #################
 # Figure A5
 #################
-attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/figure_data/attn_corr_norm_es.csv')
+attn_occur_norm = pd.read_csv(f'{BASE_PATH}/data/attn_corr_norm_es.csv')
 
 mean_pos = (attn_occur_norm[attn_occur_norm['aa'].isin(['R', 'K'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())
 mean_neg = (attn_occur_norm[attn_occur_norm['aa'].isin(['D', 'E'])].groupby(['head', 'layer'])['attn_occur_norm'].mean().reset_index())

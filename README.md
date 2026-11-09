@@ -87,6 +87,8 @@ Data downloaded by `scripts/esm2_interp_data.py` or obtained following the instr
 
 ## Reproducing Results
 
+You can reproduce all figures using `scripts/figures.py`, which plots the derived data from the other analysis scripts (stored in `data/figure_data_public/`). First run `python scripts/esm2_interp_data.py` to download the experimental SAXS data, which is merged in at plotting time (`figures.py` also fetches IDRome data and requires an internet connection). Alternatively, you can re-run each script individually (see table below), then run `python scripts/make_public_figure_data.py` to rebuild `data/figure_data_public/` before plotting.
+
 | Result (Table/Figure) | Command |
 |-----------------------|---------|
 | Figure 1 | 1. `python get_esm2_attention_matrices.py`<br>2. `python get_esm2_attention_rollout.py`<br>3. `python attention_rollout_analysis.py` |
