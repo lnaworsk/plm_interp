@@ -33,6 +33,7 @@ Data:
 '''
 
 # ---- Constants ------------------------------------------------
+LOAD_MODEL       = True   # True: use saved mlp_final.pt; False: retrain from scratch
 SEED             = 42
 BATCH_SIZE       = 256
 EPOCHS           = 200
@@ -246,72 +247,74 @@ test_loader  = DataLoader(EmbeddingDataset(X_test,  y_test), shuffle=False, **lo
 
 # ---- Training ----------------------------------------------------------------
 model      = RgMLP().to(device)
-optimiser  = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
-scheduler  = torch.optim.lr_scheduler.CosineAnnealingLR(optimiser, T_max=EPOCHS)
-scaler_amp = torch.cuda.amp.GradScaler()
-criterion  = nn.MSELoss()
+if not LOAD_MODEL:
 
-train_hist, val_hist        = [], []
-best_val_loss, patience_ctr = float('inf'), 0
+    optimiser  = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
+    scheduler  = torch.optim.lr_scheduler.CosineAnnealingLR(optimiser, T_max=EPOCHS)
+    scaler_amp = torch.cuda.amp.GradScaler()
+    criterion  = nn.MSELoss()
 
-for epoch in range(EPOCHS):
-    model.train()
-    train_losses = []
-    for X_b, y_b in tqdm(train_loader, desc=f'Epoch {epoch+1}/{EPOCHS}'):
-        X_b, y_b = X_b.to(device), y_b.to(device)
-        optimiser.zero_grad()
-        with torch.cuda.amp.autocast():
-            loss = criterion(model(X_b), y_b)
-        scaler_amp.scale(loss).backward()
-        scaler_amp.unscale_(optimiser)
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-        scaler_amp.step(optimiser)
-        scaler_amp.update()
-        train_losses.append(loss.item())
-    scheduler.step()
-    train_hist.append(np.mean(train_losses))
+    train_hist, val_hist        = [], []
+    best_val_loss, patience_ctr = float('inf'), 0
 
-    model.eval()
-    val_losses = []
-    with torch.no_grad():
-        for X_b, y_b in val_loader:
+    for epoch in range(EPOCHS):
+        model.train()
+        train_losses = []
+        for X_b, y_b in tqdm(train_loader, desc=f'Epoch {epoch+1}/{EPOCHS}'):
             X_b, y_b = X_b.to(device), y_b.to(device)
+            optimiser.zero_grad()
             with torch.cuda.amp.autocast():
-                val_losses.append(criterion(model(X_b), y_b).item())
-    val_hist.append(np.mean(val_losses))
-    print(f"Epoch {epoch+1:3d} | train: {train_hist[-1]:.4f} "
-          f"| val: {val_hist[-1]:.4f}")
+                loss = criterion(model(X_b), y_b)
+            scaler_amp.scale(loss).backward()
+            scaler_amp.unscale_(optimiser)
+            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+            scaler_amp.step(optimiser)
+            scaler_amp.update()
+            train_losses.append(loss.item())
+        scheduler.step()
+        train_hist.append(np.mean(train_losses))
 
-    if val_hist[-1] < best_val_loss:
-        best_val_loss, patience_ctr = val_hist[-1], 0
-        torch.save(model.state_dict(), os.path.join(BASE_PATH, 'mlp_final.pt'))
-        print(f" Best val loss: {best_val_loss:.4f}, saved")
-    else:
-        patience_ctr += 1
-        if patience_ctr >= PATIENCE:
-            print(f"Early stopping at epoch {epoch+1}")
-            break
+        model.eval()
+        val_losses = []
+        with torch.no_grad():
+            for X_b, y_b in val_loader:
+                X_b, y_b = X_b.to(device), y_b.to(device)
+                with torch.cuda.amp.autocast():
+                    val_losses.append(criterion(model(X_b), y_b).item())
+        val_hist.append(np.mean(val_losses))
+        print(f"Epoch {epoch+1:3d} | train: {train_hist[-1]:.4f} "
+            f"| val: {val_hist[-1]:.4f}")
+
+        if val_hist[-1] < best_val_loss:
+            best_val_loss, patience_ctr = val_hist[-1], 0
+            torch.save(model.state_dict(), os.path.join(BASE_PATH, 'mlp_final.pt'))
+            print(f" Best val loss: {best_val_loss:.4f}, saved")
+        else:
+            patience_ctr += 1
+            if patience_ctr >= PATIENCE:
+                print(f"Early stopping at epoch {epoch+1}")
+                break
 
 
-training_curve_df = pd.DataFrame({"epoch": np.arange(len(train_hist)), "Training": train_hist, "Validation": val_hist })
-training_curve_long = training_curve_df.melt(id_vars="epoch", value_vars=["Training", "Validation"], var_name="dataset", value_name="mse_loss")
-training_curve_long.to_csv(f'{BASE_PATH}/data/figure_data/training_curve_long.csv')
-best_epoch = int(np.argmin(training_curve_long[training_curve_long['dataset']=='Validation'].mse_loss))
+    training_curve_df = pd.DataFrame({"epoch": np.arange(len(train_hist)), "Training": train_hist, "Validation": val_hist })
+    training_curve_long = training_curve_df.melt(id_vars="epoch", value_vars=["Training", "Validation"], var_name="dataset", value_name="mse_loss")
+    training_curve_long.to_csv(f'{BASE_PATH}/data/figure_data/training_curve_long.csv')
+    best_epoch = int(np.argmin(training_curve_long[training_curve_long['dataset']=='Validation'].mse_loss))
 
-dataset_color_map = {'Training': 'steelblue', 'Validation': 'orange'}  
-fig, ax = plt.subplots(dpi=300)
-for ds, color in dataset_color_map.items():
-    sub = training_curve_long[training_curve_long['dataset'] == ds].sort_values('epoch')
-    ax.plot(sub['epoch'], sub['mse_loss'], color=color, linewidth=1.2, label=ds)
-ax.axvline(best_epoch, color='red', linestyle='--', linewidth=1.0, alpha=0.5)
-ax.set_xlabel('Epoch', fontsize=6, labelpad=3)
-ax.set_ylabel('MSE Loss', fontsize=6)
-ax.set_title('Training vs Validation Loss', fontsize=7)
-ax.tick_params(labelsize=5)
-ax.legend(fontsize=5.5, frameon=False, loc='upper right')
-fig.subplots_adjust(left=0.14, right=0.95, top=0.96, bottom=0.08)
-plt.savefig(os.path.join(BASE_PATH, "figures/mlp_final_curves.svg"), dpi=300)
-plt.show()
+    dataset_color_map = {'Training': 'steelblue', 'Validation': 'orange'}  
+    fig, ax = plt.subplots(dpi=300)
+    for ds, color in dataset_color_map.items():
+        sub = training_curve_long[training_curve_long['dataset'] == ds].sort_values('epoch')
+        ax.plot(sub['epoch'], sub['mse_loss'], color=color, linewidth=1.2, label=ds)
+    ax.axvline(best_epoch, color='red', linestyle='--', linewidth=1.0, alpha=0.5)
+    ax.set_xlabel('Epoch', fontsize=6, labelpad=3)
+    ax.set_ylabel('MSE Loss', fontsize=6)
+    ax.set_title('Training vs Validation Loss', fontsize=7)
+    ax.tick_params(labelsize=5)
+    ax.legend(fontsize=5.5, frameon=False, loc='upper right')
+    fig.subplots_adjust(left=0.14, right=0.95, top=0.96, bottom=0.08)
+    plt.savefig(os.path.join(BASE_PATH, "figures/mlp_final_curves.svg"), dpi=300)
+    plt.show()
 
 # ---- Evaluate on IDRome test set ------------------------------------------------
 model.load_state_dict(torch.load(os.path.join(BASE_PATH, 'mlp_final.pt')))
